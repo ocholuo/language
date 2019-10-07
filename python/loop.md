@@ -37,7 +37,7 @@ print "Good bye!"
 
 > The count is: 0
 > The count is: 1
-> T> he count is: 2
+> The count is: 2
 > The count is: 3
 > The count is: 4
 > The count is: 5
