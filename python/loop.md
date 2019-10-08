@@ -22,26 +22,341 @@
 * 任何 非零、或非空（null）的值 均为 *true* 。
 * 当判断条件假 *false* 时，循环结束。
 
-
+```
 #!/usr/bin/python
 
-```
+
 count = 0
 while (count < 9):
    print 'The count is:', count
    count = count + 1
 
 print "Good bye!"
-```
+
 以上代码执行输出结果:
 
-  > The count is: 0
-  > The count is: 1
-  > The count is: 2
-  > The count is: 3
-  > The count is: 4
-  > The count is: 5
-  > The count is: 6
-  > The count is: 7
-  > The count is: 8
-  > Good bye!
+The count is: 0
+The count is: 1
+The count is: 2
+The count is: 3
+The count is: 4
+The count is: 5
+The count is: 6
+The count is: 7
+The count is: 8
+Good bye!
+```
+
+### continue 和 break 用法
+
+* continue 用于跳过该次循环，
+* break 则是用于退出循环，
+此外"判断条件"还可以是个常值，表示循环必定成立，具体用法如下：
+
+#
+
+```
+i = 1
+while i < 10:   
+    i += 1
+    if i%2 > 0:     # 非双数时跳过输出
+        continue
+    print i         # 输出双数2、4、6、8、10
+
+i = 1
+while 1:            # 循环条件为1必定成立
+    print i         # 输出1~10
+    i += 1
+    if i > 10:     # 当i大于10时跳出循环
+        break
+```
+
+
+### 无限循环
+如果条件判断语句永远为 true ，循环将会无限的执行下去，如下实例：
+
+实例
+```
+#!/usr/bin/python
+# -*- coding: UTF-8 -*-
+
+var = 1
+while var == 1 :  # 该条件永远为true，循环将无限执行下去
+   num = raw_input("Enter a number  :")
+   print "You entered: ", num
+
+print "Good bye!"
+
+// 以上实例输出结果：
+
+Enter a number  :20
+You entered:  20
+Enter a number  :29
+You entered:  29
+Enter a number  :3
+You entered:  3
+Enter a number between :Traceback (most recent call last):
+  File "test.py", line 5, in <module>
+    num = raw_input("Enter a number :")
+KeyboardInterrupt
+```
+无限循环可以用 `CTRL+C` 来中断循环。
+
+### `else` 语句
+
+在 python 中，while … else 在循环条件为 false 时执行 else 语句块：
+
+```
+#!/usr/bin/python
+
+count = 0
+while count < 5:
+   print count, " is  less than 5"
+   count = count + 1
+else:
+   print count, " is not less than 5"
+
+// 以上实例输出结果为：
+
+0 is less than 5
+1 is less than 5
+2 is less than 5
+3 is less than 5
+4 is less than 5
+5 is not less than 5
+```
+
+### 简单语句组
+类似 if 语句的语法，如果你的 while 循环体中只有一条语句，你可以将该语句与while写在同一行中
+
+
+```
+#!/usr/bin/python
+
+flag = 1
+
+while (flag): print 'Given flag is really true!'
+
+print "Good bye!"
+```
+
+
+## Python for 循环语句
+
+Python for循环可以遍历任何序列的项目，如一个列表或者一个字符串。
+for循环的语法格式如下：
+
+```
+for iterating_var in sequence:
+   statements(s)
+```
+
+```
+for letter in 'Python':                 # 第一个实例
+   print '当前字母 :', letter
+
+fruits = ['banana', 'apple',  'mango']
+for fruit in fruits:                    # 第二个实例
+   print '当前水果 :', fruit
+
+print "Good bye!"
+
+// 以上实例输出结果:
+
+当前字母 : P
+当前字母 : y
+当前字母 : t
+当前字母 : h
+当前字母 : o
+当前字母 : n
+当前水果 : banana
+当前水果 : apple
+当前水果 : mango
+Good bye!
+```
+
+
+### 通过序列索引迭代
+另外一种执行循环的遍历方式是通过索引，如下实例：
+
+```
+#!/usr/bin/python
+# -*- coding: UTF-8 -*-
+
+fruits = ['banana', 'apple',  'mango']
+for index in range(len(fruits)):
+   print '当前水果 :', fruits[index]
+
+print "Good bye!"
+以上实例输出结果：
+
+当前水果 : banana
+当前水果 : apple
+当前水果 : mango
+Good bye!
+```
+
+以上实例我们使用了内置函数 len() 和 range(),函数 len() 返回列表的长度，即元素的个数。 range返回一个序列的数。
+
+
+
+### `for...else` 语句
+在 python 中，for … else 表示这样的意思，for 中的语句和普通的没有区别，else 中的语句会在循环正常执行完（即 for 不是通过 break 跳出而中断的）的情况下执行，while … else 也是一样。
+
+```
+for num in range(10,20):  # 迭代 10 到 20 之间的数字
+   for i in range(2,num): # 根据因子迭代
+      if num%i == 0:      # 确定第一个因子
+         j=num/i          # 计算第二个因子
+         print '%d 等于 %d * %d' % (num,i,j)
+         break            # 跳出当前循环
+   else:                  # 循环的 else 部分
+      print num, '是一个质数'
+
+// 以上实例输出结果：
+
+10 等于 2 * 5
+11 是一个质数
+12 等于 2 * 6
+13 是一个质数
+14 等于 2 * 7
+15 等于 3 * 5
+16 等于 2 * 8
+17 是一个质数
+18 等于 2 * 9
+19 是一个质数
+```
+
+
+## break 语句
+Python break语句，就像在C语言中，打破了最小封闭for或while循环。
+
+用来终止循环语句，即循环条件没有False条件或者序列还没被完全递归完，也会停止执行循环语句。
+用在while和for循环中。
+如果使用嵌套循环，break语句将停止执行最深层的循环，并开始执行下一行代码。
+
+语法：
+
+```
+for letter in 'Python':     # 第一个实例
+   if letter == 'h':
+      break
+   print '当前字母 :', letter
+
+var = 10                    # 第二个实例
+while var > 0:              
+   print '当前变量值 :', var
+   var = var -1
+   if var == 5:   # 当变量 var 等于 5 时退出循环
+      break
+
+print "Good bye!"
+以上实例执行结果：
+
+当前字母 : P
+当前字母 : y
+当前字母 : t
+当前变量值 : 10
+当前变量值 : 9
+当前变量值 : 8
+当前变量值 : 7
+当前变量值 : 6
+Good bye!
+```
+
+
+
+## continue 语句
+
+`continue` `跳出本次循环，break` 跳出整个循环。
+
+continue 语句:
+是一个 *删除* 的效果，他的存在是为了 *删除满足循环条件下的某些不需要的成分*
+用来告诉Python跳过当前循环的剩余语句，然后继续进行下一轮循环。
+用在while和for循环中。
+
+
+语法
+
+```
+for letter in 'Python':     # 第一个实例
+   if letter == 'h':
+      continue
+   print '当前字母 :', letter
+
+var = 10                    # 第二个实例
+while var > 0:              
+   var = var -1
+   if var == 5:
+      continue
+   print '当前变量值 :', var
+print "Good bye!"
+以上实例执行结果：
+
+当前字母 : P
+当前字母 : y
+当前字母 : t
+当前字母 : o
+当前字母 : n
+当前变量值 : 9
+当前变量值 : 8
+当前变量值 : 7
+当前变量值 : 6
+当前变量值 : 4
+当前变量值 : 3
+当前变量值 : 2
+当前变量值 : 1
+当前变量值 : 0
+Good bye!
+```
+
+
+只打印0-10之间的奇数：
+```
+n = 0
+while n < 10:
+    n = n + 1
+    if n % 2 == 0:      # 如果n是偶数，执行continue语句
+        continue        # continue语句会直接继续下一轮循环，后续的print()语句不会执行
+    print(n)
+```
+
+## Python pass 语句
+
+空语句，为了保持程序结构的完整性。
+不做任何事情，一般用做占位语句。
+一般用于占位置。
+
+在 Python 中有时候会看到一个 def 函数:
+
+```
+def sample(n_samples):
+    pass
+```
+
+该处的 pass 便是占据一个位置，
+因为如果定义一个空函数程序会报错，
+当你没有想好函数的内容是可以用 pass 填充，使程序可以正常运行。
+
+
+语法:
+
+```
+for letter in 'Python':
+   if letter == 'h':
+      pass
+      print '这是 pass 块'
+   print '当前字母 :', letter
+
+print "Good bye!"
+以上实例执行结果：
+
+当前字母 : P
+当前字母 : y
+当前字母 : t
+这是 pass 块
+当前字母 : h
+当前字母 : o
+当前字母 : n
+Good bye!
+```
