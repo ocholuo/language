@@ -6,6 +6,7 @@
 | 1   | Duplicate Encoder       | obnounce | :heavy_check_mark:Completed | 6          | https://www.codewars.com/kata/54b42f9314d9229fd6000d9c/train/python                                                                                                                                                                                                                                              |
 | 2   | count_sheeps            | obnounce | :heavy_check_mark:Completed | 8          | https://www.codewars.com/kata/54edbc7200b811e956000556                                                                                                                                                                                                                                                                                |
 | 2   | Persistent Bugger.      | obnounce | :x: Not Completed           | 6          | https://www.codewars.com/kata/55bf01e5a717a0d57e0000ec/python
+| 2   | Persistent Bugger.      | obnounce | :x: Not Completed           | 6          | https://www.codewars.com/kata/55bf01e5a717a0d57e0000ec/python
 
 
 
@@ -78,4 +79,36 @@ def count_sheeps(a):
         if i == True:
             t += 1
     return t
+```
+
+## 3. Persistent Bugger
+```py
+1.
+def persistence(n):
+    res = 0
+    temp = 1
+    while (n > 9):
+        if temp == 1:
+          temp = n % 10
+        n -= n %10
+        n /= 10
+        temp *= (n % 10)
+        if (n <= 9) :
+          n = temp
+          temp = 1
+          res += 1
+    return res
+
+2.
+def persistence(n):
+    n=str(n)
+    count=0
+    while len(n)>1:
+        p=1
+        for i in n:
+            p *= int(i)
+        count+=1
+        n=str(p)
+    return count
+
 ```
