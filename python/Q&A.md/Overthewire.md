@@ -7,6 +7,7 @@
 | 1   | Bandit Level 0          | :heavy_check_mark:Completed | https://overthewire.org/wargames/bandit/bandit0.html                                                                                                                                                                                                                                |
 | 2   | Persistent Bugger.      | :x: Not Completed           |
 
+# `bandit0@bandit.labs.overthewire.org -p 2220`
 
 # Solutions
 
@@ -367,6 +368,8 @@ bandit10@melinda:~$ echo VGhlIHBhc3N3b3JkIGlzIElGdWt3S0dzRlc4TU9xM0lSRnFyeEUxaHh
 The password is IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR
 ```
 
+---
+
 ## Bandit Level 11 → Level 12
 Level Goal
 - The password for the next level is stored in the file data.txt, where all lowercase (a-z) and uppercase (A-Z) letters have been rotated by 13 positions
@@ -378,8 +381,22 @@ Commands used for this level:
 
 solution
 ```py
+bandit11@bandit:~$ ls -a
+.  ..  .bash_logout  .bashrc  data.txt  .profile
+bandit11@bandit:~$ cat data.txt
+Gur cnffjbeq vf 5Gr8L4qetPEsPk8htqjhRK8XSP6x2RHh
 
+bandit11@bandit:~$ cat data.txt | tr 'A-Z a-z' 'N-ZA-M n-za-m'
+The password is 5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu
+bandit11@bandit:~$ cat data.txt | tr [A-Za-z] [N-ZA-Mn-za-m]
+The password is 5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu
 ```
+
+---
+
+## Bandit Level 12 → Level 13
+Level Goal
+The password for the next level is stored in the file data.txt, which is a hexdump of a file that has been repeatedly compressed. For this level it may be useful to create a directory under /tmp in which you can work using mkdir. For example: mkdir /tmp/myname123. Then copy the datafile using cp, and rename it using mv (read the manpages!)
 
 
 
