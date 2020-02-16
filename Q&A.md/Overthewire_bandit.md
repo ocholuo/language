@@ -729,7 +729,7 @@ GbKksEFF4yrVs6il55v6gwY5aVje5f0j
 
 ---
 
-## Bandit Level 20 → Level 21 `nc -lp 1025`
+## Bandit Level 20 → Level 21 `$ nc -lp 1025`
 Level Goal
 - There is a setuid binary in the home directory that does the following:
   - it `makes a connection to localhost on the port you specify` as a command line argument.
@@ -937,12 +937,53 @@ $ cat /tmp/jhalon/pass
 UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ
 ```
 
+---
+
 ## Bandit Level 24 → Level 25
 Level Goal
-A daemon is listening on port 30002 and will give you the password for bandit25 if given the password for bandit24 and a secret numeric 4-digit pincode. There is no way to retrieve the pincode except by going through all of the 10000 combinations, called brute-forcing.
+- A daemon is listening on port 30002 and will give you the password for bandit25 if given the password for bandit24 and a secret numeric 4-digit pincode. There is no way to retrieve the pincode except by going through all of the 10000 combinations, `brute-force`.
+
+- Objective
+  - Brute force the server listening on port 30002 using the password for Bandit 24.
+
+list of general steps for this challenge/script.
+  - Connect to the service
+  - Send a password + pin combo (Script and `automate this process`)
+  - Evaluate the results
+
+```py
+import socket
+
+pin = 0
+password = "UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ"
+ s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+ s.connect(('localhost', 30002))
+ s.rev(1024)
+ while true:
+   print ' [+] Sending Pin: ' + str(pin)
+   s.sendall(password + str(pin)+'\n')
+   data=s.recv(1024)
+   print data2pin +=1
+   
+```
 
 
+- First import the socket library, socket is required to make network connections.
+- Then initialize the `pin` variable with a 0 and set my `password` variable.
+- Next establish an object called `s` which sets up my socket.
+  - use the `socket` object and have it `connect to ‘localhost’ on port ‘30002’` and then using `s.recv(1024)` accept the `banner`.
+  - So far this just established the connection to the service. Now we enter a while loop to brute force the password.
 
+- The while loop simply prints the pin it will attempt.
+- `s.sendall()` sends the `password` and `pin` through the socket. Note the `\n` as the last argument to the function, this is required because it tells the service that you’re done entering a line, without it the script will hang.
+- Finally we capture the data returned from the server, print it and increase the pin by one. Then it starts all over.
+
+- more feature rich: evaluate a condition to determine if the return from the service had “Wrong!” in it:
+  - if so, continue the script.
+  - If not, stop and say ‘Pin Found!’.
+  - Luckily for me that was not needed because the service resets the connection when the correct pin is presented and thus the script stops.
+
+Note: It’s been pointed out that my while loop is an infinity loop. I know, I could have just used a for loop and that’s a better method of doing it. I was planning on putting in error handling + conditionals but it wasn’t necessary.
 
 
 
