@@ -1,16 +1,18 @@
 # overthewire_bandit
 
+```
 2/17/2020 updated.
 Lo termino todo~ estos son solución, pienses que si quiere verlo.
 
 
-休息一下~休息一下~
+休息一下~ 休息一下~
 ￣￣￣￣￣＼／￣￣￣￣
-　　　　∧＿∧　　　　
+　　　 　∧＿∧　　　　
 　　;;（´・ω・） 　
-　＿旦_(っ (,,■)＿＿
-　|l￣l||￣しﾞしﾞ￣|i
+　＿旦_(っ(,,■)＿＿
+|l￣l||￣しﾞしﾞ￣|i
 
+```
 
 [toc]
 
