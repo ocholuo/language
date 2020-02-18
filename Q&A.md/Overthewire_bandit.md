@@ -186,10 +186,6 @@ bandit0@melinda:~$ ls
 readme
 bandit0@melinda:~$ cat readme
 boJ9jbbUNNfktd78OOpsqOltutMc3MY1
-
-$ ssh bandit1@bandit.labs.overthewire.org -p 2220
-bandit1@bandit.labs.overthewire.org's password:
-boJ9jbbUNNfktd78OOpsqOltutMc3MY1
 ```
 
 
@@ -199,6 +195,8 @@ Level Goal
 
 solution
 ```py
+# boJ9jbbUNNfktd78OOpsqOltutMc3MY1
+
 bandit1@melinda:~$ ls -a
 -  .  ..  .bash_logout  .bashrc  .profile
 bandit1@melinda:~$ cat ./-
@@ -211,9 +209,7 @@ Level Goal
 
 solution
 ```py
-$ ssh bandit2@bandit.labs.overthewire.org -p 2220
-bandit2@bandit.labs.overthewire.org's password:
-CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9
+# CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9
 
 bandit2@melinda:~$ dir
 spaces\ in\ this\ filename
@@ -223,14 +219,14 @@ UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK
 
 ## Bandit Level 3 → Level 4 `hidden file: ls -a`
 Level Goal
-- The password for the next level is stored in a hidden file in the inhere directory.
+- The password for the next level is stored in a hidden file in the `inhere` directory.
 
 solution
 ```py
+# UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK
+
 bandit3@melinda:~$ ls
 inhere
-bandit3@bandit:~$ cat inhere
-cat: inhere: Is a directory     # not file
 bandit3@melinda:~$ cd inhere
 bandit3@melinda:~/inhere$ ls -a
 .  ..  .hidden
@@ -238,12 +234,14 @@ bandit3@melinda:~/inhere$ cat .hidden
 pIwrPrtPN36QITSp3EQaw936yaFoFgAB
 ```
 
-## Bandit Level 4 → Level 5 `human-readable: find ./-*`
+## Bandit Level 4 → Level 5 `file ./-* check the file type`
 Level Goal
-- The password for the next level is stored in the only human-readable file in the inhere directory. Tip: if your terminal is messed up, try the “reset” command.
+- The password for the next level is stored in the only human-readable file in the `inhere` directory. Tip: if your terminal is messed up, try the “reset” command.
 
 solution
 ```py
+# pIwrPrtPN36QITSp3EQaw936yaFoFgAB
+
 # file ./-*
 # ./-* this shell glob will pick up the all files which starts from - (minus sign) and print the file format of the file.
 
@@ -268,7 +266,7 @@ bandit4@melinda:~/inhere$ cat ./-file07
 koReBOKuIDDepwhWk7jZC0RTdopnAYKh
 ```
 
-## Bandit Level 5 → Level 6 `following properties: find itype -size`
+## Bandit Level 5 → Level 6 `find -type XX -size XX`
 Level Goal
 - The password for the next level is stored in a file somewhere under the inhere directory and has all of the following properties:
 - human-readable
@@ -277,6 +275,8 @@ Level Goal
 
 solution
 ```py
+# koReBOKuIDDepwhWk7jZC0RTdopnAYKh
+
 bandit5@melinda:~$ ls
 inhere
 bandit5@melinda:~$ cd inhere
@@ -292,7 +292,7 @@ bandit5@melinda:~/inhere$ cat ./maybehere07/.file2
 DXjZPULLxYr17uwoI01bNLQbtFemEgo7
 ```
 
-## Bandit Level 6 → Level 7 `following properties: find / -user -group -size 2>/dev/null`
+## Bandit Level 6 → Level 7 `find / -user -group -size 2>/dev/null`
 Level Goal
 - The password for the next level is stored somewhere on the server and has all of the following properties:
 - owned by user bandit7
@@ -312,69 +312,79 @@ bandit6@melinda:~$ cat /var/lib/dpkg/info/bandit7.password
 HKBPTKQnIay4Fw76bEy8PVxKEDQRKTzs
 ```
 
-## Bandit Level 7 → Level 8 `in the file data.txt next to the word millionth: awk '/millionth/' data.txt`
+## Bandit Level 7 → Level 8 `awk '/millionth/' data.txt`
 Level Goal
-- The password for the next level is stored in the file data.txt next to the word `millionth`
+- The password for the next level is stored in the file `data.txt` next to the word `millionth`
 ```py
-bandit7@melinda:~$ ls -a
+$ ls -a
 .  ..  .bash_logout  .bashrc  .profile  data.txt
-bandit7@bandit:~$ cat data.txt
+$ cat data.txt
 humiliation's	47r0YuNylaQ3k6HqGF5NsPPiGuolDCjn
 malarkey's	0huyJeRwvtJaoyRmJjQFsRnQcYG4gDir
 prioress	ocudTlq9CbpCw9aByrqGffAuoYvCmLNV
 ....
 
-bandit7@bandit:~$ awk '/millionth/' data.txt
-millionth	cvX2JJa4CFALtqS87jk27qwqGhBM9plV
-bandit7@melinda:~$ awk '/^millionth/ {print $2;}' data.txt
+$ awk '/millionth/' data.txt
+millionth       cvX2JJa4CFALtqS87jk27qwqGhBM9plV
+$ awk '/^millionth/ {print $2;}' data.txt
 cvX2JJa4CFALtqS87jk27qwqGhBM9plV
+$ cat data.txt | grep millionth
+millionth       cvX2JJa4CFALtqS87jk27qwqGhBM9plV
 ```
 
-## Bandit Level 8 → Level 9 `line of text that occurs only once: sort data.txt | uniq -u`
+## Bandit Level 8 → Level 9 `text that occurs only once: sort data.txt | uniq -u`
 Level Goal
 - The password for the next level is stored in the file data.txt and is the only line of text that occurs only once
 
 solution
 ```py
-bandit8@bandit:~$ ls -a
+$ ls -a
 .  ..  .bash_logout  .bashrc  data.txt  .profile
-bandit8@bandit:~$ cat data.txt
+$ cat data.txt
 KerqNiDbY0zV2VxnOCmWX5XWxumldlAe
 MsxcvOe3PGrt78wpZG2bBNF5wfXpZhET
 ...
 
-bandit8@bandit:~$ cat data.txt | sort | uniq -u
+$ cat data.txt | sort | uniq -u
 UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR
-bandit8@bandit:~$ sort data.txt | uniq -u
+$ sort data.txt | uniq -u
 UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR
 ```
 
+- sort data.txt | `uniq -u` : 直接-u获取
+- sort data.txt | `uniq -c` : -c列出出现的次数，然后从中找到是1的那一行即可
+
+---
+
 ## Bandit Level 9 → Level 10 `strings data.txt | grep "="`
 Level Goal
-- The password for the next level is stored in the file data.txt in one of the few human-readable strings, beginning with several ‘=’ characters.
+- The password for the next level is stored in the file `data.txt` in one of the few human-readable strings, beginning with several ‘=’ characters.
 
 solution
 ```py
-bandit9@melinda:~$ ls -a
+$ ls -a
 .  ..  .bash_logout  .bashrc  .profile  data.txt
-bandit9@melinda:~$ strings data.txt | grep "="
+$ strings data.txt | grep "="
 epr~F=K
 ========== truKLdjsbJ5g7yyJ2X2R0o3a5HQJFuLk
 ie)=5e
 ```
 
-## Bandit Level 10 → Level 11 `echo txt | base64 --decode`
+---
+
+## Bandit Level 10 → Level 11 `echo txt | base64 --decode, base64 -d data.txt`
 Level Goal
 - The password for the next level is stored in the file data.txt, which contains base64 encoded data
 
 solution
 ```py
-bandit10@melinda:~$ ls -a
+$ ls -a
 .  ..  .bash_logout  .bashrc  .profile  data.txt
-bandit10@melinda:~$ cat data.txt
+$ cat data.txt
 VGhlIHBhc3N3b3JkIGlzIElGdWt3S0dzRlc4TU9xM0lSRnFyeEUxaHhUTkViVVBSCg==
 
-bandit10@melinda:~$ echo VGhlIHBhc3N3b3JkIGlzIElGdWt3S0dzRlc4TU9xM0lSRnFyeEUxaHhUTkViVVBSCg== | base64 --decode
+$ echo VGhlIHBhc3N3b3JkIGlzIElGdWt3S0dzRlc4TU9xM0lSRnFyeEUxaHhUTkViVVBSCg== | base64 --decode
+$ base64 -d data.txt
 The password is IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR
 ```
 
@@ -389,16 +399,18 @@ Commands used for this level:
 `cat` – used to view contents of a file.
 `tr` – translate or delete characters.
 
+`tr -c -d -s [“string1_to_translate_from”][“string2_to_translate_to”] < input-file`
+
 solution
 ```py
-bandit11@bandit:~$ ls -a
+$ ls -a
 .  ..  .bash_logout  .bashrc  data.txt  .profile
-bandit11@bandit:~$ cat data.txt
+$ cat data.txt
 Gur cnffjbeq vf 5Gr8L4qetPEsPk8htqjhRK8XSP6x2RHh
 
-bandit11@bandit:~$ cat data.txt | tr 'A-Z a-z' 'N-ZA-M n-za-m'
+$ cat data.txt | tr 'A-Z a-z' 'N-ZA-M n-za-m'
 The password is 5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu
-bandit11@bandit:~$ cat data.txt | tr [A-Za-z] [N-ZA-Mn-za-m]
+$ cat data.txt | tr [A-Za-z] [N-ZA-Mn-za-m]
 The password is 5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu
 ```
 
@@ -407,26 +419,81 @@ The password is 5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu
 ## Bandit Level 12 → Level 13
 Level Goal
 - The password for the next level is stored in the file data.txt, which is `a hexdump of a file that has been repeatedly compressed`.
-- For this level it may be useful to create a directory under /tmp in which you can work using mkdir.
+- For this level it may be useful to create a directory under `/tmp` in which you can work using mkdir.
 - For example: mkdir /tmp/myname123. Then copy the datafile using cp, and rename it using mv (read the manpages!)
 
 ```py
-$ ls -a
-.  ..  .bash_logout  .bashrc  .profile  data.txt
+$ ls
+data.txt
 $ cat data.txt
 #00000000: 1f8b 0808 d7d2 c55b 0203 6461 7461 322e  .......[..data2.
 #00000010: 6269 6e00 013c 02c3 fd42 5a68 3931 4159  bin..<...BZh91AY
+...
+$ file data.txt
+data.txt: ASCII text
+$ xxd -r data.txt > data.bin
+-bash: data.bin: Permission denied
+# 这本来是一个文本类型的文件
+# 尝试用xxd转成bin提示权限不够
 
-bandit12@bandit:~$ mkdir /tmp/jhalon
-bandit12@bandit:~$ xxd -r data.txt > /tmp/jhalon/file.bin
-bandit12@bandit:~$ cd /tmp/jhalon
-bandit12@bandit:/tmp/jhalon$ ls -a
-.  ..  file.bin
-bandit12@bandit:/tmp/jen$ cat file.bin
-#?4h??6??@4…
+# 先复制一遍
+$ mkdir /tmp/jhalon
+$ cp data.txt /tmp/jhalon
+$ cd /tmp/jhalon
 
+$ xxd -r data.txt > /tmp/jhalon/file.bin
 $ file file.bin
 file.bin: gzip compressed data, was "data2.bin", last modified: Tue Oct 16 12:00:23 2018, max compression, from Unix
+
+# 是gzip格式，改文件名，解压
+$ mv data.bin data.gz
+bandit12@bandit:/tmp/c1911$ gzip -d data.gz
+bandit12@bandit:/tmp/c1911$ ls
+data  data.txt
+bandit12@bandit:/tmp/c1911$ file data
+data: bzip2 compressed data, block size = 900k
+# 还有一层bzip2, 继续解压
+bandit12@bandit:/tmp/c1911$ mv data data.bz2
+bandit12@bandit:/tmp/c1911$ bunzip2 -d data.bz2
+bandit12@bandit:/tmp/c1911$ file data
+data: gzip compressed data, was "data4.bin", last modified: Tue Oct 16 12:00:23 2018, max compression, from Unix
+# 还有没有解压的文件，继续
+bandit12@bandit:/tmp/c1911$ mv data data.gz
+bandit12@bandit:/tmp/c1911$ gzip -d data.gz
+bandit12@bandit:/tmp/c1911$ file data
+data: POSIX tar archive (GNU)
+bandit12@bandit:/tmp/c1911$ mv data data.tar
+bandit12@bandit:/tmp/c1911$ tar xvf data.tar
+data5.bin
+
+bandit12@bandit:/tmp/c1911$ file data5.bin
+data5.bin: POSIX tar archive (GNU)
+bandit12@bandit:/tmp/c1911$ mv data5.bin data5.tar
+bandit12@bandit:/tmp/c1911$ tar xvf data5.tar
+data6.bin
+
+bandit12@bandit:/tmp/c1911$ file data6
+data6: cannot open `data6' (No such file or directory)
+bandit12@bandit:/tmp/c1911$ file data6.bin
+data6.bin: bzip2 compressed data, block size = 900k
+bandit12@bandit:/tmp/c1911$ bunzip2 -d data6.bin
+bunzip2: Can't guess original name for data6.bin -- using data6.bin.out
+bandit12@bandit:/tmp/c1911$ file data6.bin.out
+data6.bin.out: POSIX tar archive (GNU)
+bandit12@bandit:/tmp/c1911$ mv data6.bin.out data.tar
+bandit12@bandit:/tmp/c1911$ tar xvf data.tar
+data8.bin
+
+bandit12@bandit:/tmp/c1911$ file data8.bin
+data8.bin: gzip compressed data, was "data9.bin", last modified: Tue Oct 16 12:00:23 2018, max compression, from Unix
+bandit12@bandit:/tmp/c1911$ mv data8.bin data8.gz
+bandit12@bandit:/tmp/c1911$ gzip -d data8.gz
+bandit12@bandit:/tmp/c1911$ ls
+data5.tar  data8  data.tar  data.txt
+bandit12@bandit:/tmp/c1911$ cat data8
+The password is 8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL
+
+
 
 $ zcat file.bin | file -
 /dev/stdin: bzip2 compressed data, block size = 900k
@@ -505,7 +572,6 @@ Level Goal
 ```py
 1.
 $ openssl s_client -ign_eof -connect localhost:30001
-...
 ...
 Extended master secret: yes
 ---
