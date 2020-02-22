@@ -1,0 +1,176 @@
+# C++
+
+[tov]
+
+# C++
+
+## C++
+一种中级语言，它是由 Bjarne Stroustrup 于 1979 年在贝尔实验室开始设计开发的。C++ 进一步扩充和完善了 C 语言，是一种面向对象的程序设计语言。C++ 可运行于多种平台上，如 Windows、MAC 操作系统以及 UNIX 的各种版本。
+
+### 面向对象程序设计
+C++ 完全支持面向对象的程序设计，包括面向对象开发的四大特性：
+- 封装
+- 抽象
+- 继承
+- 多态
+
+### 标准库
+标准的 C++ 由三个重要部分组成：
+- `核心语言` : 提供了所有构件块，包括变量、数据类型和常量，等等。
+- `C++ 标准库` : 提供了大量的函数，用于操作文件、字符串等。
+- `标准模板库（STL）`: 提供了大量的方法，用于操作数据结构等。
+
+
+## C++ 环境设置
+### 本地环境设置
+如果您想要设置 C++ 语言环境，您需要确保电脑上有以下两款可用的软件，文本编辑器和 C++ 编译器。
+
+### 文本编辑器
+- 用于输入您的程序。
+- 文本编辑器包括 Windows Notepad、OS Edit command、Brief、Epsilon、EMACS 和 vim/vi。
+  - Notepad 通常用于 Windows 操作系统上
+  - vim/vi 可用于 Windows 和 Linux/UNIX 操作系统上。
+
+通过编辑器创建的文件通常称为源文件，源文件包含程序源代码。C++ 程序的源文件通常使用扩展名 `.cpp`、`.cp` 或 `.c`。
+
+
+### C++ 编译器
+写在源文件中的源代码是人类可读的源。它需要"编译"，转为机器语言，这样 CPU 可以按给定指令执行程序。
+
+C++ 编译器用于把源代码编译成最终的可执行程序。
+
+大多数的 C++ 编译器并不在乎源文件的扩展名，但是如果您未指定扩展名，则默认使用 `.cpp`。
+
+最常用的免费可用的编译器是 GNU 的 C/C++ 编译器，如果您使用的是 HP 或 Solaris，则可以使用各自操作系统上的编译器。
+
+安装 GNU 的 C/C++ 编译器。
+- 这里同时提到 C/C++，主要是因为 GNU 的 gcc 编译器适合于 C 和 C++ 编程语言。
+
+#### 安装 GNU 的 C/C++ 编译器
+UNIX/Linux 上的安装
+- 检查您的系统上是否安装了 GCC: `$ g++ -v`
+- 如果您的计算机上已经安装了 GNU 编译器，则会显示如下消息：
+```
+Using built-in specs.
+Target: i386-redhat-linux
+Configured with: ../configure --prefix=/usr .......
+Thread model: posix
+gcc version 4.1.2 20080704 (Red Hat 4.1.2-46)
+```
+
+使用 Visual Studio (Graphical Interface) 编译
+1. 选择 C++ File 然后设置文件名为 main.cpp，然后点击 Add：
+2. 拷贝以下代码到 main.cpp 中：
+```
+#include <iostream>
+int main()
+{
+    std::cout << "Hello World!\n";
+    return 0;
+}
+```
+3. 点击菜单上的 Debug -> Start Without Debugging (或按下 ctrl + F5) :
+4. 完成以上操作后，你可以看到以下输出
+
+#### g++ 应用说明
+程序 g++ 是将 gcc 默认语言设为 C++ 的一个特殊的版本，链接时它自动使用 C++ 标准库而不用 C 标准库。
+
+```py
+- 通过遵循源码的命名规范并指定对应库的名字，用 gcc 来编译链接 C++ 程序是可行的，如下例所示：
+$ gcc main.cpp -lstdc++ -o main
+
+- 一个保存在文件 helloworld.cpp 中的 C++ 程序的代码：
+#include <iostream>
+using namespace std;
+int main()
+{
+    cout << "Hello, world!" << endl;
+    return 0;
+}
+
+# .cpp文件放在桌面
+$ cd Desktop
+# 最简单的编译方式
+$ g++ helloworld.cpp
+- 未指定exe文件名，默认 a.out。
+
+# 运行程序
+$ ./a.out
+Hello, world!
+
+- 使用 -o 选项指定可执行程序的文件名
+$ g++ helloworld.cpp -o helloworld
+$ ./helloworld
+Hello, world!
+
+
+- 多个 C++ 代码文件，runoob1.cpp、runoob2.cpp 生成一个 runoob 可执行文件。
+$ g++ runoob1.cpp runoob2.cpp -o runoob
+
+- g++ 有些系统默认是使用 C++98，我们可以指定使用 C++11 来编译 main.cpp 文件：
+$ g++ -g -Wall -std=c++11 main.cpp
+```
+
+g++ 常用命令选项
+选项	            | 解释
+---|---
+-ansi	           | 只支持 ANSI 标准的 C 语法。这一选项将禁止 GNU C 的某些特色， 例如 asm 或 typeof 关键词。
+-c	             | 只编译并生成目标文件。
+-DMACRO	         | 以字符串"1"定义 MACRO 宏。
+-DMACRO=DEFN	   | 以字符串"DEFN"定义 MACRO 宏。
+-E	             | 只运行 C 预编译器。
+-g	             | 生成调试信息。GNU 调试器可利用该信息。
+-IDIRECTORY	     | 指定额外的头文件搜索路径DIRECTORY。
+-LDIRECTORY	     | 指定额外的函数库搜索路径DIRECTORY。
+-lLIBRARY	       | 连接时搜索指定的函数库LIBRARY。
+-m486	           | 针对 486 进行代码优化。
+-o	             | FILE 生成指定的输出文件。用在生成可执行文件时。
+-O0	             | 不进行优化处理。
+-O	             | 或 -O1 优化生成代码。
+-O2	             | 进一步优化。
+-O3	             | 比 -O2 更进一步优化，包括 inline 函数。
+-shared	         | 生成共享目标文件。通常用在建立共享库时。
+-static	         | 禁止使用共享连接。
+-UMACRO	         | 取消对 MACRO 宏的定义。
+-w	             | 不生成任何警告信息。
+-Wall	           | 生成所有警告信息。
+
+
+#### mac cpp
+1. xcode > new project
+2. macos > command line tool
+3. choose options for your project:
+  - Product Name
+  - Language选择C++
+4. main.cpp
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.
