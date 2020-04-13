@@ -31,7 +31,7 @@ Specialization | Course Name |  Mark |
 :cyclone: | :cyclone: | :cyclone:
 **Python** | |
 Python 3 Programming | [COURSE 1 Python Basics](https://www.coursera.org/learn/python-basics?specialization=python-3-programming) | :heavy_check_mark:
-University of Michigan | [COURSE 2 Python Functions, Files, and Dictionaries](https://www.coursera.org/learn/python-functions-files-dictionaries?specialization=python-3-programming) | :heavy_check_mark:
+ . | [COURSE 2 Python Functions, Files, and Dictionaries](https://www.coursera.org/learn/python-functions-files-dictionaries?specialization=python-3-programming) | :heavy_check_mark:
  . | [COURSE 3 Data Collection and Processing with Python](https://www.coursera.org/learn/data-collection-processing-python?specialization=python-3-programming) | :heavy_check_mark:
  . | [COURSE 4 Python Classes and Inheritance](https://www.coursera.org/learn/python-classes-inheritance?specialization=python-3-programming) | :heavy_check_mark:
  . | [COURSE 5 Python Project: pillow, tesseract, and opencv](https://www.coursera.org/learn/python-project) 4/3 | :heavy_check_mark:
@@ -41,7 +41,7 @@ Python for Everybody | [COURSE 1 Programming for Everybody](https://www.coursera
  . | Instructor: Charles Russell Severance
 :cyclone: | :cyclone: | :cyclone:
 **Security** | |
-Computer Security and Systems Management Specialization | [COURSE 3 Linux Server Management and Security](https://www.coursera.org/learn/linux-server-management-security) 4/10-4/13|  :heavy_check_mark:
+Computer Security and Systems Management | [COURSE 3 Linux Server Management and Security](https://www.coursera.org/learn/linux-server-management-security) 4/10-4/13|  :heavy_check_mark:
 Palo Alto Networks Cybersecurity | [COURSE 1 Palo Alto Networks Academy Cybersecurity Foundation](https://www.coursera.org/learn/cybersecurity-foundation?specialization=palo-alto-networks-cybersecurity) | :pencil2:
 
 
