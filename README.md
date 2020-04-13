@@ -40,7 +40,10 @@ Python for Everybody | [COURSE 1 Programming for Everybody](https://www.coursera
  . | [COURSE 3 Using Python to Access Web Data](https://www.coursera.org/learn/python-network-data?courseSlug=python-network-data&showOnboardingModal=checkAndRedirect&specialization=python) 4/12| :pencil2:
  . | Instructor: Charles Russell Severance
 :cyclone: | :cyclone: | :cyclone:
+**Security** | |
+Computer Security and Systems Management Specialization | [COURSE 3 Linux Server Management and Security](https://www.coursera.org/learn/linux-server-management-security) 4/10-4/13|  :heavy_check_mark:
 Palo Alto Networks Cybersecurity | [COURSE 1 Palo Alto Networks Academy Cybersecurity Foundation](https://www.coursera.org/learn/cybersecurity-foundation?specialization=palo-alto-networks-cybersecurity) | :pencil2:
+
 
 
 
