@@ -43,8 +43,9 @@ Python for Everybody | [COURSE 1 Programming for Everybody](https://www.coursera
 **Security** | |
 Computer Security and Systems Management | [COURSE 3 Linux Server Management and Security](https://www.coursera.org/learn/linux-server-management-security) 4/10-4/13|  :heavy_check_mark:
 Palo Alto Networks Cybersecurity | [COURSE 1 Palo Alto Networks Academy Cybersecurity Foundation](https://www.coursera.org/learn/cybersecurity-foundation?specialization=palo-alto-networks-cybersecurity) | :pencil2:
-
-
+:cyclone: | :cyclone: | :cyclone:
+**pluralsight** | |
+Linux Foundation Certified Engineer (LFCE) Path | [LFCE: Advanced Linux Networking](https://app.pluralsight.com/library/courses/linux-networking-advanced-lfce/table-of-contents) | :pencil2:
 
 
 

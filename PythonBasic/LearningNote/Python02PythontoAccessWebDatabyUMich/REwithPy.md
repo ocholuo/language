@@ -128,7 +128,24 @@
 
 ```
 
+## assignment
 
+```py
+
+# find the number match this style
+'X-DSPAM-Confidence: 0.8937'
+
+import re
+
+hand=open("file.txt")
+
+for line in hand:
+    line=line.strip()
+    stuff=re.findall('^X-DSPAM-Confidence: 0.[0-9]+', line)
+
+
+
+```
 
 
 
