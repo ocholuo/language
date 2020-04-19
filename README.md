@@ -45,13 +45,12 @@ Computer Security and Systems Management | [COURSE 3 Linux Server Management and
 Palo Alto Networks Cybersecurity | [COURSE 1 Palo Alto Networks Academy Cybersecurity Foundation](https://www.coursera.org/learn/cybersecurity-foundation?specialization=palo-alto-networks-cybersecurity) | :pencil2:
 :cyclone: | :cyclone: | :cyclone:
 **pluralsight** | |
-Linux Foundation Certified Engineer (LFCE) Path | [LFCE: Advanced Linux Networking](https://app.pluralsight.com/library/courses/linux-networking-advanced-lfce/table-of-contents) | :pencil2:
+Linux Foundation Certified Engineer (LFCE) | [LFCE: Advanced Linux Networking](https://app.pluralsight.com/library/courses/linux-networking-advanced-lfce/table-of-contents) 4/18 | :heavy_check_mark:
+. | [LFCE: Advanced Network and System Administration](https://app.pluralsight.com/course-player?clipId=6f88f6c6-bea4-405e-b4c1-7bf38255c33c) | :pencil2:
 
 
 
 Google IT Support Professional Certificate
-
-
 
 Technical Support Fundamentals
 
