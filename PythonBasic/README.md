@@ -25,13 +25,41 @@ Index | Name | Date | Course material
 
 
 
+```py
+
+# a list of numbers from 0 to 67:
+for i in range(68)
+
+# return values
+list.sort()  =None
+sorted(list) =list
+
+
+# seperate
+inventory = ["shoes, 12, 29.99", "shirts, 20, 9.99", "sweatpants, 25, 15.00", "scarves, 13, 7.75"]
+for item in inventory:
+    a=item.split(", ")
+    name=a[0]
+    num=a[1]
+    price=a[2]
+    print("The store has {} {}, each for {} USD.".format(num,name,price))
 
 
 
+def get_related_titles(lst):
+    titlelst=[]
+    for name in lst:
+        [titlelst.append(name) for name in extract_movie_titles(get_movies_from_tastedive(name)) if name not in titlelst]
+    return titlelst
 
 
+sum = lambda arg1, arg2: arg1 + arg2
+print ("sum= ", sum( 10, 20 ))
+sum=30
+
+together= lambda num,abc,x=" ":x.join([str(num),abc])
 
 
-
+```
 
 .

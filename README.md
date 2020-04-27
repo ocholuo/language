@@ -47,6 +47,7 @@ Palo Alto Networks Cybersecurity | [COURSE 1 Palo Alto Networks Academy Cybersec
 **pluralsight** | |
 Linux Foundation Certified Engineer (LFCE) | [LFCE: Advanced Linux Networking](https://app.pluralsight.com/library/courses/linux-networking-advanced-lfce/table-of-contents) 4/18 | :heavy_check_mark:
 . | [LFCE: Advanced Network and System Administration](https://app.pluralsight.com/course-player?clipId=6f88f6c6-bea4-405e-b4c1-7bf38255c33c) | :pencil2:
+ . | Instructor: Anthony Nocentino
 
 
 
