@@ -155,6 +155,8 @@ Z9tkRkWmpt9Qr7XrR5jWRkgOU901swEZ
 “HTTP Referrer”.
 - set up firefox and brup
 - making sure our proxy is set up for localhost @ 127.0.0.1.
+- set up network settings to allow Firefox to use localhost proxy. Menu > Preferences > Advanced > Network > Connection Settings > `Manual proxy configuration: HTTP Proxy: 127.0.0.1 Port:8080`
+
 
 ```py
 "Access disallowed. You are visiting from "" while authorized users should come only from "http://natas5.natas.labs.overthewire.org/""
