@@ -140,20 +140,126 @@ print(ord('h'))
 
 ## network scrape
 
+beautifulsoup webcrawler
+1. run it install in python: `pip install beautifulsoup4`
+2. download and unzip it in the same file with py file.
 
+```py
 
+import urllib.request, urllib.parse, urllib.error
+import ssl
+from bs4 import BeautifulSoup
 
+ctx = ssl.create_default_context()   # for https
+ctx.check_hostname = False
+ctx.verify_mode = ssl.CERT_NONE
 
+url = input('Enter - ')  #http://www.dr-chuck.com/
+html = urllib.request.urlopen(url, context=ctx).read() # return entire website in a single string
+soup = BeautifulSoup(html, 'html.parser')
 
+# retrieve all of the anchor tags
+tags = soup('a')
+for tag in tags:
+    print(tag.get('href', None))
 
+# result
+Enter - http://www.dr-chuck.com/
+https://www.dr-chuck.com/csev-blog/
+https://www.si.umich.edu/
+https://www.ratemyprofessors.com/ShowRatings.jsp?tid=1159280
+https://www.dr-chuck.com/csev-blog/
+https://www.twitter.com/drchuck/
+https://www.dr-chuck.com/dr-chuck/resume/speaking.htm
+https://www.slideshare.net/csev
+/dr-chuck/resume/index.htm
+https://amzn.to/1K5Q81K
+```
 
+---
 
+## data on the web
 
+`python dictionary` ->serialize-> `XML` <-De-Serialize<- `JavaHashMap`
 
+`XML`: extensible markup language
+- element / nodes:
+    - attribute node
+    - text area node
+- XML as Path:
+    - /a/b X
+    - /a/c Y
 
+XML Validation
+- XML documnet
+- XML schema contract
 
+XML file:
 
+```xml
+<people>                     // complex element
+    <person>                 // complex element
+        <name>Chuch</name>   // simple element
+        <phone>1122</phone>
+    </person>
+    <person>
+        <name>beh</name>
+        <phone>3344</phone>
+        <email hide='yes'/> 
+    </person>
+</people>
 
+```
 
+XML schema contract: 
+```xml
+<xs:complexType name="person">
+    <xs:sequence>
+        <xs:element name="name" type="xs:string"/>
+        <xs:element name="phone" type="xs:integar"/>
+ </xs:sequence>
+</xs:complexType>
+```
 
+use python
+
+```py
+import xml.etree.ElementTree as ET
+
+data = '''
+<person>
+    <name>Chusck</name>
+    <Phone>1122</phone>
+    <email hide='yes'/>
+
+    <users>
+        <user x="2">
+            <id>1</id>
+            <name>hhed</name>
+        </user>
+        <user x="7">
+            <id>2</id>
+            <name>rree</name>
+        </user>
+    </users>
+
+</person>'''
+
+# make the tree
+tree = ET.fromstring(data)
+print('Name:', tree.find('name').text)  # .text item under the name
+print('Attr:', tree.find('email').get('hide'))  # Yes
+
+lst=tree.findall('users/user')  # result is a list
+print(lst)
+print('User account:', len(lst))
+for item in lst:
+    print('Name:', item.find('name').text)  
+
+# result
+# [<Element 'user' at 0x1035b1fb0>, <Element 'user' at 0x1035ce170>]
+# User account: 2
+# Name: hhed
+# Name: rree
+```
 

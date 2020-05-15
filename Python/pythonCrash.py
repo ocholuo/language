@@ -1,7 +1,9 @@
 
 
+
 ############### String ###############
 str.count( sub, start= 0, end=len(string) )
+
 
 ############### List ###############
 1.	list.append(obj): 在列表末尾添加新的对象
@@ -15,6 +17,24 @@ str.count( sub, start= 0, end=len(string) )
 9.	list.sort( key=None, reverse=False): 对原列表进行排序
 10.	list.clear(): 清空列表
 11.	list.copy(): 复制列表
+
+# a list of numbers from 0 to 67:
+for i in range(68)
+
+# return values
+list.sort()  =None
+sorted(list) =list
+
+# seperate
+inventory = ["shoes, 12, 29.99", "shirts, 20, 9.99", "sweatpants, 25, 15.00", "scarves, 13, 7.75"]
+for item in inventory:
+    a=item.split(", ")
+    name=a[0]
+    num=a[1]
+    price=a[2]
+    print("The store has {} {}, each for {} USD.".format(num,name,price))
+
+
 
 ############### dictonary mechanics ###############
 sports = {'baseball': 9, 'basketball': 4, 'soccer': 4, 'cricket': 2}
@@ -102,10 +122,24 @@ def strip_punctuation(string):   # move the punctuation
 
 
 
+
 ############### lambda ###############
 mult = lambda int,x=6:int*x
 greeting = lambda name, greeting="Hello ", excl="!": greeting + name + excl
 
+
+def get_related_titles(lst):
+    titlelst=[]
+    for name in lst:
+        [titlelst.append(name) for name in extract_movie_titles(get_movies_from_tastedive(name)) if name not in titlelst]
+    return titlelst
+
+
+sum = lambda arg1, arg2: arg1 + arg2
+print ("sum= ", sum( 10, 20 ))
+sum=30
+
+together= lambda num,abc,x=" ":x.join([str(num),abc])
 
 
 ############### RegularExpression ###############
