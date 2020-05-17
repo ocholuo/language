@@ -25,39 +25,48 @@ Name | Solutions | Mark |
 ---
 
 
+## official doc
+
+[The Python Tutorial](https://docs.python.org/3/tutorial/)
+
+
 ## Coursera finished:
 
-[Coursera Specialization] `Python 3 Programming` |  Mark |
+[Coursera Specialization] |  Mark |
 | :------------- | :------------- |
+**`Python 3 Programming`** |
 [COURSE 1 Python Basics](https://www.coursera.org/learn/python-basics?specialization=python-3-programming) | :heavy_check_mark:
 [COURSE 2 Python Functions, Files, and Dictionaries](https://www.coursera.org/learn/python-functions-files-dictionaries?specialization=python-3-programming) | :heavy_check_mark:
 [COURSE 3 Data Collection and Processing with Python](https://www.coursera.org/learn/data-collection-processing-python?specialization=python-3-programming) | :heavy_check_mark:
 [COURSE 4 Python Classes and Inheritance](https://www.coursera.org/learn/python-classes-inheritance?specialization=python-3-programming) | :heavy_check_mark:
 [COURSE 5 Python Project: pillow, tesseract, and opencv](https://www.coursera.org/learn/python-project) 4/3 | :heavy_check_mark:
-**[Coursera Specialization] `Python for Everybody`** |
+**`Python for Everybody`** |
 [COURSE 1 Programming for Everybody](https://www.coursera.org/learn/python?specialization=python) | :heavy_check_mark:
 [COURSE 2 Python Data Structures](https://www.coursera.org/learn/python-data?courseSlug=python-data&showOnboardingModal=checkAndRedirect&specialization=python) | :heavy_check_mark:
 [COURSE 3 Using Python to Access Web Data](https://www.coursera.org/learn/python-network-data?courseSlug=python-network-data&showOnboardingModal=checkAndRedirect&specialization=python) 4/12| :pencil2:
-**[Coursera Specialization] `Computer Security and Systems Management`** |
+**`Computer Security and Systems Management`** |
 [COURSE 3 Linux Server Management and Security](https://www.coursera.org/learn/linux-server-management-security) 4/10-4/13|  :heavy_check_mark:
-**[Coursera Specialization] `Palo Alto Networks Cybersecurity`** |
+**`Palo Alto Networks Cybersecurity`** |
 [COURSE 1 Palo Alto Networks Academy Cybersecurity Foundation](https://www.coursera.org/learn/cybersecurity-foundation?specialization=palo-alto-networks-cybersecurity) | :pencil2:
-**[Coursera Specialization] `Web Design for Everybody: Basics of Web Development & Coding`** |
-[COURSE 1 Introduction to HTML5](https://www.coursera.org/learn/html?specialization=web-design) | :pencil2:
+**`Web Design for Everybody: Basics of Web Development & Coding`** |
+[COURSE 1 Introduction to HTML5](https://www.coursera.org/learn/html?specialization=web-design) | :heavy_check_mark:
+[COURSE 3 Interactivity with JavaScript](https://www.coursera.org/learn/javascript?specialization=web-design) | :heavy_check_mark:
+**[Coursera] [Michigan](https://www.coursera.org/umich)** |
+**[Coursera] [Duke](https://www.coursera.org/duke)** |
+
+
+**[pluralsight]** | Mark
 | :------------- | :------------- |
-**[pluralsight] `LFCE (Linux Foundation Certified Engineer) Path`** |
+**`LFCE (Linux Foundation Certified Engineer) Path`** |
 [LFCE: Advanced Linux Networking](https://app.pluralsight.com/library/courses/linux-networking-advanced-lfce/table-of-contents) 4/18 | :heavy_check_mark:
 [LFCE: Advanced Network and System Administration](https://app.pluralsight.com/course-player?clipId=6f88f6c6-bea4-405e-b4c1-7bf38255c33c) | :heavy_check_mark:
 [LFCE: Network and Host Security](https://app.pluralsight.com/player?course=security-network-host-lfce&author=anthony-nocentino&name=security-network-host-lfce-m0&clip=0) | :pencil2:
-**[pluralsight] `CISSP (Certified Information Systems Security Professional) Path`** |
+**`CISSP (Certified Information Systems Security Professional) Path`** |
 [Physical Security](https://app.pluralsight.com/library/courses/physical-security/table-of-contents) 5/1 | :heavy_check_mark:
-**[pluralsight] `Web Application Penetration Testing Path`** |
+**`Web Application Penetration Testing Path`** |
 [1. Web Application Penetration Testing Fundamentals](https://app.pluralsight.com/player?course=web-app-pentesting-fundamentals&author=mike-woolard&name=web-app-pentesting-fundamentals-m0&clip=0) 5/9 | :pencil2:
-**[Casual]** |
+**other** |
 [Business Dashboard Fundamentals](https://app.pluralsight.com/library/courses/business-dashboard-fundamentals/table-of-contents) 5/3 | :heavy_check_mark:
-| :------------- | :------------- |
-**[Coursera Specialization] `Fundamentals of Computer Network Security`** :warning: |
-[1. Design and Analyze Secure Networked Systems](https://www.coursera.org/learn/design-secure-networked-systems) |
 
 Specialization | Course Name |  Mark |
 ---|---|---
@@ -65,6 +74,14 @@ Specialization | Course Name |  Mark |
 AWS Certified Cloud Practitioner | [AWS Academy Cloud Foundations]() 5/6 | :heavy_check_mark:
 **APP** | |
 Tableau | [Training Videos](https://www.tableau.com/learn/training/20201) 5/3 | :pencil2:
+
+
+
+course less recommand | Mark
+| :------------- | :------------- |
+**[Coursera] `Fundamentals of Computer Network Security`** |
+[1. Design and Analyze Secure Networked Systems](https://www.coursera.org/learn/design-secure-networked-systems) | :warning:
+
 
 
 Network Security & Database Vulnerabilities https://www.coursera.org/learn/network-security-database-vulnerabilities
