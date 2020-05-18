@@ -24,3 +24,6 @@ Index | Name | Date | Course material
 
 ---
 
+Data Structure | [Arrays 101]()
+
+
