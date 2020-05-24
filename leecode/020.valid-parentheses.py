@@ -42,17 +42,10 @@ class Solution:
             if i in ['(',')','{','}','[',']']:
                 newstr+=i
         while '()' in newstr or '{}' in newstr or '[]' in newstr:
-            #print(newstr)
-            newstr=newstr.replace('()','')
-            #print(newstr)
-            newstr=newstr.replace('{}','')
-            #print(newstr)
-            newstr=newstr.replace('[]','')
-        print(newstr)
-        if newstr =='':
-            return 1
-        return 0
-
+            newstr=newstr.replace('()','').replace('{}','').replace('[]','')
+        return newstr ==''
+# Runtime: 40 ms, faster than 17.44% of Python3 online submissions for Valid Parentheses.
+# Memory Usage: 13.7 MB, less than 6.09% of Python3 online submissions for Valid Parentheses.
 
 
 class Solution:
@@ -60,17 +53,22 @@ class Solution:
         while '()' in s or '{}' in s or '[]' in s:
             s=s.replace('()','').replace('{}','').replace('[]','')
         return s ==''
-# Runtime: 44 ms, faster than 13.11% of Python3 online submissions for Valid Parentheses.
-# Memory Usage: 14.1 MB, less than 5.22% of Python3 online submissions for Valid Parentheses.
+# Runtime: 80 ms, faster than 6.27% of Python3 online submissions for Valid Parentheses.
+# Memory Usage: 14 MB, less than 5.22% of Python3 online submissions for Valid Parentheses.
 
 
-class Solution(object):
+class Solution:
     def isValid(self, s):
-        s="([)]"  # should be false
-        bracket_map = {"(":")", "[":"]",  "{":"}"}
-        open_par = ["(", "[", "{"]
+        bracket_map = {"(": ")", "[": "]",  "{": "}"}
+        open_par = set(["(", "[", "{"])
+        stack = []
         for i in s:
-            if i in open_par:
-                closech = bracket_map[i]
-                s=s.replace(i, '').replace(closech, '')
-        return 1 if s=='' else 0
+            if i in open_par:                             # 放入开始的符号
+                stack.append(i)
+            elif stack and i == bracket_map[stack[-1]]:   # 若是闭合 但是前面有此开合
+                stack.pop()
+            else:
+                return False
+        return stack == []
+# Runtime: 32 ms, faster than 46.59% of Python3 online submissions for Valid Parentheses.
+# Memory Usage: 13.8 MB, less than 5.22% of Python3 online submissions for Valid Parentheses.

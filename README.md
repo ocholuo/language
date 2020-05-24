@@ -60,7 +60,8 @@ Name | Solutions | Mark |
 **`LFCE (Linux Foundation Certified Engineer) Path`** |
 [LFCE: Advanced Linux Networking](https://app.pluralsight.com/library/courses/linux-networking-advanced-lfce/table-of-contents) 4/18 | :heavy_check_mark:
 [LFCE: Advanced Network and System Administration](https://app.pluralsight.com/course-player?clipId=6f88f6c6-bea4-405e-b4c1-7bf38255c33c) | :heavy_check_mark:
-[LFCE: Network and Host Security](https://app.pluralsight.com/player?course=security-network-host-lfce&author=anthony-nocentino&name=security-network-host-lfce-m0&clip=0) | :pencil2:
+[LFCE: Network and Host Security](https://app.pluralsight.com/player?course=security-network-host-lfce&author=anthony-nocentino&name=security-network-host-lfce-m0&clip=0) | :heavy_check_mark:
+[LFCE: Linux Service Management - HTTP Services](https://app.pluralsight.com/library/courses/linux-http-services-administration/table-of-contents) | :pencil2:
 **`CISSP (Certified Information Systems Security Professional) Path`** |
 [Physical Security](https://app.pluralsight.com/library/courses/physical-security/table-of-contents) 5/1 | :heavy_check_mark:
 **`Web Application Penetration Testing Path`** |

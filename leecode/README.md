@@ -15,4 +15,4 @@ https://leetcode.com/problemset/top-100-liked-questions/?difficulty=Easy
 |-----| ----- | ----- | -------- | --------------------- |
 | 001 | Easy  | [Two Sum](https://leetcode.com/problems/two-sum/) | 阅过放入dic，在看结果是否已在dic仲
 | 007 | Easy  | [Reverse Integer][https://leetcode.com/problems/reverse-integer/] ｜ str[::-1]*-1
-| 020 | Easy  | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | 
+| 020 | Easy  | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | 扣除开闭和符号:1.成组的replace 2.组成dic，放入新list，成pair就扣除
