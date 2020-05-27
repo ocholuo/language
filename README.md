@@ -62,6 +62,8 @@ Name | Solutions | Mark |
 [LFCE: Advanced Network and System Administration](https://app.pluralsight.com/course-player?clipId=6f88f6c6-bea4-405e-b4c1-7bf38255c33c) | :heavy_check_mark:
 [LFCE: Network and Host Security](https://app.pluralsight.com/player?course=security-network-host-lfce&author=anthony-nocentino&name=security-network-host-lfce-m0&clip=0) | :heavy_check_mark:
 [LFCE: Linux Service Management - HTTP Services](https://app.pluralsight.com/library/courses/linux-http-services-administration/table-of-contents) 5/24 | :heavy_check_mark:
+[LFCE: Linux Service Management - Advanced HTTP Services](https://app.pluralsight.com/player?course=https-advanced-services-linux-lfce&author=anthony-nocentino&name=5fcf9867-8ecc-42f3-af73-00a287ae7728&clip=0&mode=live) | :heavy_check_mark:
+[LFCE: Linux Service Management - Advanced Email Services](https://app.pluralsight.com/library/courses/linux-service-management-advanced-email-services/table-of-contents) | :pencil2:
 **`CISSP (Certified Information Systems Security Professional) Path`** |
 [Physical Security](https://app.pluralsight.com/library/courses/physical-security/table-of-contents) 5/1 | :heavy_check_mark:
 **`Web Application Penetration Testing Path`** |
@@ -77,15 +79,26 @@ AWS Certified Cloud Practitioner | [AWS Academy Cloud Foundations]() 5/6 | :heav
 Tableau | [Training Videos](https://www.tableau.com/learn/training/20201) 5/3 | :pencil2:
 
 
-
 course less recommand | Mark
 | :------------- | :------------- |
 **[Coursera] `Fundamentals of Computer Network Security`** |
 [1. Design and Analyze Secure Networked Systems](https://www.coursera.org/learn/design-secure-networked-systems) | :warning:
 
 
-
 Network Security & Database Vulnerabilities https://www.coursera.org/learn/network-security-database-vulnerabilities
+
+
+## pending
+
+
+[Coursera Specialization] |  Mark |
+| :------------- | :------------- |
+[Getting Started with AWS Machine Learning](https://www.coursera.org/learn/aws-machine-learning?edocomorp=cloud-technology-free-courses&ranMID=40328&ranEAID=SAyYsTvLiGQ&ranSiteID=SAyYsTvLiGQ-PGabNbN8S6jTghHFFXdf3w&siteID=SAyYsTvLiGQ-PGabNbN8S6jTghHFFXdf3w&utm_content=10&utm_medium=partners&utm_source=linkshare&utm_campaign=SAyYsTvLiGQ) |
+[Google Cloud Platform Fundamentals for AWS Professionals](https://www.coursera.org/learn/gcp-fundamentals-aws?edocomorp=cloud-technology-free-courses&ranMID=40328&ranEAID=SAyYsTvLiGQ&ranSiteID=SAyYsTvLiGQ-F.z0VIYeKtN5Gi0Lxvlh8w&siteID=SAyYsTvLiGQ-F.z0VIYeKtN5Gi0Lxvlh8w&utm_content=10&utm_medium=partners&utm_source=linkshare&utm_campaign=SAyYsTvLiGQ) |
+[Build Your First Android App (Project-Centered Course)](https://www.coursera.org/learn/android-app?edocomorp=free-courses-college-students&ranMID=40328&ranEAID=SAyYsTvLiGQ&ranSiteID=SAyYsTvLiGQ-3_6ELfVQtT1DPiposvj.Vw&siteID=SAyYsTvLiGQ-3_6ELfVQtT1DPiposvj.Vw&utm_content=10&utm_medium=partners&utm_source=linkshare&utm_campaign=SAyYsTvLiGQ) |
+[AWS Computer Vision: Getting Started with GluonCV](https://www.coursera.org/learn/aws-computer-vision-gluoncv?edocomorp=cloud-technology-free-courses&ranMID=40328&ranEAID=SAyYsTvLiGQ&ranSiteID=SAyYsTvLiGQ-t2liqsGREqcUGXGTf8cSlQ&siteID=SAyYsTvLiGQ-t2liqsGREqcUGXGTf8cSlQ&utm_content=10&utm_medium=partners&utm_source=linkshare&utm_campaign=SAyYsTvLiGQ) |
+[Industrial IoT on Google Cloud Platform](https://www.coursera.org/learn/iiot-google-cloud-platform?edocomorp=cloud-technology-free-courses&ranMID=40328&ranEAID=SAyYsTvLiGQ&ranSiteID=SAyYsTvLiGQ-VwnGMabqmzrsWWZS5dtNcg&siteID=SAyYsTvLiGQ-VwnGMabqmzrsWWZS5dtNcg&utm_content=10&utm_medium=partners&utm_source=linkshare&utm_campaign=SAyYsTvLiGQ) |
+[Building Conversational Experiences with Dialogflow](https://www.coursera.org/learn/conversational-experiences-dialogflow?edocomorp=cloud-technology-free-courses&ranMID=40328&ranEAID=SAyYsTvLiGQ&ranSiteID=SAyYsTvLiGQ-_zONXfDZpaK7j3tNekCZSg&siteID=SAyYsTvLiGQ-_zONXfDZpaK7j3tNekCZSg&utm_content=10&utm_medium=partners&utm_source=linkshare&utm_campaign=SAyYsTvLiGQ) |
 
 
 ---
