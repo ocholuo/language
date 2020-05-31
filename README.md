@@ -15,12 +15,16 @@ sleepy....
 
 ---
 
-## IT game map:
+## Lab map:
 Name | Solutions | Mark |
 ---|---|---
 [Overthewire_bandit](https://overthewire.org/wargames/bandit/) | [Solutions](https://github.com/ocholuo/language/blob/master/codegame/Overthewire_bandit(Fin).md) | :heavy_check_mark:
 [TRAFFIC ANALYSIS EXERCISE](http://malware-traffic-analysis.net/training-exercises.html) | [Solutions](https://github.com/ocholuo/language/blob/master/codegame/TrafficAnalysisExe.md) | :pencil2:
-
+[premiumexam](https://premiumexam.com/) | <img src="https://i.imgur.com/6JAb2Cm.png" width="400">
+[NDG Online Courses & Labs](https://www.netdevgroup.com/online/courses/cybersecurity#courses) | <img src="https://i.imgur.com/0sDYnaC.png" width="400">
+[vmware HOL online](https://www.vmwarelearningplatform.com/HOL/catalogs/catalog/1212) | <img src="https://i.imgur.com/cuyokhD.png" width="400">
+[junosgenius](https://cloud.contentraven.com/junosgenius/index) | <img src="https://i.imgur.com/mioBe1G.png" width="400">
+[cisco](https://devnetsandbox.cisco.com/RM/Topology) | <img src="https://i.imgur.com/fni2hlX.png" width="400">
 
 ---
 
@@ -87,6 +91,11 @@ course less recommand | Mark
 
 Network Security & Database Vulnerabilities https://www.coursera.org/learn/network-security-database-vulnerabilities
 
+## lab
+Lab | Mark
+| :------------- | :------------- |
+[PAN8 Cybersecurity Essentials](https://portal.netdevgroup.com/learn/pan8-ce-pilot/wb79h483WM) | :pencil2:
+[PAN8 Cybersecurity Gateway](https://portal.netdevgroup.com/learn/pan8-cg-pilot/aiuWjM6CWr/) | :pencil2:
 
 ## pending
 
@@ -99,6 +108,17 @@ Network Security & Database Vulnerabilities https://www.coursera.org/learn/netwo
 [AWS Computer Vision: Getting Started with GluonCV](https://www.coursera.org/learn/aws-computer-vision-gluoncv?edocomorp=cloud-technology-free-courses&ranMID=40328&ranEAID=SAyYsTvLiGQ&ranSiteID=SAyYsTvLiGQ-t2liqsGREqcUGXGTf8cSlQ&siteID=SAyYsTvLiGQ-t2liqsGREqcUGXGTf8cSlQ&utm_content=10&utm_medium=partners&utm_source=linkshare&utm_campaign=SAyYsTvLiGQ) |
 [Industrial IoT on Google Cloud Platform](https://www.coursera.org/learn/iiot-google-cloud-platform?edocomorp=cloud-technology-free-courses&ranMID=40328&ranEAID=SAyYsTvLiGQ&ranSiteID=SAyYsTvLiGQ-VwnGMabqmzrsWWZS5dtNcg&siteID=SAyYsTvLiGQ-VwnGMabqmzrsWWZS5dtNcg&utm_content=10&utm_medium=partners&utm_source=linkshare&utm_campaign=SAyYsTvLiGQ) |
 [Building Conversational Experiences with Dialogflow](https://www.coursera.org/learn/conversational-experiences-dialogflow?edocomorp=cloud-technology-free-courses&ranMID=40328&ranEAID=SAyYsTvLiGQ&ranSiteID=SAyYsTvLiGQ-_zONXfDZpaK7j3tNekCZSg&siteID=SAyYsTvLiGQ-_zONXfDZpaK7j3tNekCZSg&utm_content=10&utm_medium=partners&utm_source=linkshare&utm_campaign=SAyYsTvLiGQ) |
+
+
+some website:
+name | .
+---|---
+[cybrary.it](https://www.cybrary.it/catalog/career-path/cyber-security-engineer/syllabus/) | <img src="https://i.imgur.com/QVLEnK3.png" width="400">
+
+
+
+![Screen Shot 2020-05-27 at 22.27.13](https://i.imgur.com/4eHR24I.png)
+
 
 
 ---
