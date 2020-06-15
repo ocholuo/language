@@ -16,18 +16,40 @@ sleepy....
 ---
 
 ## Lab map:
-Name | Solutions | Mark |
+Name | S | Mark |
 ---|---|---
-[Overthewire_bandit](https://overthewire.org/wargames/bandit/) | [Solutions](https://github.com/ocholuo/language/blob/master/codegame/Overthewire_bandit(Fin).md) | :heavy_check_mark:
-[TRAFFIC ANALYSIS EXERCISE](http://malware-traffic-analysis.net/training-exercises.html) | [Solutions](https://github.com/ocholuo/language/blob/master/codegame/TrafficAnalysisExe.md) | :pencil2:
-[premiumexam](https://premiumexam.com/) | <img src="https://i.imgur.com/6JAb2Cm.png" width="400">
-[NDG Online Courses & Labs](https://www.netdevgroup.com/online/courses/cybersecurity#courses) | <img src="https://i.imgur.com/0sDYnaC.png" width="400">
-[vmware HOL online](https://www.vmwarelearningplatform.com/HOL/catalogs/catalog/1212) | <img src="https://i.imgur.com/cuyokhD.png" width="400">
-[junosgenius](https://cloud.contentraven.com/junosgenius/index) | <img src="https://i.imgur.com/mioBe1G.png" width="400">
-[cisco](https://devnetsandbox.cisco.com/RM/Topology) | <img src="https://i.imgur.com/fni2hlX.png" width="400">
+[PAN8 Cybersecurity Essentials](https://portal.netdevgroup.com/learn/pan8-ce-pilot/wb79h483WM) |  | :heavy_check_mark:
+[PAN8 Cybersecurity Gateway](https://portal.netdevgroup.com/learn/pan8-cg-pilot/aiuWjM6CWr/) |  | :pencil2:
+[Overthewire_bandit](https://overthewire.org/wargames/bandit/) | [S](https://github.com/ocholuo/language/blob/master/codegame/Overthewire_bandit(Fin).md) | :heavy_check_mark:
+[TRAFFIC ANALYSIS EXERCISE](http://malware-traffic-analysis.net/training-exercises.html) | [S](https://github.com/ocholuo/language/blob/master/codegame/TrafficAnalysisExe.md) | :pencil2:
+[premiumexam](https://premiumexam.com/) <img src="https://i.imgur.com/6JAb2Cm.png" width="400"> |
+[NDG Online Courses & Labs](https://www.netdevgroup.com/online/courses/cybersecurity#courses) <img src="https://i.imgur.com/0sDYnaC.png" width="400"> |
+[vmware HOL online](https://www.vmwarelearningplatform.com/HOL/catalogs/catalog/1212) <img src="https://i.imgur.com/cuyokhD.png" width="400"> |
+[junosgenius](https://cloud.contentraven.com/junosgenius/index) <img src="https://i.imgur.com/mioBe1G.png" width="400"> |
+[cisco](https://devnetsandbox.cisco.com/RM/Topology) <img src="https://i.imgur.com/fni2hlX.png" width="400"> |
+
+
+
+## link
+
+Link | goal
+---|---
+:star:[aws educate](https://www.awseducate.com/signin/SiteLogin) | <img src="https://i.imgur.com/1b0Eksu.png" width="200">
+:star:[aws academy](https://awsacademy.instructure.com/courses/69/pages/webinar-q-and-a) | <img src="https://i.imgur.com/7UEa24X.png" width="200">
+:star:[aws training](https://www.aws.training/SignIn) | <img src="https://i.imgur.com/2L8TU8S.png" width="200">
+
 
 ---
 
+
+**AWS Certificate** | Mark
+| :------------- | :------------- |
+`AWS Cloud Practitioner (CLF-C01)` |
+[AWS-ACFv2EN-Interns](https://awsacademy.instructure.com/courses/69) 5/6 | :heavy_check_mark:
+[linux academy](https://linuxacademy.com/cp/modules/view/id/376) 6/14| :heavy_check_mark:
+[Udemy](https://www.udemy.com/program/aws-certified-cloud-practitioner/learn/1360446/quiz/4857986/result/330028531#announcements) 6/15| :heavy_check_mark:
+
+---
 
 ## official doc
 
@@ -55,8 +77,8 @@ Name | Solutions | Mark |
 **`Web Design for Everybody: Basics of Web Development & Coding`** |
 [COURSE 1 Introduction to HTML5](https://www.coursera.org/learn/html?specialization=web-design) | :heavy_check_mark:
 [COURSE 3 Interactivity with JavaScript](https://www.coursera.org/learn/javascript?specialization=web-design) | :heavy_check_mark:
-**[Coursera] [Michigan](https://www.coursera.org/umich)** |
-**[Coursera] [Duke](https://www.coursera.org/duke)** |
+**[CourseraLink] [Michigan](https://www.coursera.org/umich)** |
+**[CourseraLink] [Duke](https://www.coursera.org/duke)** |
 
 
 **[pluralsight]** | Mark
@@ -72,16 +94,26 @@ Name | Solutions | Mark |
 [Physical Security](https://app.pluralsight.com/library/courses/physical-security/table-of-contents) 5/1 | :heavy_check_mark:
 **`Web Application Penetration Testing Path`** |
 [1. Web Application Penetration Testing Fundamentals](https://app.pluralsight.com/player?course=web-app-pentesting-fundamentals&author=mike-woolard&name=web-app-pentesting-fundamentals-m0&clip=0) 5/9 | :pencil2:
-**other** |
+
+
+**[linux academy]** | Mark
+| :------------- | :------------- |
+`Security Analyst - Entry Level` |
+[CompTIA Linux+ XK0-004 Certification Exam](https://linuxacademy.com/cp/modules/view/id/331) 6/6| :pencil2:
+
+---
+
+
+**other** | Mark
+---|---
 [Business Dashboard Fundamentals](https://app.pluralsight.com/library/courses/business-dashboard-fundamentals/table-of-contents) 5/3 | :heavy_check_mark:
 
 Specialization | Course Name |  Mark |
 ---|---|---
-**ACFv2EN-Interns** | |
-AWS Certified Cloud Practitioner | [AWS Academy Cloud Foundations]() 5/6 | :heavy_check_mark:
 **APP** | |
 Tableau | [Training Videos](https://www.tableau.com/learn/training/20201) 5/3 | :pencil2:
 
+---
 
 course less recommand | Mark
 | :------------- | :------------- |
@@ -91,11 +123,8 @@ course less recommand | Mark
 
 Network Security & Database Vulnerabilities https://www.coursera.org/learn/network-security-database-vulnerabilities
 
-## lab
-Lab | Mark
-| :------------- | :------------- |
-[PAN8 Cybersecurity Essentials](https://portal.netdevgroup.com/learn/pan8-ce-pilot/wb79h483WM) | :pencil2:
-[PAN8 Cybersecurity Gateway](https://portal.netdevgroup.com/learn/pan8-cg-pilot/aiuWjM6CWr/) | :pencil2:
+---
+
 
 ## pending
 
@@ -256,7 +285,14 @@ In Progress
 
 
 
+```
+Last login: Mon Jun  1 23:05:09 on ttys001
 
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+
+```
 
 
 
