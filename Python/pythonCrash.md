@@ -152,6 +152,7 @@ fname = lambda arguments: value
 
 
 mult = lambda int,x=6: int*x
+
 greeting = lambda name, greeting="Hello ", excl="!": greeting + name + excl
 
 

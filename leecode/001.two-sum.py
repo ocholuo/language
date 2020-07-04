@@ -24,7 +24,7 @@ class Solution(object):
 # Memory Usage: 14.1 MB, less than 5.13% of Python online submissions for Two Sum.
 
 
-class Solution(object):
+class Solution(object):  
     def twoSum(self, nums, target):
         h = {}
         for index, value in enumerate(nums):  # index, nums_value
