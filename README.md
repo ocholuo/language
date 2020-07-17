@@ -25,6 +25,7 @@ sleepy....
 [linux academy](https://linuxacademy.com/cp/modules/view/id/376) 6/14| :heavy_check_mark:
 [Udemy](https://www.udemy.com/program/aws-certified-cloud-practitioner/learn/1360446/quiz/4857986/result/330028531#announcements) 6/15| :heavy_check_mark:
 
+
 ---
 
 ## official doc
@@ -79,6 +80,23 @@ sleepy....
 `Security Analyst - Entry Level` |
 [CompTIA Linux+ XK0-004 Certification Exam](https://linuxacademy.com/cp/modules/view/id/331) 6/6| :pencil2:
 [Python 3 Scripting for System Administrators](https://linuxacademy.com/cp/modules/view/id/168) 7/1| :pencil2:
+
+
+
+**[Alexa]** | Mark
+| :------------- | :------------- |
+`acloud` | ---
+[all](https://learn.acloud.guru/search?query=alexa&page=1) | :pencil2:
+[Introduction to Alexa](https://learn.acloud.guru/course/intro-alexa-free/dashboard) | :pencil2: soso
+`qwiklabs` | ---
+[all](https://run.qwiklabs.com/catalog?keywords=alexa&locale=&cloud%5B%5D=any&format%5B%5D=any&level%5B%5D=any&duration%5B%5D=any&modality%5B%5D=any&language%5B%5D=any)| :pencil2:
+[linuxacademy](https://app.linuxacademy.com/search?query=alexa) | :pencil2:
+`AWS internal` | ---
+[knet--Alexa OE101](https://knet.csod.com/LMS/LoDetails/DetailsLo.aspx?loid=fc4f2400-66f4-4132-9183-439204619c1b&query=%3Fs%3D1%26q%3Dalexa&back_key=1&isCompletionRedirect=true&loStatus=16&regnum=1#t=1) | :heavy_check_mark:
+[kiku-AWS internal](https://kiku.aws.training/Details/Curriculum?id=25534) | :pencil2:
+[kiku-AWS internal](https://kiku.aws.training/Details/eLearning?id=34489) | :pencil2:
+[AWSacademy-ExamReadiness:AWS Certified Alexa Skill Builder-Specialty ](https://kiku.aws.training/Details/eLearning?id=34489) | :pencil2:
+
 ---
 
 
