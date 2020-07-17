@@ -81,7 +81,7 @@ sleepy....
 [CompTIA Linux+ XK0-004 Certification Exam](https://linuxacademy.com/cp/modules/view/id/331) 6/6| :pencil2:
 [Python 3 Scripting for System Administrators](https://linuxacademy.com/cp/modules/view/id/168) 7/1| :pencil2:
 
-
+ 123
 
 **[Alexa]** | Mark
 | :------------- | :------------- |
