@@ -81,7 +81,6 @@ sleepy....
 [CompTIA Linux+ XK0-004 Certification Exam](https://linuxacademy.com/cp/modules/view/id/331) 6/6| :pencil2:
 [Python 3 Scripting for System Administrators](https://linuxacademy.com/cp/modules/view/id/168) 7/1| :pencil2:
 
- 123
 
 **[Alexa]** | Mark
 | :------------- | :------------- |
@@ -95,7 +94,7 @@ sleepy....
 [knet--Alexa OE101](https://knet.csod.com/LMS/LoDetails/DetailsLo.aspx?loid=fc4f2400-66f4-4132-9183-439204619c1b&query=%3Fs%3D1%26q%3Dalexa&back_key=1&isCompletionRedirect=true&loStatus=16&regnum=1#t=1) | :heavy_check_mark:
 [kiku-AWS internal](https://kiku.aws.training/Details/Curriculum?id=25534) | :pencil2:
 [kiku-AWS internal](https://kiku.aws.training/Details/eLearning?id=34489) | :pencil2:
-[AWSacademy-ExamReadiness:AWS Certified Alexa Skill Builder-Specialty ](https://kiku.aws.training/Details/eLearning?id=34489) | :pencil2:
+[AWSacademy-ExamReadiness:AWS Certified Alexa Skill Builder-Specialty](https://kiku.aws.training/Details/eLearning?id=34489) | :pencil2:
 
 ---
 
