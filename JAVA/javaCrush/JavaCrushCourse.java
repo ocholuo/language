@@ -1,0 +1,259 @@
+
+package JAVA.javaCrush;
+
+// import java.util.ArrayList;
+// import java.util.Arrays;
+// import java.util.HashMap;
+// import java.util.HashSet;
+// import java.util.LinkedHashMap;
+// import java.util.LinkedHashSet;
+// import java.util.LinkedList;
+// import java.util.Map;
+// import java.util.Scanner;
+// import java.util.Set;
+// import java.util.TreeMap;
+// import java.util.TreeSet;
+
+/**
+ * JavaCrushCourse
+ */
+public class JavaCrushCourse {
+
+    public static void main(String[] args) {
+        
+        // 0. array
+        // int[] arr = {1,2,3,4,5};
+        // String[] names = new String[5];
+
+        // 1. simple for loop
+        // for (int i = 0; i < arr.length; i++) {
+        //     System.out.println(arr[i]);
+        // }
+
+        
+        // 2. usual count method
+        // int count = 0;
+        // for (int element:arr) {
+        //     System.out.println(count + " " + element);
+        //     count++;
+        // }
+
+
+        // 3. use break
+        // for (int i = 0; i < names.length; i++) {
+        //     System.out.print("Input: ");
+        //     String input = sc.nextLine();
+        //     names[i] = input;
+        //     break
+        // }
+        // for (String n:names) {
+        //     System.out.println(n);
+        //     if (n.equals("tim")) {
+        //         break
+        //     }
+        // }
+
+
+
+        // 4. while: when dont know the number of times to loop
+        // Scanner sc = new Scanner(System.in);
+        // System.out.println("Type number: ");
+        // int x = sc.nextInt();
+        // int count =0
+        // while (x != 10) {
+        //     System.out.println("Type 10");
+        //     System.out.println("Type number: ");
+        //     int x = sc.nextInt();
+        //     count++;
+        // }
+        // System.out.println("you tried"+count+"times");
+
+
+        // 5. do while:
+        // Scanner sc = new Scanner(System.in);
+        // int x;     
+        // do {
+        //     System.out.println("Type number: ");
+        //     x = sc.nextInt();
+        // } while (x != 10);
+
+
+
+        // 6. set: unorder collection of unique element, fast, just want to know if it exist
+        // Set<Integer> t = new HashSet<Integer>();
+        // t.add(5);
+        // t.add(17);
+        // t.add(5);
+        // t.add(9);
+        // t.remove(9);
+        // t.clear();  // remove everything
+        // boolean y = t.contains(5);
+        // t.isEmpty();
+        // int x = t.size();
+        // System.out.println(y);
+
+
+        // 7. treeset: ordered collection of unique element
+        // Set<Integer> t2 = new TreeSet<Integer>();
+        // t2.add(5);
+        // t2.add(17);
+        // t2.add(5);
+        // t2.add(9);
+        // System.out.println(t2);
+
+
+        // 7. LinkedHashSet
+        // Set<Integer> t2 = new LinkedHashSet<Integer>();
+        // t2.add(5);
+        // t2.add(17);
+        // t2.add(5);
+        // t2.add(9);
+        // System.out.println(t2);
+
+
+        // 8. lists: 
+        // ArrayList<Integer> t = new ArrayList<Integer>();
+        // t.add(5);
+        // t.add(17);
+        // t.remove(5);
+        // t.add(7);
+        // t.add(8);
+        // t.add(6);
+        // t.add(4);
+        // t2.get(index
+        // t.get(0);
+        // t2.set(index.value);
+        // t.size();
+        // t.isEmpty();
+        // t.subList(fromIndex, toIndex)
+        // System.out.println(t.subList(1,3));
+
+
+        
+        // 8. LinkedList: 
+        // LinkedList<Integer> t = new LinkedList<Integer>();
+        // t.add(5);
+        // t.add(17);
+        // t.remove(5);
+        // t.add(7);
+        // t.add(8);
+        // t.add(6);
+        // t.add(4);
+        // t2.get(index
+        // t.get(0);
+        // t2.set(index.value);
+        // t.size();
+        // t.isEmpty();
+        // t.subList(fromIndex, toIndex)
+        // System.out.println(t.subList(1,3));
+
+
+        // 9. HashMap: unique key, no order, so fast.
+        // Map m = new HashMap();
+        // m.put("tim", 5);
+        // m.put("sd", 5);
+        // m.put(11, 5);
+        // System.out.println(m);
+        // System.out.println(m.get("tim"));
+        // {sd=5, df=5, tim=5}
+
+
+        // 10. TreeMap: key has to be same type, has order.
+        // Map m = new TreeMap();
+        // m.put("tim", 5);
+        // m.put("sd", 5);
+        // System.out.println(m);
+        // System.out.println(m.get("tim"));
+        // {sd=5, tim=5}
+
+
+        // 10. LinkedHashMap: same as input order.
+        // Map m = new LinkedHashMap();
+        // m.put("tim", 5);
+        // m.put("sd", 5);
+        // System.out.println(m);
+        // System.out.println(m.get("tim"));
+        // {tim=5, sd=5}
+        
+        
+        // 11. HashMap: unique key, no order, so fast.
+        // Map m = new HashMap();
+        // m.put("tim", 5);
+        // m.put("sd", 5);
+        // m.put("a", "b");
+        // m.clear();
+        // m.isEmpty();
+        // m.containsValue(5);
+        // m.containsKey("a");
+        // m.remove(key)
+        // System.out.println(m);
+        // System.out.println(m.get("tim"));
+        // System.out.println(m.values());
+
+
+
+        // 12. map example
+        // Map m = new HashMap();
+        // String wrds = "hello";
+        // for (char x:wrds.toCharArray()) {
+        //     if (m.containsKey(x)) {
+        //         int old = (int)m.get(x);
+        //         m.put(x, old+1);
+        //     }
+        //     else {
+        //         m.put(x, 1);
+        //     }
+        // }
+        // System.out.println(m);
+
+        
+        // 13. sort
+        // int[] x = {1,2,3,4,6,3,2,5,3,1,4,6,0};
+        // Arrays.sort(x, 3,6);
+        // for (int i:x) {
+        //     System.out.print(i+",");
+        // }
+        
+
+        // tim("Tim!!!!!", 4);
+        // System.out.println(add2(6));
+        // System.out.println(strth("bob"));
+
+
+         // 15. class
+         // create public class Dog
+         Dog tim = new Dog("tim", 4);
+         //  tim.speak();
+         tim.setAge(5);
+         //  tim.add2();  private method is not usable
+         System.out.println(tim.getAge());
+    
+
+        //  16. inherit
+
+
+
+        
+    }
+
+
+    // 14. Object
+    // void : not return anything but do something
+
+    // public static void tim() {
+    //     System.out.println("Tim!!");
+    // }
+    // public static void tim(String str, int x) {
+    //     for (int i = 0; i < x; i++) {
+    //         System.out.println(str);
+    //     }
+    // }
+    // public static int add2(int x) {
+    //     return x + 2;
+    // }
+    // public static String strth(String x) {
+    //     return "hello" + x;
+    // }
+
+
+}
