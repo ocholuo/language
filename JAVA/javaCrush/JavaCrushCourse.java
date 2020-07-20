@@ -297,10 +297,10 @@ public class JavaCrushCourse {
         // } else {
         //     System.out.println(lvl);
         // }
-        System.out.println(lvl.getLvl());
-        System.out.println(Level.valueOf("LOW"));
-        lvl.setLvl(5);
-        System.out.println(lvl.getLvl());
+        // System.out.println(lvl.getLvl());
+        // System.out.println(Level.valueOf("LOW"));
+        // lvl.setLvl(5);
+        // System.out.println(lvl.getLvl());
 
 
     }
