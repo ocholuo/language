@@ -220,20 +220,89 @@ public class JavaCrushCourse {
         // System.out.println(strth("bob"));
 
 
-         // 15. class
-         // create public class Dog
-         Dog tim = new Dog("tim", 4);
-         //  tim.speak();
-         tim.setAge(5);
-         //  tim.add2();  private method is not usable
-         System.out.println(tim.getAge());
+        // 15. class
+        // create public class Dog
+        // Dog tim = new Dog("tim", 9);
+        // Dog bill = new Dog("bill", 2);
+        // tim.speak();
+        // tim.setAge(5);
+        // tim.add2();  private method is not usable
+        // System.out.println(tim.getAge());
     
 
-        //  16. inherit
+        // 16. inherit
+        // Cat tim2 = new Cat("tim", 3, 500);
+        // Cat joe = new Cat("joe", 2);
+        // Cat bob = new Cat("bob");
+        // tim2.speak();
+        // joe.speak();
+        // bob.speak();
+        // tim2.eat(2);
+
+        // 17. static variable
+        // System.out.println(Dog.count);  // 2
+        // Dog.count = 7;
+        // System.out.println(tim.count);  // 7
+
+
+        // 18. static method
+
+
+        // 19. overloading methods & object comparisons
+        // check quality between objects.
+        // Student joe = new Student("Joe");
+        // Student bill = new Student("Bill");
+        // Student tim = new Student("Tim");
+        // System.out.println(joe.equals(bill));    // the actual object is 2 differnet object in memory.
+        // System.out.println(joe.compareTo(tim));  // compare 2 object
+        // System.out.println(tim);   // the memory location address of the object  JAVA.javaCrush.Student@36aa7bc2
+        // System.out.println(tim.toString());
 
 
 
-        
+        // 20. inner classes
+        // 2 way to access an inner class
+        // OuterClass out = new OuterClass();
+        // OuterClass.InnerClass in = out.new InnerClass();   // if is public
+        // out.inner();
+        // System.out.println();
+        // in.display();
+
+
+
+        // 21. interface
+        // Car ford = new Car();
+        // ford.speedUp(10);
+        // ford.changeGear(2);
+        // ford.display();
+        // static method
+        // int x = Vehicle.math(9);
+        // System.out.println(x);
+        // like create a Math interface with caculate
+        // then when use, just Math.yourmethod
+
+
+        // 22. enums
+        // Level lvl = Level.LOW;
+        // Level[] arr = Level.values();
+        // for (Level e:arr) {
+        //     System.out.println(e);
+        // }
+        // System.out.println(lvl.values());    // memory location
+        // String en = lvl.toString();
+        // if (lvl == Level.LOW) {
+        //     System.out.println(lvl);
+        // } else if (lvl == Level.HIGH) {
+        //     System.out.println(lvl);
+        // } else {
+        //     System.out.println(lvl);
+        // }
+        System.out.println(lvl.getLvl());
+        System.out.println(Level.valueOf("LOW"));
+        lvl.setLvl(5);
+        System.out.println(lvl.getLvl());
+
+
     }
 
 
