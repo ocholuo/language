@@ -78,6 +78,8 @@ import java.util.HashMap;
 // }
 
 
+// as only i answer, and sort by order
+
 // class Solution {
 //     public int[] twoSum(final int[] numbers, final int target) {
 //         int i = 0;
