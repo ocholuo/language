@@ -301,7 +301,7 @@ A Binary tree has maximum number of leaves (and minimum number of levels) when a
 ## Full & Complete Binary Tree
 有兩類Binary Tree十分常見，分別為Full Binary Tree以及Complete Binary Tree。
 
-1. `Perfect Binary Tree`：
+### 1. `Perfect Binary Tree`：
    - 所有internal node都有兩個subtree(child pointer)；
    - 所有leaf node具有相同的level(或相同的height)。
    - 由以上性質能夠推論出：
@@ -323,7 +323,7 @@ A Binary tree has maximum number of leaves (and minimum number of levels) when a
          15         30  
 ```
 
-2. `Full Binary Tree`：
+### 2. `Full Binary Tree`：
    - In a Full Binary Tree, number of leaf nodes is the number of internal nodes plus 1:
      - Number of leaf nodes = Number of internal nodes + 1
 ```
@@ -348,7 +348,7 @@ A Binary tree has maximum number of leaves (and minimum number of levels) when a
                  100   40
 ```
 
-3. `Complete Binary Tree`:
+### 3. `Complete Binary Tree`:
    - 若一棵樹的node按照Full Binary Tree的次序排列(由上至下，由左至右)，則稱此樹為Complete Binary Tree。
    - 圖四的樹共有10個node，且這十個node正好填滿Full Binary Tree的前十個位置，則此樹為Complete Binary Tree。
    - if all the levels are completely filled except possibly the last level and the last level has all keys as left as possible
@@ -376,10 +376,13 @@ A Binary tree has maximum number of leaves (and minimum number of levels) when a
 ![f5](https://i.imgur.com/ed7613u.png)
 
 
-4. Balanced Binary Tree
-A binary tree is balanced if the height of the tree is O(Log n) where n is the number of nodes. For Example, the AVL tree maintains O(Log n) height by making sure that the difference between the heights of the left and right subtrees is almost 1. Red-Black trees maintain O(Log n) height by making sure that the number of Black nodes on every root to leaf paths is the same and there are no adjacent red nodes. Balanced Binary Search trees are performance-wise good as they provide O(log n) time for search, insert and delete.
+### 4. Balanced Binary Tree
+A binary tree is balanced if the height of the tree is O(Log n) where n is the number of nodes.
+- For Example, the AVL tree maintains `O(Log n)` height by making sure that the difference between the heights of the left and right subtrees is almost 1.
+- Red-Black trees maintain O(Log n) height by making sure that the number of Black nodes on every root to leaf paths is the same and there are no adjacent red nodes.
+- performance-wise good: woest: O(log n) time for search, insert and delete.
 
-5. `degenerate / pathological tree`
+### 5. `degenerate / pathological tree`
    - A Tree where every internal node has one child. Such trees are performance-wise same as linked list.
 ```
       10
@@ -391,8 +394,700 @@ A binary tree is balanced if the height of the tree is O(Log n) where n is the n
       40     
 ```
 
+---
+
+## Binary Tree Traversal
+
+### preorder traversal `V-L-R`
+
+![Screen Shot 2020-07-23 at 01.29.46](https://i.imgur.com/bDWOafI.png)
+
+### inorder traversal `L-V-R`
+
+![Screen Shot 2020-07-23 at 01.33.45](https://i.imgur.com/q4wCoVb.png)
+
+
+### postorder traversal `L-R-V`
+
+
 
 ---
+
+# Binary Search Tree code (depth-first)
+
+## Binary Search Tree Search
+
+```java
+
+public class BSTSearch {
+
+    public Node search(Node root, int key) {
+        if (root.data == null) { return null;}
+        if (root.data == key) { return root;}
+        else if (root.data > key) {
+            search(root.left, key);
+        }
+        else {
+            search(root.right, key);
+        }
+    }
+
+    public static void main(String args[]){
+
+        BinaryTree bt = new BinaryTree();
+        Node root = null;
+        root = bt.addNode(10, root);
+        root = bt.addNode(20, root);
+        root = bt.addNode(-10, root);
+        root = bt.addNode(15, root);
+        root = bt.addNode(0, root);
+        root = bt.addNode(21, root);
+        root = bt.addNode(-1, root);
+
+        BSTSearch bstSearch = new BSTSearch();
+
+        Node result = bstSearch.search(root, 21);
+        assert result.data == 21;
+
+        result = bstSearch.search(root, -1);
+        assert result.data == 21;
+
+        result = bstSearch.search(root, 11);
+        assert result == null;
+    }
+}
+
+```
+
+---
+
+## Binary Search Tree Insertion (Iterative method)
+
+worst: O(n)
+
+```Java
+
+public class BinaryTree{
+
+    public Node insert(Node root, int data){
+        Node node = new Node(data);
+        if (root == null) {
+            return node;
+        }        
+        Node parent = null;
+        Node current = root;
+        while (root != null) {
+            parent = root;
+            if (root.data < data) {
+                root = root.right;
+            }
+            else {
+                root = root.left;
+            }
+        }
+        if (parent.data < data) {
+            parent.right = data;
+        }
+        else {
+            parent.left = data;
+        }
+        return parent;
+
+        // if (root.data < key && root.next == null) {
+        //     root.left.data == key
+        // }
+        // if (root.data > key && root.next == null) {
+        //     root.left.data == key
+        // }
+        // if (root.next != null) {
+        //     root = root.next;
+        //     bstInsert(Node root.next, int key);
+        // }
+    }
+}
+```
+
+---
+
+
+
+## Iterative `preOrder Traversal V-L-R` of Binary Tree
+
+![Screen Shot 2020-07-24 at 14.39.24](https://i.imgur.com/8V6IjcI.png)
+
+```java
+public class TreeTraversals {
+
+    public void preOrder(Node root){
+        if(root == null){return;}
+        System.out.print(root.data + " ");
+        preOrder(root.left);
+        preOrder(root.right);
+    }
+
+    public void preOrderItr(Node root){
+        Deque<Node> stack = new LinkedList<Node>();
+        stack.addFirst(root);
+        while(!stack.isEmpty()){
+            root = stack.pollFirst();
+            System.out.print(root.data + " ");
+
+            if(root.right != null){
+                stack.addFirst(root.right);
+            }
+            if(root.left!= null){
+                stack.addFirst(root.left);
+            }
+        }
+    }
+}
+```
+
+---
+
+
+## Iterative `Inorder Traversal L-V-R` of Binary Tree
+
+O(n)
+
+![Screen Shot 2020-07-25 at 00.40.01](https://i.imgur.com/ReKolwj.png)
+
+```java
+public class TreeTraversals {
+
+    public void inOrder(Node root){
+        if(root == null){return;}
+        inOrder(root.left);
+        System.out.print(root.data + " ");
+        inOrder(root.right);
+    }
+
+    public void inorderItr(Node root){
+        if (root==null) return;
+        Stack<Node> s = new Stack<Node>();
+        while (true) {
+            if (root != null) {
+                s.push(root);
+                root=root.left;
+            }
+            else {
+                if (s.isEmpty()) {
+                    break;
+                }
+                root=s.pop();
+                System.out.print(root);
+                root = root.right;
+            }
+        }
+    }
+
+
+
+    public void inorderItr(Node root){
+        Stack stack = new Stack();
+        stack.push(root);
+
+        if (root.left == null) {
+            return stack.pop(root);
+        }
+        if (root.left != null) {
+            return inorderItr(root.left);
+            stack.pop(root)
+            stack.pop(root.right)
+        }
+    }
+
+
+
+
+    // public void inorderItr(Node root){
+    //     Deque<Node> stack = new LinkedList<Node>();
+    //     Node node = root;
+    //     while(true){
+    //         if(node != null){
+    //             stack.addFirst(node);
+    //             node = node.left;
+    //         }
+    //         else{
+    //             if(stack.isEmpty()){
+    //                 break;
+    //             }
+    //             node = stack.pollFirst();
+    //             System.out.println(node.data);
+    //             node = node.right;
+    //         }
+    //     }
+    // }
+}
+```
+
+---
+
+## Iterative `Postorder Traversal L-R-V` of Binary Tree
+
+![Screen Shot 2020-07-24 at 13.57.34](https://i.imgur.com/EpqGSIW.png)
+
+![Screen Shot 2020-07-24 at 14.00.03](https://i.imgur.com/fNYgO5h.png)
+
+
+```java
+public class TreeTraversals {
+
+    public void postOrder(Node root){
+        if(root == null){return;}
+        postOrder(root.left);
+        postOrder(root.right);
+        System.out.print(root.data + " ");
+    }
+
+    // 1.
+    public void iterPostOrder(Node root){
+        if (root==null) {return;}
+        Stack<Node> s1 = new Stack<Node>();
+        Stack<Node> s2 = new Stack<Node>();
+        s1.push(root);
+        while (!s1.isEmpty()){
+            root=s1.pop();
+            s2.push(root);
+            if (root.left != null) {
+                s1.push(root.left);
+            }
+            if (root.right != null) {
+                s1.push(root.right);
+            }
+        }
+        while (!s2.isEmpty()){
+            root=s2.pop();
+            System.out.println(root.data)
+        }
+    }
+
+    // 2.
+    public void postOrderItr(Node root){
+        Deque<Node> stack1 = new LinkedList<Node>();
+        Deque<Node> stack2 = new LinkedList<Node>();
+        stack1.addFirst(root);
+        while(!stack1.isEmpty()){
+            root = stack1.pollFirst();
+            if(root.left != null){
+                stack1.addFirst(root.left);
+            }
+            if(root.right != null){
+                stack1.addFirst(root.right);
+            }
+            stack2.addFirst(root);
+        }
+        while(!stack2.isEmpty()){
+            System.out.print(stack2.pollFirst().data + " ");
+        }
+    }
+
+    public void postOrderItrOneStack(Node root){
+        Node current = root;
+        Deque<Node> stack = new LinkedList<>();
+        while(current != null || !stack.isEmpty()){
+            if(current != null){
+                stack.addFirst(current);
+                current = current.left;
+            }else{
+                Node temp = stack.peek().right;
+                if (temp == null) {
+                    temp = stack.poll();
+                    System.out.print(temp.data + " ");
+                    while (!stack.isEmpty() && temp == stack.peek().right) {
+                        temp = stack.poll();
+                        System.out.print(temp.data + " ");
+                    }
+                } else {
+                    current = temp;
+                }
+            }
+        }
+    }
+}
+```
+
+
+
+---
+
+## Check Same Binary Tree
+
+![Screen Shot 2020-07-24 at 11.27.26](https://i.imgur.com/dcOA8T4.png)
+time O(n)
+
+```java
+public class SameTree {
+
+    public boolean sameTree(Node root1, Node root2){
+        if(root1 == null && root2 == null){
+            return true;
+        }
+        if(root1 == null || root2 == null){
+            return false;
+        }
+        return root1.data == root2.data &&
+                sameTree(root1.left, root2.left) &&
+                sameTree(root1.right, root2.right);
+    }
+
+    public static void main(String args[]){
+        BinaryTree bt = new BinaryTree();
+        Node root1 = null;
+        root1 = bt.addNode(10, root1);
+        root1 = bt.addNode(20, root1);
+        root1 = bt.addNode(15, root1);
+        root1 = bt.addNode(2, root1);
+
+        Node root2 = null;
+        root2 = bt.addNode(10, root2);
+        root2 = bt.addNode(20, root2);
+        root2 = bt.addNode(15, root2);
+        root2 = bt.addNode(2, root2);
+
+        SameTree st = new SameTree();
+        assert st.sameTree(root1, root2);
+   }
+}
+```
+
+
+---
+
+## Size Of Binary Tree `node numebr`
+
+![Screen Shot 2020-07-24 at 13.30.14](https://i.imgur.com/mbLl3ws.png)
+
+```java
+public class SizeOfBinaryTree {
+
+    public int size(Node root){
+        if(root == null){
+            return 0;
+        }
+        return size(root.left) + size(root.right) + 1;
+    }
+
+    public static void main(String args[]){
+
+        BinaryTree bt = new BinaryTree();
+        Node head = null;
+        head = bt.addNode(10, head);
+        head = bt.addNode(15, head);
+        head = bt.addNode(5, head);
+        head = bt.addNode(7, head);
+        head = bt.addNode(19, head);
+        head = bt.addNode(20, head);
+        head = bt.addNode(-1, head);
+
+        SizeOfBinaryTree sbt = new SizeOfBinaryTree();
+        System.out.println(sbt.size(head));
+    }
+}
+```
+
+---
+
+
+## Height Of Binary Tree
+
+time & space: O(n)
+
+![Screen Shot 2020-07-24 at 13.29.49](https://i.imgur.com/WrgJy8X.png)
+
+```java
+public class SameTree {
+
+    public int height(Node root){
+        if(root == null){
+            return 0;
+        }
+        int leftHeight  = height(root.left);
+        int rightHeight = height(root.right);
+        return Math.max(leftHeight, rightHeight) + 1;
+    }
+
+    // public int height(Node root){
+    //     if(root.left == null && root.right == null) {
+    //         return 1;
+    //     }
+    //     else {
+    //         return 0;
+    //     }
+    //     return 1 + height(root.right) + height(root.left)
+    // }
+}
+
+```
+
+---
+
+## Root To Leaf Sum Binary Tree
+
+![Screen Shot 2020-07-24 at 13.29.20](https://i.imgur.com/ezvZIHd.png)
+
+```java
+public class Root {
+
+    public boolean RootToLeaf(Node root, int sum, list<Integer result>) {
+
+        if (root == null) {return false;}
+        if (root.left == null && root.right == null) {
+            if (root.data == sum) {
+                result.add(root.data);
+                return true;
+            }
+            else {return false;}
+        }
+
+        if (RootToLeaf(Node root.left, int sum-root.data, list<Integer result>)) {
+            result.add(root.data);
+            return true;
+        }
+        else {return false;}
+
+        if (RootToLeaf(Node root.right, int sum-root.data, list<Integer result>)) {
+            result.add(root.data);
+            return true;
+        }
+        else {return false;}     
+        return false;   
+    }
+}
+```
+
+---
+
+## Check if Binary Tree is Binary Search Tree
+
+![Screen Shot 2020-07-24 at 13.34.44](https://i.imgur.com/8uaDJ2C.png)
+
+```java
+public class Root {
+
+    public boolean isBST(Node root, int min, int max) {
+        if (root == null) {return true;}
+        if (root.data < min || root.data > max) {return false;}
+        return isBST(root.left, min, root.data) && isBST(root, root.data, max)
+    }
+}
+```
+
+---
+
+# Binary Search Tree code (Level Order -> queue)
+
+![Screen Shot 2020-07-24 at 13.44.59](https://i.imgur.com/f5M3oF1.png)
+
+time: O(n)
+space: the size of the tree, O(n)
+
+---
+
+## Level Order Traversal (in one line)
+
+![Screen Shot 2020-07-24 at 13.53.38](https://i.imgur.com/nd0fEXX.png)
+
+```java
+public class LevelOrderTraversal {
+
+    public void levelOrder(Node root){
+
+        if(root == null){
+            System.out.println("Please enter a valid tree!");
+            return;
+        }
+
+        Queue<Node> queue = new LinkedList<Node>();
+        queue.offer(root);
+
+        while(queue.size() > 0){
+            root = queue.poll();
+            System.out.print(root.data + " ");
+
+            if(root.left != null){
+                queue.add(root.left);
+            }
+            if(root.right != null){
+                queue.add(root.right);
+            }
+        }
+    }
+
+    public static void main(String args[]){
+        LevelOrderTraversal loi = new LevelOrderTraversal();
+        BinaryTree bt = new BinaryTree();
+        Node head = null;
+        head = bt.addNode(10, head);
+        head = bt.addNode(15, head);
+        head = bt.addNode(5, head);
+        head = bt.addNode(7, head);
+        head = bt.addNode(19, head);
+        head = bt.addNode(20, head);
+        head = bt.addNode(-1, head);
+        loi.levelOrder(head);
+    }
+}
+```
+
+---
+
+## Level by Level Printing (in different line)
+
+1. use 2 quesues
+
+![Screen Shot 2020-07-25 at 00.49.14](https://i.imgur.com/eeISHog.png)
+
+```java
+
+void levelByLevelTwoQueue(Node root) {
+    if (root==null) return;
+    Queue<Node> q1 = new Queue<Node>();
+    Queue<Node> q2 = new Queue<Node>();
+    q1.add(root);
+    while ( !q1.isEmpty() || !q2.isEmpty() ) {
+        while (!q1.isEmpty()) {
+            root=q1.pull();
+            System.out.print(root);
+            if (root.left != null) {q2.add(root.left);}
+            if (root.right != null) {q2.add(root.right);}
+        }
+        System.out.println();
+        while (!q2.isEmpty()) {
+            root=q2.pull();
+            System.out.print(root);
+            if (root.left != null) {q1.add(root.left);}
+            if (root.right != null) {q1.add(root.right);}
+        }
+        System.out.println();
+    }
+}
+```
+
+2. use 1 queue
+
+![Screen Shot 2020-07-25 at 00.52.36](https://i.imgur.com/YvovZpO.png)
+
+```java
+void levelByLevelOneQueueUsingDelimiter(Node root) {
+    if (root==null) return;
+    Queue<Node> q = new Queue<Node>();
+    q.add(root);
+    while (!q.isEmpty()) {
+        root=q.poll();
+        if (root==null) {
+            System.out.println();
+            break
+        }
+        if (root != null) {
+            System.out.print(root.data + " ");
+            if (root.left != null) {
+                q.add(root.left);
+            }
+            if (root.left != null) {
+                q.add(root.left);
+            }
+        }
+        q.add(null);
+    }
+}
+
+public void levelByLevelOneQueueUsingDelimiter(Node root) {
+    if (root == null) {
+        return;
+    }
+    Queue<Node> q = new LinkedList<Node>();
+    q.offer(root);
+    q.offer(null);
+    while (!q.isEmpty()) {
+        root = q.poll();
+        if (root != null) {
+            System.out.print(root.data + " ");
+            if (root.left != null) {
+                q.offer(root.left);
+            }
+            if (root.right != null) {
+                q.offer(root.right);
+            }
+        } else {
+            if (!q.isEmpty()) {
+                System.out.println();
+                q.offer(null);
+            }
+        }
+    }
+}
+```
+
+3. 1 queue & 2 conter
+
+![Screen Shot 2020-07-25 at 01.41.49](https://i.imgur.com/kcl3RcP.png)
+
+![Screen Shot 2020-07-25 at 00.57.11](https://i.imgur.com/pl4FPNv.png)
+
+```java
+public void levelByLevelOneQueueUsingCount(Node root) {
+    if (root == null) return;
+
+    Queue<Node> q = new LinkedList<Node>();
+    int levelCount = 1;
+    int currentCount = 0;
+    int current = 0;
+
+    q.add(root);
+
+    while (!q.isEmpty()) {
+        while (levelCount > 0) {
+            current = q.poll();
+            if (current.left != null) {
+                q.add(root.left);
+                currentCount++;
+            }
+            if (current.right != null) {
+                q.add(root.right);
+                currentCount++;
+            }
+            System.out.print(current.data + " ");
+            levelCount--;
+        }
+        System.out.println();
+        levelCount = currentCount;
+        currentCount = 0;
+    }
+
+}
+```
+
+---
+
+## `Reverse` level order traversal binary tree
+
+![Screen Shot 2020-07-25 at 01.55.58](https://i.imgur.com/UJFL9fn.png)
+
+```java
+public void reverseLevelOrderTraversal(Node root) {
+    if (root=null) return;
+    Stack<Node> s = new Stack<Node>();
+    Queue<Node> q = new Queue<Node>();
+    q.add(root);
+    while(!q.isEmpty()){
+        current = q.poll();
+        if (current.right != null) {
+            q.add(root.right);
+        }
+        if (current.left != null) {
+            q.add(root.left);
+        }
+        s.push(current)
+    }
+    while(!s.isEmpty()){
+        System.out.print(s.pop().data + " ");
+    }
+}
+```
+
+---
+
 
 # Handshaking Lemma and Interesting Tree Properties ??
 
@@ -480,11 +1175,89 @@ For example for n = 3, there are 5 * 3! = 5*6 = 30 different labeled trees
 
 ![binary-tree-insertion](https://i.imgur.com/xjtBYaX.png)
 
+```java
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class GFG {
+
+	/* A binary tree node has key, pointer to
+	left child and a pointer to right child */
+	static class Node {
+		int key;
+		Node left, right;
+
+		// constructor
+		Node(int key) {
+			this.key = key;
+			left = null;
+			right = null;
+		}
+  }
+
+	static Node root;
+	static Node temp = root;
+
+	/* Inorder traversal of a binary tree*/
+	static void inorder(Node temp) {
+		if (temp == null)
+			return;
+		inorder(temp.left);
+		System.out.print(temp.key+" ");
+		inorder(temp.right);
+	}
+
+	/*function to insert element in binary tree */
+	static void insert(Node temp, int key) {
+		Queue<Node> q = new LinkedList<Node>();
+		q.add(temp);
+
+		// Do level order traversal until we find
+		// an empty place.
+		while (!q.isEmpty()) {
+			temp = q.peek();
+			q.remove();
+
+			if (temp.left == null) {
+				temp.left = new Node(key);
+				break;
+			} else
+				q.add(temp.left);
+
+			if (temp.right == null) {
+				temp.right = new Node(key);
+				break;
+			} else
+				q.add(temp.right);
+		}
+	}
+
+	// Driver code
+	public static void main(String args[])
+	{
+		root = new Node(10);
+		root.left = new Node(11);
+		root.left.left = new Node(7);
+		root.right = new Node(9);
+		root.right.left = new Node(15);
+		root.right.right = new Node(8);
+
+		System.out.print( "Inorder traversal before insertion:");
+		inorder(root);
+
+		int key = 12;
+		insert(root, key);
+
+		System.out.print("\nInorder traversal after insertion:");
+		inorder(root);
+	}
+}
+```
 
 
 
 
-
+---
 
 Deletion in a Binary Tree
 BFS vs DFS for Binary Tree

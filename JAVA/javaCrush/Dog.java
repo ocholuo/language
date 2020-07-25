@@ -52,12 +52,12 @@ public class Dog {
     }
 
 
-    private int add2() {
-        return this.age + 2;
-    }
+    // private int add2() {
+    //     return this.age + 2;
+    // }
 
-    private void notouch() {
-        // private: no other class or package able to use it, but this class
-    }
+    // private void notouch() {
+    //     // private: no other class or package able to use it, but this class
+    // }
 }
 
