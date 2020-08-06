@@ -20,11 +20,15 @@ sleepy....
 
 **AWS Certificate** | Mark
 | :------------- | :------------- |
-:star:`AWS Cloud Practitioner (CLF-C01)` :star:|
-[AWS-ACFv2EN-Interns](https://awsacademy.instructure.com/courses/69) 5/6 | :heavy_check_mark:
-[linux academy](https://linuxacademy.com/cp/modules/view/id/376) 6/14| :heavy_check_mark:
-[Udemy](https://www.udemy.com/program/aws-certified-cloud-practitioner/learn/1360446/quiz/4857986/result/330028531#announcements) 6/15| :heavy_check_mark:
-
+:star:`AWS Cloud Practitioner (CLF-C01)` :star:| :rabbit:
+[AWS-ACFv2EN-Interns](https://awsacademy.instructure.com/courses/69) - AWS Academy Cloud Foundations [Amazon Interns] 5/6 | :heavy_check_mark:
+[AWSTraining](https://www.aws.training/Details/Curriculum?id=27076) - AWS Cloud Practitioner Essentials (Second Edition) | :heavy_check_mark:
+[LinuxAcademy](https://linuxacademy.com/cp/modules/view/id/376) - AWS Cloud Practitioner (CLF-C01) 6/14| :heavy_check_mark:
+[Udemy](https://www.udemy.com/course/aws-certified-cloud-practitioner/) - AWS Certified Cloud Practitioner 2020 '300Q' 6/15| :heavy_check_mark:
+:star:`AWS Certified Solutions Architect – Associate` :star:| :rabbit:
+[AWS-ACFv2EN-Interns](https://awsacademy.instructure.com/courses/374) - AWS Academy Cloud Architecting [Amazon Interns] 7.24 | :heavy_check_mark:
+[AWSTraining](https://www.aws.training/Details/Curriculum?id=20685) - Exam Readiness: AWS Certified Solutions Architect – Associate (Digital) 7.25 | :heavy_check_mark:
+[LinuxAcademy](https://linuxacademy.com/cp/modules/view/id/341) - AWS Certified Solutions Architect - Associate Level 6/14| :pencil2:
 
 ---
 
