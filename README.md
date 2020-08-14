@@ -20,22 +20,29 @@ sleepy....
 
 **AWS Certificate** | Mark
 | :------------- | :------------- |
-:star:`AWS Cloud Practitioner (CLF-C01)` :star:| :rabbit:
+:star: `AWS Cloud Practitioner (CLF-C01)` :star:| :rabbit:
 [AWS-ACFv2EN-Interns](https://awsacademy.instructure.com/courses/69) - AWS Academy Cloud Foundations [Amazon Interns] 5/6 | :heavy_check_mark:
 [AWSTraining](https://www.aws.training/Details/Curriculum?id=27076) - AWS Cloud Practitioner Essentials (Second Edition) | :heavy_check_mark:
 [LinuxAcademy](https://linuxacademy.com/cp/modules/view/id/376) - AWS Cloud Practitioner (CLF-C01) 6/14| :heavy_check_mark:
 [Udemy](https://www.udemy.com/course/aws-certified-cloud-practitioner/) - AWS Certified Cloud Practitioner 2020 '300Q' 6/15| :heavy_check_mark:
-:star:`AWS Certified Solutions Architect – Associate` :star:| :rabbit:
+:star: `AWS Certified Solutions Architect – Associate` :star:| :rabbit:
 [AWS-ACFv2EN-Interns](https://awsacademy.instructure.com/courses/374) - AWS Academy Cloud Architecting [Amazon Interns] 7.24 | :heavy_check_mark:
 [AWSTraining](https://www.aws.training/Details/Curriculum?id=20685) - Exam Readiness: AWS Certified Solutions Architect – Associate (Digital) 7.25 | :heavy_check_mark:
 [LinuxAcademy](https://linuxacademy.com/cp/modules/view/id/341) - AWS Certified Solutions Architect - Associate Level 6/14| :pencil2:
 
+
 ---
 
-## official doc
+## doc
 
-[The Python Tutorial](https://docs.python.org/3/tutorial/)
+**official doc** | Link
+---|---
+Python | [The Python Tutorial](https://docs.python.org/3/tutorial/) |
+**AWSCerSheet** | Link
+AWS | [1](https://github.com/alozano-77/AWS-SAA-C02-Course/blob/master/README.md)
 
+
+---
 
 ## Coursera finished:
 
@@ -61,6 +68,7 @@ sleepy....
 **[CourseraLink] [Michigan](https://www.coursera.org/umich)** |
 **[CourseraLink] [Duke](https://www.coursera.org/duke)** |
 
+<br>
 
 **[pluralsight]** | Mark
 | :------------- | :------------- |
@@ -76,6 +84,7 @@ sleepy....
 **`Web Application Penetration Testing Path`** |
 [1. Web Application Penetration Testing Fundamentals](https://app.pluralsight.com/player?course=web-app-pentesting-fundamentals&author=mike-woolard&name=web-app-pentesting-fundamentals-m0&clip=0) 5/9 | :pencil2:
 
+<br>
 
 **[linux academy]** | Mark
 | :------------- | :------------- |
@@ -85,6 +94,7 @@ sleepy....
 [CompTIA Linux+ XK0-004 Certification Exam](https://linuxacademy.com/cp/modules/view/id/331) 6/6| :pencil2:
 [Python 3 Scripting for System Administrators](https://linuxacademy.com/cp/modules/view/id/168) 7/1| :pencil2:
 
+<br>
 
 **[Alexa]** | Mark
 | :------------- | :------------- |
@@ -102,17 +112,16 @@ sleepy....
 
 ---
 
-
-**other** | Mark
----|---
-[Business Dashboard Fundamentals](https://app.pluralsight.com/library/courses/business-dashboard-fundamentals/table-of-contents) 5/3 | :heavy_check_mark:
+## other resource
 
 Specialization | Course Name |  Mark |
 ---|---|---
 **APP** | |
 Tableau | [Training Videos](https://www.tableau.com/learn/training/20201) 5/3 | :pencil2:
+**other** | |
+other | [Business Dashboard Fundamentals](https://app.pluralsight.com/library/courses/business-dashboard-fundamentals/table-of-contents) 5/3 | :heavy_check_mark:
 
----
+<br>
 
 course less recommand | Mark
 | :------------- | :------------- |
@@ -124,8 +133,8 @@ Network Security & Database Vulnerabilities https://www.coursera.org/learn/netwo
 
 ---
 
-
 ## Lab map:
+
 Name | S | Mark |
 ---|---|---
 [PAN8 Cybersecurity Essentials](https://portal.netdevgroup.com/learn/pan8-ce-pilot/wb79h483WM) |  | :heavy_check_mark:
@@ -138,7 +147,7 @@ Name | S | Mark |
 [junosgenius](https://cloud.contentraven.com/junosgenius/index) <img src="https://i.imgur.com/mioBe1G.png" width="400"> |
 [cisco](https://devnetsandbox.cisco.com/RM/Topology) <img src="https://i.imgur.com/fni2hlX.png" width="400"> |
 
-
+---
 
 ## link
 
@@ -151,7 +160,6 @@ Link | goal
 ---
 
 ## pending
-
 
 [Coursera Specialization] |  Mark |
 | :------------- | :------------- |
@@ -176,8 +184,7 @@ name | .
 
 ---
 
-topic | Number
----|---
+```
 IDS/IPS |
 DDOS |
 Cloud Security / architectures |
@@ -305,7 +312,7 @@ Windows Server Management and Security
 Linux Server Management and Security
 Palo Alto Networks Academy Cybersecurity Foundation
 In Progress
-
+```
 
 
 
