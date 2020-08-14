@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 
 
@@ -5234,4 +5232,3 @@ for the data and reduce the costs for querying that data.
 
 
 .
->>>>>>> 74990b7f26ccdb2234774f74c367ade70cfa21b5
