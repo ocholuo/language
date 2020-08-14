@@ -20,112 +20,55 @@ Two /17's will fit into a /16, sixteen /20 subnets can fit into one /16.
 
 ### Elastic Compute Cloud (EC2)
 
-Default compute service. Provides access to virtual machines called instances.
-
-**IaaS** - Infrastructure as as Service
-
-The unit of consumption is an instance
-EC2 instance is configured to launch into a single VPC subnet.
-Private service by default, public access must be configured.
-The VPC needs to support public access. If you use a custom VPC then you must
-handle the networking on your own.
-
-EC2 deploys into one AZ. If it fails, the instance fails.
-
-Different sizes and capabilities all use On-Demand Billing - Per second.
-Only pay for what you consume.
-
-Charge for running the instance, CPU, memory and storage.
-Extra cost for any commercial software the instance deploys with.
-
-Local on-host storage or **Elastic Block Storage**
-
-Pricing based on:
-
-- CPU
-- Memory
-- Storage
-- Networking
-
 #### Running State
-
 Charged for all four categories.
-
 - Running on a physical host using CPU.
 - Using memory even with no processing.
 - OS is stored on disk allocated
 - Networking is always ready to transfer information.
 
 #### Stopped State
-
-Charged for EBS storage  only.
-
+Charged for EBS storage only.
 - No CPU resources are being consumed
 - No memory is being used
 - Networking is not running
 - Storage is allocated to the instance for the OS.
 
 #### Terminated State
-
 No charges, deletes the disk and prevents all future charges.
 
 #### AMI (Server Image)
 
-AMI can use used to create an instance or created from an instance.
-AMIs in one region are not available from other regions.
-
-Contains:
-
-- Permissions: control which accounts can and can't use the AMI.
-
-  - Public: Anyone can launch it.
-
-  - Owner - Implicit allow, only the owner can use it  spin up new instances
-
-  - Explicit - owner grants access to AMI for specific AWS accounts
-
 - Root Volume: contain the **Boot Volume**
 
-- Block Device Mapping: links the volumes that the AMI has and
-how they're presented to the operating system. Determines which volume is a
-boot volume and which volumes is a data volume.
+- **Block Device Mapping**: 
+  - links the volumes that the AMI has and how they're presented to the operating system. 
+  - Determines which volume is a boot volume and which volumes is a data volume.
 
-AMI Types:
-
-- Amazon Quick Start AMIs
-- AWS Marketplace AMIs
-- Community AMIs
-- Private AMIs
 
 #### Connecting to EC2
-
 - Windows using RDP (Remote Desktop Protocol), Port 3389
 - Linux SSH protocol, Port 22
+- Login to the instance using an SSH key pair.
+  - Private Key - Stored on local machine to initiate connection.
+  - Public Key - AWS places this key on the instance.
 
-Login to the instance using an SSH key pair.
-Private Key - Stored on local machine to initiate connection.
-Public Key - AWS places this key on the instance.
 
 ### S3 (Default Storage Service)
-
-Global Storage platform. Runs from all regions and is a public service.
-Can be accessed anywhere from the internet with an unlimited amount of users.
-
-This should be the default storage platform
 
 S3 is an object storage, not file, or block storage.
 You can't mount an S3 Bucket.
 
+
 #### Objects
-
 Can be thought of a file. Two main components:
-
-- Object Key: File name in a bucket
-- Value: Data or contents of the object
+- Object Key: 
+  - File name in bucket
+- Value: 
+  - Data or contents of the object
   - Zero bytes to 5 TB
 
 Other components:
-
 - Version ID
 - Metadata
 - Access Control
@@ -133,21 +76,12 @@ Other components:
 
 #### Buckets
 
-- Created in a specific AWS Region.
-- Data has a primary home region. Will not leave this region unless told.
-- Blast Radius = Region
-- Unlimited number of Objects
-- Name is globally unique
 - All objects are stored within the bucket at the same level.
 
 If the objects name starts with a slash such as `/old/Koala1.jpg` the UI will
 present this as a folder. In actuality this is not true, there are no folders.
 
 ### CloudFormation Basics
-
-Templates can modify infrastructure to, create, update and delete.
-
-Written in YAML or JSON
 
 ```YAML
 ## This is not mandatory unless a description is added
@@ -158,21 +92,22 @@ AWSTemplateFormatVersion: "version date"
 Description:
   A sample template
 
-## Can control the command line UI. The bigger your template, the more likely
-## this section is needed
+## Can control the command line UI. 
+## The bigger your template, the more likely this section is needed
 Metadata:
   template metadata
 
-## Prompt the user for more data. Name of something, size of instance,
-## data validation
+## Prompt the user for more data. 
+## Name of something, size of instance, data validation
 Parameters:
   set of parameters
 
-## Another optional section. Allows lookup tables, not used often
+## optional section. Allows lookup tables, not used often
 Mappings:
   set of mappings
 
-## Decision making in the template. Things will only occur if a condition is met.
+## Decision making in the template. 
+## Things will only occur if a condition is met.
 ## Step 1: create condition
 ## Step 2: use the condition to do something else in the template
 Conditions:
