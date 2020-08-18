@@ -1,6 +1,7 @@
+
 import java.util.Stack;
 
-// First Binary Tree Traversal
+// Binary Tree Traversal
 
 // preorder: V-L-R
 // inorder: L-V-R
@@ -27,7 +28,7 @@ public class BTTraversal {
         s.add(node);
         while(!s.isEmpty()) {
             node = s.pop();
-            System.out.println(node);
+            System.out.println(node.data);
             if(node.right != null) {
                 s.add(node.right);
             }
@@ -38,7 +39,13 @@ public class BTTraversal {
     }
 
 
-// 2. inorder
+
+// 2. inorder 3 4 5 7 10 15 19 20
+
+//        10
+//     5     15
+//   4   7      19
+// 3              20
 
     public void inorder(Node node) {
         if (node != null) {
@@ -47,6 +54,25 @@ public class BTTraversal {
             inorder(node.right);
         }
     }
+
+    public void inorderItr(Node root){
+        if (root==null) return;
+        Stack<Node> s = new Stack<Node>();
+        while (true) {
+            if (root != null) {
+                s.push(root);
+                root=root.left;
+            }
+            else {
+                if (s.isEmpty()) {
+                    break;
+                }
+                root=s.pop();
+                System.out.print(root);
+                root = root.right;
+            }
+        }
+    
 
 
 // 3. postorder L - R - V
@@ -100,6 +126,7 @@ public class BTTraversal {
 
         BTTraversal traverse = new BTTraversal();
         traverse.postorderWithTwoStack(head);
+        traverse.preorderwithStack(head);
     }
 
 }
