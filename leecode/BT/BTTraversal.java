@@ -23,7 +23,6 @@ public class BTTraversal {
         if(node == null) {
             return;
         }
-
         Stack<Node> s = new Stack<Node>();
         s.add(node);
         while(!s.isEmpty()) {
