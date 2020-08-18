@@ -1,5 +1,12 @@
 
 
+
+//        10
+//     5     15
+//   4   7      19
+// 3              20
+
+
 class NodeRef{
     Node node;
 }
