@@ -55,11 +55,11 @@ public class BTTraversal {
         }
     }
 
-    public void inorderItr(Node root){
-        if (root==null) return;
+    public void inorderItr(Node node){
+        if (node==null) return;
         Stack<Node> s = new Stack<Node>();
         while (true) {
-            if (root != null) {
+            if (node != null) {
                 s.push(root);
                 root=root.left;
             }
