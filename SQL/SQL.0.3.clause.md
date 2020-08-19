@@ -63,7 +63,7 @@ combine rows from tables based on common field.
 SQL> SELECT columnA1, columnA2, columnB1, columnB2...
      FROM TableA
      (INNER) JOIN TableB
-     ON tableA.column_name=tableB.column_name;;
+     ON tableA.column_name=tableB.column_name;
 
 2.
 SQL> SELECT column_name(s)
@@ -84,6 +84,9 @@ SQL> SELECT column_name(s)
      ON table1.column_name=table2.column_name;
 ```
 
+
+
+
 1. `INNER JOIN`: 如果表中有至少一个匹配，则返回行
 2. `LEFT JOIN`: Return all rows from the left table, and the matched rows from the right table. 即使右表中没有匹配，也从左表返回所有的行
 3. `RIGHT JOIN`: Return all rows from the right table, and the matched rows from the left table.即使左表中没有匹配，也从右表返回所有的行
@@ -99,8 +102,8 @@ Websites
 | 2  | 淘宝          | https://www.taobao.com/   | 13    | CN      |
 | 3  | 菜鸟教程      | http://www.runoob.com/    | 4689  | CN      |
 | 4  | 微博          | http://weibo.com/         | 20    | CN      |
-| 5  | Facebook     | https://www.facebook.com/ | 3     | USA     |
-| 7  | stackoverflow | http://stackoverflow.com/ |   0 | IND     |
+| 5  | Facebook     | https://www.facebook.com/ | 3      | USA     |
+| 7  | stackoverflow | http://stackoverflow.com/ | 0     | IND     |
 +----+---------------+---------------------------+-------+---------+
 
 access_log

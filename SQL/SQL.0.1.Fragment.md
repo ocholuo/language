@@ -398,7 +398,7 @@ Use ".open FILENAME" to reopen on a persistent database.
 * 想在文档下的sqlite文件夹下创建数据库，我们需要先装载该目录。
     * 首先进入到你要创建数据库的位置, 或者你现有数据库所在的位置.
     * 输入：cd 将文件夹地址拖到终端  然后enter
-    * `cd` **/Users/wer/Documents** 
+    * `cd` **/Users/wer/Documents**
 * 创建一个文件夹（存放数据库）
     * `mkdir`  **testSqlist（文件夹名）**
 * 创建数据库
@@ -443,16 +443,16 @@ sqlite>`insert into` table (id, name, age, sex, birth, department, address) `val
 
 * 此时我们的数据库已经创建完毕.
 
- * 输入：sqlite3 upload.sqlite3  
+* 输入：sqlite3 upload.sqlite3  
     * 如果存在文件名为“upload.sqlite3”的文件，这个操作就是打开“upload.sqlite3”文件。
     * 如果不存在“upload.sqlite3”文件，系统就会去创建它。
     * 然后输入：“;”（对，就是输入分号） 然后enter
- 
- 
+
+
 ### 输入:   ".quit"可以退出sqlite
 ctrl+d
 ### 输入:   “.help”可以查看更多命令
- 
+
 ### 常用命令
 
 ## SQLite 简介
