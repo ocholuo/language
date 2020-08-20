@@ -55,24 +55,24 @@ public class BTTraversal {
         }
     }
 
-    public void inorderItr(Node node){
+    public void inorderwithStack(Node node){
         if (node==null) return;
         Stack<Node> s = new Stack<Node>();
         while (true) {
             if (node != null) {
-                s.push(root);
-                root=root.left;
+                s.push(node);
+                node = node.left;   // to the left end
             }
             else {
                 if (s.isEmpty()) {
                     break;
                 }
-                root=s.pop();
-                System.out.print(root);
-                root = root.right;
+                node = s.pop();
+                System.out.print(node);
+                node = node.right;
             }
         }
-    
+    }
 
 
 // 3. postorder L - R - V
