@@ -350,61 +350,7 @@ SQL> SELECT column_name(s)
 3. `RIGHT JOIN`: Return all rows from the right table, and the matched rows from the left table.即使左表中没有匹配，也从右表返回所有的行
 4. `FULL JOIN`: Return all rows when there is a match in ONE of the tables.只要其中一个表中存在匹配，则返回行. 结合了 LEFT JOIN 和 RIGHT JOIN 的结果。
 
-
-```sql
-Websites
-+----+--------------+---------------------------+-------+---------+
-| id | name         | url                       | alexa | country |
-+----+--------------+---------------------------+-------+---------+
-| 1  | Google       | https://www.google.cm/    | 1     | USA     |
-| 2  | 淘宝          | https://www.taobao.com/   | 13    | CN      |
-| 3  | 菜鸟教程      | http://www.runoob.com/    | 4689  | CN      |
-| 4  | 微博          | http://weibo.com/         | 20    | CN      |
-| 5  | Facebook     | https://www.facebook.com/ | 3      | USA     |
-| 7  | stackoverflow | http://stackoverflow.com/ | 0     | IND     |
-+----+---------------+---------------------------+-------+---------+
-
-access_log
-+-----+---------+-------+------------+
-| aid | site_id | count | date       |
-+-----+---------+-------+------------+
-|   1 |       1 |    45 | 2016-05-10 |
-|   2 |       3 |   100 | 2016-05-13 |
-|   3 |       1 |   230 | 2016-05-14 |
-|   4 |       2 |    10 | 2016-05-14 |
-|   5 |       5 |   205 | 2016-05-14 |
-|   6 |       4 |    13 | 2016-05-15 |
-|   7 |       3 |   220 | 2016-05-15 |
-|   8 |       5 |   545 | 2016-05-16 |
-|   9 |       3 |   201 | 2016-05-17 |
-+-----+---------+-------+------------+
-```
-
-```sql
-SQL> SELECT Websites.name, access_log.count, access_log.date
-     FROM Websites
-     LEFT JOIN access_log
-     ON Websites.id=access_log.site_id
-     ORDER BY access_log.count DESC;
-
-![-w534](media/15361896864552/15590897911253.jpg)
-
-SELECT Websites.name, access_log.count, access_log.date
-FROM access_log
-RIGHT JOIN Websites
-ON access_log.site_id=Websites.id
-ORDER BY access_log.count DESC;
-
-![-w523](media/15361896864552/15590898224273.jpg)
-```
-
-join more tables:
-
-`SELECT` SID, C.MCode, C.Cno, C.Title
-`FROM` Enrollment E, Section S, Course C
-`WHERE` E.CallNo = S.CallNo `AND` S.Mcode = C.MCode `AND` S.CNo = C.CNo
-`ORDER BY` SID
-
+---
 
 ## MINUS
 返回存在于A表中，但不存在于B表中的数据。
@@ -417,6 +363,34 @@ SQL> SELECT  COL1,COL2
 ```
 Oracle 数据库支持 MINUS 用法，SQL Server, PostgreSQL, and SQLite 可以使用Except代替
 
+---
+
+## UNION 操作符
+合并两个或多个 SELECT 语句的结果集。
+- 每个 SELECT 语句必须拥有相同数量的列。
+- 列也必须拥有相似的数据类型。
+- 每个 SELECT 语句中的列的顺序必须相同。
+
+```sql
+SELECT column_name(s) FROM table1
+UNION
+SELECT column_name(s) FROM table2;
+// 默认 UNION 操作符选取不同的值。
+
+
+// 如果允许重复的值 UNION ALL
+SELECT column_name(s) FROM table1
+UNION ALL
+SELECT column_name(s) FROM table2;
+```
+
+```sql
+//Examples
+SELECT country FROM Websites
+UNION
+SELECT country FROM apps
+ORDER BY country;
+```
 
 ---
 
@@ -514,6 +488,15 @@ WHERE a.site_id=w.id and w.name="菜鸟教程";
 SELECT Websites.name, Websites.url, access_log.count, access_log.date
 FROM Websites, access_log
 WHERE Websites.id=access_log.site_id and Websites.name="菜鸟教程";
+
+
+join more tables:
+
+SELECT SID, C.MCode, C.Cno, C.Title
+FROM Enrollment E, Section S, Course C
+WHERE E.CallNo = S.CallNo AND S.Mcode = C.MCode AND S.CNo = C.CNo
+ORDER BY SID
+
 ```
 
 
