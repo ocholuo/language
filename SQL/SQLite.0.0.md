@@ -1,391 +1,10 @@
-# SQL
-
-[TOC]
-
-# basic SQL
-
-
-## SQL
-
-SQL statements usually are divided into two categories:
-
-* Data Definition Language (DDL)
-    * define relation/table structures including the schema for each relation, the domain of values associated with each attribute, and integrity constraints.
-    * Example, CREATE DATABASE, ALTER DATABASE, DROP DATABASE, CREATE TABLE, ALTER TABLE, DROP TABLE, TRUNCATE TABLE, and so on.
-    * DDL statements do `COMMIT` automatically
-* Data Manipulation Language (DML)
-    * used to *retrieve, insert, update, and delete* data in database.
-    * Example, SELECT, INSERT, UPDATE, DELETE, and MERGE
-    * DML may not do a COMMIT automatically in some RDBMS, like Oracle.
-    * have to explicitly issue the `COMMIT` statement
-
-
-
-## database security
-http://www.aseatw.com/html/Present.aspx?id=DatabaseFundamentals&num=26
-
-the first line of database for a database:
-
-* **change the default user password** immediately
-* **lock** unused user account.
-* **enforce** stronger passwords.
-* **remove** public accounts, or all access from all accounts.
-* **choose** *domain authentication* or *database authentication* for your database users, and stick with it.
-* **Examine** roles and groups closely.
-* **Protect** administrative functions from users.
-* **divide** database admin duties.
-
-
-
-# mysql
-table - database - server
-
-## for database
-
-### choose database:
-
-mysql> `show databases`;
-+--------------------+
-| Database           |
-+--------------------+
-| information_schema |
-| first              |
-| mysql              |
-| performance_schema |
-| sys                |
-+--------------------+
-5 rows in set (0.02 sec)
-
-mysql> `use` test1;
-database changed
-
-mysql> `show tables`;
-+-----------------+
-| Tables_in_first |
-+-----------------+
-| parrots         |
-| student         |
-+-----------------+
-2 rows in set (0.00 sec)
-
-### create database
-mysql> `create database` test0 `charset utf8`;
-Query OK, 1 row affected (0.01 sec)
-
-mysql> `show tables`;
-Empty set (0.00 sec)
-
-### drop database
-mysql> `drop database` test0;
-Query OK, 0 rows affected (0.03 sec)
-
-### change name?
-mysql数据库不能改名
-只能呢该表，列名字
-
-## for table
-### create table
-建表其实就是声明表头列的过程
-
-mysql> `create table` stu(
-id `int`,
-name `varchar(10)`)
-`engine myisam charset utf8`;
-Query OK, 0 rows affected (0.04 sec)
-
-mysql> `show tables`;
-+-----------------+
-| Tables_in_test1 |
-+-----------------+
-| stu             |
-+-----------------+
-1 row in set (0.00 sec)
-
-#### 三大列类型
-
-* 数值类型
-    * 整型: 字节越多，存的范围越大。
-        * int默认是有符号的。
-            * *unsigned*：无符号, 无正负[0,255]
-            * *M*: 必须跟zerofill才有意义，单独使用无意义。表示补0的宽度
-            * *zerofill*: 补0,默认unsigned。
-        * **tinyint**：1字节，正负[-128,+127] 或 无正负[0,255]
-            * 1 byte = 8 bits, 00000000 - 111111111
-            * 计算机为了表示正负数，最高位最左侧的0/1当成符号。
-            * 用补码规则
-            * 0 0000000 = 0
-            * 0 1111111 = 127
-            * 1 0000000 = -1
-            * 1 1111111 = 128
-            * [-2^7,2^7-1]
-        * **smallint**：2字节,16bits，3万
-            * [-2^15,2^15-1]
-        * **mediumint**：3字节，800+万
-        * **int**：4字节，40+亿
-        * **bigint**：8字节
-            * XX `int` not null default 0;
-            * XX `int` `(5)` `zerofill` not null default 0;
-
-    * 浮点数:
-        * **float (M,D)**:
-        * **decimal (M,D)**:定点
-        * M:精度，总位数, D: 标度，小数点后面
-        * 正负的9999.99
-            * `XX decimal(6,2)` 总共6位数，小数点后1位，正负都可以。
-        * float 能存10^38，10^-38.
-        * M<=24 4bytes, xor 8 bytes
-        * 定点是把整数部分和小数部分分开存的，比float精确。float取出时有可能不一样！！像账户银行敏感的，建议用decimal。
-
-mysql> `insert into` account values
-    -> (1, 1234567.23,1234567.23);
-Query OK, 1 row affected (0.00 sec)
-
-mysql> `select` * `from` account;
-+----+------------+------------+
-| id | acc1       | acc2       |
-+----+------------+------------+
-|  1 | 1234567.25 | 1234567.23 |
-+----+------------+------------+
-2 rows in set (0.00 sec)
-
-* 字符串型
-    * *M 限制的是字符数不是字节，6个utf8或其他任何都是6个*。
-    * **char(M)** 定长字符串 M,[0,255]
-        * 存储定长，容易计算文件指针的移动量，*速度更快*
-        * 不论够不够长，实际都占据N个长度
-        * char(N),如果不够N个长度，用空格在末尾补齐长度
-        * 取出时再把右侧空格去掉（*字符串本身右侧有空格将会丢失*）
-        * 宽度M，可存字符M，实存字符i(i<=M),
-        * 实占空间：M
-        * 定长的利用率：M<=可能达到100%
-        * 会有浪费
-    * **varchar(M)** 变长字符串 M,[0,65535]
-        * 不用空格补气，但是数据前面有1或2个字节来记录开头
-        * 实占空间：i+(1或2个字节)
-        * 变长的利用率：i+(1或2个字节)<100%, 不可能100%
-        * 和text差不多，但是比他慢一点
-    * **text**：
-        * 不用加默认值，存较大的文本段，搜索速度慢。
-        * 一万以内可以用varchar
-    * **mediumblob**
-    * **mediumtext**：一千多万
-    * **longblob**
-    * **longtext**
-    * **blob**:
-        * 是二进制类型，用来储存图像音频等二进制信息，0-255都有可能出现。
-        * 意义在于防止因为字符集的问题，导致信息丢失
-        * 比如一张图片中有0xFF字节，这个在ascii字符集中人文非法，在入库是被过滤了。如果是二进制，就是原原本本存进去，拿出来，隐形防范字符集的问题导致数据流失
-
-```
-//char varchar 区别
-mysql> create table test(
-    -> char(6) not null default'',
-    -> varchar(6) not null default'')
-    -> engine myisam charset utf8;
-
-mysql> insert into test2 values ('aa ','aa ');
-mysql> select concat(ca,'!'),concat(vca,'!') from test2;
-+----------------+-----------------+
-| concat(ca,'!') | concat(vca,'!') |
-+----------------+-----------------+
-| hello!         | hello!          |
-| aa!            | aa !            |
-+----------------+-----------------+
-2 rows in set (0.01 sec)
-```
-
-```
-//text 不需要默认值
-mysql> create table test3(
-    -> artice **text** not null default''
-    -> )engine myisam charset utf8;
-ERROR 1101 (42000): BLOB, TEXT, GEOMETRY or JSON column 'artice' can't have a default value
-
-mysql> create table test3(
-    -> artice text);
-Query OK, 0 rows affected (0.05 sec)
-
-mysql> alter table test3 add img blob;
-Query OK, 0 rows affected (0.04 sec)
-Records: 0  Duplicates: 0  Warnings: 0
-```
-
-```
-//blob
-mysql> desc test3;
-+--------+------+------+-----+---------+-------+
-| Field  | Type | Null | Key | Default | Extra |
-+--------+------+------+-----+---------+-------+
-| artice | text | YES  |     | NULL    |       |
-| img    | blob | YES  |     | NULL    |       |
-+--------+------+------+-----+---------+-------+
-
-mysql> insert into test3
-    -> values('qingqiongmaima','zhangfeiganlu');
-
-mysql> select * from test3;
-+----------------+---------------+
-| artice         | img           |
-+----------------+---------------+
-| qingqiongmaima | zhangfeiganlu |
-+----------------+---------------+
-
-```
-
-* 时间类型
-    * 比起用char来使用各省时间空间。
-    * **date**：3个字节
-        * 1934-04-12
-        * 范围：1000-01-01到9999-12-31
-    * **datetime**:  8个字节
-        * YYYY-mm-dd HH:ii:ss
-    * **time**: 3个字节
-        * 20:20:20
-    * **timestamp**：4个字节
-        * 可以取当前的时间
-    * **year**: 1个字节
-        * [0000, 1901,2155]
-        * 可以简化成两位数 year(2)
-
-```
-mysql> create table test4(
-    -> sname varchar(20) not null default'',
-    -> logintime datetime not null,
-    -> ts timestamp default current_timestamp
-    -> )engine myisam charset utf8;
-```
-
-`primery key`
-`auto_increment`
-`not null`
-`default '' `
-`engine myisam/innodb/bdb charset utf8/gbk/latin1...`
-
-```
-create table test5(
-id int unsigned primary key not null default,
-username char(10) not null default 'admimn',
-gender char(1) not null,
-weight tinyint unsigned not null,
-birth date not null,
-salary decimal(8,2) unsigned not null,
-lastlogin datetime not null,
-intro char(1500)not null
-
-//除username和intro之外都是定长
-//都是定长的话 搜索会快很多
-//*优化：就是空间换时间*
-//username varchar(10) 可以有优化 char(10)
-//intro varchar(1500) 变 char(1500)就浪费太多了
-//*优化：把常用到的信息，优先考虑效率，把不常用比较占空间的信息，放到附表*
-//把intro单独拿出来，改变次数也很少
-
-create table intro(
-id int unsigned primary key not null default,
-username char(10) not null default 'admimn',
-lastlogin datetime not null,
-intro char(1500)not null
-
-create table member(
-id int unsigned auto_increment primary key,
-username char(20) not null default '',
-gender char(1) not null default '',
-weight tinyint unsigned not null default 0,
-birth date not null,
-salary decimal(8,2) not null default 0.00,
-lastlogin int unsigned not null default 0)
-engine myisam charset utf8;
-```
-
-### 删除表 `drop table table_A`
-mysql> `drop table` stu;
-//表就不在了
-
-### 改名 `rename table table_A to table_B`
-mysql> `rename table` stu `to` newstu;
-
-
-### 修改表
-#### 添加列 `alter table table_A add Z (after/first) X`
-//加在最后
-mysql> `alter table` class1 `add` score2 tinyint unsigned not null default 0;
-
-//加在指定位置
-mysql> `alter table` class1 `add` score1 tinyint unsigned not null default 0 `after` id;
-
-//加在第一位
-mysql> `alter table` class1 `add` score1 tinyint unsigned not null default 0 `first`;
-
-#### 删除列 `alter table table_A drop X`
-mysql> `alter table` class1 `drop` score2；
-
-#### 修改列参数 `alter table table_A modify X .../ Change X TO Y...) `
-//不能改列名
-mysql> `alter table` class1 `modify` score2 int unsigned not null default 100;
-
-//可以修改列名
-mysql> `alter table` class1 `change` score2 `to` score234 int unsigned not null default 100;
-
-//如果列类型改变了，导致数据保存不下来
-//一般会往大了该
-//1. 丢数据
-//2. 严格模式下，不能改
-
-
-### 查找 `desc table_A`
-mysql> `desc` table_name;
-+---------+--------------+------+-----+---------+----------------+
-| Field   | Type         | Null | Key | Default | Extra          |
-+---------+--------------+------+-----+---------+----------------+
-| id      | int(11)      | NO   | PRI | NULL    | auto_increment |
-| sname   | varchar(10)  | NO   |     |         |                |
-| gender  | varchar(1)   | NO   |     |         |                |
-| company | varchar(20)  | NO   |     |         |                |
-| salary  | decimal(6,2) | NO   |     | 0.00    |                |
-| fanbu   | smallint(6)  | NO   |     | 0       |                |
-+---------+--------------+------+-----+---------+----------------+
-6 rows in set (0.00 sec)
-
-
-### add date `insert into table_A (X,Y,Z) values (X,1), (Y,2), (Z,3)`
-mysql> `insert into` newstu (X,Y,Z) `values`(
-    -> (1,'a'),
-    -> (2,'b'),
-    -> (3,'c'));
-
-### 修改data
-mysql> `update` table_name
-    -> `set` X = 100;
-//X栏全部都改了
-
-mysql> `update` * `from` table_name
-    -> `set` X = X+2;
-    -> `where` Y = 6;
-
-### 删除data
-删除就是整行
-一个data属于修改
-mysql> `delete from` stu `where` id=2;
-mysql> `delete` * `from` stu `where` id=2;
-//都是删除整行 不需要 *
-
-
-### 清空表数据
-mysql> `truncate` newstu;
-Query OK, 0 rows affected (0.01 sec)
-//删除表，扔了重写，（全删的情况下更快）
-
-mysql> `delete` `from` newstu;
-//delete把数据删除重写
-
-### data 没并行
-set name utf8;
-
-`\c` 退出继续打
-
-
 
 # SQLite
+
+[toc]
+
+---
+
 ## SQLite Mac使用
 $ sqlite3
 SQLite version 3.19.3 2017-06-27 16:48:08
@@ -929,6 +548,658 @@ CREATE TABLE sqlite_master (
   sql text
 );
 ```
+
+## SQLite 语法
+SQLite 是遵循一套独特的称为语法的规则和准则。
+**大小写敏感性**：有SQLite 不区分大小写的，但也有一些命令是大小写敏感的，比如 GLOB 和 glob 在 SQLite 的语句中有不同的含义。
+**注释**： SQLite 注释是附加的注释，可以在 SQLite 代码中添加注释以增加其可读性，他们可以出现在任何空白处，包括在表达式内和其他 SQL 语句的中间，但它们不能嵌套。
+
+* 以两个连续的 `-` 字符（ASCII 0x2d）开始，并扩展至下一个换行符（ASCII 0x0a）或直到输入结束，以先到者为准。
+* 也可以使用 C 风格的注释，以 `/*注释*/` 字符对或直到输入结束，以先到者为准。SQLite的注释可以跨越多行。
+
+```
+sqlite>.help -- 这是一个简单的注释
+```
+
+### SQLite 语句
+所有的 SQLite 语句可以以任何关键字开始，如 `SELECT`、`INSERT`、`UPDATE`、`DELETE`、`ALTER`、`DROP` 等，所有的语句以分号 `;`结束。
+
+#### 1. SQLite ANALYZE 语句：
+
+```
+ANALYZE;
+or
+ANALYZE database_name;
+or
+ANALYZE database_name.table_name;
+```
+
+#### 2. SQLite AND/OR 子句：
+
+```
+SELECT column1, column2....columnN
+FROM   table_name
+WHERE  CONDITION-1 {AND|OR} CONDITION-2;
+```
+
+#### 3. SQLite ALTER TABLE 语句：
+
+```
+ALTER TABLE table_name ADD COLUMN column_def...;
+```
+
+#### 4. SQLite ALTER TABLE 语句（Rename）：
+
+```
+ALTER TABLE table_name RENAME TO new_table_name;
+```
+
+#### 5. SQLite ATTACH DATABASE 语句：
+```
+ATTACH DATABASE 'DatabaseName' As 'Alias-Name';
+SQLite BEGIN TRANSACTION 语句：
+BEGIN;
+or
+BEGIN EXCLUSIVE TRANSACTION;
+```
+
+#### 6. BETWEEN 子句：
+```
+SELECT column1, column2....columnN
+FROM   table_name
+WHERE  column_name BETWEEN val-1 AND val-2;
+```
+
+#### 7. COMMIT 语句：
+```
+COMMIT;
+```
+
+#### 8. CREATE INDEX 语句：
+```
+CREATE INDEX index_name
+ON table_name ( column_name COLLATE NOCASE );
+```
+
+#### 9. CREATE UNIQUE INDEX 语句：
+```
+CREATE UNIQUE INDEX index_name
+ON table_name ( column1, column2,...columnN);
+```
+
+#### 10. CREATE TABLE 语句：SQLite 创建表
+```
+CREATE TABLE table_name(
+   column1 datatype  PRIMARY KEY(one or more columns),
+   column2 datatype,
+   column3 datatype,
+   .....
+   columnN datatype  PRIMARY KEY( one or more columns )
+);
+```
+
+`CREATE TABLE` 语句:
+用于在任何给定的数据库创建一个新表。
+创建基本表，涉及到命名表、定义列及每一列的数据类型。
+CREATE TABLE 是告诉数据库系统创建一个新表的关键字。
+CREATE TABLE 语句后跟着表的唯一的名称或标识。
+您也可以选择指定带有 `table_name` 的 `database_name`。
+
+```
+//创建一个 `COMPANY 表`，`ID` 作为主键，`NOT NULL` 的约束表示在表中创建纪录时这些字段不能为 `NULL`：
+
+sqlite> CREATE TABLE COMPANY(
+   ID INT PRIMARY KEY     NOT NULL,
+   NAME           TEXT    NOT NULL,
+   AGE            INT     NOT NULL,
+   ADDRESS        CHAR(50),
+   SALARY         REAL
+);
+
+//让我们再创建一个表，我们将在随后章节的练习中使用：
+
+sqlite> CREATE TABLE DEPARTMENT(
+   ID INT PRIMARY KEY      NOT NULL,
+   DEPT           CHAR(50) NOT NULL,
+   EMP_ID         INT      NOT NULL
+);
+
+sqlite>.tables
+COMPANY     DEPARTMENT
+//这里可以看到我们刚创建的两张表 COMPANY、 DEPARTMENT。
+
+//使用 SQLite .schema 命令得到表的完整信息
+sqlite>.schema COMPANY
+CREATE TABLE COMPANY(
+   ID INT PRIMARY KEY     NOT NULL,
+   NAME           TEXT    NOT NULL,
+   AGE            INT     NOT NULL,
+   ADDRESS        CHAR(50),
+   SALARY         REAL
+);
+```
+
+
+#### SQLite CREATE TRIGGER 语句：
+```
+CREATE TRIGGER database_name.trigger_name
+BEFORE INSERT ON table_name FOR EACH ROW
+BEGIN
+   stmt1;
+   stmt2;
+   ....
+END;
+```
+
+#### 11. CREATE VIEW 语句：
+```
+CREATE VIEW database_name.view_name  AS
+SELECT statement....;
+```
+
+#### 12. CREATE VIRTUAL TABLE 语句：
+```
+CREATE VIRTUAL TABLE database_name.table_name USING weblog( access.log );
+or
+CREATE VIRTUAL TABLE database_name.table_name USING fts3( );
+```
+
+#### 13. COMMIT TRANSACTION 语句：
+```
+COMMIT;
+```
+
+#### 14. COUNT 子句：
+```
+SELECT COUNT(column_name)
+FROM   table_name
+WHERE  CONDITION;
+```
+
+#### 15. DELETE 语句：
+```
+DELETE FROM table_name
+WHERE  {CONDITION};
+```
+
+#### 16. DETACH DATABASE 语句：
+```
+DETACH DATABASE 'Alias-Name';
+```
+
+#### 17. DISTINCT 子句：
+```
+SELECT DISTINCT column1, column2....columnN
+FROM   table_name;
+```
+
+#### 18. DROP INDEX 语句：
+```
+DROP INDEX database_name.index_name;
+```
+
+#### 19. DROP TABLE 语句：SQLite 删除表
+`DROP TABLE` 语句:
+删除表定义及其所有相关数据、索引、触发器、约束和该表的权限规范。
+一旦一个表被删除，表中所有信息也将永远丢失。
+
+**语法**
+
+```
+DROP TABLE database_name.table_name;
+```
+
+```
+sqlite>.tables     
+COMPANY       test.COMPANY
+//先确认 COMPANY 表已经存在，然后我们将其从数据库中删除。  
+//结果 COMPANY 表已存在数据库中，接下来让我们把它从数据库中删除.
+
+sqlite>DROP TABLE COMPANY;
+sqlite>
+
+//尝试 .TABLES 命令，那么将无法找到 COMPANY 表了：
+sqlite>.tables
+sqlite>
+//显示结果为空，意味着已经成功从数据库删除表。
+```
+
+
+
+#### 20. DROP VIEW 语句：
+```
+DROP VIEW view_name;
+```
+
+#### 21. DROP TRIGGER 语句：
+```
+DROP TRIGGER trigger_name
+```
+
+#### 22. EXISTS 子句：
+```
+SELECT column1, column2....columnN
+FROM   table_name
+WHERE  column_name EXISTS (SELECT * FROM   table_name );
+```
+
+#### 23. EXPLAIN 语句：
+```
+EXPLAIN INSERT statement...;
+or
+EXPLAIN QUERY PLAN SELECT statement...;
+```
+
+#### 27. INSERT INTO 语句：
+`INSERT INTO` 语句:
+用于向数据库的某个表中添加新的数据行。
+如果要为表中的所有列添加值，可以不需要在 SQLite 查询中指定列名称。但要确保值的顺序与列在表中的顺序一致。
+
+**语法**: 两种基本语法.
+
+```
+INSERT INTO TABLE_NAME [(column1, column2, column3,...columnN)]  
+INSERT INTO TABLE_NAME VALUES (value1, value2, value3,...valueN);
+//在这里，column1, column2,...columnN 是要插入数据的表中的列的名称。
+```
+
+```
+//假设您已经在 testDB.db 中创建了 COMPANY表，如下所示：
+
+sqlite> CREATE TABLE COMPANY(
+   ID   INT PRIMARY KEY     NOT NULL,
+   NAME           TEXT    NOT NULL,
+   AGE            INT     NOT NULL,
+   ADDRESS        CHAR(50),
+   SALARY         REAL
+);
+
+//在 COMPANY 表中创建六个记录：
+//语法1
+
+INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY)
+VALUES (1, 'Paul', 32, 'California', 20000.00 );
+
+INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY)
+VALUES (2, 'Allen', 25, 'Texas', 15000.00 );
+
+//语法2
+
+INSERT INTO COMPANY VALUES (7, 'James', 24, 'Houston', 10000.00 );
+
+// 在 COMPANY 表中创建下列记录。
+
+ID          NAME        AGE         ADDRESS     SALARY
+----------  ----------  ----------  ----------  ----------
+1           Paul        32          California  20000.0
+2           Allen       25          Texas       15000.0
+7           James       24          Houston     10000.0
+```
+
+```
+//使用一个表来填充另一个表
+//可以通过在一个有一组字段的表上使用 select 语句，填充数据到另一个表中。
+
+INSERT INTO first_table_name [(column1, column2, ... columnN)]
+   SELECT column1, column2, ...columnN
+   FROM second_table_name
+   [WHERE condition];
+```
+
+
+
+#### PRAGMA 语句：
+**PRAGMA pragma_name;**
+For example:
+
+```
+PRAGMA page_size;
+PRAGMA cache_size = 1024;
+PRAGMA table_info(table_name);
+```
+
+#### SQLite RELEASE SAVEPOINT 语句：
+```
+RELEASE savepoint_name;
+```
+
+#### SQLite REINDEX 语句：
+```
+REINDEX collation_name;
+REINDEX database_name.index_name;
+REINDEX database_name.table_name;
+```
+
+#### SQLite ROLLBACK 语句：
+```
+ROLLBACK;
+or
+ROLLBACK TO SAVEPOINT savepoint_name;
+```
+
+#### SQLite SAVEPOINT 语句：
+```
+SAVEPOINT savepoint_name;
+```
+
+#### SQLite SELECT 语句：
+`SELECT` 语句:
+用于从 SQLite 数据库表中获取数据，以结果表的形式返回数据。
+这些结果表也被称为结果集。
+
+```
+SELECT column1, column2....columnN
+FROM   table_name;
+//column1, column2...是表的字段，他们的值即是您要获取的。
+
+
+//获取所有可用的字段
+```
+
+##### sqlite> SELECT * FROM FROM table_name; 获取所有可用的字段
+
+```
+//假设 COMPANY 表有以下记录：
+
+ID          NAME        AGE         ADDRESS     SALARY
+----------  ----------  ----------  ----------  ----------
+1           Paul        32          California  20000.0
+2           Allen       25          Texas       15000.0
+3           Teddy       23          Norway      20000.0
+4           Mark        25          Rich-Mond   65000.0
+5           David       27          Texas       85000.0
+6           Kim         22          South-Hall  45000.0
+7           James       24          Houston     10000.0
+
+sqlite>.header on
+sqlite>.mode column
+
+sqlite> SELECT * FROM COMPANY;
+
+//前三个命令被用来设置正确格式化的输出。
+//最后，将得到以下的结果：
+
+ID          NAME        AGE         ADDRESS     SALARY
+----------  ----------  ----------  ----------  ----------
+1           Paul        32          California  20000.0
+2           Allen       25          Texas       15000.0
+3           Teddy       23          Norway      20000.0
+4           Mark        25          Rich-Mond   65000.0
+5           David       27          Texas       85000.0
+6           Kim         22          South-Hall  45000.0
+7           James       24          Houston     10000.0
+```
+
+##### sqlite> SELECT column1,2....N FROM table_name; 只获取 COMPANY 表中指定的字段
+```
+sqlite> SELECT ID, NAME, SALARY FROM COMPANY;
+//只想获取 COMPANY 表中指定的字段
+//上面的查询会产生以下结果：
+
+ID          NAME        SALARY
+----------  ----------  ----------
+1           Paul        20000.0
+2           Allen       15000.0
+3           Teddy       20000.0
+4           Mark        65000.0
+5           David       85000.0
+6           Kim         45000.0
+7           James       10000.0
+```
+
+##### .width num, num.... 设置输出列的宽度
+```
+//有时由于要显示的列的默认宽度导致 .mode column，这种情况下，输出被截断。
+//可以使用 .width num, num.... 命令设置显示列的宽度，如下所示：
+
+sqlite>.width 10, 20, 10
+sqlite>SELECT * FROM COMPANY;
+
+//.width 命令设置第一列的宽度为 10，第二列的宽度为 20，第三列的宽度为 10。
+//上述 SELECT 语句将得到以下结果：
+
+ID          NAME                  AGE         ADDRESS     SALARY
+----------  --------------------  ----------  ----------  ----------
+1           Paul                  32          California  20000.0
+2           Allen                 25          Texas       15000.0
+3           Teddy                 23          Norway      20000.0
+4           Mark                  25          Rich-Mond   65000.0
+5           David                 27          Texas       85000.0
+6           Kim                   22          South-Hall  45000.0
+7           James                 24          Houston     10000.0
+```
+
+##### Schema 信息
+因为所有的点命令只在 SQLite 提示符中可用，所以当您进行带有 SQLite 的编程时，您要使用下面的带有 sqlite_master 表的 SELECT 语句来列出所有在数据库中创建的表：
+
+sqlite> `SELECT` **tbl_name** `FROM` **sqlite_master** `WHERE type =` **'table'**;
+
+
+```
+//使用下面的带有 sqlite_master 表的 SELECT 语句来列出所有在数据库中创建的表：
+sqlite> SELECT tbl_name FROM sqlite_master WHERE type = 'table';
+
+//假设在 testDB.db 中已经存在唯一的 COMPANY 表
+tbl_name
+----------
+COMPANY
+
+//列出关于 COMPANY 表的完整信息，如下所示：
+sqlite> SELECT sql FROM sqlite_master WHERE type = 'table' AND tbl_name = 'COMPANY';
+
+//假设在 testDB.db 中已经存在唯一的 COMPANY 表，则将产生以下结果：
+CREATE TABLE COMPANY(
+   ID INT PRIMARY KEY     NOT NULL,
+   NAME           TEXT    NOT NULL,
+   AGE            INT     NOT NULL,
+   ADDRESS        CHAR(50),
+   SALARY         REAL
+)
+```
+
+#### SQL UNION 和 UNION ALL 操作符
+
+### Operator
+#### GLOB 子句：
+```
+SELECT column1, column2....columnN
+FROM   table_name
+WHERE  column_name GLOB { PATTERN };
+```
+
+#### GROUP BY 子句：
+```
+SELECT SUM(column_name)
+FROM   table_name
+WHERE  CONDITION
+GROUP BY column_name;
+```
+* `AVG`(): finds the average value of *numeric attribute*
+* `MIN`(): finds the minimum value of *string/numeric attribute*
+* `MAX`(): finds the maximum value of *string/numeric attribute*
+* `SUM`(): finds the sum total of a *numeric attribute*
+* `COUNT`(): counts the number of rows in a set
+
+
+#### HAVING 子句clause：
+```
+SELECT SUM(column_name)
+FROM   table_name
+WHERE  CONDITION
+GROUP BY column_name
+HAVING (arithematic function condition);
+```
+The `HAVING` clause can do the same thing as `WHERE` clause
+
+* SELECT FID, Name FROM Faculty
+* HAVING Rank = 'Professor';
+
+* SELECT FID, Name FROM Faculty
+* WHERE Rank = 'Professor';
+/generate the same output,
+/but the WHERE clause provides a better performance
+
+`HAVING` clause ually used with GROUP BY, can include aggregate functions (previous page)
+
+#### IN 子句：
+```
+SELECT column1, column2....columnN
+FROM table_name
+WHERE column_name IN (val-1, val-2,...val-N);
+```
+#### JOIN 子句clause：combine rows from tables based on common field.
+
+![](media/15361896864552/15590892383952.png)
+
+```
+1.
+SELECT columnA1, columnA2, columnB1, columnB2...
+FROM TableA
+(INNER) JOIN TableB
+ON tableA.column_name=tableB.column_name;;
+
+2.
+SELECT column_name(s)
+FROM table1
+LEFT (OUTER) JOIN table2
+ON table1.column_name=table2.column_name;
+
+3.
+SELECT column_name(s)
+FROM table1
+RIGHT (OUTER) JOIN table2
+ON table1.column_name=table2.column_name;
+
+4.
+SELECT column_name(s)
+FROM table1
+FULL (OUTER) JOIN table2
+ON table1.column_name=table2.column_name;
+```
+
+1. `INNER JOIN`: 如果表中有至少一个匹配，则返回行
+2. `LEFT JOIN`: Return all rows from the left table, and the matched rows from the right table.即使右表中没有匹配，也从左表返回所有的行
+3. `RIGHT JOIN`: Return all rows from the right table, and the matched rows from the left table.即使左表中没有匹配，也从右表返回所有的行
+4. `FULL JOIN`: Return all rows when there is a match in ONE of the tables.只要其中一个表中存在匹配，则返回行. 结合了 LEFT JOIN 和 RIGHT JOIN 的结果。
+
+```
+Websites
++----+--------------+---------------------------+-------+---------+
+| id | name         | url                       | alexa | country |
++----+--------------+---------------------------+-------+---------+
+| 1  | Google       | https://www.google.cm/    | 1     | USA     |
+| 2  | 淘宝          | https://www.taobao.com/   | 13    | CN      |
+| 3  | 菜鸟教程      | http://www.runoob.com/    | 4689  | CN      |
+| 4  | 微博          | http://weibo.com/         | 20    | CN      |
+| 5  | Facebook     | https://www.facebook.com/ | 3     | USA     |
+| 7  | stackoverflow | http://stackoverflow.com/ |   0 | IND     |
++----+---------------+---------------------------+-------+---------+
+
+access_log
++-----+---------+-------+------------+
+| aid | site_id | count | date       |
++-----+---------+-------+------------+
+|   1 |       1 |    45 | 2016-05-10 |
+|   2 |       3 |   100 | 2016-05-13 |
+|   3 |       1 |   230 | 2016-05-14 |
+|   4 |       2 |    10 | 2016-05-14 |
+|   5 |       5 |   205 | 2016-05-14 |
+|   6 |       4 |    13 | 2016-05-15 |
+|   7 |       3 |   220 | 2016-05-15 |
+|   8 |       5 |   545 | 2016-05-16 |
+|   9 |       3 |   201 | 2016-05-17 |
++-----+---------+-------+------------+
+```
+
+SELECT Websites.name, access_log.count, access_log.date
+FROM Websites
+LEFT JOIN access_log
+ON Websites.id=access_log.site_id
+ORDER BY access_log.count DESC;
+
+![-w534](media/15361896864552/15590897911253.jpg)
+
+SELECT Websites.name, access_log.count, access_log.date
+FROM access_log
+RIGHT JOIN Websites
+ON access_log.site_id=Websites.id
+ORDER BY access_log.count DESC;
+
+![-w523](media/15361896864552/15590898224273.jpg)
+
+
+join more tables:
+
+`SELECT` SID, C.MCode, C.Cno, C.Title
+`FROM` Enrollment E, Section S, Course C
+`WHERE` E.CallNo = S.CallNo `AND` S.Mcode = C.MCode `AND` S.CNo = C.CNo
+`ORDER BY` SID
+
+
+#### Like 子句：
+```
+SELECT column1, column2....columnN
+FROM table_name
+WHERE column_name LIKE PATTERN;
+```
+**case sensetive**
+* `LIKE` 'Toyota`%`'; *start with Toyota*
+* `LIKE` '`%`0'; *end with 0*
+* `LIKE` '`%`RX4`%`' *contain RX$*
+* `NOT LIKE` '`%`RX4`%`' *do NOT match the pattern*
+
+#### NOT IN 子句：
+```
+SELECT column1, column2....columnN
+FROM   table_name
+WHERE  column_name NOT IN (val-1, val-2,...val-N);
+```
+
+#### ORDER BY 子句：
+```
+SELECT column1, column2....columnN
+FROM   table_name
+WHERE  CONDITION
+ORDER BY column_name {ASC|DESC};
+```
+
+
+### comparison
+#### NULL
+* To check whether a value is NULL or not in MySQL,
+* we can use `IS NULL` or `IS NOT NULL`
+```
+SELECT * FROM Section
+WHERE Room IS NULL;
+```
+### Relational Algebra - Examples
+* A X B X C, 要标注 where 条件 and key一一对应
+`Π`course.MCode, Course.Cno, Schedule, Room, Credit
+(`σ`SID = "625018" (Enrollment `X` Section `X` Course))
+
+`SELECT` C.MCode, C.CNo, Credit, Schedule, Room FROM Enrollment E, Section S, Course C
+`WHERE` E.SID='20000006'
+`AND` E.CallNo=S.CallNo `AND` S.MCode=C.MCode `AND` S.CNo=C.CNo;
+
+2. SID
+SID --- `Π`SID(Student) - `Π`SID(Transcript)
+`Π`Student.SID,Name (SID   Student))
+
+`SELECT` SID, Name FROM Student
+`WHERE` SID `IN` (
+`SELECT SID FROM Student`
+`MINUS` `SELECT SID FROM Transcript`
+)
+
+3. group
+SC -- SID`G`sum(Credit)(Transcript `X` Course)
+`Π`SC.SID,Name `σ`sum(Credit) >= 6 (SC `X` Student))
+
+`SELECT` S.SID, S.Name, SUM(Credit)
+`FROM` Student S, Transcript T, Course C
+`WHERE` S.SID=T.SID `AND` T.MCode=C.Mcode `AND` T.CNo= C.Cno
+`GROUP BY` S.SID
+`HAVING` SUM(Credit)>=6;
 
 
 ### SQL UNION 语法
@@ -1639,25 +1910,3 @@ SQLite - Java
 SQLite - PHP
 SQLite - Perl
 SQLite - Python
-
-# SQL 安装问题
-
-## Mac安装mysql问题之-bash: mysql: command not found
-mysql -u root -p
--bash: mysql: command not found
-
-解决方法：
-
-* 在你的Mac终端,输入： `cd ~` //进入~文件夹
-* 然后输入：`touch .bash_profile`
-* 回车执行后，
-* 再输入：`open -e .bash_profile`
-* 这时候会出现一个TextEdit，如果以前没有配置过环境变量，呈现在你眼前的就是一个空白文档，你需要在这个空白文档里输入：`export PATH=$PATH:/usr/local/mysql/bin`
-* 然后关闭这个TextEdit
-* 回到终端面板，输入：`source ~/.bash_profile`
-
-以上，问题解决
-
-再输入：mysql -u root -p
-回车后就会显示：Enter password:
-正确输入你的密码
