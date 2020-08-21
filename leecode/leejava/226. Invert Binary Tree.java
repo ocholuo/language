@@ -1,10 +1,8 @@
 
 
 
-
 // 226. Invert Binary Tree
 // https://leetcode.com/problems/invert-binary-tree/
-// Invert a binary tree.
 
 // Example:
 // Input:
@@ -20,10 +18,6 @@
 //   7     2
 //  / \   / \
 // 9   6 3   1
-
-// Trivia:
-// This problem was inspired by this original tweet by Max Howell:
-// Google: 90% of our engineers use the software you wrote (Homebrew), but you can’t invert a binary tree on a whiteboard so f*** off.
 
 /**
  * Definition for a binary tree node.
@@ -45,8 +39,9 @@
 // class Solution {
 //     public TreeNode invertTree(TreeNode root) {
 //         TreeNode newtree = new TreeNode();
-//         if (root == null)
+//         if (root == null){
 //             return root;
+//         }
 //         newtree.val = root.val;
 //         newtree.left = invertTree(root.right);
 //         newtree.right = invertTree(root.left);

@@ -34,14 +34,18 @@
 
 // Approach #1: Depth-First Search [Accepted]
 // class Solution {
+
 //     public int ans=0;
+
 //     public int diameterOfBinaryTree(TreeNode root) {
 //         depth(root);
 //         return ans;
 //     }
     
 //     public int depth(TreeNode root) {
-//         if (root == null) return 0;
+//         if (root == null) {
+//             return 0;
+//         }
 //         int L = depth(root.left);
 //         int R = depth(root.right);
 //         ans = Math.max(ans, L+R);
