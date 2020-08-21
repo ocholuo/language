@@ -28,7 +28,7 @@ public class BTTraversal {
         s.add(node);
         while(!s.isEmpty()) {
             node = s.pop();
-            System.out.println(node.data);
+            System.out.print(node.data + " ");
             if(node.right != null) {
                 s.add(node.right);
             }
@@ -86,6 +86,34 @@ public class BTTraversal {
     }
 
 
+    public void postorderWithOneStack(Node node) {
+        if(node == null) return;
+        Stack<Node> s = new Stack<Node>();
+        Node current = node;
+        Node temp;
+        while(current != null || !s.isEmpty()) {
+            if(current != null) {
+                s.push(current);
+                current = current.left;
+            }
+            else {
+                temp = s.peek().right;
+                if(temp == null) {
+                    temp = s.pop();
+                    System.out.print(temp.data + " ");
+                    while(!s.isEmpty() && temp == s.peek().right) {
+                        temp = s.pop();
+                        System.out.print(temp.data+ " ");
+                    }
+                }
+                else {
+                    current = temp;
+                }
+            }
+
+        }
+    }
+
     public void postorderWithTwoStack(Node node) {
         if (node == null) {
             System.out.print("The node is null.");
@@ -93,9 +121,7 @@ public class BTTraversal {
         }
         Stack<Node> s1 = new Stack<Node>();
         Stack<Node> s2 = new Stack<Node>();
-
         s1.push(node);
-
         while(!s1.isEmpty()) {
             node = s1.pop();
             s2.push(node);
@@ -116,17 +142,24 @@ public class BTTraversal {
 
     public static void main(String args[]){
         BinaryTree bt = new BinaryTree();
-        Node head = null;
-        head = bt.addNode(10, head);
-        head = bt.addNode(15, head);
-        head = bt.addNode(19, head);
-        head = bt.addNode(17, head);
-        head = bt.addNode(11, head);
-        head = bt.addNode(-11, head);
+        Node root = null;
+        root = bt.addNode(10, root);
+        root = bt.addNode(15, root);
+        root = bt.addNode(0, root);
+        root = bt.addNode(5, root);
+        root = bt.addNode(-1, root);
+        root = bt.addNode(2, root);
+        root = bt.addNode(6, root);
 
         BTTraversal traverse = new BTTraversal();
-        traverse.postorderWithTwoStack(head);
-        traverse.preorderwithStack(head);
+        System.out.println("preorderwithStack:");
+        traverse.preorderwithStack(root);
+        System.out.println();
+        System.out.println("postorderWithTwoStack:");
+        traverse.postorderWithTwoStack(root);
+        System.out.println();
+        System.out.println("postorderWithOneStack:");
+        traverse.postorderWithOneStack(root);
     }
 
 }

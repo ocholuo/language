@@ -1,4 +1,5 @@
 
+
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -6,6 +7,7 @@ import java.util.Queue;
 //     5     15
 //   4   7      19
 // 3              20
+
 
 
 public class BTTraversalLevelByLevel {
@@ -73,21 +75,44 @@ public class BTTraversalLevelByLevel {
         }
     }
 
+
+    
+    public void levelByLevelWithOneQueueandCounter(Node node) {
+        if(node == null) return;
+        Node current;
+        int levelcount = 1;
+        int currentcount = 0;
+        Queue<Node> q = new LinkedList<>();
+        q.offer(node);
+        while(!q.isEmpty()) {
+            while (levelcount != 0) {
+                current = q.poll();
+                System.out.print(current.data + " ");
+                if(current.left != null){ 
+                    q.offer(current.left);
+                    currentcount ++;
+                }
+                if(current.right != null){
+                    q.offer(current.right);
+                    currentcount ++;
+                }
+                levelcount -= 1;
+            }
+            System.out.println();
+            levelcount = currentcount;
+            currentcount = 0;
+        }
+    }
+
+
     public static void main(String args[]) {
         BTTraversalLevelByLevel tt = new BTTraversalLevelByLevel();
         BinaryTree bt = new BinaryTree();
         Node root = null;
         root = bt.addNode(10, root);
-        // root = bt.addNode(20, root);
-        // root = bt.addNode(30, root);
         root = bt.addNode(15, root);
-        // root = bt.addNode(-10, root);
         root = bt.addNode(0, root);
         root = bt.addNode(5, root);
-        // root = bt.addNode(-5, root);
-        // root = bt.addNode(-15, root);
-        // root = bt.addNode(27, root);
-        // root = bt.addNode(35, root);
         root = bt.addNode(-1, root);
         root = bt.addNode(2, root);
         root = bt.addNode(6, root);
@@ -96,8 +121,8 @@ public class BTTraversalLevelByLevel {
         tt.levelByLevelWithTwoQueue(root);
         System.out.println("\n2. One queue and delimiter");
         tt.levelByLevelWithOneQueue(root);
-        // System.out.println("\n\n3. One queue and count");
-        // tt.levelByLevelOneQueueUsingCount(root);
+        System.out.println("\n\n3. One queue and count");
+        tt.levelByLevelWithOneQueueandCounter(root);
     }
 
 
