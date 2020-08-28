@@ -1,4 +1,11 @@
-# overthewire_bandit
+---
+layout: post
+title: InfoSecurityGame - over the wire.bandit
+date: 2020-02-17 11:11:11 +0300
+description: solution for over the wire bandit.
+img: SSH.png
+tags: [SSH, InfoSecurityGame]
+---
 
 ```
 2/17/2020 updated.
@@ -14,10 +21,16 @@ Lo termino todo~ estos son solución, pienses que si quiere verlo.
 
 ```
 
+
+
+# overthewire_bandit
+
+
 [toc]
 
 `bandit0@bandit.labs.overthewire.org -p 2220`
 
+---
 
 # Solutions
 
@@ -1041,27 +1054,33 @@ list of general steps for this challenge/script.
 `echo UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ 1001 | nc localhost 30002 >> result &`
 
 ```py
------------------------------------------------------
+
 #!/bin/bash
 password24=UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ
 for i in {0000..9999}
   do
     echo $password24 $i >> passlist.txt
   done
+
 # generated the passlist.txt with the password and 0000 for example:
 UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ 0000
 UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ 0001
 ...
+
 # cat this file into nc and let it run
 cat passlist.txt | nc localhost 30002
+
+
 -----------------------------------------------------
+
+
 #!/bin/bash
 passwd="UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ"
-
 for a in {0000-10000};
   do
-    echo $passwd' ''$a | nc localhost 30002 >> result &
+    echo $passwd $a | nc localhost 30002 >> result &
   done
+
 # put in result and search
 # but actullay it cannot loop
 # need troubleshoott

@@ -397,6 +397,62 @@ class ElectricCar(Car):
 
 
 
+---
+
+
+# images
+
+
+```py
+
+# face detect
+import cv2 as cv
+face_cascade = cv.CascadeClassifier('readonly/haarcascade_frontalface_default.xml')
+eye_cascade = cv.CascadeClassifier('readonly/haarcascade_eye.xml')
+
+img = cv.imread('readonly/floyd.jpg')
+
+# convert it to grayscale using the cvtColor image
+gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
+
+faces = face_cascade.detectMultiScale(gray)
+# array([[158, 75, 176, 176]], dtype=int32)
+
+faces = face_cascade.detectMultiScale(cv_img, 1.05)
+show_rects(faces)
+
+
+rec = faces.tolist()[0]
+# [158, 75, 176, 176]
+
+
+from PIL import Image
+from PIL import ImageDraw
+
+
+#  draw
+pil_img=Image.fromarray(gray,mode="L")
+drawing=ImageDraw.Draw(pil_img)
+drawing.rectangle( (rec[0],rec[1], rec[0]+rec[2], rec[1]+rec[3]), oultline="white")
+display(pil_img)
+
+
+pil_img = Image.open('readonly/msi_recruitment.gif')
+pil_img.mode       # "P"
+
+
+open_cv_version = pil_img.convert("L")
+open_cv_version.save("msi_recruitment.png")
+
+
+pil_img = pil_img.convert("RGB")
+pil_img.mode       # "RBG"
+```
+
+
+
+
+
 
 
 
