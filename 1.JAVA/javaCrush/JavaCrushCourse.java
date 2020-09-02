@@ -21,9 +21,34 @@ public class JavaCrushCourse {
 
     public static void main(String[] args) {
         
+        // constructor 
+        // specifies how to create objects of this class. 
+        // code that gets run when an object is created to initialize that object.
+        // constructor looks like a function but has no return type. 
+        // And is named the same as the class.
+        
+        // abstraction.
+        // The details of how a object works can remain hidden from us as long as we know what it does.
+
         // 0. array
         // int[] arr = {1,2,3,4,5};
         // String[] names = new String[5];
+
+
+        // 0. string
+        // String s1 = "Hello";
+        // String s2 = " World!";
+        // String s3 = s1.concat(s2);
+        // System.out.println(s3);       // prints "Hello World!"
+        // System.out.println(s1.equals("Hello"));     // prints true
+        // System.out.println(str.indexOf("l"));       // prints 2
+        // System.out.println(str.charAt(0));          // prints 'T'
+        // String str = "Hello World!";
+        // String uppercase = str.toUpperCase();
+        // // uppercase = "HELLO WORLD!"
+        // String lowercase = str.toLowerCase();
+        // lowercase = "hello world!"
+
 
         // 1. simple for loop
         // for (int i = 0; i < arr.length; i++) {
@@ -230,6 +255,7 @@ public class JavaCrushCourse {
         // System.out.println(tim.getAge());
     
 
+
         // 16. inherit
         // Cat tim2 = new Cat("tim", 3, 500);
         // Cat joe = new Cat("joe", 2);
@@ -237,7 +263,35 @@ public class JavaCrushCourse {
         // tim2.speak();
         // joe.speak();
         // bob.speak();
-        // tim2.eat(2);
+        // tim2.eat(2)
+        // class Animal { // Parent Class: Animal class members}
+        // class Dog extends Animal { // Child Class: Dog inherits traits from Animal }
+        // class Animal {    // Parent class
+        //     String sound;
+        //     Animal(String snd){this.sound = snd;}
+        //     protected double gpa;    // any child class of Student can access gpa
+        //     final protected boolean isStudent() {
+        //         return true;      // any child class of Student cannot modify isStudent()
+        //     }
+        // }
+        // class Dog extends Animal {    // Child class
+        //     // super() method can act like the parent constructor inside the child class constructor.
+        //     Dog() {
+        //         super("woof");
+        //     }
+        //     // alternatively, we can override the constructor completely by defining a new constructor.
+        //     Dog() {
+        //         this.sound = "woof";
+        //     }
+        // }
+
+
+
+        // 16.
+        // Main() method in Java
+        // In simple Java programs, you may work with just one class and one file. However, as your programs become more complex you will work with multiple classes, each of which requires its own file. Only one of these files in the Java package requires a main() method, and this is the file that will be run in the package.
+
+
 
         // 17. static variable
         // System.out.println(Dog.count);  // 2

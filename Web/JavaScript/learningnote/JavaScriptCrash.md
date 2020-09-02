@@ -1,5 +1,14 @@
+---
+title: HTML - JavaScript OnePage
+date: 2020-08-29 11:11:11 -0400
+description: Learning Path
+categories: [Web, JavaScript]
+img: /assets/img/sample/rabbit.png
+tags: [OnePage, JavaScript]
+---
 
-# Language basics crash course
+
+# HTML - JavaScript OnePage
 
 [toc]
 
@@ -32,7 +41,7 @@ assign variable:
 | `String`  | A sequence of text, enclose in quote.                   | let myvar = 'Bob';                                                                          |
 | `Number`  | A number. no quotes.                                    | let myvar = 10;                                                                             |
 | `Boolean` | A True/False value. no quotes.                          | let myvar = true;                                                                           |
-| `Array`   | A structure to store multiple values                      | let myvar = [1,'Bob','Steve',10];  myVariable[0], myVariable[1], etc.                       |
+| `Array`   | A structure to store multiple values                    | let myvar = [1,'Bob','Steve',10];  myVariable[0], myVariable[1], etc.                       |
 | `Object`  | Everything in JSt is object, can be stored in variable. | let myvar = document.querySelector('h1'); let dog = { name : 'Spot', breed : 'Dalmatian' }; |
 
 difference between `var` and `let`
@@ -73,6 +82,7 @@ let z;
 console.log(typeof rating)
 ```
 
+---
 
 ### Constants in JavaScript
 

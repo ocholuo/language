@@ -1,71 +1,22 @@
+---
+title: HTML - HTML Style
+date: 2020-08-29 11:11:11 -0400
+description: Learning Path
+categories: [Web, HTML]
+img: /assets/img/sample/rabbit.png
+tags: [HTML]
+---
 
-# HTML
+
+# HTML - HTML Style
 
 [toc]
 
 ---
 
-## introduction
-
-What is HTML?
-- HTML stands for Hyper Text Markup Language
-- HTML describes the structure of a Web page
-- HTML consists of a series of elements
-- HTML elements tell the browser how to display the content
-- HTML elements are represented by tags
-- HTML tags label pieces of content such as "heading", "paragraph", "table", and so on
-- Browsers do not display the HTML tags, but use them to render the content of the page
-
-
-![Screen Shot 2020-05-12 at 20.24.54](https://i.imgur.com/kPTQ6qH.png)
-
-### HTML Tags
-
-`<tagname>content goes here...</tagname>`
-
-in pairs, start tag + end tag.
-
-```html
-<html>
-
-<head>
-<title>Page title</title>
-</head>
-
-<body>
-<h1>This is a heading</h1>
-<p>This is a paragraph.</p>
-<p>This is another paragraph.</p>
-</body>
-
-</html>
-```
-
-### The <!DOCTYPE> Declaration
-
-- The <!DOCTYPE> declaration represents the document type, and helps browsers to display web pages correctly.
-- only appear once, at the top of the page (before any HTML tags).
-- The <!DOCTYPE> declaration is not case sensitive.
-- The <!DOCTYPE> declaration for HTML5 is: `<!DOCTYPE html>`
-
-
-### Empty HTML Elements
-HTML elements with no content are called empty elements.
-
-`<br>` is an empty element without a closing tag (the `<br>` tag defines a line break):
-
-`<p>This is a <br> paragraph with a line break.</p>`
-
-
-### inlines vs block level Elements
-
-![Screen Shot 2020-05-12 at 19.50.31](https://i.imgur.com/7rOUAfh.png)
-
----
-
 ## HTML Attributes
-
-W3C recommends lowercase in HTML, and demands lowercase for stricter document types like XHTML.
+- ecommends lowercase in HTML, 
+- demands lowercase for stricter document types like XHTML.
 
 **The `href` Attribute**： HTML links
 
@@ -108,7 +59,6 @@ W3C recommends lowercase in HTML, and demands lowercase for stricter document ty
 </html>
 ```
 
-
 **The `title` Attribute**
 - title attribute is added to the `<p>` element.
 - will be displayed as a tooltip when you mouse over the paragraph:
@@ -116,62 +66,6 @@ W3C recommends lowercase in HTML, and demands lowercase for stricter document ty
 ```html
 <h2 title="I'm a header">The title Attribute</h2>
 <p title="I'm a tooltip">Mouse over this paragraph, to display the title attribute as a tooltip.</p>
-```
-
----
-
-
-## HTML Headings
-HTML headings are defined with the `<h1>` to `<h6>` tags.
-
-### Bigger Headings
-Each HTML heading has a default size.
-specify the size for any heading with the style attribute, using the CSS font-size property:
-
-`<h1 style="font-size:60px;">Heading 1</h1>`
-
-### HTML Horizontal Rules `<hr>`
-
----
-
-## HTML Paragraphs
-
-You cannot be sure how HTML will be displayed.
-
-Large or small screens, and resized windows will create different results.
-
-With HTML, you cannot change the output by adding extra spaces or extra lines in your HTML code.
-
-The browser will remove any extra spaces and extra lines when the page is displayed:
-
-all the same:
-
-```html
-
-<p>This is a paragraph.</p>
-
-<p>This is a                     paragraph.</p>
-
-<p>
-This
-is
-a
-paragraph.
-</p>
-```
-
-### Line Breaks `<br>`
-
-
-### The Poem Problem `<pre> </pre>`
-This poem will display on a single line:
-
-```html
-<pre>
-  My Bonnie lies over the ocean.
-
-  My Bonnie lies over the sea.
-</pre>
 ```
 
 ---
@@ -195,8 +89,183 @@ This poem will display on a single line:
 </body>
 ```
 
+---
+
+## HTML Styles - `CSS` Cascading Style Sheets
+
+CSS can be added to HTML elements in 3 ways:
+- Inline - using the `style attribute` in HTML elements
+- Internal - by using a `<style>` element in the `<head>` section
+- External - by using an external CSS file
+
+---
+
+### 1. Inline CSS
+- used to apply a unique style to a *single HTML element*.
+- uses the `style` attribute of an HTML element.
+- **avoid this**
+  - keep the presentation the functionality and the styling completely separate or as much as possible.
+  - inline css mix the presentation with Styling
+  - not professional, not scalable, not practical.
+
+
+```html
+<h1 style="color:blue;">This is a Blue Heading</h1>
+```
+
+
+---
+
+
+### 2. Internal CSS `<head> <style> body {} h1 {} p {} </style> </head>`
+- define a style for a *single HTML page*.
+- defined in the `<head>` section of an HTML page, within a `<style>` element:
+
+- **avoid**
+  - only for that single html file, also fattens up the HTML file.
+
+```html
+<head>
+
+  <style>
+    body {background-color: powderblue;}
+
+    h1 {
+      color: blue;
+      font-family: verdana;
+      font-size: 300%;
+    }
+  </style>
+
+</head>
+```
+
+
+
+---
+
+### 3. External CSS `<head> <link rel="stylesheet" href="name.css"> </head>`
+- define the style for *many HTML pages*.
+- With an external style sheet, change entire web site, by changing one file!
+- add a `<link>` to it in the `<head>` section of the HTML page:
+
+![Screen Shot 2020-05-12 at 22.35.19](https://i.imgur.com/GT3XrCC.png)
+
+```html
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
+```
+
+**crate a separate css file**: the `"styles.css"`:
+
+```html
+body {
+  background-color: powderblue;
+}
+h1 {
+  color: blue;
+}
+/p {
+  color: red;
+}
+```
+
+---
+
+#### 4. External References
+External style sheets can be referenced with a full URL or with a path relative to the current web page.
+
+full URL to link to a style sheet:
+```html
+<link rel="stylesheet" href="https://www.w3schools.com/html/styles.css">
+```
+
+style sheet located in the html folder on the current web site:
+```html
+<link rel="stylesheet" href="/html/styles.css">
+```
+
+style sheet located in the same folder as the current page:
+```html
+<link rel="stylesheet" href="styles.css">
+```
+
+---
+
+#### CSS: Classe and ID
+
+**id** is *unique*, wont's use it for other element.
+**class** is may use for other element.
+
+- re-use as needed
+- across pages
+
+
+
+1. The `id` Attribute
+  - define a specific style for **one special element**, 
+  - add an `id` attribute to the element:
+  - then define a style for the element with the specific `id`:
+
+    ```html
+    <p id="p01">I am different</p>
+    <img src="cake,jpg" id="cakeimg" />
+
+    #p01 {
+      color: blue;
+    }
+
+    #cakeimg {
+      flost: right;
+    }
+    ```
+
+
+2. The `class` Attribute
+   - define a style for **special types of elements**, 
+   - add a `class` attribute to the element:
+   - then define a style for the elements with the specific `class`:
+
+    ```html
+    <p class="error">I am different</p>
+    <li class="foodLi"> choco </li>
+    
+    p.error {
+      color: red;
+    }
+
+    .foodLi {
+      coolor: green;
+    }
+    ```
+
+
+---
+
+
+### CSS `Border` `Padding`
+
+The CSS `border` property defines a border around an HTML element:
+
+The CSS `padding` property defines a padding (space) between the text and the border:
+
+The CSS `margin` property defines a margin (space) outside the border:
+
+```
+p {
+  border: 1px solid powderblue;
+  padding: 30px;  内圈框
+  margin: 50px;   外圈框
+}
+```
+
+
 #### `color`
-the text color for an HTML element:
+- the text color for an HTML element:
+  - 140 color name, 
+  - RGB `rgb(138,42,33)`, 
+  - Hex value `#8A2BE2`
 ```html
 <h1 style="color:blue;">This is a heading</h1>
 <p style="color:red;">This is a paragraph.</p>
@@ -224,6 +293,7 @@ defines the horizontal text alignment for an HTML element:
 ```
 
 ---
+
 
 ## HTML Text Formatting
 
@@ -384,142 +454,6 @@ not displayed by the browser, but can help document HTML source code.
 
 
 ---
-
-## HTML Styles - `CSS` Cascading Style Sheets.
-
-CSS can be added to HTML elements in 3 ways:
-- Inline - by using the style attribute in HTML elements
-- Internal - by using a `<style>` element in the <head> section
-- External - by using an external CSS file
-
-### Inline CSS
-- used to apply a unique style to a *single HTML element*.
-- uses the `style` attribute of an HTML element.
-
-`<h1 style="color:blue;">This is a Blue Heading</h1>`
-
-- **avoid this**
-  - keep the presentation the functionality and the styling completely separate or as much as possible.
-  - inline css mix the presentation with Styling, not professional, not scalable, not practical.
-
-### Internal CSS `<head> <style> body {} h1 {} p {} </style> </head>`
-- define a style for a *single HTML page*.
-- defined in the `<head>` section of an HTML page, within a `<style>` element:
-
-- **avoid**
-  - only for that single html file, also fattens up the HTML file.
-
-```html
-<head>
-<style>
-body {background-color: powderblue;}
-h1 {
-  color: blue;
-  font-family: verdana;
-  font-size: 300%;
-}
-</style>
-</head>
-```
-
-### External CSS `<head> <link rel="stylesheet" href="name.css"> </head>`
-- define the style for *many HTML pages*.
-- With an external style sheet, change entire web site, by changing one file!
-- add a `<link>` to it in the `<head>` section of the HTML page:
-
-![Screen Shot 2020-05-12 at 22.35.19](https://i.imgur.com/GT3XrCC.png)
-
-```html
-<head>
-  <link rel="stylesheet" href="styles.css">
-</head>
-```
-
-**crate a separate css file**: the `"styles.css"`:
-
-```
-body {
-  background-color: powderblue;
-}
-h1 {
-  color: blue;
-}
-/p {
-  color: red;
-}
-```
-
-#### External References
-External style sheets can be referenced with a full URL or with a path relative to the current web page.
-
-full URL to link to a style sheet:
-```html
-<link rel="stylesheet" href="https://www.w3schools.com/html/styles.css">
-```
-
-style sheet located in the html folder on the current web site:
-```html
-<link rel="stylesheet" href="/html/styles.css">
-```
-
-style sheet located in the same folder as the current page:
-```html
-<link rel="stylesheet" href="styles.css">
-```
-
-
-
-### The `id` Attribute 根据id改样式
-
-To define a specific style for one special element, add an id attribute to the element:
-
-```html
-<p id="p01">I am different</p>
-```
-
-then define a style for the element with the specific id:
-
-```html
-#p01 {
-  color: blue;
-}
-```
-
-**id** is *unique*, wont's use it for other element.
-**class** is may use for other element.
-
-
-### The `class` Attribute 根据class改样式
-To define a style for special types of elements, add a class attribute to the element:
-```html
-<p class="error">I am different</p>
-```
-
-then define a style for the elements with the specific class:
-```html
-p.error {
-  color: red;
-}
-```
-
-
-### CSS `Border` `Padding`
-
-The CSS `border` property defines a border around an HTML element:
-
-The CSS `padding` property defines a padding (space) between the text and the border:
-
-The CSS `margin` property defines a margin (space) outside the border:
-
-```
-p {
-  border: 1px solid powderblue;
-  padding: 30px;  内圈框
-  margin: 50px;   外圈框
-}
-```
-
-
 ---
 
 ## HTML Links
@@ -697,23 +631,15 @@ suggest using the `style` attribute. It prevents styles sheets from changing the
 <html>
 
 <head>
-<style>
-/* This stylesheet sets the width of all images to 100%: */
-img {
-  width: 100%;
-}
-</style>
+    <style>
+    /* This stylesheet sets the width of all images to 100%: */
+        img {width: 100%;}
+    </style>
 </head>
 
 <body>
-
-<h2>Styling Images</h2>
-<p>The image below has the width attribute set to 128 pixels, but the stylesheet overrides it, and sets the width to 100%.</p>
 <img src="html5.gif" alt="HTML5 Icon" width="128" height="128">
-
-<p>The image below uses the style attribute, where the width is set to 128 pixels which overrides the stylesheet:</p>
 <img src="html5.gif" alt="HTML5 Icon" style="width:128px;height:128px;">
-
 </body>
 
 </html>
@@ -724,7 +650,7 @@ img {
 
 ```html
 Images in Another Folder
-<img src="/images/html5.gif" alt="HTML5 Icon" style="width:128px;height:128px;">
+<img src="/images/html5.gif" alt="HTML5 Icon">
 
 Images on Another Server:
 <img src="https://www.w3schools.com/images/w3schools_green.jpg" alt="W3Schools.com">
@@ -734,49 +660,46 @@ Images on Another Server:
 #### Animated Images
 HTML allows animated GIFs:
 ```html
-<img src="programming.gif" alt="Computer Man" style="width:48px;height:48px;">
+<img src="programming.gif" alt="Computer Man">
 ```
 
 
 #### Image as a Link `<a href="url"> <img src="url" style="border:0;"> </a>`
-To use an image as a link, put the `<img>` tag inside the `<a>` tag:
-
-Note: `border:0;` is added to prevent IE9 (and earlier) from displaying a border around the image (when the image is a link).
+use an image as a link, put the `<img>` tag inside the `<a>` tag:
+- `border:0;` is added to prevent IE9 (and earlier) from displaying a border around the image (when the image is a link).
 
 ```html
 <a href="default.asp">
-  <img src="smiley.gif" alt="HTML tutorial" style="width:42px;height:42px;border:0;">
+  <img src="smiley.gif" alt="HTML tutorial" style="border:0;">
 </a>
 ```
 
 
 #### Image Floating `<img src="url" style="float:right;">`
-Use the CSS float property to let the image float to the right or to the left of a text:
+let the image float to the right or to the left of a text:
 
 ```html
 float to the right of the text:
 <p>
-  <img src="smiley.gif" alt="Smiley face" style="float:right;width:42px;height:42px;">
+  <img src="smiley.gif" alt="Smiley face" style="float:right;">
   Hello
 </p>
 
 float to the left
 <p>
-  <img src="smiley.gif" alt="Smiley face" style="float:left;width:42px;height:42px;">
+  <img src="smiley.gif" alt="Smiley face" style="float:left">
   Hello
 </p>
 ```
 
 
 ### Image Maps `<img src="url" alt="tag" usemap="#workmap">`  
-The `<map>` tag defines an image-map. An image-map is an image with clickable areas.
-
-may insert the `<map>` element anywhere,.
+defines an image-map
+- an image with clickable areas.
+- may insert the `<map>` element anywhere,.
 
 ```html
-
 <img src="workplace.jpg" alt="Workplace" usemap="#workmap">  
-
 
 <map name="workmap">
  <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
@@ -785,20 +708,19 @@ may insert the `<map>` element anywhere,.
 </map>
 ```
 
-`<img>`: add a usemap attribute:
-`<map>`: element is used to create an image map, and linked to the image by name attribute:
-`<area>` element: defined clickable area
-- define the shape of the area, and you can choose one of these values:
-- `rect` - defines a rectangular region
-- `circle` - defines a circular region
-- `poly` - defines a polygonal region
-- `default` - defines the entire region
+- `<img>`: add a usemap attribute:
+- `<map>`: element is used to create an image map, and linked to the image by name attribute:
+- `<area>` element: defined clickable area
+    - define the shape of the area, and you can choose one of these values:
+    - `rect` - defines a rectangular region
+    - `circle` - defines a circular region
+    - `poly` - defines a polygonal region
+    - `default` - defines the entire region
 
 
 #### Image Map and JavaScript
-A clickable area: a `link to another page`, or trigger a `JavaScript function`.
-
-Add a click event on the `<area>` element to execute a JavaScript function:
+- A clickable area: a `link to another page`, or trigger a `JavaScript function`.
+- Add a click event on the `<area>` element to execute a JavaScript function:
 
 ```html
 <!DOCTYPE html>
@@ -826,69 +748,61 @@ function myFunction() {
 
 ### HTML Background Images
 
-文字背景：
+1. text background color
 ```html
 <body>
-<div style="background-image: url('img_girl.jpg');">
-  You can specify background images.
-</div>
+    <div style="background-image: url('img_girl.jpg');">
+      You can specify background images.
+    </div>
 </body>
 
 or
 
 <style>
-div {
-  background-image: url('img_girl.jpg');
-}
+    div {background-image: url('img_girl.jpg');}
 </style>
 ```
 
-网页页面背景：
+2. 网页页面背景：
 ```html
 <style>
-body {
-  background-image: url('img_girl.jpg');
-  background-repeat: no-repeat;            // avoid the repeating
-  background-attachment: fixed;            // 拉伸至全屏
-  background-size: cover;
-  background-size: 100% 100%               // stretch to fit the entire image
-}
+    body {
+      background-image: url('img_girl.jpg');
+      background-repeat: no-repeat;            // avoid the repeating
+      background-attachment: fixed;            // 拉伸至全屏
+      background-size: cover;
+      background-size: 100% 100%               // stretch to fit the entire image
+    }
 </style>
 ```
 
 #### Background Image
+- add a background image **on an HTML element**,
+- **use the HTML style attribute and the CSS background-image property**
 
-To add a background image *on an HTML element*,
-
-**use the HTML style attribute and the CSS background-image property**
 ```html
 <body>
-
-<div style="background-image: url('img_girl.jpg');">
-  hello.         // 只有字段大小的图片显示出来
-</div>
-
+    <div style="background-image: url('img_girl.jpg');">
+      hello.         // 只有字段大小的图片显示出来
+    </div>
 </body>
 ```
 
-Specify the background image *in the style element:*
+Specify the background image **in the style element:**
 ```html
 <style>
-div {
-  background-image: url('img_girl.jpg');
-}
+    div {background-image: url('img_girl.jpg');}
 </style>
 ```
 
-*the entire page to have a background image**
+**the entire page to have a background image**
 specify the background image on the `<body>` element:
 ```html
 <style>
-body {
-  background-image: url('img_girl.jpg');
-}
+    body {background-image: url('img_girl.jpg');}
 </style>
 ```
+
 
 #### Background Repeat
 - If the background image is smaller than the element,
@@ -928,195 +842,6 @@ body {
 
 
 ---
-
-## table
-
-An HTML table is defined with the `<table>` tag.
-
-Each table row is defined with the `<tr>` tag.
-
-A table header is defined with the `<th>` tag. `<thead>`
-
-By default, table headings are bold and centered.
-
-A table data/cell is defined with the `<td>` tag.
-
-`<tbody> <tfoot>`
-
-
-```html
-<!DOCTYPE html>
-<html>
-
-<head>
-<style>
-
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;      // 只留一条边框
-  border-spacing: 5px;            // 留2条边框
-  width: 100%;
-}
-
-td, th {
-  border: 1px solid #dddddd;      // Adding a Border
-  text-align: left;               // 字体靠边对齐
-  padding: 8px;                   // 字体和边框宽度
-}
-
-tr:nth-child(even) {
-  background-color: #dddddd;
-}
-</style>
-</head>
-<body>
-
-<h2>HTML Table</h2>
-
-<table>
-  <tr>
-    <th>Company</th>
-    <th>Contact</th>
-    <th>Country</th>
-  </tr>
-  <tr>
-    <td>Alfreds Futterkiste</td>
-    <td>Maria Anders</td>
-    <td>Germany</td>
-  </tr>
-  <tr>
-    <td>Centro comercial Moctezuma</td>
-    <td>Francisco Chang</td>
-    <td>Mexico</td>
-  </tr>
-</table>
-
-
-<table style="width:100%">
-  <caption>Table name</caption>    // add a caption to a table
-  <tr>
-    <th>Name</th>
-    <th colspan="2">Telephone</th>      // Cells that Span Many Columns
-  </tr>
-  <tr>
-    <td>Bill Gates</td>
-    <td>55577854</td>
-    <td>55577855</td>
-  </tr>
-  <tr>
-    <th rowspan="2">Telephone:</th>     // Cells that Span Many rows
-  </tr>
-    <td>1</td>
-    <td>1.1</td>    
-  </tr>
-  <tr>
-    <td>2</td>
-    <td>2.1</td>
-  </tr>
-</table>
-
-</body>
-</html>
-
-```
-
-
-### A Special Style for One Table
-add an id attribute to the table:
-
-```html
-
-<head>
-<style>
-
-table {            
-  width:100%;
-}
-
-// 主要，可控制全部
-table, th, td {               
-  border: 1px solid black;
-  border-collapse: collapse;
-  padding: 15px;
-  text-align: left;
-}
-
-// 单独的其他样式
-table#t01 tr:nth-child(even) {
-  background-color: #eee;
-}
-table#t01 tr:nth-child(odd) {
- background-color: #fff;
-}
-table#t01 th {
-  background-color: black;
-  color: white;
-}
-
-</style>
-</head>
-
-
-<table id="t01">
-  <tr>
-    <th>Firstname</th>
-    <th>Lastname</th>
-    <th>Age</th>
-  </tr>
-  <tr>
-    <td>Eve</td>
-    <td>Jackson</td>
-    <td>94</td>
-  </tr>
-</table>
-
-```
-
----
-
-## HTML lists
-
-```html
-
-<body>
-
-// Unordered HTML List
-<ul>
-  <li>Coffee</li>
-  <li>Tea</li>
-  <li>Milk</li>
-</ul>  
-
-// Ordered HTML List
-<ol>
-  <li>Coffee</li>
-  <li>Tea</li>
-  <li>Milk</li>
-</ol>
-
-
-// Description Lists
-<dl>
-  <dt>Coffee</dt>
-  <dd>- black hot drink</dd>
-  <dt>Milk</dt>
-  <dd>- white cold drink</dd>
-</dl>
-
-</body>
-```
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

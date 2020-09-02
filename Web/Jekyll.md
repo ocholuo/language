@@ -68,5 +68,14 @@ $ git commit -m "8.25"
 $ git push -u origin master
 ```
 
+---
+
+
+1. `_config.yml` updated, webpages does not refresh.
+2. Git push: email `nuild-n-test`. no error = success
+
+
+---
+
 
 .

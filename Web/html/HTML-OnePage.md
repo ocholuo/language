@@ -1,44 +1,87 @@
-# HTML (HTML5 标准)
+---
+title: HTML - HTML5 OnePage
+date: 2020-08-29 11:11:11 -0400
+description: Learning Path
+categories: [Web, HTML]
+img: /assets/img/sample/rabbit.png
+tags: [OnePage]
+---
+
+# HTML5 OnePage
 
 [toc]
 
-## 超文本标记语言
-HyperText Markup Language HTML
-是一种用于创建网页的标准标记语言。
-可以使用 HTML 来建立自己的 WEB 站点，HTML 运行在浏览器上，由浏览器来解析
+---
+
+## introduction
+
+HTML
+- Hyper Text Markup Language
+- HTML describes the structure of a Web page
+- HTML consists of a series of elements
+- HTML elements tell the browser how to display the content
+- HTML elements are represented by tags
+- HTML tags label pieces of content such as "heading", "paragraph", "table", and so on
+- Browsers do not display the HTML tags, but use them to render the content of the page
+
+![Screen Shot 2020-05-12 at 20.24.54](https://i.imgur.com/kPTQ6qH.png)
+
+使用 HTML 来建立自己的 WEB 站点，HTML 运行在浏览器上，由浏览器来解析
 
 - `<!DOCTYPE html>` : 声明为 HTML5 文档
-- `<html>` : 是 HTML 页面的根元素
-
-- `<head>` : 包含了文档的元（meta）数据，如 <meta charset="utf-8"> 定义网页编码格式为 utf-8。
-- `<title>` : 描述了文档的标题
+- **Metadata elements**
+  - `<html>` : HTML页面的根元素
+    - contains all other elements
+    - tells a browser that it should use the HTML standard in displaying the web page
+  - `<head>` :
+    - contains general information about the page.
+    - includes the title Information about scripts and information about displaying the page using CSS.
+    - 包含了文档的元（meta）数据，
+    - 如 <meta charset="utf-8"> 定义网页编码格式为 utf-8。
+  - `<title>` :
+    - 描述了文档的标题
+    - title for the page
+    - must be nested between the `<head>``/<head>`.
   - `<base>` :	定义了页面链接标签的默认链接地址
   - `<link>` :	定义了一个文档和外部资源之间的关系
   - `<meta>` :	定义了HTML文档中的元数据
   - `<script>` :	定义了客户端的脚本文件
   - `<style>` :	定义了HTML文档的样式文件
-- `<body>` : 包含了可见的页面内容
-- `<h1>` : 定义一个大标题
-- `<p>` : 定义一个段落
-- `<hr>`	: 定义水平线
-- `<!--...-->`	: 定义注释
+- **sectioning elements**
+- `<body>` : define the body of the whole webpage
+- `<h1>` : header
+- `<div>`:
+  - section or division of a web page.
+  - for grouping elements together to use CSS styling.
+- **text content**
+  - `<p>` : 定义一个段落
+  - `<hr>`	: 定义水平线
+  - `<!--...-->`	: 定义注释
+  - `<ul> <ol> <dl>`: `<li>`
 
+
+`<tagname>content goes here...</tagname>`
+
+```html
+<html>
+    <head>
+        <title>Page title</title>
+    </head>
+
+    <body>
+        <h1>This is a heading</h1>
+        <p>This is a paragraph.</p>
+        <p>This is another paragraph.</p>
+    </body>
+</html>
+```
+
+---
 
 ### HTML文档的后缀名
 `.html`
 `.htm`
 
-## HTML 简介
-
-`<!DOCTYPE html>` : 声明为 HTML5 文档
-`<html>` : 是 HTML 页面的根元素
-`<head>` : 包含了文档的元（meta）数据，如 <meta charset="utf-8"> 定义网页编码格式为 utf-8。
-`<title>` : 描述了文档的标题
-`<body>` : 包含了可见的页面内容
-`<h1>` : 定义一个大标题
-`<p>` : 定义一个段落
-
-在浏览器的页面上使用键盘上的 F12 按键开启调试模式，就可以看到组成标签。
 
 ### HTML
 HTML 是用来描述网页的一种语言。
@@ -49,21 +92,34 @@ HTML 是用来描述网页的一种语言。
 - 文档包含了`HTML` `标签`及`文本内容`
 - `HTML文档`也叫做 `web 页面`
 
-### HTML 标签
-`HTML 标记标签`通常被称为 `HTML 标签 (HTML tag)`。
-- 是由尖括号包围的关键词: 比如 <html>
-- 通常是成对出现的: 比如 <b> 和 </b>
-  - 第一个标签是开始标签，第二个标签是结束标签
-  - 也被称为开放标签和闭合标签
 
-        <标签>内容</标签>
+### The `<!DOCTYPE>` Declaration
+- declaration represents the document type, and helps browsers to display web pages correctly.
+- only appear once, at the top of the page (before any HTML tags).
+- not case sensitive.
+- The `<!DOCTYPE>` declaration for HTML5 is: `<!DOCTYPE html>`
 
-### HTML 元素
-`HTML 标签`和`HTML 元素`通常都是描述同样的意思.
+#### 通用声明
+HTML5
+`<!DOCTYPE html>`
+HTML 4.01
+`<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">`
+XHTML 1.0
+`<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">`
 
-严格来讲, 一个 HTML 元素包含了开始标签与结束标签，如下实例:
 
-HTML 元素: `<p>这是一个段落。</p>`
+### Empty HTML Elements
+HTML elements with no content are called empty elements.
+- `<br>` is an empty element without a closing tag, line break:
+- `<p> a <br> paragraph with a line break.</p>`
+
+
+### inlines vs block level Elements
+
+![Screen Shot 2020-05-12 at 19.50.31](https://i.imgur.com/7rOUAfh.png)
+
 
 ### Web 浏览器
 - Web浏览器用于读取HTML文件，并将其作为网页显示。
@@ -71,7 +127,7 @@ HTML 元素: `<p>这是一个段落。</p>`
 
 ### HTML 网页结构
 下面是一个可视化的HTML页面结构：
-
+```
 <html>
   <head>
     <title>页面标题</title>
@@ -85,81 +141,69 @@ HTML 元素: `<p>这是一个段落。</p>`
 </html>
 
 只有 <body> 区域 (白色部分) 才会在浏览器中显示。
+```
 
-### <!DOCTYPE> 声明
-<!DOCTYPE>声明有助于浏览器中正确显示网页。
-
-网络上有很多不同的文件，如果能够正确声明HTML的版本，浏览器就能正确显示网页内容。
-
-doctype 声明是不区分大小写的，以下方式均可：
-
-    <!DOCTYPE html>
-    <!DOCTYPE HTML>
-    <!doctype html>
-    <!Doctype Html>
-
-#### 通用声明
-HTML5
-`<!DOCTYPE html>`
-HTML 4.01
-`<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-"http://www.w3.org/TR/html4/loose.dtd">`
-XHTML 1.0
-`<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">`
-
-
-## HTML 编辑器
-
-步骤 1: 新建 HTML 文件
-在 VS Code 安装完成后，选择" 文件(F)->新建文件(N) "，在新建的文件中输入以下代码：
-
-<!DOCTYPE html>
-<html>
-  <head>
-      <meta charset="utf-8">
-      <title>菜鸟教程(runoob.com)</title>
-  </head>
-  <body>
-      <h1>我的第一个标题</h1>
-      <p>我的第一个段落。</p>
-  </body>
-</html>
-
-步骤 2: 另存为 HTML 文件
-然后选择" 文件(F)->另存为(A) "，文件名为 runoob.html:
-保存 HTML 文件时，可用 .htm 也可用 .html 扩展名。两者没有区别，建议统一用 .html。
-在一个容易记忆的文件夹中保存这个文件，比如 runoob
-
-步骤 3: 在浏览器中运行这个 HTML 文件
-然后鼠标右击编辑器上的文件名，选择在默认浏览器打开（也可以其他的浏览器）:
-运行
+---
 
 ## HTML 基础
 
-### HTML 标题（Heading）
-通过 `<h1> - <h6>` 标签来定义的.
+### HTML Heading
+`<h1> - <h6>`
+
 ```
 <h1>这是一个标题</h1>
 <h2>这是一个标题</h2>
 <h3>这是一个标题</h3>
 ```
 
-### HTML 段落
-通过标签 `<p>` 来定义的.
+---
+
+
+### HTML 段落 `<p>`
+
 ```
 <p>这是一个段落。</p>
 <p>这是另外一个段落。</p>
+浏览器会自动地在段落的前后添加空行。（</p> 是块级元素）
 ```
 
-### HTML 链接
-通过标签 `<a>` 来定义的.
-在 href 属性中指定链接的地址。
+
+### HTML Horizontal Rules `<hr>`
+
+```
+创建水平线。
+
+<p>这是一个段落。</p>
+<hr>
+<p>这是一个段落。</p>
+<hr>
+<p>这是一个段落。</p>
+```
+
+### Line Breaks `<br>`
+
+
+### The Poem Problem `<pre> </pre>`
+This poem will display on a single line:
+
+```html
+<pre>
+  My Bonnie lies over the ocean.
+
+  My Bonnie lies over the sea.
+</pre>
+```
+
+---
+
+
+
+### HTML 链接 `<a href="url"> </a>`
 `<a href="https://www.runoob.com"> 这是一个链接 </a>`
 
-### HTML 图像
-通过标签 `<img>` 来定义的.
-图像的名称和尺寸是以属性的形式提供的。
+---
+
+### HTML 图像 `<img>`
 `<img src="/images/logo.png" width="258" height="39" />`
 
 ### Example
@@ -202,15 +246,7 @@ XHTML 1.0
 
 简而言之，src 用于 *替换当前元素*；href 用于 *在当前文档和引用资源之间建立联系*。
 
-## HTML 元素
-HTML 文档由 HTML 元素定义。
-
-HTML 元素
-`<p>`	这是一个段落	`</p>`
-`<a href="default.htm">`	这是一个链接	`</a>`
-`<br>`	换行	 
-
-* 开始标签常被称为起始标签（opening tag），结束标签常称为闭合标签（closing tag）。
+---
 
 ### HTML 元素语法
 - 以开始标签起始
@@ -269,6 +305,7 @@ HTML 文档实例
 ### 使用小写标签
 HTML 标签对大小写不敏感：`<P>` 等同于 `<p>`。许多网站都使用大写的 HTML 标签。
 
+---
 
 ## HTML 属性
 属性是 HTML 元素提供的附加信息。
@@ -296,36 +333,11 @@ id	     | 定义元素的唯一id
 style	   | 规定元素的行内样式（inline style）
 title	   | 描述了元素的额外信息 (作为工具条使用)
 
-## !!
-### HTML 标题 Heading `<h1> - <h6> `
-- 通过 `<h1> - <h6> `标签进行定义的。
-- `<h1>` 定义最大的标题。 `<h6>` 定义最小的标题。
-
-确保 HTML `标题 标签只用于标题`。不要仅仅是为了生成粗体或大号的文本而使用标题。
-- 搜索引擎使用`标题`为您的网页的结构和内容编制索引。
-- 用户可以通过标题来快速浏览您的网页，所以用标题来呈现文档结构是很重要的。
-
-### HTML 水平线 `<hr>`
-`<hr>` 标签在 HTML 页面中创建水平线。
-```
-<p>这是一个段落。</p>
-<hr>
-<p>这是一个段落。</p>
-<hr>
-<p>这是一个段落。</p>
-```
 
 ### HTML 注释 `<!-- 这是一个注释 -->`
 可以将注释插入 HTML 代码中，这样可以提高其可读性，使代码更易被人理解。浏览器会忽略注释，也不会显示它们。
 `<!-- 这是一个注释 -->`
 
-### HTML 段落 `<p>这是另一个段落</p>`
-段落是通过 <p> 标签定义的。
-```
-<p>这是一个段落 </p>
-<p>这是另一个段落</p>
-```
-浏览器会自动地在段落的前后添加空行。（</p> 是块级元素）
 
 #### HTML 折行 `<p>这个<br>段落<br>演示了分行的效果</p>`
 如果您希望在不产生一个新段落的情况下进行换行（新行），请使用 <br> 标签：
