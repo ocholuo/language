@@ -70,8 +70,33 @@ public class PerimeterRunner {
         System.out.println("Largest X = " + maxX);
     }
 
+
+    // Assignment 2: Processing multiple Shape files
+    // find the largest perimeter over several shapes by examining several files representing shapes, calculating the size of the largest perimeter and also the name of the file with the largest perimeter. You will add new methods to the PerimeterAssignmentRunner class.
+
+    // The PerimeterAssignmentRunner class already includes the following method you should understand the following. The printFileNames method has no parameters and no return value, hence return type void. This method first creates a DirectoryResource. When this happens you are prompted to select a file or files. You can select a bunch of files together by clicking on the name of one file, and then hold down the shift key and
+
+    public void getLargestPerimeterMultipleFiles(){
+        double LargestPerimeter = 0.0;
+        File largestFile = null;
+        DirectoryResource dr = new DirectoryResource();      
+        for (File f : dr.selectedFiles()){
+            FileResource fr = new FileResource(f);
+            Shape s = new Shape(fr);
+            if(LargestPerimeter < getPerimeter(s)){
+                LargestPerimeter = getPerimeter(s);
+                largestFile = f;
+                System.out.println("The perimeter in " + largestFile + "is :" + LargestPerimeter);
+            }
+        }
+        System.out.println("The largest perimeter in the directory = " + LargestPerimeter);
+        System.out.println("The largest perimeter File in the directory = " + largestFile);
+    }
+
     public static void main (String[] args) {
         PerimeterRunner pr = new PerimeterRunner();
-        pr.testPerimeter();
+        // pr.testPerimeter();
+        pr.getLargestPerimeterMultipleFiles();
+
     }
 }
