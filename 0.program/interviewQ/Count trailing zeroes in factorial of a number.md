@@ -11,7 +11,7 @@
 n = 5: There is one 5 and 3 2s in prime factors of 5! So count of trailing 0s is 1.
 
 ```
-2*3*4*5
+2*3*4*5 = 120
 =2*3* 2*2 *5
 =2^3*3*5
 ```
@@ -41,19 +41,20 @@ n = 28, 0s is 6.
 ```
 
 
-
-
-
 ```
 Trailing 0s in n! = Count of 5s in prime factors of n!
                   = floor(n/5) + floor(n/25) + floor(n/125) + ....
 ```
 
-
-
 ---
 
+## solution
 
+```java
+public int findzero(int n){
+   if(n/5 != 0 && n%5 !=0)
+}
+```
 
 
 
