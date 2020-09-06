@@ -35,12 +35,12 @@ Index | Name | Date | Course material
 
 Index | Name | Date | Course material
 ---|---|---|---
-1 | [PerimeterRunner](./javademo/2020-09-04-PerimeterRunner/PerimeterRunner.java) | 2020-09-04 | Duke
-2 | [FindingWebLinks](./javademo/2020-09-04-FindingWebLinks/FindingWebLinks.java) | 2020-09-04 | Duke
-3 | [FindGenieinDNA](./javademo/2020-09-05-FindGenieinDNA/FindGenieinDNA.java) | 2020-09-05 | Duke
-4 | [CSVofCountryExport](./javademo/2020-09-05-CSVofCountryExport/CSVofCountryExport.java) | 2020-09-05 | Duke
-5 | [FindHottestDay](./javademo/2020-09-05-FindHottestDay/FindHottestDay.java) | 2020-09-05 | Duke
-6 | [BabyNames](./javademo/2020-09-06-BabyNames/BabyNames.java) | 2020-09-06 | Duke
+1 | [PerimeterRunner](./javademo/2020-09-04-PerimeterRunner/PerimeterRunner.java) | 2020-09-04 | Duke University
+2 | [FindingWebLinks](./javademo/2020-09-04-FindingWebLinks/FindingWebLinks.java) | 2020-09-04 | Duke University
+3 | [FindGenieinDNA](./javademo/2020-09-05-FindGenieinDNA/FindGenieinDNA.java) | 2020-09-05 | Duke University
+4 | [CSVofCountryExport](./javademo/2020-09-05-CSVofCountryExport/CSVofCountryExport.java) | 2020-09-05 | Duke University
+5 | [FindHottestDay](./javademo/2020-09-05-FindHottestDay/FindHottestDay.java) | 2020-09-05 | Duke University
+6 | [BabyNames](./javademo/2020-09-06-BabyNames/BabyNames.java) | 2020-09-06 | Duke University
 
 ---
 

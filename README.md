@@ -7,7 +7,6 @@ img: /assets/img/sample/rabbit.png
 tags: [Language]
 ---
 
-refresh from on README.md!!!
 
 # Language - Learning Path
 
@@ -80,18 +79,24 @@ AWS | [1](https://github.com/alozano-77/AWS-SAA-C02-Course/blob/master/README.md
 
 [Coursera Specialization] |  Mark |
 | :------------- | :------------- |
-**`Python 3 Programming`** |
+**`Java Programming and Software Engineering Fundamentals Specialization`** |
+[COURSE 1 Programming Foundations with JavaScript, HTML and CSS](https://www.coursera.org/learn/duke-programming-web?specialization=java-programming) 9/2| :heavy_check_mark:
+[COURSE 2 Java Programming: Solving Problems with Software](https://www.coursera.org/learn/java-programming?specialization=java-programming) 9/6| :heavy_check_mark:
+[COURSE 3 Java Programming: Arrays, Lists, and Structured Data](https://www.coursera.org/learn/java-programming-arrays-lists-data?specialization=java-programming) | 
+[COURSE 4 Java Programming: Principles of Software Design](https://www.coursera.org/learn/java-programming-design-principles?specialization=java-programming) | 
+[COURSE 5 Java Programming: Build a Recommendation System](https://www.coursera.org/learn/java-programming-recommender) | 
+**`Python 3 Programming`** 4/3 |
 [COURSE 1 Python Basics](https://www.coursera.org/learn/python-basics?specialization=python-3-programming) | :heavy_check_mark:
 [COURSE 2 Python Functions, Files, and Dictionaries](https://www.coursera.org/learn/python-functions-files-dictionaries?specialization=python-3-programming) | :heavy_check_mark:
 [COURSE 3 Data Collection and Processing with Python](https://www.coursera.org/learn/data-collection-processing-python?specialization=python-3-programming) | :heavy_check_mark:
 [COURSE 4 Python Classes and Inheritance](https://www.coursera.org/learn/python-classes-inheritance?specialization=python-3-programming) | :heavy_check_mark:
 [COURSE 5 Python Project: pillow, tesseract, and opencv](https://www.coursera.org/learn/python-project) 4/3 | :heavy_check_mark:
-**`Python for Everybody`** |
+**`Python for Everybody`** 4/13 |
 [COURSE 1 Programming for Everybody](https://www.coursera.org/learn/python?specialization=python) | :heavy_check_mark:
 [COURSE 2 Python Data Structures](https://www.coursera.org/learn/python-data?courseSlug=python-data&showOnboardingModal=checkAndRedirect&specialization=python) | :heavy_check_mark:
 [COURSE 3 Using Python to Access Web Data](https://www.coursera.org/learn/python-network-data?courseSlug=python-network-data&showOnboardingModal=checkAndRedirect&specialization=python) 4/12| :pencil2:
 **`Computer Security and Systems Management`** |
-[COURSE 3 Linux Server Management and Security](https://www.coursera.org/learn/linux-server-management-security) 4/10-4/13|  :heavy_check_mark:
+[COURSE 3 Linux Server Management and Security](https://www.coursera.org/learn/linux-server-management-security) 4/13|  :heavy_check_mark:
 **`Palo Alto Networks Cybersecurity`** |
 [COURSE 1 Palo Alto Networks Academy Cybersecurity Foundation](https://www.coursera.org/learn/cybersecurity-foundation?specialization=palo-alto-networks-cybersecurity) | :pencil2:
 **`Web Design for Everybody: Basics of Web Development & Coding`** |
