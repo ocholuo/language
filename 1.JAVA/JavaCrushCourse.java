@@ -48,6 +48,7 @@ public class JavaCrushCourse {
         // // uppercase = "HELLO WORLD!"
         // String lowercase = str.toLowerCase();
         // lowercase = "hello world!"
+        // s.substring(startindex, endindex)
 
 
         // 1. simple for loop

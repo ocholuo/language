@@ -33,14 +33,16 @@ Index | Name | Date | Course material
 
 ## java project
 
-Index | Name | Date | Course material
----|---|---|---
+Index | Name | Date | Course material | Note
+---|---|---|---|---
 1 | [PerimeterRunner](./javademo/2020-09-04-PerimeterRunner/PerimeterRunner.java) | 2020-09-04 | Duke University
 2 | [FindingWebLinks](./javademo/2020-09-04-FindingWebLinks/FindingWebLinks.java) | 2020-09-04 | Duke University
 3 | [FindGenieinDNA](./javademo/2020-09-05-FindGenieinDNA/FindGenieinDNA.java) | 2020-09-05 | Duke University
 4 | [CSVofCountryExport](./javademo/2020-09-05-CSVofCountryExport/CSVofCountryExport.java) | 2020-09-05 | Duke University
 5 | [FindHottestDay](./javademo/2020-09-05-FindHottestDay/FindHottestDay.java) | 2020-09-05 | Duke University
-6 | [BabyNames](./javademo/2020-09-06-BabyNames/BabyNames.java) | 2020-09-06 | Duke University
+6 | [BabyNames](./javademo/2020-09-06-BabyNames/BabyNames.java) | 2020-09-06 | Duke University | **use CSVParser to process multiple line** <br>`String fname = "yob" + year + ".csv";` <br> `FileResource fr = new FileResource(fname); ` <br> `CSVParser parser = fr.getCSVParser(false);` <br> `for(CSVRecord rec : parser){` <br> `System.out.println("Name " + rec.get(0) + " Gender "+ rec.get(1) + " Num Born" + rec.get(2));}`
+7 | [RollsSimulate](./javademo/2020-09-06-RollsSimulate/RollsSimulate.java) | 2020-09-06 | Duke University | **sum two random roll number, make a record array** `Random rand = new Random();` <br> `for(int i = 0; i < rolls; i++){` <br> `int d1 = rand.nextInt(6) + 1`
+8 | [CountShakespeareWords](./2020-09-07-CountShakespeareWords/CountShakespeareWords.java) | 2020-09-07| Duke University | **make a word record array** crate getCommon().method to pur common word list into a array `String[] common;` <br> to store counts create `int[] counts = new int[common.length];` <br> `for(String word : resource.words())` <br> crate indexOf().method to get the index of common word `if (common[i].equals(word)); return i` <br> crate countWords().method to ++1 according to the index, `if (index != -1) {counts[index] += 1;}` <br> print out line as index `System.out.println(common[k] + "\t" + counts[k]);`
 
 ---
 

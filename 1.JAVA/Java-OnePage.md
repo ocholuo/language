@@ -119,6 +119,51 @@ sr.contains("last") // is false
 sr.clear();
 ```
 
+---
+
+## StringBuilder
+
+string cannot change, 
+
+StringBuilder can change,
+
+```java
+StringBuilder sb = new StringBuilder(“Hello”);
+
+append
+// Put String, int, char, etc.. on end
+  
+insert
+// Insert String, int, char, etc... into middle
+ 
+charAt
+// Gets character at specified index
+
+setCharAt
+// Changes the character at specified index
+ 
+toString
+// Get back String that you made
+```
+
+---
+
+## Character Building
+
+```java
+isLowerCase(ch) 
+// returns boolean if ch is 'a', 'b' …
+
+isDigit(ch) 
+// returns boolean if ch is '0','1',…'9'
+
+toLowerCase(ch) 
+// returns lowercase version of ch
+
+toUpperCase(ch) 
+// returns uppercase version of ch
+```
+
 
 
 
