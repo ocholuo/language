@@ -154,15 +154,10 @@ public class JavaCrushCourse {
         // 8. LinkedList: 
         // LinkedList<Integer> t = new LinkedList<Integer>();
         // t.add(5);
-        // t.add(17);
         // t.remove(5);
-        // t.add(7);
-        // t.add(8);
-        // t.add(6);
-        // t.add(4);
-        // t2.get(index
+        // t2.get(index);
         // t.get(0);
-        // t2.set(index.value);
+        // t2.set(index, value);
         // t.size();
         // t.isEmpty();
         // t.subList(fromIndex, toIndex)
@@ -171,11 +166,14 @@ public class JavaCrushCourse {
 
         // 9. HashMap: unique key, no order, so fast.
         // Map m = new HashMap();
+        // HashMap<String, Interger> map = new HashMap<String, Interger>();
         // m.put("tim", 5);
-        // m.put("sd", 5);
         // m.put(11, 5);
+        // m.get("tim");
+        // map.containsKey("tim");
         // System.out.println(m);
         // System.out.println(m.get("tim"));
+        // for(String s : map.keySet());
         // {sd=5, df=5, tim=5}
 
 
@@ -204,6 +202,8 @@ public class JavaCrushCourse {
         // m.put("a", "b");
         // m.clear();
         // m.isEmpty();
+        // m.size();
+        // m.keySet();
         // m.containsValue(5);
         // m.containsKey("a");
         // m.remove(key)
