@@ -138,15 +138,10 @@ public class JavaCrushCourse {
 
 
         // 8. lists: 
-        // ArrayList<Integer> t = new ArrayList<Integer>();
+        // ArrayList<Integer> t = new ArrayList<Integer>();  // no size need
         // t.add(5);
-        // t.add(17);
-        // t.remove(5);
-        // t.add(7);
-        // t.add(8);
-        // t.add(6);
-        // t.add(4);
-        // t2.get(index
+        // t.remove(5)
+        // t2.get(index);
         // t.get(0);
         // t2.set(index.value);
         // t.size();

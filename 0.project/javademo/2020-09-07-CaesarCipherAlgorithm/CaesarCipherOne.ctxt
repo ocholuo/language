@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=CaesarCipherOne
+comment1.params=key
+comment1.target=CaesarCipherOne(int)
+comment2.params=plaintext
+comment2.target=java.lang.String\ caesarcipher(java.lang.String)
+comment3.params=s
+comment3.target=int[]\ count26char(java.lang.String)
+comment4.params=freqs
+comment4.target=int\ maxIndex(int[])
+comment5.params=ciphertext
+comment5.target=int\ getkey(java.lang.String)
+comment6.params=ciphertext
+comment6.target=java.lang.String\ caesarBreaker(java.lang.String)
+comment7.params=
+comment7.target=void\ test()
+numComments=8
