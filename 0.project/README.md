@@ -37,7 +37,7 @@ Index | Name | Date | Course material | Notes
 14 | [LogEntry](https://github.com/ocholuo/language/blob/master/0.project/javademo/2020-09-09-LogEntry/LogEntry.java) | 2020-09-09 | DukeU | **analyst web log entry**
 
 
-`https://github.com/ocholuo/language/blob/master/0.project/javademo/2020-09-04-FindingWebLinks/FindingWebLinks.java`
+path: `https://github.com/ocholuo/language/blob/master/0.project/javademo/2020-09-04-FindingWebLinks/FindingWebLinks.java`
 
 ---
 
