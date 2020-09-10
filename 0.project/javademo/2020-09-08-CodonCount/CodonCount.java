@@ -8,7 +8,7 @@ public class CodonCount {
 
     private HashMap<String,Integer> codonMap;
 
-    public HashMapDemo(){
+    public CodonCount(){
         codonMap = new HashMap<String, Integer>();
         
     }
@@ -17,7 +17,7 @@ public class CodonCount {
         int uniquecodon = 0;
         for(int i = start; i+3 <= dna.length(); i+=3){
             String codon = dna.substring(i, i+3);
-            System.out.println(codon);
+            // System.out.println(codon);
             if(!codonMap.containsKey(codon)){
                 // System.out.println("new codon");
                 codonMap.put(codon, 1);
@@ -41,15 +41,16 @@ public class CodonCount {
             }
         }
         System.out.println("and most common codon is " + maxcodon + " with count " + maxcount);
-        for(String codon : codonMap.keySet()){
-            System.out.println(codon + codonMap.get(codon));
-        }
+        // for(String codon : codonMap.keySet()){
+        //     System.out.println(codon + codonMap.get(codon));
+        // }
         return maxcodon;
     }
 
+
     // This method prints all the codons in the HashMap along with their counts if their count is between start and end, inclusive.
     public void printCodonCounts(int start, int end){
-        System.out.println("Counts of codons between " + start + " and " + end + "inclusive are:");
+        System.out.println("Counts of codons between " + start + " and " + end + " inclusive are:");
         for(String codon : codonMap.keySet()){
             if(start <= codonMap.get(codon) && codonMap.get(codon) <= end){
                 System.out.println(codon + "  " + codonMap.get(codon));
@@ -58,18 +59,21 @@ public class CodonCount {
     }
 
     public static void main(String[] args) {
+    
         CodonCount pr = new CodonCount();
         FileResource fr = new FileResource();
         String dna = fr.asString();
         System.out.println("---------------test buildCodonMap()---------------");
         // String dna  = "CGTTCAAGTTCAA";
-        pr.buildCodonMap(0, dna);
+        // pr.buildCodonMap(0, dna);
+        pr.buildCodonMap(1, dna);
+        // pr.buildCodonMap(2, dna);
 
         System.out.println("---------------test getMostCommonCodon()---------------");
         pr.getMostCommonCodon();
 
         System.out.println("---------------test printCodonCounts()---------------");
-        pr.printCodonCounts(1, 5);
+        pr.printCodonCounts(5, 7);
 
     }
     

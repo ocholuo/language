@@ -4,7 +4,7 @@ date: 2020-09-04 11:11:11 -0400
 categories: [Programming]
 tags: [OnePage, Programming]
 math: true
-image: 
+image:
 ---
 
 # Programming learning Path
@@ -29,9 +29,9 @@ Index | Name | Date | Course material | Note
 8 | [CountShakespeareWords](https://github.com/ocholuo/language/blob/master/0.project/javademo/2020-09-07-CountShakespeareWords/CountShakespeareWords.java) | 2020-09-07 | DukeU | **make a word record array:** <br> crate getCommon().method to pur common word list into a array `String[] common;` <br> to store counts create `int[] counts = new int[common.length];` <br> `for(String word : resource.words())` <br> crate indexOf().method to get the index of common word `if (common[i].equals(word)); return i` <br> crate countWords().method to ++1 according to the index, `if (index != -1) {counts[index] += 1;}` <br> print out line as index `System.out.println(common[k] + "\t" + counts[k]);`
 9 | [CaesarCipherAlgorithm](https://github.com/ocholuo/language/blob/master/0.project/javademo/2020-09-07-CaesarCipherAlgorithm/CaesarCipherAlgorithm.java) | 2020-09-07 | DukeU | **encrypt and decrypt the cipher with 1 key or 2 key**
 10 | [GladLibs](https://github.com/ocholuo/language/blob/master/0.project/javademo/2020-09-07-GladLibs/GladLibs.java) | 2020-09-07 | DukeU | **ArrayList create random story**
-11 | [WordFrequencies](https://github.com/ocholuo/language/blob/master/0.project/javademo/2020-09-07-WordFrequencies/WordFrequencies.java) | 2020-09-07 | DukeU | 
+11 | [WordFrequencies](https://github.com/ocholuo/language/blob/master/0.project/javademo/2020-09-07-WordFrequencies/WordFrequencies.java) | 2020-09-07 | DukeU |
 12 | [WordFrequenciesMap](https://github.com/ocholuo/language/blob/master/0.project/javademo/2020-09-07-WordFrequenciesMap/WordFrequenciesMap.java) | 2020-09-07 | DukeU | **HashMap**
-13 | [CodonCount](https://github.com/ocholuo/language/blob/master/0.project/javademo/2020-09-08-CodonCount/CodonCount.java) | 2020-09-08 | DukeU | **use hashmap to operate dna codon**
+13 | [CodonCount](https://github.com/ocholuo/language/blob/master/0.project/javademo/2020-09-08-CodonCount/CodonCount.java) | 2020-09-08 | DukeU | **use hashmap to operate dna codon** <br> `buildCodonMap(int start, String dna)` check if idex+=3 dna existed in HashMap <br> `getMostCommonCodon()` check max num in HashMap
 14 | [WordsinFiles](https://github.com/ocholuo/language/blob/master/0.project/javademo/2020-09-08-WordsinFiles/WordsinFiles.java) | 2020-09-08 | DukeU | **word - file - directory HashMap create**
 
 
@@ -52,7 +52,7 @@ Index | Name | Date | Course material
 6 | [Wheel Of Python](https://github.com/ocholuo/language/blob/master/0.project/pycode/2020-03-20-WheelOfPython.md) | 03/30/2020 | University of Michigan in Coursera Chapter 22.8
 7 | [Taste Dive](https://github.com/ocholuo/language/blob/master/0.project/pycode/2020-04-03-TasteDive.md) | 2020-04-03 | University of Michigan in Coursera Chapter 24.14
 8 | [Beautiful Soup](https://github.com/ocholuo/language/blob/master/0.project/pycode/2020-05-14-BeautifulSoup.md) | 2020-05-14 | University of Michigan in Coursera Chapter 12
-9 | [Building a Better Contact Sheet](https://github.com/ocholuo/language/blob/master/0.project/pycode/2020-05-31-Building-a-Better-Contact-Sheet.md) | 2020-05-31 | University of Michigan in Coursera 
+9 | [Building a Better Contact Sheet](https://github.com/ocholuo/language/blob/master/0.project/pycode/2020-05-31-Building-a-Better-Contact-Sheet.md) | 2020-05-31 | University of Michigan in Coursera
 10| [Newspaper Face Search](https://github.com/ocholuo/language/blob/master/0.project/pycode/2020-08-30-NewspaperFaceSearch.py) | 2020-08-30 | University of Michigan in Coursera
 
 `https://github.com/ocholuo/language/blob/master/0.project/pycode/2020-03-20-HiMyPokemon.md`
@@ -66,8 +66,3 @@ Index | Name | Date | Course material
 ---
 
 Data Structure | [Arrays 101]()
-
-
-
-
-
