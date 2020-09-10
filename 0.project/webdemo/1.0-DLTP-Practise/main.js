@@ -1,6 +1,5 @@
 
 
-
 function dochange(){
     alert('clicked buttom')
 }
@@ -47,28 +46,26 @@ function doYellow(){
     ctext.fillText("Hello", 10, 80)
 }
 
-function doPink(){
-    var id = document.getElementById('d4');
-    id.style.backgroundColor = "pink";
-    var ctext = id.getContext("2d");
-    ctext.fillStyle = "yellow";
-    ctext.fillRect(10,10,60,60);
-    ctext.fillRect(80,10,60,60);  
-    ctext.fillStyle = "black";
-    ctext.font = "20px Arial"
-    ctext.fillText("Hello", 15, 45);
+
+var img;
+
+function upLoad(){
+    var imgcanvas = document.getElementById('pic');
+    var fileinput = document.getElementById('finput');
+    // var filename = fileinput.value;
+    img = new SimpleImage(fileinput);
+    img.drawTo(imgcanvas);
+    // alert("Chose: " + filename);
 }
 
-function doBlue(){
-    var id = document.getElementById('d5');
-    id.style.backgroundColor = "blue";
-    var ctext = id.getContext("2d");
 
-}
-
-function clearContext(){
-    var id = document.getElementById('d4');
-    var ctext = id.getContext("2d");
-    id.style.backgroundColor = "orange";
-    ctext.clearRect(0,0,id.width,id.height);
+function doGrey(){
+    for(var pixel of img.values()){
+        var avg = (pixel.getRed()+pixel.getBlue()+pixel.getGreen())/3
+        pixel.setRed(avg);
+        pixel.setBlue(avg);
+        pixel.setGreen(avg);
+    }
+    var imgcanvas = document.getElementById('pic');
+    img.drawTo(imgcanvas);
 }

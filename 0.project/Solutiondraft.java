@@ -1,5 +1,5 @@
 
-public class Solution {
+public class Solutiondraft {
 
     public void findAbc(String input){
         int index = input.indexOf("abc");
@@ -21,7 +21,7 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        Solution pr = new Solution();
+        Solutiondraft pr = new Solutiondraft();
         pr.findAbc("abcdkfjsksioehgjfhsdjfhksdfhuwabcabcajfieowj");
     }
 }

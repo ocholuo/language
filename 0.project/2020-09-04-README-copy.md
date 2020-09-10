@@ -4,7 +4,7 @@ date: 2020-09-04 11:11:11 -0400
 categories: [Programming]
 tags: [OnePage, Programming]
 math: true
-image:
+image: 
 ---
 
 # Programming learning Path
@@ -12,13 +12,13 @@ image:
 
 | ᐕ)⁾⁾ como estas~~~~ bien~~~~ y tu?~~~~ yes
 
----
 
+---
 
 ## java project
 
 
-Index | Name | Date | Course material | Notes
+Index | Name | Date | Course material | Note
 ---|---|---|---|---
 1 | [PerimeterRunner](https://github.com/ocholuo/language/blob/master/0.project/javademo/2020-09-04-PerimeterRunner/PerimeterRunner.java) | 2020-09-04 | DukeU
 2 | [FindingWebLinks](https://github.com/ocholuo/language/blob/master/0.project/javademo/2020-09-04-FindingWebLinks/FindingWebLinks.java) | 2020-09-04 | DukeU

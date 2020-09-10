@@ -4,6 +4,40 @@
 </head>
 
 
+
+<h1> Upload prototype </h1>
+
+<canvas id="pic">
+</canvas>
+
+<p>
+    File:
+    <input type="file" multiple="false" accept="image/*" id="finput" onchange="upLoad()">
+</p>
+
+<p>
+    <input type="button" value="Make Grayscale" id="dogrey" onclick="doGrey()">
+</p>
+
+
+<hr>
+
+<h1>Color Picker</h1>
+
+<canvas id='d6'>
+</canvas>
+
+<p>
+    <input type="color" value="#001A57" id="clr" onchange="doColor()">
+</p>
+
+<p>
+    <input type="range" min="10" max="100" value="10" id="sldr" oninput="doSquare()">
+</p>
+
+<hr>
+
+
 <h1>Canvas Practice</h1>
 
 <canvas id='d4' class="orangeback">
