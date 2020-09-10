@@ -43,7 +43,7 @@ body{
 
 
 #showcase{
-    background-image: url(https://github.com/ocholuo/language/blob/master/0.project/webdemo/images/1.png);
+    background-image: url(https://github.com/ocholuo/language/tree/master/0.project/webdemo/images/1.png);
     background-position: center center;
     min-height: 300px;    /* text grow, height grow */
     margin-bottom: 30px;

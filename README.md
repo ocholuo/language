@@ -83,7 +83,7 @@ AWS | [1](https://github.com/alozano-77/AWS-SAA-C02-Course/blob/master/README.md
 [COURSE 1 Programming Foundations with JavaScript, HTML and CSS](https://www.coursera.org/learn/duke-programming-web?specialization=java-programming) 9/2| :heavy_check_mark:
 [COURSE 2 Java Programming: Solving Problems with Software](https://www.coursera.org/learn/java-programming?specialization=java-programming) 9/6| :heavy_check_mark:
 [COURSE 3 Java Programming: Arrays, Lists, and Structured Data](https://www.coursera.org/learn/java-programming-arrays-lists-data?specialization=java-programming) | 
-`- Cryptography: Keeping Information Secret` <br> `- GladLibs: Stories from Templates` <br> `- Web Server Logs: From Logs to Visits` <br> `- MiniProject: Vigenère Cipher` | [slide](https://www.dukelearntoprogram.com//course3/files.php) <br> [code](https://github.com/ocholuo/language/blob/master/0.project/javademo/)
+`- Cryptography: Keeping Information Secret` <br> `- GladLibs: Stories from Templates` <br> `- Web Server Logs: From Logs to Visits` <br> `- MiniProject: Vigenère Cipher` | [slide](https://www.dukelearntoprogram.com//course3/files.php) <br> [code](https://github.com/ocholuo/language/tree/master/0.project/javademo/)
 [COURSE 4 Java Programming: Principles of Software Design](https://www.coursera.org/learn/java-programming-design-principles?specialization=java-programming) | 
 [COURSE 5 Java Programming: Build a Recommendation System](https://www.coursera.org/learn/java-programming-recommender) | 
 | :------------- | :--- |
@@ -183,8 +183,8 @@ Name | S | Mark |
 ---|---|---
 [PAN8 Cybersecurity Essentials](https://portal.netdevgroup.com/learn/pan8-ce-pilot/wb79h483WM) |  | :heavy_check_mark:
 [PAN8 Cybersecurity Gateway](https://portal.netdevgroup.com/learn/pan8-cg-pilot/aiuWjM6CWr/) |  | :pencil2:
-[Overthewire_bandit](https://overthewire.org/wargames/bandit/) | [S](https://github.com/ocholuo/language/blob/master/codegame/Overthewire_bandit(Fin).md) | :heavy_check_mark:
-[TRAFFIC ANALYSIS EXERCISE](http://malware-traffic-analysis.net/training-exercises.html) | [S](https://github.com/ocholuo/language/blob/master/codegame/TrafficAnalysisExe.md) | :pencil2:
+[Overthewire_bandit](https://overthewire.org/wargames/bandit/) | [S](https://github.com/ocholuo/language/tree/master/codegame/Overthewire_bandit(Fin).md) | :heavy_check_mark:
+[TRAFFIC ANALYSIS EXERCISE](http://malware-traffic-analysis.net/training-exercises.html) | [S](https://github.com/ocholuo/language/tree/master/codegame/TrafficAnalysisExe.md) | :pencil2:
 [premiumexam](https://premiumexam.com/) <img src="https://i.imgur.com/6JAb2Cm.png" width="400"> |
 [NDG Online Courses & Labs](https://www.netdevgroup.com/online/courses/cybersecurity#courses) <img src="https://i.imgur.com/0sDYnaC.png" width="400"> |
 [vmware HOL online](https://www.vmwarelearningplatform.com/HOL/catalogs/catalog/1212) <img src="https://i.imgur.com/cuyokhD.png" width="400"> |
