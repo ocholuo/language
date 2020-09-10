@@ -1,15 +1,13 @@
 ---
-title: Language - Learning Path
+title: Language - Course Learning Path
 date: 2020-08-29 11:11:11 -0400
 description: Learning Path
-categories: [Language]
+categories: [Project]
 img: /assets/img/sample/rabbit.png
-tags: [Language]
+tags: [Language, Project]
 ---
 
-refresh from on README.md!!!
-
-# Language - Learning Path
+# Language - Course Learning Path
 
 [toc]
 

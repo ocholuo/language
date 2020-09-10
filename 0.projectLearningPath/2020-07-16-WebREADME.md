@@ -1,15 +1,14 @@
 ---
-title: Web - Learning Path
+title: Web - demo & Learning Path
 date: 2020-07-16 11:11:11 -0400
-categories: [Web]
-tags: [OnePage, Web]
+categories: [Project]
+tags: [OnePage, Project]
 math: true
 image:
 ---
 
 
-# Web - Learning Path
-
+# Web - demo & Learning Path
 ```
     __∧_∧__    ~~~~~
 　／(*´O｀)／＼
@@ -96,6 +95,11 @@ Path: `https://github.com/ocholuo/language/blob/master/0.project/webdemo/`
       - Video and audio APIs
       - Client-side storage
 - Web forms — Working with user data
+
+
+
+
+
 
 
 

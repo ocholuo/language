@@ -1,13 +1,13 @@
 ---
-title: Linux - Learning Path
+title: Programming - demo & Learning Path
 date: 2020-09-04 11:11:11 -0400
-categories: [Programming]
-tags: [OnePage, Programming]
+categories: [Project]
+tags: [OnePage, Project]
 math: true
 image: 
 ---
 
-# Programming learning Path
+# Programming - demo & Learning Path
 
 
 | ᐕ)⁾⁾ como estas~~~~ bien~~~~ y tu?~~~~ yes
@@ -15,8 +15,13 @@ image:
 
 ---
 
-## java project
+## Code Demo
 
+---
+
+### java project
+
+Path: `https://github.com/ocholuo/language/blob/master/0.project/javademo/`
 
 Index | Name | Date | Course material | Note
 ---|---|---|---|---
@@ -37,12 +42,11 @@ Index | Name | Date | Course material | Note
 14 | [LogEntry](https://github.com/ocholuo/language/blob/master/0.project/javademo/2020-09-09-LogEntry/LogEntry.java) | 2020-09-09 | DukeU | **analyst web log entry**
 
 
-`https://github.com/ocholuo/language/blob/master/0.project/javademo/2020-09-04-FindingWebLinks/FindingWebLinks.java`
-
 ---
 
-## python project
+### python project
 
+Path: `https://github.com/ocholuo/language/blob/master/0.project/pycode/`
 
 Index | Name | Date | Course material
 ---|---|---|---
