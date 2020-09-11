@@ -14,7 +14,7 @@ tags: [Language]
 
 Little learning note.
 
-From class, online courses, blog, and other resources.
+From class, online courses, blog, and other sources.
 
 
 ```
@@ -45,7 +45,7 @@ Python | [The Python Tutorial](https://docs.python.org/3/tutorial/) |
 **AWSCerSheet** | Link
 AWS | [1](https://github.com/alozano-77/AWS-SAA-C02-Course/blob/master/README.md)
 **Code test environment** | Mark
-| :------------- | :------------- |
+| :------------- | :--- |
 JavaScript| [:rabbit:](https://www.dukelearntoprogram.com//course1/example/index.php)
 
 
@@ -55,24 +55,26 @@ JavaScript| [:rabbit:](https://www.dukelearntoprogram.com//course1/example/index
 
 [Coursera Specialization] |  Mark |
 | :------------- | :--- |
+[COURSE Name]() | [code]() <br> [slide]() <br> [source]()
+| :------------- | :--- |
 **`DukeU. Java Programming and Software Engineering Fundamentals Specialization`** |
 [COURSE 1 Programming Foundations with JavaScript, HTML and CSS](https://www.coursera.org/learn/duke-programming-web?specialization=java-programming) 9/2| :heavy_check_mark: <br> [code](https://github.com/ocholuo/language/tree/master/0.project/javademo/)
-[COURSE 2 Java Programming: Solving Problems with Software](https://www.coursera.org/learn/java-programming?specialization=java-programming) 9/6| :heavy_check_mark:<br> [code](https://github.com/ocholuo/language/tree/master/0.project/javademo/)
-[COURSE 3 Java Programming: Arrays, Lists, and Structured Data](https://www.coursera.org/learn/java-programming-arrays-lists-data?specialization=java-programming) 9/10|
-`- Cryptography: Keeping Information Secret` <br> `- GladLibs: Stories from Templates` <br> `- Web Server Logs: From Logs to Visits` <br> `- MiniProject: Vigenère Cipher` | :heavy_check_mark: <br> [code](https://github.com/ocholuo/language/tree/master/0.project/javademo/) <br> [slide](https://github.com/ocholuo/language/tree/master/1.JAVA/course/Java%20Programming%20and%20Software%20Engineering%20Fundamentals%20Specialization/2.JavaProgrammingArraysListsandStructuredData) <br> [resource](https://www.dukelearntoprogram.com//course3/files.php) 
-[COURSE 4 Java Programming: Principles of Software Design](https://www.coursera.org/learn/java-programming-design-principles?specialization=java-programming) | [code](https://github.com/ocholuo/language/tree/master/0.project/javademo/) <br> [resource](https://www.dukelearntoprogram.com//course4/files.php)
-[COURSE 5 Java Programming: Build a Recommendation System](https://www.coursera.org/learn/java-programming-recommender) | <br> [code](https://github.com/ocholuo/language/tree/master/0.project/javademo/)
-| :------------- | :------------- |
+[COURSE 2 Java Programming: Solving Problems with Software](https://www.coursera.org/learn/java-programming?specialization=java-programming) 9/6| :heavy_check_mark: <br> [code](https://github.com/ocholuo/language/tree/master/0.project/javademo/)
+[COURSE 3 Java Programming: Arrays, Lists, and Structured Data](https://www.coursera.org/learn/java-programming-arrays-lists-data?specialization=java-programming) 9/10| :heavy_check_mark:
+`- Cryptography: Keeping Information Secret` <br> `- GladLibs: Stories from Templates` <br> `- Web Server Logs: From Logs to Visits` <br> `- MiniProject: Vigenère Cipher` | [code](https://github.com/ocholuo/language/tree/master/0.project/javademo/) <br> [slide](https://github.com/ocholuo/language/tree/master/1.JAVA/course/Java-Programming-and-Software-Engineering-Fundamentals-Specialization) <br> [source](https://www.dukelearntoprogram.com//course3/files.php)
+[COURSE 4 Java Programming: Principles of Software Design](https://www.coursera.org/learn/java-programming-design-principles?specialization=java-programming) | [code](https://github.com/ocholuo/language/tree/master/0.project/javademo/) <br> [slide]() <br> [source](https://www.dukelearntoprogram.com//course4/files.php)
+[COURSE 5 Java Programming: Build a Recommendation System](https://www.coursera.org/learn/java-programming-recommender) | [code](https://github.com/ocholuo/language/tree/master/0.project/javademo/) <br> [slide]() <br> [source]()
+| :------------- | :--- |
 **freecodecamp** |
 [Python for Penetration Testing Challenges](https://www.freecodecamp.org/learn/information-security/python-for-penetration-testing/) 9/10 | :heavy_check_mark:
-| :------------- | :------------- |
+| :------------- | :--- |
 **AWS Certificate** |
-:star: `AWS Cloud Practitioner (CLF-C01)` :star:| :rabbit:
+`AWS Cloud Practitioner (CLF-C01)` :star:| :rabbit:
 [AWS-ACFv2EN-Interns](https://awsacademy.instructure.com/courses/69) - AWS Academy Cloud Foundations [Amazon Interns] 5/6 | :heavy_check_mark:
 [AWSTraining](https://www.aws.training/Details/Curriculum?id=27076) - AWS Cloud Practitioner Essentials (Second Edition) | :heavy_check_mark:
 [LinuxAcademy](https://linuxacademy.com/cp/modules/view/id/376) - AWS Cloud Practitioner (CLF-C01) 6/14| :heavy_check_mark:
 [Udemy](https://www.udemy.com/course/aws-certified-cloud-practitioner/) - AWS Certified Cloud Practitioner 2020 '300Q' 6/15| :heavy_check_mark:
-:star: `AWS Certified Solutions Architect – Associate` :star:| :rabbit:
+`AWS Certified Solutions Architect – Associate` :star:| :rabbit:
 [AWS-ACFv2EN-Interns](https://awsacademy.instructure.com/courses/374) - AWS Academy Cloud Architecting [Amazon Interns] 7.24 | :heavy_check_mark:
 [AWSTraining](https://www.aws.training/Details/Curriculum?id=20685) - Exam Readiness: AWS Certified Solutions Architect – Associate (Digital) 7.25 | :heavy_check_mark:
 [LinuxAcademy](https://linuxacademy.com/cp/modules/view/id/341) - AWS Certified Solutions Architect - Associate Level 6/14| :pencil2:
@@ -105,7 +107,7 @@ JavaScript| [:rabbit:](https://www.dukelearntoprogram.com//course1/example/index
 <br>
 
 **[pluralsight]** | Mark
-| :------------- | :------------- |
+| :------------- | :--- |
 **`LFCE (Linux Foundation Certified Engineer) Path`** |
 [LFCE: Advanced Linux Networking](https://app.pluralsight.com/library/courses/linux-networking-advanced-lfce/table-of-contents) 4/18 | :heavy_check_mark:
 [LFCE: Advanced Network and System Administration](https://app.pluralsight.com/course-player?clipId=6f88f6c6-bea4-405e-b4c1-7bf38255c33c) | :heavy_check_mark:
@@ -121,7 +123,7 @@ JavaScript| [:rabbit:](https://www.dukelearntoprogram.com//course1/example/index
 <br>
 
 **[linux academy]** | Mark
-| :------------- | :------------- |
+| :------------- | :--- |
 `AWS Certification` |
 [AWS Cloud Practitioner (CLF-C01)](https://linuxacademy.com/cp/modules/view/id/376) 6/26| :heavy_check_mark:
 `Security Analyst - Entry Level` |
@@ -131,7 +133,7 @@ JavaScript| [:rabbit:](https://www.dukelearntoprogram.com//course1/example/index
 <br>
 
 **[Alexa]** | Mark
-| :------------- | :------------- |
+| :------------- | :--- |
 `acloud` | ---
 [all](https://learn.acloud.guru/search?query=alexa&page=1) | :pencil2:
 [Introduction to Alexa](https://learn.acloud.guru/course/intro-alexa-free/dashboard) | :pencil2: soso
@@ -146,7 +148,7 @@ JavaScript| [:rabbit:](https://www.dukelearntoprogram.com//course1/example/index
 
 ---
 
-## other resource
+## other source
 
 Specialization | Course Name |  Mark |
 ---|---|---
@@ -158,7 +160,7 @@ other | [Business Dashboard Fundamentals](https://app.pluralsight.com/library/co
 <br>
 
 course less recommand | Mark
-| :------------- | :------------- |
+| :------------- | :--- |
 **[Coursera] `Fundamentals of Computer Network Security`** |
 [1. Design and Analyze Secure Networked Systems](https://www.coursera.org/learn/design-secure-networked-systems) | :warning:
 
@@ -196,7 +198,7 @@ Link | goal
 ## pending
 
 [Coursera Specialization] |  Mark |
-| :------------- | :------------- |
+| :------------- | :--- |
 [Getting Started with AWS Machine Learning](https://www.coursera.org/learn/aws-machine-learning?edocomorp=cloud-technology-free-courses&ranMID=40328&ranEAID=SAyYsTvLiGQ&ranSiteID=SAyYsTvLiGQ-PGabNbN8S6jTghHFFXdf3w&siteID=SAyYsTvLiGQ-PGabNbN8S6jTghHFFXdf3w&utm_content=10&utm_medium=partners&utm_source=linkshare&utm_campaign=SAyYsTvLiGQ) |
 [Google Cloud Platform Fundamentals for AWS Professionals](https://www.coursera.org/learn/gcp-fundamentals-aws?edocomorp=cloud-technology-free-courses&ranMID=40328&ranEAID=SAyYsTvLiGQ&ranSiteID=SAyYsTvLiGQ-F.z0VIYeKtN5Gi0Lxvlh8w&siteID=SAyYsTvLiGQ-F.z0VIYeKtN5Gi0Lxvlh8w&utm_content=10&utm_medium=partners&utm_source=linkshare&utm_campaign=SAyYsTvLiGQ) |
 [Build Your First Android App (Project-Centered Course)](https://www.coursera.org/learn/android-app?edocomorp=free-courses-college-students&ranMID=40328&ranEAID=SAyYsTvLiGQ&ranSiteID=SAyYsTvLiGQ-3_6ELfVQtT1DPiposvj.Vw&siteID=SAyYsTvLiGQ-3_6ELfVQtT1DPiposvj.Vw&utm_content=10&utm_medium=partners&utm_source=linkshare&utm_campaign=SAyYsTvLiGQ) |
@@ -265,7 +267,7 @@ VM Hardening
 Azure Update Management
 Serverless Computing (Kubernetes)
 Subscription Security
-Azure resource locks
+Azure source locks
 Subscription policies
 Resource policies
 Secure Data & Applications
