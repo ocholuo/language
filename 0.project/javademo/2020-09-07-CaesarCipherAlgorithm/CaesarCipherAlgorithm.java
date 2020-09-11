@@ -33,6 +33,7 @@ public class CaesarCipherAlgorithm {
 
     // public String caesarcipher(String plaintext, int key){
     public String caesarcipher(String plaintext, int key){
+        
         String alphU = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         String alphL = "abcdefghijklmnopqrstuvwxyz";
         String shiftedAlphU = alphU.substring(key) + alphU.substring(0,key);

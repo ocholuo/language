@@ -56,14 +56,17 @@ JavaScript| [:rabbit:](https://www.dukelearntoprogram.com//course1/example/index
 [Coursera Specialization] |  Mark |
 | :------------- | :--- |
 **`DukeU. Java Programming and Software Engineering Fundamentals Specialization`** |
-[COURSE 1 Programming Foundations with JavaScript, HTML and CSS](https://www.coursera.org/learn/duke-programming-web?specialization=java-programming) 9/2| :heavy_check_mark:
-[COURSE 2 Java Programming: Solving Problems with Software](https://www.coursera.org/learn/java-programming?specialization=java-programming) 9/6| :heavy_check_mark:
-[COURSE 3 Java Programming: Arrays, Lists, and Structured Data](https://www.coursera.org/learn/java-programming-arrays-lists-data?specialization=java-programming) | 
-`- Cryptography: Keeping Information Secret` <br> `- GladLibs: Stories from Templates` <br> `- Web Server Logs: From Logs to Visits` <br> `- MiniProject: Vigenère Cipher` | [slide](https://www.dukelearntoprogram.com//course3/files.php) <br> [code](https://github.com/ocholuo/language/tree/master/0.project/javademo/)
-[COURSE 4 Java Programming: Principles of Software Design](https://www.coursera.org/learn/java-programming-design-principles?specialization=java-programming) | 
-[COURSE 5 Java Programming: Build a Recommendation System](https://www.coursera.org/learn/java-programming-recommender) | 
+[COURSE 1 Programming Foundations with JavaScript, HTML and CSS](https://www.coursera.org/learn/duke-programming-web?specialization=java-programming) 9/2| :heavy_check_mark: <br> [code](https://github.com/ocholuo/language/tree/master/0.project/javademo/)
+[COURSE 2 Java Programming: Solving Problems with Software](https://www.coursera.org/learn/java-programming?specialization=java-programming) 9/6| :heavy_check_mark:<br> [code](https://github.com/ocholuo/language/tree/master/0.project/javademo/)
+[COURSE 3 Java Programming: Arrays, Lists, and Structured Data](https://www.coursera.org/learn/java-programming-arrays-lists-data?specialization=java-programming) 9/10|
+`- Cryptography: Keeping Information Secret` <br> `- GladLibs: Stories from Templates` <br> `- Web Server Logs: From Logs to Visits` <br> `- MiniProject: Vigenère Cipher` | :heavy_check_mark: <br> [code](https://github.com/ocholuo/language/tree/master/0.project/javademo/) <br> [slide](https://github.com/ocholuo/language/tree/master/1.JAVA/course/Java%20Programming%20and%20Software%20Engineering%20Fundamentals%20Specialization/2.JavaProgrammingArraysListsandStructuredData) <br> [resource](https://www.dukelearntoprogram.com//course3/files.php) 
+[COURSE 4 Java Programming: Principles of Software Design](https://www.coursera.org/learn/java-programming-design-principles?specialization=java-programming) | [code](https://github.com/ocholuo/language/tree/master/0.project/javademo/) <br> [resource](https://www.dukelearntoprogram.com//course4/files.php)
+[COURSE 5 Java Programming: Build a Recommendation System](https://www.coursera.org/learn/java-programming-recommender) | <br> [code](https://github.com/ocholuo/language/tree/master/0.project/javademo/)
 | :------------- | :------------- |
-**AWS Certificate** | 
+**freecodecamp** |
+[Python for Penetration Testing Challenges](https://www.freecodecamp.org/learn/information-security/python-for-penetration-testing/) 9/10 | :heavy_check_mark:
+| :------------- | :------------- |
+**AWS Certificate** |
 :star: `AWS Cloud Practitioner (CLF-C01)` :star:| :rabbit:
 [AWS-ACFv2EN-Interns](https://awsacademy.instructure.com/courses/69) - AWS Academy Cloud Foundations [Amazon Interns] 5/6 | :heavy_check_mark:
 [AWSTraining](https://www.aws.training/Details/Curriculum?id=27076) - AWS Cloud Practitioner Essentials (Second Edition) | :heavy_check_mark:

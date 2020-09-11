@@ -4,7 +4,7 @@ date: 2020-09-04 11:11:11 -0400
 categories: [Programming]
 tags: [OnePage, Programming]
 math: true
-image: 
+image:
 ---
 
 # Programming learning Path
@@ -16,6 +16,7 @@ image:
 ---
 
 ## Code Demo
+
 
 ---
 

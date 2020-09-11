@@ -1,0 +1,128 @@
+---
+title: Data Structure
+date: 2020-09-10 11:11:11 -0400
+description:
+categories: [Data Structure]
+tags: [DataStructure]
+---
+
+# Data Structure
+
+[toc]
+
+---
+
+## list
+
+```java
+List<Integer> newlist = new ArrayList<>();
+newlist.add(i);
+newlist.remove(new Integer(i));
+newlist.get(0);
+```
+
+---
+
+## ArrayList
+- in order
+- index
+
+```java
+arr.add();
+
+Student[] arr;
+arr = new Student[5];
+
+arr[0] = new Student(1,"aman");
+arr[1] = new Student(2,"vaibhav");
+arr[2] = new Student(3,"shikar");
+arr[3] = new Student(4,"dharmesh");
+arr[4] = new Student(5,"mohit");
+```
+
+---
+
+## linked list
+
+```java
+Deque<Node> d = new LinkedList<Node>();
+d.offerFirst(root)
+d.pollFirst();
+
+
+FIFO 从上往下垒 上面先走
+Queue<Node> queue = new LinkedList<Node>();
+q.add()
+q.poll()
+
+
+LIFO  从下往上垒 上面先走
+Stack<Node> s = new Stack<Node>();
+s.push()
+s.add()
+s.pop()
+```
+
+---
+
+## HashMap
+```java
+HashMap<Integer, Integer> ht = new HashMap<>();
+
+Map.Entry<Integer, Integer> entry;
+hm.entrySet()
+entry.getValue()
+entry.getKey()
+
+ht.put(i, ht.getOrDefault(i, 0) + 1);
+ht.getOrDefault(i, 0)
+ht.get(i)
+
+// Show all hts in hash table.
+names = ht.keys();
+
+ht.get("Zara")
+```
+
+---
+
+## Set
+
+no duplicate
+
+---
+
+## HashSet
+
+- not in order
+- not index
+
+```java
+mySet.add();
+
+```
+
+---
+
+# sort
+
+## Insertion Sort
+![insertionsort](https://i.imgur.com/USnNyUt.png)
+
+## QuickSort
+![QuickSort2](https://i.imgur.com/c1PSGPf.png)
+
+## Merge Sort
+![Merge-Sort-Tutorial](https://i.imgur.com/mpLzj9y.png)
+
+
+
+
+
+
+
+
+
+
+
+.
