@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=FilterDepth
+comment0.text=\n\ Depth\ Filter\n\n\ @Grace\ JyL\n\ @version\ 1.0,\ Sep\ 12\ 2020\n
+comment1.params=minNum\ maxNum
+comment1.target=FilterDepth(double,\ double)
+comment2.params=qe
+comment2.target=boolean\ satisfies(QuakeEntry)
+numComments=3

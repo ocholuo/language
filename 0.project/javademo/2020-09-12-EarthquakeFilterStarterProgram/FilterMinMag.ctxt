@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=FilterMinMag
+comment0.text=\n\ Filter\ MinMag\n\n\ @Grace\ JyL\n\ @version\ 1.0,\ Sep\ 12\ 2020\n
+comment1.params=min
+comment1.target=FilterMinMag(double)
+comment2.params=qe
+comment2.target=boolean\ satisfies(QuakeEntry)
+comment3.params=
+comment3.target=java.lang.String\ getFilterName()
+numComments=4

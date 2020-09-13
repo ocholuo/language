@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=FilterDistance
+comment0.text=\n\ Distance\ Filter\n\n\ @Grace\ JyL\n\ @version\ 1.0,\ Sep\ 12\ 2020\n
+comment1.params=from\ maxDis
+comment1.target=FilterDistance(Location,\ int)
+comment2.params=qe
+comment2.target=boolean\ satisfies(QuakeEntry)
+numComments=3

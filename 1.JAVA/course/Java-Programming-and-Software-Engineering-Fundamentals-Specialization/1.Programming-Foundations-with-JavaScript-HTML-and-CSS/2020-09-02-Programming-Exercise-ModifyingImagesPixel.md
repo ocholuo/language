@@ -1,8 +1,21 @@
+---
+title: Java - Programming Exercise - Modifying Images
+date: 2020-09-02 11:11:11 -0400
+description:
+categories: [Java, DukeCourse]
+img: /assets/img/sample/rabbit.png
+tags: [Java]
+---
+
 
 # Programming Foundations with JS, HTML and CSS
 
-Programming Exercise: Modifying Images
 
+Java-Programming-and-Software-Engineering-Fundamentals-Specialization
+- 1.Programming-Foundations-with-JavaScript-HTML-and-CSS
+  - Programming Exercise: Modifying Images
+
+---
 
 ## 1
 

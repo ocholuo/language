@@ -1,12 +1,13 @@
 
+
 /**
- * EarthQuakeParser
  * 
- * @Grace JyL
- * @version 1.0, Sep 11 2015
+ * 
+ * @Grace Jyl
+ * @version 1
  */
 
-
+ 
 import java.io.File;
 import java.io.IOException;
 import java.util.*;
@@ -18,17 +19,12 @@ import javax.xml.parsers.ParserConfigurationException;
 import org.w3c.dom.*;
 import org.xml.sax.SAXException;
 
-
 public class EarthQuakeParser {
-
-
     public EarthQuakeParser() {
         // TODO Auto-generated constructor stub
     }
 
-
     public ArrayList<QuakeEntry> read(String source) {
-
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 
         try {

@@ -1,4 +1,10 @@
 
+/**
+ * QuakeEntry
+ * 
+ * @Grace JyL
+ * @version 1.0, Sep 11 2015
+ */
 
 
 public class QuakeEntry implements Comparable<QuakeEntry> {
