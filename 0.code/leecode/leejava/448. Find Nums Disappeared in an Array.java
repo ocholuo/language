@@ -24,7 +24,38 @@ class Solution {
 
 
 // 1. all the numbers that we have seen will be marked as negative. In the second iteration, if a value is not marked as negative, it implies we have never seen that index before, so just add it to the return list.
+public List<Integer> findDisappearedNumbers(int[] nums) {
+    List<Integer> result = new ArrayList<Integer>();
+    for(int i = 0; i < nums.length; i++){
+        int data = Math.abs(nums[i]) - 1;
+        if(nums[data] > 0){
+            nums[data] = -nums[data];
+        }
+    }
+    for(int i = 0; i < nums.length; i++){
+        if(nums[i] > 0){
+            result.add(i+1);
+        }
+    }
+    return result;
+}
+// Runtime: 4 ms, faster than 93.19% of Java online submissions for Find All Numbers Disappeared in an Array.
+// Memory Usage: 48.8 MB, less than 48.53% of Java online submissions for Find All Numbers Disappeared in an Array.
 
+
+// public List<Integer> findDisappearedNumbers(int[] nums) {
+//     List<Integer> ans = new ArrayList<>();
+    
+//     for(int n : nums){
+//         int i = (n < 0 ? -n : n) - 1;       // n < 0 , i = -n;  n > 0 , i = -n
+//         nums[i] = nums[i] > 0 ? -nums[i] : nums[i];
+//     }
+    
+//     for(int i = 0; i < nums.length; i++)
+//         if(nums[i] > 0)
+//             ans.add(i+1);
+//     return ans;
+// }
 
 
 // 2
@@ -33,8 +64,8 @@ class Solution {
 // 空间复杂度 O(n).
     // public List<Integer> findDisappearedNumbers(int[] nums) {
     //     List<Integer> ans = new ArrayList<>();
-    //     Set<Integer> rangeSet = new HashSet<>();  
-    //     Set<Integer> numSet = new HashSet<>();      // no duplicate
+    //     HashSet<Integer> rangeSet = new HashSet<>();  
+    //     HashSet<Integer> numSet = new HashSet<>();      // no duplicate
         
     //     for(int i = 1; i <= nums.length; i++){
     //         rangeSet.add(i);
@@ -50,24 +81,5 @@ class Solution {
     //     }
     //     return ans;
     // }
-
-
-
-
-// 3.
-    public List<Integer> findDisappearedNumbers(int[] nums) {
-        List<Integer> ans = new ArrayList<>();
-        
-        for(int n : nums){
-            int i = (n < 0 ? -n : n) - 1;       // n < 0 , i = -n;  n > 0 , i = -n
-            nums[i] = nums[i] > 0 ? -nums[i] : nums[i];
-        }
-        
-        for(int i = 0; i < nums.length; i++)
-            if(nums[i] > 0)
-                ans.add(i+1);
-        return ans;
-    }
-}
 
 }

@@ -106,15 +106,49 @@ mySet.add();
 
 # sort
 
-## Insertion Sort
-![insertionsort](https://i.imgur.com/USnNyUt.png)
+## SelectionSort
+
+![SelectionSort](./images/sort-SelectionSort.png)
+
+keep finding the smallest one, and put in the `arr[0]`
+
+```java
+public void SelectionSort(int[] num) {
+    for (int k=0; k < in.size(); j++) {
+        int minIndex = k;
+        for (int i=k+1; i < num.length; i++) {
+            if (num[minIndex] > num[i]) {
+                minIndex = i;
+            }
+        }
+        int temp = num[k];
+        num[k] = num[minIndex];
+        num[minIndex] = temp;    
+    }
+}
+```
+
+
+## BubbleSort
+
+![BubbleSort](./images/sort-BubbleSort.png)
+
+- Worst and Average Case Time Complexity: O(n*n). Worst case occurs when array is reverse sorted.
+- Best Case Time Complexity: O(n). Best case occurs when array is already sorted.
+- Auxiliary Space: O(1)
+- Boundary Cases: Bubble sort takes minimum time (Order of n) when elements are already sorted.
+- Sorting In Place: Yes
+- Stable: Yes
+
+
+## InsertionSort
+![insertionsort](./images/sort-InsertionSort.png)
 
 ## QuickSort
-![QuickSort2](https://i.imgur.com/c1PSGPf.png)
+![QuickSort](./images/sort-QuickSort.png)
 
-## Merge Sort
-![Merge-Sort-Tutorial](https://i.imgur.com/mpLzj9y.png)
-
+## MergeSort
+![MergeSort](./images/sort-MergeSort.png)
 
 
 
