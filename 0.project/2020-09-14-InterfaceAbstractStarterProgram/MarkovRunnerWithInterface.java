@@ -9,34 +9,46 @@
 import edu.duke.*; 
 
 public class MarkovRunnerWithInterface {
-    public void runModel(IMarkovModel markov, String text, int size) {
-        markov.setTraining(text);
-        System.out.println("running with " + markov);
-        for(int k=0; k < 3; k++){
-			String st= markov.getRandomText(size);
-			printOut(st);
-		}
-    }
-    
+
+	// setup model 
+	// This method will work with any markov object that implements IMarkovModel.
+    public void runModel(IMarkovModel markov, String text, int size, int seed) {
+		markov.setTraining(text);
+		markov.setRandom(seed);
+        System.out.println("running with " + markov);    // running with MarkovFour@4b53b922
+        // for(int k=0; k < 1; k++){
+		// 	String st= markov.getRandomText(size);
+		// 	printOut(st);
+		// }
+	}
+	
+	// give text file, put differne model
+	// This method creates one of the types of Markov models, and calls runModel with it to generate random text.
     public void runMarkov() {
         FileResource fr = new FileResource();
 		String st = fr.asString();
 		st = st.replace('\n', ' ');
-		int size = 200;
-		
+		int size = 50;
+		int seed = 20;
         MarkovZero mz = new MarkovZero();
-        runModel(mz, st, size);
-    
+        runModel(mz, st, size, seed);
         MarkovOne mOne = new MarkovOne();
-        runModel(mOne, st, size);
-        
+        runModel(mOne, st, size, seed);
         MarkovModel mThree = new MarkovModel(3);
-        runModel(mThree, st, size);
-        
+        runModel(mThree, st, size, seed);
         MarkovFour mFour = new MarkovFour();
-        runModel(mFour, st, size);
+        runModel(mFour, st, size, seed);
+	}
+	
 
-    }
+	public void testHashMap() {
+		String st = "yes-this-is-a-thin-pretty-pink-thistle";
+		int size = 50;
+		int seed = 42;
+        EfficientMarkovModel mz = new EfficientMarkovModel(2);
+		runModel(mz, st, size, seed);
+		mz.printHashMapInfo();
+	}
 
 	private void printOut(String s){
 		String[] words = s.split("\\s+");
