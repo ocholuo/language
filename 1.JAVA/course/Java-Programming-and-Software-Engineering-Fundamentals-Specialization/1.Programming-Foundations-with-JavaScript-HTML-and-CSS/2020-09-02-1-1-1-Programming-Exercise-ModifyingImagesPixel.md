@@ -24,7 +24,7 @@ ProjectCode: https://github.com/ocholuo/language/tree/master/0.project/javademo
 
 Write a JavaScript program that modifies an image by putting three vertical stripes on it - a red stripe on the left one third, a green stripe in the middle, and a blue stripe on the right one third. For example, if your program ran on Drew’s picture shown on the left, the resulting image would have red, green and blue vertical stripes as shown in the image on the right.
 
-![3color](./image/3color.png)
+![3color](https://github.com/ocholuo/language/blob/master/1.JAVA/img/3color.png)
 
 ```js
 // 1
