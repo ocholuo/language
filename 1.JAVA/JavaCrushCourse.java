@@ -43,12 +43,11 @@ public class JavaCrushCourse {
         // System.out.println(s1.equals("Hello"));     // prints true
         // System.out.println(str.indexOf("l"));       // prints 2
         // System.out.println(str.charAt(0));          // prints 'T'
-        // String str = "Hello World!";
         // String uppercase = str.toUpperCase();
-        // // uppercase = "HELLO WORLD!"
         // String lowercase = str.toLowerCase();
-        // lowercase = "hello world!"
         // s.substring(startindex, endindex)
+        // String myStr = "       Hello World!       ";
+        // System.out.println(myStr.trim());
 
 
         // 1. simple for loop
