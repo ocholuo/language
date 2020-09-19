@@ -21,14 +21,12 @@ tags: [Java]
 
 ```java
 create a FileResource:
-
 new FileResource() : opens a dialog box prompting you to select a file on your computer
 new FileResource("path/to/file.ext") : find a file on computer or within your BlueJ project
 new FileResource(existingFile) : uses the given File (typically returned by using a DirectoryResource)
 
 
 Method
-
 .lines()
 // provides access to the contents of this opened file one line at a time
 for (String line : fr.lines()) { }
@@ -41,6 +39,27 @@ for (String word : fr.words()) { }
 // returns the entire contents of this opened file as one String
 String contents = fr.asString();
 ```
+
+similar to 
+
+```java
+import java.io;
+import java.nio.file;
+
+public void readAndPrint() throws IOException {
+    Path p = Paths.get("data/hello.txt");
+    BufferedReader reader = Files.newBufferedReader(p);
+    while(true){
+        String line = reader.readLine();
+        if(line == null){
+            break;
+        }
+        System.out.println(line);
+    }
+}
+```
+
+
 
 ---
 
@@ -69,6 +88,19 @@ for (String word : ur.words()) { }
 .asString()
 // returns the entire contents of this opened web page as one String
 String contents = ur.asString();
+```
+
+similar
+
+```java
+public void urlread() {
+    URL source = new URL("www.google.com");
+    BufferedReader reader = new BufferedReader(source.openStream());
+    while(true){
+        String line = reader.readLine();
+        // print line
+    }
+}
 ```
 
 ---
