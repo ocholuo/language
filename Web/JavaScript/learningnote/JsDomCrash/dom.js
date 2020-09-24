@@ -93,7 +93,6 @@
 
 
 
-
 // querySelector //
 // only grep the first one
 
@@ -210,7 +209,6 @@
 // newDiv.style.fontSize = '30px';
 
 // up.insertBefore(newDiv, h1);
-
 
 
 

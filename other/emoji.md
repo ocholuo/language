@@ -26,7 +26,7 @@ People
 | :green_heart: `:green_heart:` | :broken_heart: `:broken_heart:` | :heartbeat: `:heartbeat:` |
 | :heartpulse: `:heartpulse:` | :two_hearts: `:two_hearts:` | :revolving_hearts: `:revolving_hearts:` |
 | :cupid: `:cupid:` | :sparkling_heart: `:sparkling_heart:` | :sparkles: `:sparkles:` |
-| :star: `:star:` | :star2: `:star2:` | :dizzy: `:dizzy:` |
+| ⭐ `⭐` | :star2: `:star2:` | :dizzy: `:dizzy:` |
 | :boom: `:boom:` | :collision: `:collision:` | :anger: `:anger:` |
 | :exclamation: `:exclamation:` | :question: `:question:` | :grey_exclamation: `:grey_exclamation:` |
 | :grey_question: `:grey_question:` | :zzz: `:zzz:` | :dash: `:dash:` |
@@ -74,7 +74,7 @@ Nature
 | :snowflake: `:snowflake:` | :snowman: `:snowman:` | :zap: `:zap:` |
 | :cyclone: `:cyclone:` | :foggy: `:foggy:` | :ocean: `:ocean:` |
 | :cat: `:cat:` | :dog: `:dog:` | :mouse: `:mouse:` |
-| :hamster: `:hamster:` | :rabbit: `:rabbit:` | :wolf: `:wolf:` |
+| :hamster: `:hamster:` | 🐰 `🐰` | :wolf: `:wolf:` |
 | :frog: `:frog:` | :tiger: `:tiger:` | :koala: `:koala:` |
 | :bear: `:bear:` | :pig: `:pig:` | :pig_nose: `:pig_nose:` |
 | :cow: `:cow:` | :boar: `:boar:` | :monkey_face: `:monkey_face:` |
@@ -151,7 +151,7 @@ Objects
 | :clipboard: `:clipboard:` | :calendar: `:calendar:` | :date: `:date:` |
 | :card_index: `:card_index:` | :file_folder: `:file_folder:` | :open_file_folder: `:open_file_folder:` |
 | :scissors: `:scissors:` | :pushpin: `:pushpin:` | :paperclip: `:paperclip:` |
-| :black_nib: `:black_nib:` | :pencil2: `:pencil2:` | :straight_ruler: `:straight_ruler:` |
+| :black_nib: `:black_nib:` | ✏️ `✏️` | :straight_ruler: `:straight_ruler:` |
 | :triangular_ruler: `:triangular_ruler:` | :closed_book: `:closed_book:` | :green_book: `:green_book:` |
 | :blue_book: `:blue_book:` | :orange_book: `:orange_book:` | :notebook: `:notebook:` |
 | :notebook_with_decorative_cover: `:notebook_with_decorative_cover:` | :ledger: `:ledger:` | :books: `:books:` |
@@ -300,7 +300,7 @@ Symbols
 | :x: `:x:` | :heavy_exclamation_mark: `:heavy_exclamation_mark:` | :bangbang: `:bangbang:` |
 | :interrobang: `:interrobang:` | :o: `:o:` | :heavy_multiplication_x: `:heavy_multiplication_x:` |
 | :heavy_plus_sign: `:heavy_plus_sign:` | :heavy_minus_sign: `:heavy_minus_sign:` | :heavy_division_sign: `:heavy_division_sign:` |
-| :white_flower: `:white_flower:` | :100: `:100:` | :heavy_check_mark: `:heavy_check_mark:` |
+| :white_flower: `:white_flower:` | :100: `:100:` | ✔️ `✔️` |
 | :ballot_box_with_check: `:ballot_box_with_check:` | :radio_button: `:radio_button:` | :link: `:link:` |
 | :curly_loop: `:curly_loop:` | :wavy_dash: `:wavy_dash:` | :part_alternation_mark: `:part_alternation_mark:` |
 | :trident: `:trident:` | :black_square: `:black_square:` | :white_square: `:white_square:` |

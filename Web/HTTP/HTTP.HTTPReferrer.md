@@ -36,7 +36,7 @@ Referer的正确拼写是Referrer，但是标准定案只能将错就错。
 <!-- 加载脚本 -->
 <script src="foo.js"></script>
 <!-- 加载样式 -->
-<link href="foo.css" rel="stylesheet">
+<!-- <link href="foo.css" rel="stylesheet"> -->
 ```
 
 - 浏览器都会将当前网址作为Referer字段，放在 HTTP 请求的头信息发送。
