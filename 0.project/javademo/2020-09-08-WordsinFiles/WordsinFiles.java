@@ -112,8 +112,8 @@ public class WordsinFiles {
             System.out.println("---------------File " + f.getName() + " .TXT ---------------");
             System.out.println();
 
-            // System.out.println("---------------test buildWordFileMap()---------------");
-            // pr.buildWordFileMap();
+            System.out.println("---------------test buildWordFileMap()---------------");
+            pr.buildWordFileMap();
 
             System.out.println("---------------test addWordsFromFile()---------------");
             pr.addWordsFromFile(f);
@@ -126,7 +126,7 @@ public class WordsinFiles {
 
 
             System.out.println("---------------test wrdnotexit()---------------");
-            pr.printFilesIn("sad");
+            pr.printFilesIn("laid");
 
         }
 

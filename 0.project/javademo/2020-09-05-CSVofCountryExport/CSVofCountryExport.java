@@ -87,10 +87,10 @@ public class CSVofCountryExport {
         // pr.countryinfo(parser, "Nauru");
 
         // System.out.println("---------------test listExportersTwoProducts()---------------");
-        // pr.listExportersTwoProducts(parser, "gold", "diamonds");
+        // pr.listExportersTwoProducts(parser, "cotton", "flowers");
 
         // System.out.println("---------------test numberOfExporters()---------------");
-        // int countryNum = pr.numberOfExporters(parser, "sugar");
+        // int countryNum = pr.numberOfExporters(parser, "cocoa");
         // System.out.println(countryNum);
 
         System.out.println("---------------test bigExporters()---------------");

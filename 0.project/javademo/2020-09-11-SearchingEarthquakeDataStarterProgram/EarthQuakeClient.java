@@ -91,7 +91,6 @@ public class EarthQuakeClient {
     }
 
 
-
     // ------------------------------------------------------------
     // ArrayList<QuakeEntry> quakeData {QuakeEntry1, QuakeEntry2, QuakeEntry3, ...}
     // call filterByDistance to calculate each QuakeEntry distance, 
@@ -168,7 +167,7 @@ public class EarthQuakeClient {
         ArrayList<QuakeEntry> quakeData  = parser.read(source);
         System.out.println("read data for "+ quakeData.size()+" quakes");
 
-        ArrayList<QuakeEntry> qeByDepth = filterByDepth(quakeData, -8000.0, -5000.0);
+        ArrayList<QuakeEntry> qeByDepth = filterByDepth(quakeData, -12000.0, -10000.0);
         for(QuakeEntry qe : qeByDepth){
             System.out.println(qe);
         }
@@ -204,9 +203,43 @@ public class EarthQuakeClient {
         ArrayList<QuakeEntry> quakeData  = parser.read(source);
         System.out.println("read data for "+ quakeData.size()+" quakes");
 
-        String where = "end"; 
-        String phrase = "California";
+        // String where = "end"; 
+        // String phrase = "California";
+        // ArrayList<QuakeEntry> qeByPhrase = filterByPhrase(quakeData, where, phrase);
+        // for(QuakeEntry qe : qeByPhrase){
+        //     System.out.println(qe);
+        // }
+        // System.out.println("Found " + qeByPhrase.size() + " quakes that match " + phrase + " at " + where);
+
+        
+        // where = "any"; 
+        // phrase = "Creek";
+        // qeByPhrase = filterByPhrase(quakeData, where, phrase);
+        // for(QuakeEntry qe : qeByPhrase){
+        //     System.out.println(qe);
+        // }
+        // System.out.println("Found " + qeByPhrase.size() + " quakes that match " + phrase + " at " + where);
+
+        
+        // where = "start"; 
+        // phrase = "Explosion";
+        // qeByPhrase = filterByPhrase(quakeData, where, phrase);
+        // for(QuakeEntry qe : qeByPhrase){
+        //     System.out.println(qe);
+        // }
+        // System.out.println("Found " + qeByPhrase.size() + " quakes that match " + phrase + " at " + where);
+
+        String where = "start"; 
+        String phrase = "Quarry Blast";
         ArrayList<QuakeEntry> qeByPhrase = filterByPhrase(quakeData, where, phrase);
+        for(QuakeEntry qe : qeByPhrase){
+            System.out.println(qe);
+        }
+        System.out.println("Found " + qeByPhrase.size() + " quakes that match " + phrase + " at " + where);
+
+        where = "end"; 
+        phrase = "Alaska";
+        qeByPhrase = filterByPhrase(quakeData, where, phrase);
         for(QuakeEntry qe : qeByPhrase){
             System.out.println(qe);
         }
@@ -214,16 +247,7 @@ public class EarthQuakeClient {
 
         
         where = "any"; 
-        phrase = "Creek";
-        qeByPhrase = filterByPhrase(quakeData, where, phrase);
-        for(QuakeEntry qe : qeByPhrase){
-            System.out.println(qe);
-        }
-        System.out.println("Found " + qeByPhrase.size() + " quakes that match " + phrase + " at " + where);
-
-        
-        where = "start"; 
-        phrase = "Explosion";
+        phrase = "Can";
         qeByPhrase = filterByPhrase(quakeData, where, phrase);
         for(QuakeEntry qe : qeByPhrase){
             System.out.println(qe);
@@ -231,4 +255,14 @@ public class EarthQuakeClient {
         System.out.println("Found " + qeByPhrase.size() + " quakes that match " + phrase + " at " + where);
     }
     
+
+    public static void main(String[] args) {
+        EarthQuakeClient pr = new EarthQuakeClient();
+        
+        System.out.println("quakesOfDepth()--------------");
+        pr.quakesOfDepth();
+
+        // pr.quakesByPhrase();
+
+    }
 }

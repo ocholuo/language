@@ -26,19 +26,19 @@ public class MarkovRunnerWithInterface {
 	// give text file, put differne model
 	// This method creates one of the types of Markov models, and calls runModel with it to generate random text.
     public void runMarkov() {
-        FileResource fr = new FileResource();
+        FileResource fr = new FileResource("data/confucius.txt");
 		String st = fr.asString();
 		st = st.replace('\n', ' ');
-		int size = 50;
-		int seed = 20;
-        MarkovZero mz = new MarkovZero();
-        runModel(mz, st, size, seed);
-        MarkovOne mOne = new MarkovOne();
-        runModel(mOne, st, size, seed);
-        MarkovModel mThree = new MarkovModel(3);
-        runModel(mThree, st, size, seed);
-        MarkovFour mFour = new MarkovFour();
-        runModel(mFour, st, size, seed);
+		int size = 500;
+		// int seed = 1024;
+        // MarkovZero mz = new MarkovZero();
+        // runModel(mz, st, size, seed);
+        // MarkovOne mOne = new MarkovOne();
+        // runModel(mOne, st, size, seed);
+        // MarkovModel mThree = new MarkovModel(3);
+        // runModel(mThree, st, size, seed);
+        // MarkovFour mFour = new MarkovFour();
+        // runModel(mFour, st, size, seed);
 	}
 
 	public void compareMethods() {
@@ -74,9 +74,9 @@ public class MarkovRunnerWithInterface {
 	
  
 	public void testHashMap() {
-        // FileResource fr = new FileResource("data/romeo.txt");
-		// String st = fr.asString();
-        String st = "yes-this-is-a-thin-pretty-pink-thistle";
+        FileResource fr = new FileResource("data/confucius.txt");
+		String st = fr.asString();
+        // String st = "yes-this-is-a-thin-pretty-pink-thistle";
 
         EfficientMarkovModel markov = new EfficientMarkovModel(5);
         System.out.println(markov);
@@ -87,7 +87,7 @@ public class MarkovRunnerWithInterface {
         // System.out.println("buildMap(): ");
         // markov.buildMap();
 
-		markov.setRandom(42);
+		markov.setRandom(531);
 		
         for(int k=0; k < 1; k++){
 			String out= markov.getRandomText(50);

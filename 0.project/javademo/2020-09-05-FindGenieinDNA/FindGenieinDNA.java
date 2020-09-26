@@ -208,12 +208,15 @@ public class FindGenieinDNA {
 
         // System.out.println("all the Strings in sr that are longer than 60 characters: ");
         int ninecharcount = 0;
+        int count = 0;;
         for(String gene : sr.data()){
+            count++;
             if(gene.length() > 60){
                 // System.out.println(gene);
                 ninecharcount++;
             }
         }
+        System.out.println("the number of Strings in sr: " + count);
         System.out.println("the number of Strings in sr that are longer than 60 characters: " + ninecharcount);
 
         System.out.println("");
@@ -234,7 +237,8 @@ public class FindGenieinDNA {
                 longestGene = gene;
             }
         }
-        System.out.println("the length of the longest gene in sr: " + longestGene);
+        System.out.println("the length of the longest gene in sr: " + longestGene.length());
+
     }
 
 
@@ -273,30 +277,45 @@ public class FindGenieinDNA {
         // System.out.println("num2 has: " + num2 + "Gene");
 
 
-        System.out.println("------------------test getAllGene()------------------");
-        // start Condon: ATG 
-        // stop Condon: TAA/TAG/TGA"
-        //                                    "ATGooo   ooo   ooo   ooo   ooo   ooo   ooo   ooo   ooo   ooo   ooo   ooo   CCAATAA"
-        StorageResource genes = pr.getAllGene("ATGCCTATTGGATCCAAAGAGAGGCCAACATTTTTTGAAATTTTTAAGACACGCTGCAACAAAGCAGATTTAGGACCAATAA");
-        System.out.println("This is the list of genes: ");
-        for(String g : genes.data()){
-            System.out.println(g);
-            double ctcount = pr.cgRatio(g);
-            System.out.println("the ratio of C’s and G’s in dna is: " + ctcount);
-        }
+        // System.out.println("------------------test getAllGene()------------------");
+        // // start Condon: ATG 
+        // // stop Condon: TAA/TAG/TGA"
+        // //                                    "ATGooo   ooo   ooo   ooo   ooo   ooo   ooo   ooo   ooo   ooo   ooo   ooo   CCAATAA"
+        // StorageResource genes = pr.getAllGene("ATGCCTATTGGATCCAAAGAGAGGCCAACATTTTTTGAAATTTTTAAGACACGCTGCAACAAAGCAGATTTAGGACCAATAA");
+        // System.out.println("This is the list of genes: ");
+        // for(String g : genes.data()){
+        //     System.out.println(g);
+        //     double ctcount = pr.cgRatio(g);
+        //     System.out.println("the ratio of C’s and G’s in dna is: " + ctcount);
+        // }
 
         System.out.println("------------------input dna from file, tostring, find all gene, then process it:------------------");
-        FileResource fr = new FileResource("dna-brca1line.fa");
+        FileResource fr = new FileResource("data/ass1.fa");
         String dna = fr.asString().toUpperCase();
         System.out.println(dna);
         System.out.println("");
 
         StorageResource sr = pr.getAllGene(dna);
         pr.processGenes(sr);
+
+        
         for(String g : sr.data()){
-            System.out.println(g);
-            
+            // System.out.println(g);
         }
+
+        int CTGcount=0;
+        int start = dna.indexOf("CTG");
+        System.out.println(dna.length());
+        while(start<=dna.length()-3 && start != -1){
+            CTGcount++;
+            System.out.println(start);
+            start = dna.indexOf("CTG", start+3);
+            System.out.println(start);
+        }
+        System.out.println("CTG:" + CTGcount);
     }
 
 }
+
+
+

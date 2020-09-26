@@ -1,9 +1,10 @@
 
-
+import java.util.*;
 import edu.duke.*;
+import java.io.File;
 import org.apache.commons.csv.*;
 
-public class HottestDay {
+public class FindHottestDay {
 
     public CSVParser inputfile(){
         FileResource fr = new FileResource();
@@ -106,6 +107,29 @@ public class HottestDay {
     }
 
 
+    public void coldestDayInFile() {
+        DirectoryResource dr = new DirectoryResource();
+        CSVRecord coldestRow = null;
+        Double coldestT = 1000000.00;
+
+        for(File f : dr.selectedFiles()){
+            FileResource fr = new FileResource(f);
+            CSVParser parser = fr.getCSVParser();
+            CSVRecord smallestRow = coldestHourInFile(parser);
+            Double smallT = Double.parseDouble(smallestRow.get("TemperatureF"));
+            if(smallT < coldestT){
+                coldestT = smallT;
+                coldestRow = smallestRow;
+            }
+        }
+        System.out.println("coldest day:");
+        System.out.println(coldestRow.get("DateUTC") + " is " + coldestT );
+    }
+
+
+
+
+
     // find lowest humidity
     public CSVRecord lowestHumidityInFile(CSVParser parser){
         CSVRecord lowestHRow = null;
@@ -126,7 +150,7 @@ public class HottestDay {
             }
         }
         System.out.println("lowest Humidity day:");
-        System.out.println(lowestHRow.get("DateUTC") + ": " + lowestHRow.get("Humidity"));
+        System.out.println(lowestHRow.get("DateUTC") + " is " + lowestHRow.get("Humidity"));
         return lowestHRow;
     }
 
@@ -163,11 +187,46 @@ public class HottestDay {
     }
 
 
+    public void lowestHumformanyDay() {
+        DirectoryResource dr = new DirectoryResource();
+        // Double lowestHinFiles = 1000000.00;
+        // CSVRecord lowestHRowinFiles = null;
+
+        CSVRecord lowestHRow = null;
+        Double lowestHinFiles = 0.00;
+
+        for(File f : dr.selectedFiles()){
+            FileResource fr = new FileResource(f);
+            CSVParser parser = fr.getCSVParser();
+
+            // CSVRecord lowestHRow = null;
+            for(CSVRecord currRow : parser){
+                if(lowestHRow == null){
+                    lowestHRow = currRow;
+                }
+                double lowestH = Double.parseDouble(lowestHRow.get("Humidity"));
+                String currHStr = currRow.get("Humidity");
+                if(!currHStr.equals("N/A")){
+                    double currH = Double.parseDouble(currHStr);
+                    if(lowestH > currH){
+                        lowestH = currH;
+                        lowestHRow = currRow;
+                    }
+                }
+            }
+        }
+        System.out.println("lowest Humidity day:");
+        System.out.println(lowestHRow.get("DateUTC") + " is " + lowestHRow.get("Humidity"));
+    }
+
 
 
     public static void main(String[] args) {
 
-        HottestDay pr = new HottestDay();
+        FindHottestDay pr = new FindHottestDay();
+        // pr.lowestHumformanyDay();
+        // pr.coldestDayInFile();
+
         CSVParser parser = pr.inputfile();
 
         // System.out.println("---------------test hottestInADay()---------------");
@@ -179,10 +238,13 @@ public class HottestDay {
         // System.out.println("---------------test lowestHumidityInFile()---------------");
         // CSVRecord lowestHRow = pr.lowestHumidityInFile(parser);
 
-        // System.out.println("---------------test averageTemperatureInFile()---------------");
-        // double avg = pr.averageTemperatureInFile(parser);
+        System.out.println("---------------test averageTemperatureInFile()---------------");
+        double avg = pr.averageTemperatureInFile(parser);
     
-        System.out.println("---------------test averageTemperatureWithHighHumidityInFile()---------------");
-        double avg = pr.averageTemperatureWithHighHumidityInFile(parser, 80);
+        // System.out.println("--test averageTemperatureWithHighHumidityInFile()---------------");
+        // double avg = pr.averageTemperatureWithHighHumidityInFile(parser, 80);
+
+
+
     }
 }

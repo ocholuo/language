@@ -197,14 +197,14 @@ public class VigenereBreaker {
         }
         System.out.println("breakForLanguage() ->");
         System.out.println("valid words in the decrypted String: " + maxcommonwrd);
-        // System.out.println("the key size is: " + rightkey.length);
-        // System.out.println("the key is: ");
-        // for(int i = 0; i < rightkey.length; i++){
-        //     System.out.print(rightkey[i] + " ");
-        //     System.out.println();
-        // }
-        // System.out.println("the plaintext is: ");
-        // System.out.println(plaintext);
+        System.out.println("the key size is: " + rightkey.length);
+        System.out.println("the key is: ");
+        for(int i = 0; i < rightkey.length; i++){
+            System.out.print(rightkey[i] + " ");
+            System.out.println();
+        }
+        System.out.println("the plaintext is: ");
+        System.out.println(plaintext);
         return plaintext;
     }
 
@@ -212,7 +212,6 @@ public class VigenereBreaker {
     public void breakVigenereForAllLangs (String encrypted, HashMap<String, HashSet<String>> languages) {
         for(String Onelanguage : languages.keySet()){
             System.out.println("Test The Language: " + Onelanguage);
-
             HashSet<String> dictionaryList = languages.get(Onelanguage);
             String plaintext = breakForLanguage(encrypted, dictionaryList);
         }
@@ -223,12 +222,12 @@ public class VigenereBreaker {
     public static void main(String[] args) {
         VigenereBreaker pr = new VigenereBreaker();
 
-        FileResource fr = new FileResource("data/athens_keyflute.txt");
+        FileResource fr = new FileResource("messages/secretmessage4.txt");
         String encrypted = fr.asString();
 
-        // HashSet<String> dictionaryList = pr.readDictionary(f);
 
-
+        FileResource languagefile = new FileResource("dictionaries/French");
+        HashSet<String> dictionaryList = pr.readDictionary(languagefile);
 
         // System.out.println("---------------test when know keylength---------------");
         // int []key = pr.tryKeyLength(encrypted,38,'e');

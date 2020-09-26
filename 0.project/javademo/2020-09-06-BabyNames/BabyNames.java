@@ -18,7 +18,7 @@ public class BabyNames {
     }
 
     public CSVParser readOneFile(int year) {
-        String fname = "yob" + year + ".csv";
+        String fname = "data/us_babynames_by_year/yob" + year + ".csv";
         FileResource fr = new FileResource(fname);
         CSVParser parser = fr.getCSVParser(false);    // false: no head row
         return parser;
@@ -122,8 +122,9 @@ public class BabyNames {
 
     public static void main(String[] args) {
         BabyNames pr = new BabyNames();
-        FileResource fr = new FileResource("example-small.csv");
-        CSVParser parser = fr.getCSVParser(false);
+
+        // FileResource fr = new FileResource("example-small.csv");
+        // CSVParser parser = fr.getCSVParser(false);
 
         // System.out.println("---------------test printNames()---------------");
         // pr.printNames(parser);
@@ -152,12 +153,14 @@ public class BabyNames {
         // System.out.println("---------------test totalBirths()---------------");
         // pr.totalBirths(parser);
 
-        // System.out.println("---------------test whatIsNameInYear()---------------");
-        // String newname = pr.whatIsNameInYear("Owen", 1974, 2014, "M");
-
         System.out.println("---------------test whatIsNameInYear()---------------");
-        int sum = pr.getTotalBirthsRankedHigher(1990, "Emily", "F");
-        sum = pr.getTotalBirthsRankedHigher(1990, "Drew", "M");
+        String newname = pr.whatIsNameInYear("Owen", 1974, 2014, "M");
+        System.out.println();
+        String newname2 = pr.whatIsNameInYear("Susan", 1972, 2014, "F");
+
+        // System.out.println("---------------test whatIsNameInYear()---------------");
+        // int sum = pr.getTotalBirthsRankedHigher(1990, "Emily", "F");
+        // sum = pr.getTotalBirthsRankedHigher(1990, "Drew", "M");
     }
 
 

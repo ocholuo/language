@@ -28,7 +28,7 @@ public class Test {
 
         
     public void testGetFollowsWithFile(){
-        FileResource fr = new FileResource("data/melville.txt");
+        FileResource fr = new FileResource("data/confucius.txt");
         String st = fr.asString();
         st = st.trim();
 
@@ -36,9 +36,8 @@ public class Test {
         markov.setTraining(st);
         // markov.setRandom(42);
 
-
         System.out.println("test testGetFollowsWithFile():");
-        ArrayList<String> follows = markov.getFollows("th");
+        ArrayList<String> follows = markov.getFollows("he");
         int count = 0;
         for(String wrd : follows){
             // System.out.print(wrd + ",");

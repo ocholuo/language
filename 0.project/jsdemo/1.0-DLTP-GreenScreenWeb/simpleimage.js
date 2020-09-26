@@ -416,12 +416,6 @@ function __rangeCheck (value, low, high, funName, coordName, size) {
 
 
 
-
-
-
-
-
-
 var FGimage;
 var BGimage;
 

@@ -106,11 +106,11 @@ mySet.add();
 
 # sort
 
-## SelectionSort
-
-![SelectionSort](./images/sort-SelectionSort.png)
+## SelectionSort - keep finding the smallest one
 
 keep finding the smallest one, and put in the `arr[0]`
+
+![SelectionSort](./images/sort-SelectionSort.png)
 
 ```java
 public void SelectionSort(int[] num) {
@@ -129,7 +129,7 @@ public void SelectionSort(int[] num) {
 ```
 
 
-## BubbleSort
+## BubbleSort - if bigger, back
 
 ![BubbleSort](./images/sort-BubbleSort.png)
 
@@ -141,7 +141,7 @@ public void SelectionSort(int[] num) {
 - Stable: Yes
 
 
-## InsertionSort
+## InsertionSort - if smaller, forward
 ![insertionsort](./images/sort-InsertionSort.png)
 
 ## QuickSort

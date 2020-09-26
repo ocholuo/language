@@ -15,7 +15,6 @@ public class QuakeSortWithTwoArrayLists {
                 min = q;
             }
         }
-        
         return min;
     }
     
@@ -26,7 +25,6 @@ public class QuakeSortWithTwoArrayLists {
             in.remove(minElement);
             out.add(minElement);
         }
-        
         return out;
     }
     

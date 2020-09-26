@@ -109,7 +109,7 @@ public class CaesarCipherTwo {
             }
         }
         for(int i = 0; i < count.length; i++){
-            System.out.println(alph.charAt(i) + ": " + count[i]);
+            // System.out.println(alph.charAt(i) + ": " + count[i]);
         }
         return count;
     }
@@ -142,7 +142,7 @@ public class CaesarCipherTwo {
         String alphL = "abcdefghijklmnopqrstuvwxyz";
         String shiftedAlphU = alphU.substring(key) + alphU.substring(0,key);
         String shiftedAlphL = alphL.substring(key) + alphL.substring(0,key);
-        System.out.println(shiftedAlphU);
+        // System.out.println(shiftedAlphU);
 
         StringBuilder ciphertext = new StringBuilder(plaintext);
 
@@ -160,10 +160,10 @@ public class CaesarCipherTwo {
                 ciphertext.setCharAt(i, encrChar);
             }
         }
-        System.out.println("plaintext: ");
-        System.out.println(plaintext);
-        System.out.println("ciphertext: ");
-        System.out.println(ciphertext.toString());
+        // System.out.println("plaintext: ");
+        // System.out.println(plaintext);
+        // System.out.println("ciphertext: ");
+        // System.out.println(ciphertext.toString());
         return ciphertext.toString();
     }
 
@@ -184,10 +184,11 @@ public class CaesarCipherTwo {
         String ans0 = caesarBreaker(string0);
         String ans1 = caesarBreaker(string1);
 
-        System.out.println(ans0.length());
-        System.out.println(ans1.length());
-        System.out.println(ans0);
-        System.out.println(ans1);
+        // System.out.println(ans0.length());
+        // System.out.println(ans1.length());
+
+        // System.out.println(ans0);
+        // System.out.println(ans1);
 
         for(int i = 0; i < ans0.length(); i++){
             char c0 = ans0.charAt(i);
@@ -202,19 +203,21 @@ public class CaesarCipherTwo {
     }
     
 
-    public void test() {
+    public static void main(String[] args) {
 
-        CaesarCipherTwo pr = new CaesarCipherTwo(17, 3);
-        System.out.println("---------------test caesarcipher()---------------");
-        String input = "At noon be in the conference room with your hat on for a surprise party. YELL LOUD! eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee";
-        // String input = "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee";
-        System.out.println("plaintext :");
-        System.out.println(input);
-        String ans = pr.caesarcipher(input);
+        CaesarCipherTwo pr = new CaesarCipherTwo(21, 8);
 
+        // System.out.println("---------------test caesarcipher()---------------");
+        // String input = "Can you imagine life WITHOUT the internet AND computers in your pocket?";
+        // // String input = "At noon be in the conference room with your hat on for a surprise party. YELL LOUD! eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee";
+        // // String input = "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee";
+        // System.out.println("plaintext :");
+        // System.out.println(input);
+        // String ans = pr.caesarcipher(input);
 
         System.out.println("---------------test breakCaesarCipher()---------------");
-        String ctext = "At noon be in the conference room with your hat on for a surprise party. YELL LOUD! eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee";
+        FileResource fr = new FileResource();
+        String ctext = fr.asString();
         pr.breakCaesarCipher(ctext);
     }
 }

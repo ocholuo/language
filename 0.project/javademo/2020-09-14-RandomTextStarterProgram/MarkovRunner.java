@@ -28,13 +28,13 @@ public class MarkovRunner {
 	
 
 	public void runMarkovOne() {
-		FileResource fr = new FileResource();
+		FileResource fr = new FileResource("data/romeo.txt");
 		String st = fr.asString();
 		st = st.replace('\n', ' ');
 
 		MarkovOne markov = new MarkovOne();
 		markov.setTraining(st);
-		markov.setRandom(273);
+		markov.setRandom(365);
 		// markov.setRandom(101);  // every time you run it you get the same text.
 
 		for(int k=0; k < 2; k++){
@@ -45,13 +45,13 @@ public class MarkovRunner {
 
 
 	public void runMarkovFour() {
-		FileResource fr = new FileResource("data/confucius.txt");
+		FileResource fr = new FileResource("data/romeo.txt");
 		String st = fr.asString();
 		st = st.replace('\n', ' ');
 
 		MarkovFour markov = new MarkovFour();
 		markov.setTraining(st);
-		markov.setRandom(371);
+		markov.setRandom(715);
 		// markov.setRandom(101);  // every time you run it you get the same text.
 
 		for(int k=0; k < 2; k++){
@@ -62,14 +62,14 @@ public class MarkovRunner {
 
 
 	public void runMarkovN() {
-		FileResource fr = new FileResource("data/confucius.txt");
+		FileResource fr = new FileResource("data/romeo.txt");
 		String st = fr.asString();
 		st = st.replace('\n', ' ');
 
 		MarkovModel markov = new MarkovModel();
-		markov.setModel(8);
+		markov.setModel(7);
 		markov.setTraining(st);
-		markov.setRandom(365);
+		markov.setRandom(953);
 
 		for(int k=0; k < 2; k++){
 			String text = markov.getRandomText(500);

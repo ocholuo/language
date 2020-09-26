@@ -248,13 +248,14 @@ public class LogAnalyzer{
         int maxTime = 0;
         ArrayList<String> maxIP = new ArrayList<String>();
         for(String date : dayToIP.keySet()){
+            System.out.println(date);
             if(date.equals(day)){
+                System.out.println(day);
                 HashMap<String,Integer> FreqsIP = new HashMap<String,Integer>();
                 ArrayList<String> ipList = dayToIP.get(date);
                 for(String ip : ipList){
                     if( ! FreqsIP.containsKey(ip) ){
                         FreqsIP.put(ip, 1);
-
                     }
                     else{
                         FreqsIP.put(ip, FreqsIP.get(ip)+1 );

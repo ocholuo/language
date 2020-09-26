@@ -22,39 +22,39 @@ public class Tester{
 
     public void testLogAnalyzer() {
         LogAnalyzer pr = new LogAnalyzer();
-        pr.readFile("data/weblog1_log");
-        pr.printAll();
+        pr.readFile("data/weblog2_log");
+        // pr.printAll();
         
         // System.out.println("---------------test countUniqueIPs()---------------");
         // int ips = pr.countUniqueIPs();
 
         // System.out.println("---------------test uniqueIPVisitsOnDay()---------------");
-        // pr.uniqueIPVisitsOnDay("24/Mar");
+        // pr.uniqueIPVisitsOnDay("24/Sep");
 
         // System.out.println("---------------test printAllHigherThanNum()---------------");
         // pr.printAllHigherThanNum(400);
 
         // System.out.println("---------------test countUniqueIPsInRange()---------------");
-        // pr.countUniqueIPsInRange(300,399);
+        // pr.countUniqueIPsInRange(200,299);
 
-        System.out.println("---------------test counVisitesPerIO()---------------");
-        HashMap<String,Integer> counts = pr.countVisitsPerIP();
+        // System.out.println("---------------test counVisitesPerIO()---------------");
+        // HashMap<String,Integer> counts = pr.countVisitsPerIP();
 
         // System.out.println("---------------test mostNumberVisitsByIP()---------------");
         // int maxTimes = pr.mostNumberVisitsByIP(counts);
 
-        // System.out.println("---------------test iPsMostVisits()---------------");
-        // ArrayList<String> maxIP = pr.iPsMostVisits();
+        System.out.println("---------------test iPsMostVisits()---------------");
+        ArrayList<String> maxIP = pr.iPsMostVisits();
 
-        System.out.println("---------------test iPsForDays()---------------");
-        HashMap<String, ArrayList<String>> dayToIP = pr.iPsForDays();
+        // System.out.println("---------------test iPsForDays()---------------");
+        // HashMap<String, ArrayList<String>> dayToIP = pr.iPsForDays();
 
 
-        System.out.println("---------------test dayWithMostIPVisits()---------------");
-        String mostIPday = pr.dayWithMostIPVisits(dayToIP);
+        // System.out.println("---------------test dayWithMostIPVisits()---------------");
+        // String mostIPday = pr.dayWithMostIPVisits(dayToIP);
 
-        System.out.println("---------------test iPsWithMostVisitsOnDay()---------------");
-        ArrayList<String> maxIP = pr.iPsWithMostVisitsOnDay(dayToIP, "17/Mar");
+        // System.out.println("---------------test iPsWithMostVisitsOnDay()---------------");
+        // ArrayList<String> maxIP = pr.iPsWithMostVisitsOnDay(dayToIP, "30/Sep");
     }
 
 

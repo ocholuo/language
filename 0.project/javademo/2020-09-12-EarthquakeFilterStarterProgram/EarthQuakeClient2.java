@@ -47,14 +47,14 @@ public class EarthQuakeClient2 {
         // those with magnitude between 4.0 and 5.0
         // and depth between -35000.0 and -12000.0
         // ---------------------------------------------------
-        Filter f1 = new FilterMagnitude(4.0, 5.0);
-        Filter f2 = new FilterDepth(-35000.0, -12000.0);
-        ArrayList<QuakeEntry> output1  = filter(quakeData, f1);
-        ArrayList<QuakeEntry> output2  = filter(output1, f2);
-        System.out.println("after FilterDepth(), the total quakes is: " + output2.size());
-        for (QuakeEntry qe: output2) {
-            System.out.println(qe);
-        }
+        // Filter f1 = new FilterMagnitude(4.0, 5.0);
+        // Filter f2 = new FilterDepth(-35000.0, -12000.0);
+        // ArrayList<QuakeEntry> output1  = filter(quakeData, f1);
+        // ArrayList<QuakeEntry> output2  = filter(output1, f2);
+        // System.out.println("after FilterDepth(), the total quakes is: " + output2.size());
+        // for (QuakeEntry qe: output2) {
+        //     System.out.println(qe);
+        // }
 
         // ---------------------------------------------------
         // to filter earthquakes using two criteria,
@@ -106,9 +106,42 @@ public class EarthQuakeClient2 {
 
         int count = 0;
         MatchAllFilter maf = new MatchAllFilter();
-        Filter f1 = new FilterMagnitude(0.0, 3.0);
-        Filter f2 = new FilterDistance(36.1314, -95.9372, 10000000);
-        Filter f3 = new FilterPhrase("any", "Ca");
+        
+        // Filter f1 = new FilterMagnitude(0.0, 3.0);
+        // Filter f2 = new FilterDistance(36.1314, -95.9372, 10000000);
+        // Filter f3 = new FilterPhrase("any", "Ca");
+        // maf.addFilter(f1);
+        // maf.addFilter(f2);
+        // maf.addFilter(f3);
+        // ArrayList<QuakeEntry> quakes = filter(quakeData, maf);
+
+
+        // quiz
+        // Filter f2 = new FilterDistance(39.7392, -104.9903, 1000000);
+        // Filter f3 = new FilterPhrase("end", "a");
+        // maf.addFilter(f2);
+        // maf.addFilter(f3);
+        // ArrayList<QuakeEntry> quakes = filter(quakeData, maf);
+
+        // Filter f1 = new FilterMagnitude(3.5, 4.5);
+        // Filter f2 = new FilterDepth(-55000.0, -20000.0);
+        // maf.addFilter(f1);
+        // maf.addFilter(f2);
+        // ArrayList<QuakeEntry> quakes = filter(quakeData, maf);
+
+
+        // Filter f1 = new FilterMagnitude(1.0, 4.0);
+        // Filter f2 = new FilterDepth(-180000.0, -30000.0);
+        // Filter f3 = new FilterPhrase("any", "o");
+        // maf.addFilter(f1);
+        // maf.addFilter(f2);
+        // maf.addFilter(f3);
+        // ArrayList<QuakeEntry> quakes = filter(quakeData, maf);
+
+        
+        Filter f1 = new FilterMagnitude(0.0, 5.0);
+        Filter f2 = new FilterDistance(55.7308, 9.1153, 3000000);
+        Filter f3 = new FilterPhrase("any", "e");
         maf.addFilter(f1);
         maf.addFilter(f2);
         maf.addFilter(f3);
@@ -140,6 +173,12 @@ public class EarthQuakeClient2 {
                 qe.getMagnitude(),
                 qe.getInfo());
         }
+    }
+
+
+    public static void main(String[] args) {
+        EarthQuakeClient2 pr = new EarthQuakeClient2();
+        pr.quakesWithFilter();
     }
 
 }
