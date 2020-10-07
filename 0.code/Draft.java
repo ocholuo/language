@@ -24,8 +24,10 @@ public class Draft {
     }
 
     public static void main(String[] args) {
-        Draft pr = new Draft();
-        int[] num = {4,3,2,7,8,2,3,1};
-        List<Integer> result = pr.findDisappearedNumbers(num);
+        
+        String[] words = { "abc", "ab", "Mango", "Cherry", "Apple" };
+        if (words[0].compareTo(words[1]) > 0) {
+            System.out.println(words[0] + " smaller than " + words[1]);
+        }
     }
 }
