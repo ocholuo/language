@@ -1,10 +1,10 @@
 ---
-title: Problem Solving with Algorithms and Data Structures using Python 1
+title: pythonds3 - 1. Introduction
 # author: Grace JyL
 date: 2019-08-25 11:11:11 -0400
-description: 
-excerpt_separator: 
-categories: [DataStructure, Runstone]
+description:
+excerpt_separator:
+categories: [CS, DataStructure]
 tags: [DataStructure, Python]
 math: true
 # pin: true
@@ -17,6 +17,9 @@ toc: true
 ---
 
 # 1. Introduction
+
+Problem Solving with Algorithms and Data Structures using Python 1
+
 
 ## 1.5. Why Study Data Structures and Abstract Data Types?
 
@@ -33,6 +36,35 @@ toc: true
 - the separation of these two perspectives define the complex data models for problems without giving any indication as to the details of how the model will actually be built.
 - This provides an implementation-independent view of the data.
 - Since there will usually be many different ways to implement an abstract data type, this implementation independence allows the programmer to switch the details of the implementation without changing the way the user of the data interacts with it. The user can remain focused on the problem-solving process.
+
+
+a | b
+---|---
+抽象 | 实现
+逻辑 | 物理
+接口 | 实现 implemen
+
+<kbd>算法+数据结果=编程</kbd>
+
+bulid in function: procedural abstraction
+
+primitive data typr: int, str....
+
+ADT: abstract data type: 抽象数据 (user descript / cover the data)
+
+![Screen Shot 2020-05-25 at 23.25.42](https://i.imgur.com/cJRDWnA.png)
+
+逻辑层面稳定，操作接口不一样，物理不一样
+
+```
+coding:
+- c
+  - compile
+  - link
+  - execute
+- python
+  - run
+```
 
 ---
 
