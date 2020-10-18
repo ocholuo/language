@@ -2,9 +2,9 @@
 title: Java - Interfaces and Abstract Classes
 date: 2020-09-14 11:11:11 -0400
 description:
-categories: [Java, JavaPoint]
-img: /assets/img/sample/rabbit.png
+categories: [CourseNote, JavaNote]
 tags: [Java]
+img: /assets/img/sample/rabbit.png
 ---
 
 

@@ -2,9 +2,9 @@
 title: Java - Arrays stream() method in Java
 date: 2020-09-12 11:11:11 -0400
 description:
-categories: [Java, JavaPoint]
-img: /assets/img/sample/rabbit.png
+categories: [CourseNote, JavaNote]
 tags: [Java]
+img: /assets/img/sample/rabbit.png
 ---
 
 
