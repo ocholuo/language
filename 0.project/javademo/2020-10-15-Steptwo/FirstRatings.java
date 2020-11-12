@@ -118,7 +118,7 @@ public class FirstRatings{
                     // 1,0068646,10,1381620027
     // process every record from the CSV file, a file of raters and their ratings, and return an ArrayList of type Rater with all the rater data from the file.
     public ArrayList<Rater> loadRaters(String filename){
-        FileResource fr = new FileResource(filename);
+        FileResource fr = new FileResource("data/" + filename);
         CSVParser pr = fr.getCSVParser();
 
         ArrayList<Rater> raterData = new ArrayList<Rater>();
