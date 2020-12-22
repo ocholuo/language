@@ -25,6 +25,7 @@ public class Rater {
         myRatings.add(new Rating(item,rating));
     }
 
+
     public boolean hasRating(String item) {
         for(int k=0; k < myRatings.size(); k++){
             if (myRatings.get(k).getItem().equals(item)){

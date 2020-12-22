@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=FirstRatings
+comment1.params=parser
+comment1.target=java.util.ArrayList\ csvMovieme(org.apache.commons.csv.CSVParser)
+comment2.params=filename
+comment2.target=java.util.ArrayList\ loadMovies(java.lang.String)
+comment3.params=
+comment3.target=void\ testLoadMovies()
+comment4.params=parser
+comment4.target=java.util.ArrayList\ csvRater(org.apache.commons.csv.CSVParser)
+comment5.params=filename
+comment5.target=java.util.ArrayList\ loadRaters(java.lang.String)
+comment6.params=raterID\ movieID
+comment6.target=void\ testLoadRaters(int,\ java.lang.String)
+numComments=7

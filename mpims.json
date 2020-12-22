@@ -1,0 +1,3026 @@
+[
+{
+    "id": "GAEN7AN1W",
+    "name": "mpdm-yahor--lou--nick-1",
+    "created": 1525034601,
+    "creator": "UA8RCHTQV",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB",
+        "U84ADEJP9",
+        "UA8RCHTQV"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "UA8RCHTQV",
+        "last_set": 1525034601
+    },
+    "purpose": {
+        "value": "Group messaging with: @yahor @lou @nick",
+        "creator": "UA8RCHTQV",
+        "last_set": 1525034601
+    }
+},
+{
+    "id": "GCWMPEZ9S",
+    "name": "mpdm-lou--edan--ayman-1",
+    "created": 1537378025,
+    "creator": "U30A0FZSB",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB",
+        "UBD3AQ4P9",
+        "UCUPN5KPT"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "U30A0FZSB",
+        "last_set": 1537378025
+    },
+    "purpose": {
+        "value": "Group messaging with: @lou @edan @ayman",
+        "creator": "U30A0FZSB",
+        "last_set": 1537378025
+    }
+},
+{
+    "id": "GD1GUAXQB",
+    "name": "mpdm-lou--bondu--ayman-1",
+    "created": 1537982218,
+    "creator": "U30A0FZSB",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB",
+        "U9JGCM28H",
+        "UCUPN5KPT"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "U30A0FZSB",
+        "last_set": 1537982218
+    },
+    "purpose": {
+        "value": "Group messaging with: @lou @bondu @ayman",
+        "creator": "U30A0FZSB",
+        "last_set": 1537982218
+    }
+},
+{
+    "id": "GEXJ7MZC0",
+    "name": "mpdm-lou--miguel--eric-1",
+    "created": 1545254888,
+    "creator": "U30A0FZSB",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB",
+        "UE8FSJXGC",
+        "UECFTJRJ7"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "U30A0FZSB",
+        "last_set": 1545254888
+    },
+    "purpose": {
+        "value": "Group messaging with: @lou @miguel @eric",
+        "creator": "U30A0FZSB",
+        "last_set": 1545254888
+    }
+},
+{
+    "id": "GEXRY1WAG",
+    "name": "mpdm-lou--yahor--eric-1",
+    "created": 1545237017,
+    "creator": "U30A0FZSB",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB",
+        "UA8RCHTQV",
+        "UECFTJRJ7"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "U30A0FZSB",
+        "last_set": 1545237017
+    },
+    "purpose": {
+        "value": "Group messaging with: @lou @yahor @eric",
+        "creator": "U30A0FZSB",
+        "last_set": 1545237017
+    }
+},
+{
+    "id": "CF1H1M1FY",
+    "name": "mpdm-yahor--nick--eric--mmoon-1",
+    "created": 1545417822,
+    "creator": "UA8RCHTQV",
+    "is_archived": false,
+    "members": [
+        "U84ADEJP9",
+        "UA8RCHTQV",
+        "UECFTJRJ7"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "UA8RCHTQV",
+        "last_set": 1545417822
+    },
+    "purpose": {
+        "value": "Group messaging with: @yahor @nick @eric @mmoon",
+        "creator": "UA8RCHTQV",
+        "last_set": 1545417822
+    }
+},
+{
+    "id": "GFME3D7CN",
+    "name": "mpdm-yahor--nick--john--eric-1",
+    "created": 1548176564,
+    "creator": "UA8RCHTQV",
+    "is_archived": false,
+    "members": [
+        "U84ADEJP9",
+        "UA8RCHTQV",
+        "UDV6T1M2L",
+        "UECFTJRJ7"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "UA8RCHTQV",
+        "last_set": 1548176564
+    },
+    "purpose": {
+        "value": "Group messaging with: @yahor @nick @john @eric",
+        "creator": "UA8RCHTQV",
+        "last_set": 1548176564
+    }
+},
+{
+    "id": "CFRD8BJ2X",
+    "name": "mpdm-lou--eric--brianhasse-1",
+    "created": 1548721929,
+    "creator": "U30A0FZSB",
+    "is_archived": true,
+    "members": [
+        "U30A0FZSB",
+        "UECFTJRJ7"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "U30A0FZSB",
+        "last_set": 1548721929
+    },
+    "purpose": {
+        "value": "Group messaging with: @lou @eric @brianhasse",
+        "creator": "U30A0FZSB",
+        "last_set": 1548721929
+    }
+},
+{
+    "id": "GG1A8AS1Y",
+    "name": "mpdm-lou--john--eric-1",
+    "created": 1549574939,
+    "creator": "U30A0FZSB",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB",
+        "UDV6T1M2L",
+        "UECFTJRJ7"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "U30A0FZSB",
+        "last_set": 1549574939
+    },
+    "purpose": {
+        "value": "Group messaging with: @lou @john @eric",
+        "creator": "U30A0FZSB",
+        "last_set": 1549574939
+    }
+},
+{
+    "id": "CG8CF3HPE",
+    "name": "mpdm-lou--alex--lhanscom-1",
+    "created": 1550254012,
+    "creator": "U30A0FZSB",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "U30A0FZSB",
+        "last_set": 1550254012
+    },
+    "purpose": {
+        "value": "Group messaging with: @lou @alex @lhanscom",
+        "creator": "U30A0FZSB",
+        "last_set": 1550254012
+    }
+},
+{
+    "id": "GGJ6CFLGG",
+    "name": "mpdm-lou--kevin--john--miguel-1",
+    "created": 1551310106,
+    "creator": "U30A0FZSB",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB",
+        "UC1MBG9SL",
+        "UDV6T1M2L",
+        "UE8FSJXGC"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "U30A0FZSB",
+        "last_set": 1551310106
+    },
+    "purpose": {
+        "value": "Group messaging with: @lou @kevin @john @miguel",
+        "creator": "U30A0FZSB",
+        "last_set": 1551310106
+    }
+},
+{
+    "id": "GGLBNSJEA",
+    "name": "mpdm-lou--john--miguel-1",
+    "created": 1551310085,
+    "creator": "U30A0FZSB",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB",
+        "UDV6T1M2L",
+        "UE8FSJXGC"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "U30A0FZSB",
+        "last_set": 1551310085
+    },
+    "purpose": {
+        "value": "Group messaging with: @lou @john @miguel",
+        "creator": "U30A0FZSB",
+        "last_set": 1551310085
+    }
+},
+{
+    "id": "GGPFAK29F",
+    "name": "mpdm-lou--troy--kevinm-1",
+    "created": 1551823904,
+    "creator": "U30A0FZSB",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB",
+        "UG690A8H3",
+        "UGM87PMM2"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "U30A0FZSB",
+        "last_set": 1551823904
+    },
+    "purpose": {
+        "value": "Group messaging with: @lou @troy @kevinm",
+        "creator": "U30A0FZSB",
+        "last_set": 1551823904
+    }
+},
+{
+    "id": "GGPPL0LLB",
+    "name": "mpdm-lou--yahor--john-cdg--eric--troy-1",
+    "created": 1551814209,
+    "creator": "U30A0FZSB",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB",
+        "UA8RCHTQV",
+        "UDV6T1M2L",
+        "UECFTJRJ7",
+        "UG690A8H3"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "U30A0FZSB",
+        "last_set": 1551814209
+    },
+    "purpose": {
+        "value": "Group messaging with: @lou @yahor @john-cdg @eric @troy",
+        "creator": "U30A0FZSB",
+        "last_set": 1551814209
+    }
+},
+{
+    "id": "GGTC1GLCB",
+    "name": "mpdm-troy--lou--john-cdg-1",
+    "created": 1552084229,
+    "creator": "UG690A8H3",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB",
+        "UDV6T1M2L",
+        "UG690A8H3"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "UG690A8H3",
+        "last_set": 1552084229
+    },
+    "purpose": {
+        "value": "Group messaging with: @troy @lou @john-cdg",
+        "creator": "UG690A8H3",
+        "last_set": 1552084229
+    }
+},
+{
+    "id": "GGTEAL8M8",
+    "name": "mpdm-troy--john-cdg--miguel--eric-1",
+    "created": 1552081209,
+    "creator": "UG690A8H3",
+    "is_archived": false,
+    "members": [
+        "UDV6T1M2L",
+        "UE8FSJXGC",
+        "UECFTJRJ7",
+        "UG690A8H3"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "UG690A8H3",
+        "last_set": 1552081209
+    },
+    "purpose": {
+        "value": "Group messaging with: @troy @john-cdg @miguel @eric",
+        "creator": "UG690A8H3",
+        "last_set": 1552081209
+    }
+},
+{
+    "id": "GH0ARDJQZ",
+    "name": "mpdm-troy--john-cdg--eric-1",
+    "created": 1553533064,
+    "creator": "UG690A8H3",
+    "is_archived": false,
+    "members": [
+        "UDV6T1M2L",
+        "UECFTJRJ7",
+        "UG690A8H3"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "UG690A8H3",
+        "last_set": 1553533064
+    },
+    "purpose": {
+        "value": "Group messaging with: @troy @john-cdg @eric",
+        "creator": "UG690A8H3",
+        "last_set": 1553533064
+    }
+},
+{
+    "id": "GH93QHMHC",
+    "name": "mpdm-troy--nick--yahor--john-cdg-1",
+    "created": 1553298037,
+    "creator": "UG690A8H3",
+    "is_archived": false,
+    "members": [
+        "U84ADEJP9",
+        "UA8RCHTQV",
+        "UDV6T1M2L",
+        "UG690A8H3"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "UG690A8H3",
+        "last_set": 1553298037
+    },
+    "purpose": {
+        "value": "Group messaging with: @troy @nick @yahor @john-cdg",
+        "creator": "UG690A8H3",
+        "last_set": 1553298037
+    }
+},
+{
+    "id": "CHFCPFZM4",
+    "name": "mpdm-lou--jgilbert--ehoschet-1",
+    "created": 1553797858,
+    "creator": "U30A0FZSB",
+    "is_archived": true,
+    "members": [
+        "U30A0FZSB"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "U30A0FZSB",
+        "last_set": 1553797858
+    },
+    "purpose": {
+        "value": "Group messaging with: @lou @jgilbert @ehoschet",
+        "creator": "U30A0FZSB",
+        "last_set": 1553797858
+    }
+},
+{
+    "id": "CHFS1C11U",
+    "name": "mpdm-troy--ehoschet--delkin-1",
+    "created": 1553823131,
+    "creator": "UG690A8H3",
+    "is_archived": true,
+    "members": [
+        "UG690A8H3"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "UG690A8H3",
+        "last_set": 1553823131
+    },
+    "purpose": {
+        "value": "Group messaging with: @troy @ehoschet @delkin",
+        "creator": "UG690A8H3",
+        "last_set": 1553823131
+    }
+},
+{
+    "id": "GHGCX4J10",
+    "name": "mpdm-lou--mike--kevinm-1",
+    "created": 1555008112,
+    "creator": "U30A0FZSB",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB",
+        "U8479KRK9",
+        "UGM87PMM2"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "U30A0FZSB",
+        "last_set": 1555008112
+    },
+    "purpose": {
+        "value": "Group messaging with: @lou @mike @kevinm",
+        "creator": "U30A0FZSB",
+        "last_set": 1555008112
+    }
+},
+{
+    "id": "GJN3S94V8",
+    "name": "mpdm-john-cdg--lou--vanessa.barrett-1",
+    "created": 1558711361,
+    "creator": "UDV6T1M2L",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB",
+        "UDV6T1M2L",
+        "UHXLCBA0L"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "UDV6T1M2L",
+        "last_set": 1558711361
+    },
+    "purpose": {
+        "value": "Group messaging with: @john-cdg @lou @vanessa.barrett",
+        "creator": "UDV6T1M2L",
+        "last_set": 1558711361
+    }
+},
+{
+    "id": "GJRU20B7V",
+    "name": "mpdm-yahor--eric--troy-1",
+    "created": 1559145338,
+    "creator": "UA8RCHTQV",
+    "is_archived": false,
+    "members": [
+        "UA8RCHTQV",
+        "UECFTJRJ7",
+        "UG690A8H3"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "UA8RCHTQV",
+        "last_set": 1559145338
+    },
+    "purpose": {
+        "value": "Group messaging with: @yahor @eric @troy",
+        "creator": "UA8RCHTQV",
+        "last_set": 1559145338
+    }
+},
+{
+    "id": "GJXDHFBT4",
+    "name": "mpdm-miguel--troy--vanessa.barrett-1",
+    "created": 1559660072,
+    "creator": "UE8FSJXGC",
+    "is_archived": false,
+    "members": [
+        "UE8FSJXGC",
+        "UG690A8H3",
+        "UHXLCBA0L"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "UE8FSJXGC",
+        "last_set": 1559660072
+    },
+    "purpose": {
+        "value": "Group messaging with: @miguel @troy @vanessa.barrett",
+        "creator": "UE8FSJXGC",
+        "last_set": 1559660072
+    }
+},
+{
+    "id": "CK46HFK6Y",
+    "name": "mpdm-eric--lou--edan-1",
+    "created": 1559238542,
+    "creator": "UECFTJRJ7",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB",
+        "UECFTJRJ7"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "UECFTJRJ7",
+        "last_set": 1559238542
+    },
+    "purpose": {
+        "value": "Group messaging with: @eric @lou @edan",
+        "creator": "UECFTJRJ7",
+        "last_set": 1559238542
+    }
+},
+{
+    "id": "GK9V23W9L",
+    "name": "mpdm-yahor--lou--john-cdg-1",
+    "created": 1559582661,
+    "creator": "UA8RCHTQV",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB",
+        "UA8RCHTQV",
+        "UDV6T1M2L"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "UA8RCHTQV",
+        "last_set": 1559582661
+    },
+    "purpose": {
+        "value": "Group messaging with: @yahor @lou @john-cdg",
+        "creator": "UA8RCHTQV",
+        "last_set": 1559582661
+    }
+},
+{
+    "id": "GKAFY77S7",
+    "name": "mpdm-conor--lou--miguel-1",
+    "created": 1560811241,
+    "creator": "UJTAT1056",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB",
+        "UE8FSJXGC",
+        "UJTAT1056"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "UJTAT1056",
+        "last_set": 1560811241
+    },
+    "purpose": {
+        "value": "Group messaging with: @conor @lou @miguel",
+        "creator": "UJTAT1056",
+        "last_set": 1560811241
+    }
+},
+{
+    "id": "GKBMBTYLS",
+    "name": "mpdm-conor--lou--kevin-1",
+    "created": 1560889787,
+    "creator": "UJTAT1056",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB",
+        "UC1MBG9SL",
+        "UJTAT1056"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "UJTAT1056",
+        "last_set": 1560889787
+    },
+    "purpose": {
+        "value": "Group messaging with: @conor @lou @kevin",
+        "creator": "UJTAT1056",
+        "last_set": 1560889787
+    }
+},
+{
+    "id": "GKJCR5RPY",
+    "name": "mpdm-vanessa.barrett--lou--conor-1",
+    "created": 1560296440,
+    "creator": "UHXLCBA0L",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB",
+        "UHXLCBA0L",
+        "UJTAT1056"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "UHXLCBA0L",
+        "last_set": 1560296440
+    },
+    "purpose": {
+        "value": "Group messaging with: @vanessa.barrett @lou @conor",
+        "creator": "UHXLCBA0L",
+        "last_set": 1560296440
+    }
+},
+{
+    "id": "GKYN5T6CT",
+    "name": "mpdm-miguel--eric--jacob200-1",
+    "created": 1562765341,
+    "creator": "UE8FSJXGC",
+    "is_archived": false,
+    "members": [
+        "UE8FSJXGC",
+        "UECFTJRJ7",
+        "UKHANCAAZ"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "UE8FSJXGC",
+        "last_set": 1562765341
+    },
+    "purpose": {
+        "value": "Group messaging with: @miguel @eric @jacob200",
+        "creator": "UE8FSJXGC",
+        "last_set": 1562765341
+    }
+},
+{
+    "id": "GKZGEBPTR",
+    "name": "mpdm-conor--lou--chris-1",
+    "created": 1561593257,
+    "creator": "UJTAT1056",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB",
+        "U8Y5SFSQY",
+        "UJTAT1056"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "UJTAT1056",
+        "last_set": 1561593257
+    },
+    "purpose": {
+        "value": "Group messaging with: @conor @lou @chris",
+        "creator": "UJTAT1056",
+        "last_set": 1561593257
+    }
+},
+{
+    "id": "GL3GRT1SB",
+    "name": "mpdm-lou--eric.fischer--conor--jacob200-1",
+    "created": 1562007048,
+    "creator": "U30A0FZSB",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB",
+        "UHG0KCZ4M",
+        "UJTAT1056",
+        "UKHANCAAZ"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "U30A0FZSB",
+        "last_set": 1562007048
+    },
+    "purpose": {
+        "value": "Group messaging with: @lou @eric.fischer @conor @jacob200",
+        "creator": "U30A0FZSB",
+        "last_set": 1562007048
+    }
+},
+{
+    "id": "GLHLHNB1C",
+    "name": "mpdm-jacob200--lou--conor-1",
+    "created": 1563251095,
+    "creator": "UKHANCAAZ",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB",
+        "UJTAT1056",
+        "UKHANCAAZ"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "UKHANCAAZ",
+        "last_set": 1563251095
+    },
+    "purpose": {
+        "value": "Group messaging with: @jacob200 @lou @conor",
+        "creator": "UKHANCAAZ",
+        "last_set": 1563251095
+    }
+},
+{
+    "id": "GLL4AHTJA",
+    "name": "mpdm-kevin--lou--peggy-1",
+    "created": 1563402501,
+    "creator": "UC1MBG9SL",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB",
+        "UAATLE5GW",
+        "UC1MBG9SL"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "UC1MBG9SL",
+        "last_set": 1563402501
+    },
+    "purpose": {
+        "value": "Group messaging with: @kevin @lou @peggy",
+        "creator": "UC1MBG9SL",
+        "last_set": 1563402501
+    }
+},
+{
+    "id": "CLV51B3HB",
+    "name": "mpdm-conor--lou--michelle.duprey-1",
+    "created": 1564412396,
+    "creator": "UJTAT1056",
+    "is_archived": true,
+    "members": [
+        "U30A0FZSB",
+        "UJTAT1056"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "UJTAT1056",
+        "last_set": 1564412396
+    },
+    "purpose": {
+        "value": "Group messaging with: @conor @lou @michelle.duprey",
+        "creator": "UJTAT1056",
+        "last_set": 1564412396
+    }
+},
+{
+    "id": "GM0TQU8UD",
+    "name": "mpdm-conor--lou--peggy-1",
+    "created": 1564777716,
+    "creator": "UJTAT1056",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB",
+        "UAATLE5GW",
+        "UJTAT1056"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "UJTAT1056",
+        "last_set": 1564777716
+    },
+    "purpose": {
+        "value": "Group messaging with: @conor @lou @peggy",
+        "creator": "UJTAT1056",
+        "last_set": 1564777716
+    }
+},
+{
+    "id": "GM692EJF3",
+    "name": "mpdm-kevin--miguel--tim-1",
+    "created": 1565807809,
+    "creator": "UC1MBG9SL",
+    "is_archived": false,
+    "members": [
+        "UC1MBG9SL",
+        "UE8FSJXGC",
+        "ULL6H1BL0"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "UC1MBG9SL",
+        "last_set": 1565807809
+    },
+    "purpose": {
+        "value": "Group messaging with: @kevin @miguel @tim",
+        "creator": "UC1MBG9SL",
+        "last_set": 1565807809
+    }
+},
+{
+    "id": "GM6UB8R16",
+    "name": "mpdm-lou--conor--tim-1",
+    "created": 1565297195,
+    "creator": "U30A0FZSB",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB",
+        "UJTAT1056",
+        "ULL6H1BL0"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "U30A0FZSB",
+        "last_set": 1565297195
+    },
+    "purpose": {
+        "value": "Group messaging with: @lou @conor @tim",
+        "creator": "U30A0FZSB",
+        "last_set": 1565297195
+    }
+},
+{
+    "id": "GMC6LGH0C",
+    "name": "mpdm-kevin--lou--miguel--tim-1",
+    "created": 1565807993,
+    "creator": "UC1MBG9SL",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB",
+        "UC1MBG9SL",
+        "UE8FSJXGC",
+        "ULL6H1BL0"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "UC1MBG9SL",
+        "last_set": 1565807993
+    },
+    "purpose": {
+        "value": "Group messaging with: @kevin @lou @miguel @tim",
+        "creator": "UC1MBG9SL",
+        "last_set": 1565807993
+    }
+},
+{
+    "id": "GMK01ATNW",
+    "name": "mpdm-lou--kevin--peggy376-1",
+    "created": 1567203329,
+    "creator": "U30A0FZSB",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB",
+        "UC1MBG9SL",
+        "UM2RCEMDM"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "U30A0FZSB",
+        "last_set": 1567203329
+    },
+    "purpose": {
+        "value": "Group messaging with: @lou @kevin @peggy376",
+        "creator": "U30A0FZSB",
+        "last_set": 1567203329
+    }
+},
+{
+    "id": "GMU6EPRFC",
+    "name": "mpdm-lou--kevin--miguel--conor-1",
+    "created": 1568121937,
+    "creator": "UC1MBG9SL",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB",
+        "UC1MBG9SL",
+        "UE8FSJXGC",
+        "UJTAT1056"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "UC1MBG9SL",
+        "last_set": 1568121937
+    },
+    "purpose": {
+        "value": "Group messaging with: @lou @kevin @miguel @conor",
+        "creator": "UC1MBG9SL",
+        "last_set": 1568121937
+    }
+},
+{
+    "id": "GN3FHLPUL",
+    "name": "mpdm-lou--john-cdg--miguel--kevinm--conor-1",
+    "created": 1567805855,
+    "creator": "U30A0FZSB",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB",
+        "UDV6T1M2L",
+        "UE8FSJXGC",
+        "UGM87PMM2",
+        "UJTAT1056"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "U30A0FZSB",
+        "last_set": 1567805855
+    },
+    "purpose": {
+        "value": "Group messaging with: @lou @john-cdg @miguel @kevinm @conor",
+        "creator": "U30A0FZSB",
+        "last_set": 1567805855
+    }
+},
+{
+    "id": "CNA74N813",
+    "name": "mpdm-lou--edan--eric--alex-1",
+    "created": 1568305054,
+    "creator": "U30A0FZSB",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB",
+        "UBD3AQ4P9",
+        "UECFTJRJ7"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "U30A0FZSB",
+        "last_set": 1568305054
+    },
+    "purpose": {
+        "value": "Group messaging with: @lou @edan @eric @alex",
+        "creator": "U30A0FZSB",
+        "last_set": 1568305054
+    }
+},
+{
+    "id": "GNN5XH92R",
+    "name": "mpdm-lou--kevinm--conor-1",
+    "created": 1569260395,
+    "creator": "U30A0FZSB",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB",
+        "UGM87PMM2",
+        "UJTAT1056"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "U30A0FZSB",
+        "last_set": 1569260395
+    },
+    "purpose": {
+        "value": "Group messaging with: @lou @kevinm @conor",
+        "creator": "U30A0FZSB",
+        "last_set": 1569260395
+    }
+},
+{
+    "id": "GNPAC19S7",
+    "name": "mpdm-kevin--conor--tim-1",
+    "created": 1570120777,
+    "creator": "UC1MBG9SL",
+    "is_archived": false,
+    "members": [
+        "UC1MBG9SL",
+        "UJTAT1056",
+        "ULL6H1BL0"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "UC1MBG9SL",
+        "last_set": 1570120777
+    },
+    "purpose": {
+        "value": "Group messaging with: @kevin @conor @tim",
+        "creator": "UC1MBG9SL",
+        "last_set": 1570120777
+    }
+},
+{
+    "id": "GP9242E2H",
+    "name": "mpdm-lou--tim--quincey-1",
+    "created": 1570724943,
+    "creator": "U30A0FZSB",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB",
+        "ULL6H1BL0",
+        "UNMQ3V2TY"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "U30A0FZSB",
+        "last_set": 1570724943
+    },
+    "purpose": {
+        "value": "Group messaging with: @lou @tim @quincey",
+        "creator": "U30A0FZSB",
+        "last_set": 1570724943
+    }
+},
+{
+    "id": "GPA6F4N6S",
+    "name": "mpdm-lou--john-cdg--conor-1",
+    "created": 1570660607,
+    "creator": "UDV6T1M2L",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB",
+        "UDV6T1M2L",
+        "UJTAT1056"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "UDV6T1M2L",
+        "last_set": 1570660607
+    },
+    "purpose": {
+        "value": "Group messaging with: @lou @john-cdg @conor",
+        "creator": "UDV6T1M2L",
+        "last_set": 1570660607
+    }
+},
+{
+    "id": "GPMJPSRRC",
+    "name": "mpdm-lou--conor--sherwyn-1",
+    "created": 1571451611,
+    "creator": "U30A0FZSB",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB",
+        "UJTAT1056",
+        "UN8L7SY0Y"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "U30A0FZSB",
+        "last_set": 1571451611
+    },
+    "purpose": {
+        "value": "Group messaging with: @lou @conor @sherwyn",
+        "creator": "U30A0FZSB",
+        "last_set": 1571451611
+    }
+},
+{
+    "id": "GPPC087H6",
+    "name": "mpdm-kevin--conor--stuart.mitchell-1",
+    "created": 1571797195,
+    "creator": "UJTAT1056",
+    "is_archived": false,
+    "members": [
+        "UC1MBG9SL",
+        "UJTAT1056",
+        "UPAA6CY0K"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "UJTAT1056",
+        "last_set": 1571797195
+    },
+    "purpose": {
+        "value": "Group messaging with: @kevin @conor @stuart.mitchell",
+        "creator": "UJTAT1056",
+        "last_set": 1571797195
+    }
+},
+{
+    "id": "GQ997SML6",
+    "name": "mpdm-lou--conor--peggy376-1",
+    "created": 1573003305,
+    "creator": "UJTAT1056",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB",
+        "UJTAT1056",
+        "UM2RCEMDM"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "UJTAT1056",
+        "last_set": 1573003305
+    },
+    "purpose": {
+        "value": "Group messaging with: @lou @conor @peggy376",
+        "creator": "UJTAT1056",
+        "last_set": 1573003305
+    }
+},
+{
+    "id": "GQMJ8RRKL",
+    "name": "mpdm-lou--conor--rachael-1",
+    "created": 1574799957,
+    "creator": "U30A0FZSB",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB",
+        "UJTAT1056",
+        "UQPCDD4R5"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "U30A0FZSB",
+        "last_set": 1574799957
+    },
+    "purpose": {
+        "value": "Group messaging with: @lou @conor @rachael",
+        "creator": "U30A0FZSB",
+        "last_set": 1574799957
+    }
+},
+{
+    "id": "GQW3H1RU0",
+    "name": "mpdm-lou--miguel--tim-1",
+    "created": 1574452151,
+    "creator": "U30A0FZSB",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB",
+        "UE8FSJXGC",
+        "ULL6H1BL0"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "U30A0FZSB",
+        "last_set": 1574452151
+    },
+    "purpose": {
+        "value": "Group messaging with: @lou @miguel @tim",
+        "creator": "U30A0FZSB",
+        "last_set": 1574452151
+    }
+},
+{
+    "id": "GR8FW7AN9",
+    "name": "mpdm-conor--tim--sherwyn-1",
+    "created": 1575407664,
+    "creator": "UJTAT1056",
+    "is_archived": false,
+    "members": [
+        "UJTAT1056",
+        "ULL6H1BL0",
+        "UN8L7SY0Y"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "UJTAT1056",
+        "last_set": 1575407664
+    },
+    "purpose": {
+        "value": "Group messaging with: @conor @tim @sherwyn",
+        "creator": "UJTAT1056",
+        "last_set": 1575407664
+    }
+},
+{
+    "id": "GRBSUD8QM",
+    "name": "mpdm-kevin--miguel--peggy376-1",
+    "created": 1575576932,
+    "creator": "UM2RCEMDM",
+    "is_archived": false,
+    "members": [
+        "UC1MBG9SL",
+        "UE8FSJXGC",
+        "UM2RCEMDM"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "UM2RCEMDM",
+        "last_set": 1575576932
+    },
+    "purpose": {
+        "value": "Group messaging with: @kevin @miguel @peggy376",
+        "creator": "UM2RCEMDM",
+        "last_set": 1575576932
+    }
+},
+{
+    "id": "GRFJY5SQ7",
+    "name": "mpdm-lou--miguel--rachael-1",
+    "created": 1575678705,
+    "creator": "U30A0FZSB",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB",
+        "UE8FSJXGC",
+        "UQPCDD4R5"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "U30A0FZSB",
+        "last_set": 1575678705
+    },
+    "purpose": {
+        "value": "Group messaging with: @lou @miguel @rachael",
+        "creator": "U30A0FZSB",
+        "last_set": 1575678705
+    }
+},
+{
+    "id": "GRTLD5WLB",
+    "name": "mpdm-kevin--tim--peggy376-1",
+    "created": 1577718675,
+    "creator": "ULL6H1BL0",
+    "is_archived": false,
+    "members": [
+        "UC1MBG9SL",
+        "ULL6H1BL0",
+        "UM2RCEMDM"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "ULL6H1BL0",
+        "last_set": 1577718675
+    },
+    "purpose": {
+        "value": "Group messaging with: @kevin @tim @peggy376",
+        "creator": "ULL6H1BL0",
+        "last_set": 1577718675
+    }
+},
+{
+    "id": "GRXNHMTGT",
+    "name": "mpdm-lou--kevin--conor--peggy376-1",
+    "created": 1578116779,
+    "creator": "UM2RCEMDM",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB",
+        "UC1MBG9SL",
+        "UJTAT1056",
+        "UM2RCEMDM"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "UM2RCEMDM",
+        "last_set": 1578116779
+    },
+    "purpose": {
+        "value": "Group messaging with: @lou @kevin @conor @peggy376",
+        "creator": "UM2RCEMDM",
+        "last_set": 1578116779
+    }
+},
+{
+    "id": "GSEGZV87P",
+    "name": "mpdm-lou--miguel--conor--tim-1",
+    "created": 1578513791,
+    "creator": "ULL6H1BL0",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB",
+        "UE8FSJXGC",
+        "UJTAT1056",
+        "ULL6H1BL0"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "ULL6H1BL0",
+        "last_set": 1578513791
+    },
+    "purpose": {
+        "value": "Group messaging with: @lou @miguel @conor @tim",
+        "creator": "ULL6H1BL0",
+        "last_set": 1578513791
+    }
+},
+{
+    "id": "GSKGPKZ7B",
+    "name": "mpdm-miguel--conor--tim-1",
+    "created": 1579530890,
+    "creator": "UJTAT1056",
+    "is_archived": false,
+    "members": [
+        "UE8FSJXGC",
+        "UJTAT1056",
+        "ULL6H1BL0"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "UJTAT1056",
+        "last_set": 1579530890
+    },
+    "purpose": {
+        "value": "Group messaging with: @miguel @conor @tim",
+        "creator": "UJTAT1056",
+        "last_set": 1579530890
+    }
+},
+{
+    "id": "CSN8MF50B",
+    "name": "mpdm-conor--sherwyn--jordan-1",
+    "created": 1579723756,
+    "creator": "UJTAT1056",
+    "is_archived": false,
+    "members": [
+        "UJTAT1056",
+        "UN8L7SY0Y"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "UJTAT1056",
+        "last_set": 1579723756
+    },
+    "purpose": {
+        "value": "Group messaging with: @conor @sherwyn @jordan",
+        "creator": "UJTAT1056",
+        "last_set": 1579723756
+    }
+},
+{
+    "id": "GSRUDTU9K",
+    "name": "mpdm-kevin--conor--sherwyn-1",
+    "created": 1579206029,
+    "creator": "UJTAT1056",
+    "is_archived": false,
+    "members": [
+        "UC1MBG9SL",
+        "UJTAT1056",
+        "UN8L7SY0Y"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "UJTAT1056",
+        "last_set": 1579206029
+    },
+    "purpose": {
+        "value": "Group messaging with: @kevin @conor @sherwyn",
+        "creator": "UJTAT1056",
+        "last_set": 1579206029
+    }
+},
+{
+    "id": "CT1ERK92T",
+    "name": "mpdm-conor--lauren.worcester--blair.weis-1",
+    "created": 1579719737,
+    "creator": "UJTAT1056",
+    "is_archived": true,
+    "members": [
+        "UJTAT1056"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "UJTAT1056",
+        "last_set": 1579719737
+    },
+    "purpose": {
+        "value": "Group messaging with: @conor @lauren.worcester @blair.weis",
+        "creator": "UJTAT1056",
+        "last_set": 1579719737
+    }
+},
+{
+    "id": "CT6F83E5N",
+    "name": "mpdm-lou--nandita.balaji--andrew.mckenna-1",
+    "created": 1580170842,
+    "creator": "U30A0FZSB",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "U30A0FZSB",
+        "last_set": 1580170842
+    },
+    "purpose": {
+        "value": "Group messaging with: @lou @nandita.balaji @andrew.mckenna",
+        "creator": "U30A0FZSB",
+        "last_set": 1580170842
+    }
+},
+{
+    "id": "CT7RZJCJV",
+    "name": "mpdm-conor--mike.antico--james.chiappetta-1",
+    "created": 1580828667,
+    "creator": "UJTAT1056",
+    "is_archived": false,
+    "members": [
+        "UJTAT1056"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "UJTAT1056",
+        "last_set": 1580828667
+    },
+    "purpose": {
+        "value": "Group messaging with: @conor @mike.antico @james.chiappetta",
+        "creator": "UJTAT1056",
+        "last_set": 1580828667
+    }
+},
+{
+    "id": "CT804MEB1",
+    "name": "mpdm-conor--todd--jordan-1",
+    "created": 1580155107,
+    "creator": "UJTAT1056",
+    "is_archived": false,
+    "members": [
+        "UJTAT1056"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "UJTAT1056",
+        "last_set": 1580155107
+    },
+    "purpose": {
+        "value": "Group messaging with: @conor @todd @jordan",
+        "creator": "UJTAT1056",
+        "last_set": 1580155107
+    }
+},
+{
+    "id": "GTNTZH4SU",
+    "name": "mpdm-lou--miguel--peggy376-1",
+    "created": 1581029344,
+    "creator": "U30A0FZSB",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB",
+        "UE8FSJXGC",
+        "UM2RCEMDM"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "U30A0FZSB",
+        "last_set": 1581029344
+    },
+    "purpose": {
+        "value": "Group messaging with: @lou @miguel @peggy376",
+        "creator": "U30A0FZSB",
+        "last_set": 1581029344
+    }
+},
+{
+    "id": "GTT64MYTX",
+    "name": "mpdm-miguel--tim--sherwyn--anand-1",
+    "created": 1581351962,
+    "creator": "ULL6H1BL0",
+    "is_archived": false,
+    "members": [
+        "UE8FSJXGC",
+        "ULL6H1BL0",
+        "UN8L7SY0Y",
+        "UPJFJAVM0"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "ULL6H1BL0",
+        "last_set": 1581351962
+    },
+    "purpose": {
+        "value": "Group messaging with: @miguel @tim @sherwyn @anand",
+        "creator": "ULL6H1BL0",
+        "last_set": 1581351962
+    }
+},
+{
+    "id": "GUKE5NAPL",
+    "name": "mpdm-kevin--peggy376--sherwyn-1",
+    "created": 1583434807,
+    "creator": "UC1MBG9SL",
+    "is_archived": false,
+    "members": [
+        "UC1MBG9SL",
+        "UM2RCEMDM",
+        "UN8L7SY0Y"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "UC1MBG9SL",
+        "last_set": 1583434807
+    },
+    "purpose": {
+        "value": "Group messaging with: @kevin @peggy376 @sherwyn",
+        "creator": "UC1MBG9SL",
+        "last_set": 1583434807
+    }
+},
+{
+    "id": "CUY763G58",
+    "name": "mpdm-lou--conor--andrew.mckenna--nandita.balaji-1",
+    "created": 1584041392,
+    "creator": "U30A0FZSB",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB",
+        "UJTAT1056"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "U30A0FZSB",
+        "last_set": 1584041392
+    },
+    "purpose": {
+        "value": "Group messaging with: @lou @conor @andrew.mckenna @nandita.balaji",
+        "creator": "U30A0FZSB",
+        "last_set": 1584041392
+    }
+},
+{
+    "id": "CV3FQ8VTJ",
+    "name": "mpdm-lou--conor--anand--andrew.mckenna--long.pham-1",
+    "created": 1583772772,
+    "creator": "UJTAT1056",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB",
+        "UJTAT1056",
+        "UPJFJAVM0"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "UJTAT1056",
+        "last_set": 1583772772
+    },
+    "purpose": {
+        "value": "Group messaging with: @lou @conor @anand @andrew.mckenna @long.pham",
+        "creator": "UJTAT1056",
+        "last_set": 1583772772
+    }
+},
+{
+    "id": "GV8PVS5RR",
+    "name": "mpdm-tim--sherwyn--anand-1",
+    "created": 1584461949,
+    "creator": "ULL6H1BL0",
+    "is_archived": false,
+    "members": [
+        "ULL6H1BL0",
+        "UN8L7SY0Y",
+        "UPJFJAVM0"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "ULL6H1BL0",
+        "last_set": 1584461949
+    },
+    "purpose": {
+        "value": "Group messaging with: @tim @sherwyn @anand",
+        "creator": "ULL6H1BL0",
+        "last_set": 1584461949
+    }
+},
+{
+    "id": "CVCSA6U07",
+    "name": "mpdm-lou--conor--andrew.mckenna-1",
+    "created": 1584041359,
+    "creator": "U30A0FZSB",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB",
+        "UJTAT1056"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "U30A0FZSB",
+        "last_set": 1584041359
+    },
+    "purpose": {
+        "value": "Group messaging with: @lou @conor @andrew.mckenna",
+        "creator": "U30A0FZSB",
+        "last_set": 1584041359
+    }
+},
+{
+    "id": "C0105BS27V4",
+    "name": "mpdm-conor--john.k--josh.west-1",
+    "created": 1584373063,
+    "creator": "UJTAT1056",
+    "is_archived": true,
+    "members": [
+        "UJTAT1056"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "UJTAT1056",
+        "last_set": 1584373063
+    },
+    "purpose": {
+        "value": "Group messaging with: @conor @john.k @josh.west",
+        "creator": "UJTAT1056",
+        "last_set": 1584373063
+    }
+},
+{
+    "id": "G010NPL96AC",
+    "name": "mpdm-lou--conor--amy_looper-1",
+    "created": 1585064707,
+    "creator": "U30A0FZSB",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB",
+        "UJTAT1056",
+        "UUJGMVBPD"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "U30A0FZSB",
+        "last_set": 1585064707
+    },
+    "purpose": {
+        "value": "Group messaging with: @lou @conor @amy_looper",
+        "creator": "U30A0FZSB",
+        "last_set": 1585064707
+    }
+},
+{
+    "id": "G011FLTRT5L",
+    "name": "mpdm-kevin--miguel--kevinm--tim--raj-1",
+    "created": 1586290444,
+    "creator": "UC1MBG9SL",
+    "is_archived": false,
+    "members": [
+        "UC1MBG9SL",
+        "UE8FSJXGC",
+        "UGM87PMM2",
+        "ULL6H1BL0",
+        "UM4PAAC83"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "UC1MBG9SL",
+        "last_set": 1586290444
+    },
+    "purpose": {
+        "value": "Group messaging with: @kevin @miguel @kevinm @tim @raj",
+        "creator": "UC1MBG9SL",
+        "last_set": 1586290444
+    }
+},
+{
+    "id": "G012P9T7CT1",
+    "name": "mpdm-lou--conor--nick-1",
+    "created": 1588724178,
+    "creator": "U30A0FZSB",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB",
+        "U84ADEJP9",
+        "UJTAT1056"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "U30A0FZSB",
+        "last_set": 1588724178
+    },
+    "purpose": {
+        "value": "Group messaging with: @lou @conor @nick",
+        "creator": "U30A0FZSB",
+        "last_set": 1588724178
+    }
+},
+{
+    "id": "G012SU78ZSP",
+    "name": "mpdm-amy--lou--conor--kevin-1",
+    "created": 1588193055,
+    "creator": "UUJGMVBPD",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB",
+        "UC1MBG9SL",
+        "UJTAT1056",
+        "UUJGMVBPD"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "UUJGMVBPD",
+        "last_set": 1588193055
+    },
+    "purpose": {
+        "value": "Group messaging with: @amy @lou @conor @kevin",
+        "creator": "UUJGMVBPD",
+        "last_set": 1588193055
+    }
+},
+{
+    "id": "C013K40KE2C",
+    "name": "mpdm-conor--jon-erik.schneiderhan--josh.west-1",
+    "created": 1588274028,
+    "creator": "UJTAT1056",
+    "is_archived": true,
+    "members": [
+        "UJTAT1056"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "UJTAT1056",
+        "last_set": 1588274028
+    },
+    "purpose": {
+        "value": "Group messaging with: @conor @jon-erik.schneiderhan @josh.west",
+        "creator": "UJTAT1056",
+        "last_set": 1588274028
+    }
+},
+{
+    "id": "C01414DBKBN",
+    "name": "mpdm-conor--josh.west--lauren.worcester-1",
+    "created": 1589822195,
+    "creator": "UJTAT1056",
+    "is_archived": true,
+    "members": [
+        "UJTAT1056"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "UJTAT1056",
+        "last_set": 1589822195
+    },
+    "purpose": {
+        "value": "Group messaging with: @conor @josh.west @lauren.worcester",
+        "creator": "UJTAT1056",
+        "last_set": 1589822195
+    }
+},
+{
+    "id": "C014LLVGDLL",
+    "name": "mpdm-conor--erika.bartucca--josh.west-1",
+    "created": 1590672064,
+    "creator": "UJTAT1056",
+    "is_archived": true,
+    "members": [
+        "UJTAT1056"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "UJTAT1056",
+        "last_set": 1590672064
+    },
+    "purpose": {
+        "value": "Group messaging with: @conor @erika.bartucca @josh.west",
+        "creator": "UJTAT1056",
+        "last_set": 1590672064
+    }
+},
+{
+    "id": "G014Q4XPGR5",
+    "name": "mpdm-lou--conor--remington-1",
+    "created": 1591761918,
+    "creator": "U30A0FZSB",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB",
+        "UJTAT1056",
+        "U013U9ZMQ04"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "U30A0FZSB",
+        "last_set": 1591761918
+    },
+    "purpose": {
+        "value": "Group messaging with: @lou @conor @remington",
+        "creator": "U30A0FZSB",
+        "last_set": 1591761918
+    }
+},
+{
+    "id": "G01573NLEQJ",
+    "name": "mpdm-amy--kevin--lou-1",
+    "created": 1591825629,
+    "creator": "UUJGMVBPD",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB",
+        "UC1MBG9SL",
+        "UUJGMVBPD"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "UUJGMVBPD",
+        "last_set": 1591825629
+    },
+    "purpose": {
+        "value": "Group messaging with: @amy @kevin @lou",
+        "creator": "UUJGMVBPD",
+        "last_set": 1591825629
+    }
+},
+{
+    "id": "C015D7HBPDK",
+    "name": "mpdm-lou--conor--jpwallhorn-1",
+    "created": 1592232044,
+    "creator": "U30A0FZSB",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB",
+        "UJTAT1056"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "U30A0FZSB",
+        "last_set": 1592232044
+    },
+    "purpose": {
+        "value": "Group messaging with: @lou @conor @jpwallhorn",
+        "creator": "U30A0FZSB",
+        "last_set": 1592232044
+    }
+},
+{
+    "id": "C015PDXC5MK",
+    "name": "mpdm-miguel--peyman--pierre-1",
+    "created": 1592577721,
+    "creator": "UE8FSJXGC",
+    "is_archived": false,
+    "members": [
+        "UE8FSJXGC"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "UE8FSJXGC",
+        "last_set": 1592577721
+    },
+    "purpose": {
+        "value": "Group messaging with: @miguel @peyman @pierre",
+        "creator": "UE8FSJXGC",
+        "last_set": 1592577721
+    }
+},
+{
+    "id": "G015XG91TGB",
+    "name": "mpdm-amy--kevin--peggy376-1",
+    "created": 1592936901,
+    "creator": "UUJGMVBPD",
+    "is_archived": false,
+    "members": [
+        "UC1MBG9SL",
+        "UM2RCEMDM",
+        "UUJGMVBPD"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "UUJGMVBPD",
+        "last_set": 1592936901
+    },
+    "purpose": {
+        "value": "Group messaging with: @amy @kevin @peggy376",
+        "creator": "UUJGMVBPD",
+        "last_set": 1592936901
+    }
+},
+{
+    "id": "C016F1V69CG",
+    "name": "mpdm-lou--amy--mohsen-1",
+    "created": 1592587590,
+    "creator": "U30A0FZSB",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB",
+        "UUJGMVBPD"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "U30A0FZSB",
+        "last_set": 1592587590
+    },
+    "purpose": {
+        "value": "Group messaging with: @lou @amy @mohsen",
+        "creator": "U30A0FZSB",
+        "last_set": 1592587590
+    }
+},
+{
+    "id": "C016VTE8ATW",
+    "name": "mpdm-conor--john.k--erika.bartucca--josh.west-1",
+    "created": 1594150799,
+    "creator": "UJTAT1056",
+    "is_archived": true,
+    "members": [
+        "UJTAT1056"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "UJTAT1056",
+        "last_set": 1594150799
+    },
+    "purpose": {
+        "value": "Group messaging with: @conor @john.k @erika.bartucca @josh.west",
+        "creator": "UJTAT1056",
+        "last_set": 1594150799
+    }
+},
+{
+    "id": "G016YT2L293",
+    "name": "mpdm-kevin--conor--amy-1",
+    "created": 1594658169,
+    "creator": "UC1MBG9SL",
+    "is_archived": false,
+    "members": [
+        "UC1MBG9SL",
+        "UJTAT1056",
+        "UUJGMVBPD"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "UC1MBG9SL",
+        "last_set": 1594658169
+    },
+    "purpose": {
+        "value": "Group messaging with: @kevin @conor @amy",
+        "creator": "UC1MBG9SL",
+        "last_set": 1594658169
+    }
+},
+{
+    "id": "C017LKPRQ4Q",
+    "name": "mpdm-conor--aliza.mon--lauren.worcester-1",
+    "created": 1594400596,
+    "creator": "UJTAT1056",
+    "is_archived": true,
+    "members": [
+        "UJTAT1056"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "UJTAT1056",
+        "last_set": 1594400596
+    },
+    "purpose": {
+        "value": "Group messaging with: @conor @aliza.mon @lauren.worcester",
+        "creator": "UJTAT1056",
+        "last_set": 1594400596
+    }
+},
+{
+    "id": "C017S5L2397",
+    "name": "mpdm-conor--josh.west--alex-1",
+    "created": 1595256926,
+    "creator": "UJTAT1056",
+    "is_archived": true,
+    "members": [
+        "UJTAT1056"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "UJTAT1056",
+        "last_set": 1595256926
+    },
+    "purpose": {
+        "value": "Group messaging with: @conor @josh.west @alex",
+        "creator": "UJTAT1056",
+        "last_set": 1595256926
+    }
+},
+{
+    "id": "C017Y5KJMHR",
+    "name": "mpdm-conor--aliza.mon--ash-1",
+    "created": 1596035694,
+    "creator": "UJTAT1056",
+    "is_archived": true,
+    "members": [
+        "UJTAT1056"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "UJTAT1056",
+        "last_set": 1596035694
+    },
+    "purpose": {
+        "value": "Group messaging with: @conor @aliza.mon @ash",
+        "creator": "UJTAT1056",
+        "last_set": 1596035694
+    }
+},
+{
+    "id": "C01820K2GRX",
+    "name": "mpdm-conor--aliza.mon--john.k--ash-1",
+    "created": 1595603786,
+    "creator": "UJTAT1056",
+    "is_archived": true,
+    "members": [
+        "UJTAT1056"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "UJTAT1056",
+        "last_set": 1595603786
+    },
+    "purpose": {
+        "value": "Group messaging with: @conor @aliza.mon @john.k @ash",
+        "creator": "UJTAT1056",
+        "last_set": 1595603786
+    }
+},
+{
+    "id": "G0182J0QE5A",
+    "name": "mpdm-peggy376--amy--lou--conor-1",
+    "created": 1595974683,
+    "creator": "UM2RCEMDM",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB",
+        "UJTAT1056",
+        "UM2RCEMDM",
+        "UUJGMVBPD"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "UM2RCEMDM",
+        "last_set": 1595974683
+    },
+    "purpose": {
+        "value": "Group messaging with: @peggy376 @amy @lou @conor",
+        "creator": "UM2RCEMDM",
+        "last_set": 1595974683
+    }
+},
+{
+    "id": "G01883Y5JEB",
+    "name": "mpdm-miguel--kevin--sherwyn-1",
+    "created": 1597173379,
+    "creator": "UE8FSJXGC",
+    "is_archived": false,
+    "members": [
+        "UC1MBG9SL",
+        "UE8FSJXGC",
+        "UN8L7SY0Y"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "UE8FSJXGC",
+        "last_set": 1597173379
+    },
+    "purpose": {
+        "value": "Group messaging with: @miguel @kevin @sherwyn",
+        "creator": "UE8FSJXGC",
+        "last_set": 1597173379
+    }
+},
+{
+    "id": "G018LN88Z8B",
+    "name": "mpdm-lou--sherwyn--remington-1",
+    "created": 1597091762,
+    "creator": "U30A0FZSB",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB",
+        "UN8L7SY0Y",
+        "U013U9ZMQ04"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "U30A0FZSB",
+        "last_set": 1597091762
+    },
+    "purpose": {
+        "value": "Group messaging with: @lou @sherwyn @remington",
+        "creator": "U30A0FZSB",
+        "last_set": 1597091762
+    }
+},
+{
+    "id": "C018M2V9HRR",
+    "name": "mpdm-lou--remington--simon-1",
+    "created": 1597105240,
+    "creator": "U30A0FZSB",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB",
+        "U013U9ZMQ04"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "U30A0FZSB",
+        "last_set": 1597105240
+    },
+    "purpose": {
+        "value": "Group messaging with: @lou @remington @simon",
+        "creator": "U30A0FZSB",
+        "last_set": 1597105240
+    }
+},
+{
+    "id": "G019132A1EV",
+    "name": "mpdm-amy--lou--remington-1",
+    "created": 1597163633,
+    "creator": "UUJGMVBPD",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB",
+        "UUJGMVBPD",
+        "U013U9ZMQ04"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "UUJGMVBPD",
+        "last_set": 1597163633
+    },
+    "purpose": {
+        "value": "Group messaging with: @amy @lou @remington",
+        "creator": "UUJGMVBPD",
+        "last_set": 1597163633
+    }
+},
+{
+    "id": "G0199MDPN5D",
+    "name": "mpdm-amy--kevin--gabrielle--lou-1",
+    "created": 1598643239,
+    "creator": "UUJGMVBPD",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB",
+        "UC1MBG9SL",
+        "UGNV191QF",
+        "UUJGMVBPD"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "UUJGMVBPD",
+        "last_set": 1598643239
+    },
+    "purpose": {
+        "value": "Group messaging with: @amy @kevin @gabrielle @lou",
+        "creator": "UUJGMVBPD",
+        "last_set": 1598643239
+    }
+},
+{
+    "id": "G0199TKUGKH",
+    "name": "mpdm-lou--miguel--eliana-1",
+    "created": 1598650015,
+    "creator": "U30A0FZSB",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB",
+        "UE8FSJXGC",
+        "U019EFTUQ1X"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "U30A0FZSB",
+        "last_set": 1598650015
+    },
+    "purpose": {
+        "value": "Group messaging with: @lou @miguel @eliana",
+        "creator": "U30A0FZSB",
+        "last_set": 1598650015
+    }
+},
+{
+    "id": "G019BUX2EGZ",
+    "name": "mpdm-kevin--lou--remington-1",
+    "created": 1597678455,
+    "creator": "UC1MBG9SL",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB",
+        "UC1MBG9SL",
+        "U013U9ZMQ04"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "UC1MBG9SL",
+        "last_set": 1597678455
+    },
+    "purpose": {
+        "value": "Group messaging with: @kevin @lou @remington",
+        "creator": "UC1MBG9SL",
+        "last_set": 1597678455
+    }
+},
+{
+    "id": "G019QLHNT3P",
+    "name": "mpdm-kevin--lou--gabrielle-1",
+    "created": 1598892696,
+    "creator": "UC1MBG9SL",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB",
+        "UC1MBG9SL",
+        "UGNV191QF"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "UC1MBG9SL",
+        "last_set": 1598892696
+    },
+    "purpose": {
+        "value": "Group messaging with: @kevin @lou @gabrielle",
+        "creator": "UC1MBG9SL",
+        "last_set": 1598892696
+    }
+},
+{
+    "id": "G019TQ4SZ1S",
+    "name": "mpdm-lou--eliana--remington-1",
+    "created": 1598547593,
+    "creator": "U30A0FZSB",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB",
+        "U013U9ZMQ04",
+        "U019EFTUQ1X"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "U30A0FZSB",
+        "last_set": 1598547593
+    },
+    "purpose": {
+        "value": "Group messaging with: @lou @eliana @remington",
+        "creator": "U30A0FZSB",
+        "last_set": 1598547593
+    }
+},
+{
+    "id": "G019ZQR8N76",
+    "name": "mpdm-kevin--lou--remington--eliana-1",
+    "created": 1598889612,
+    "creator": "UC1MBG9SL",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB",
+        "UC1MBG9SL",
+        "U013U9ZMQ04",
+        "U019EFTUQ1X"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "UC1MBG9SL",
+        "last_set": 1598889612
+    },
+    "purpose": {
+        "value": "Group messaging with: @kevin @lou @remington @eliana",
+        "creator": "UC1MBG9SL",
+        "last_set": 1598889612
+    }
+},
+{
+    "id": "G019ZQTP57W",
+    "name": "mpdm-kevin--lou--miguel--remington-1",
+    "created": 1598889641,
+    "creator": "UC1MBG9SL",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB",
+        "UC1MBG9SL",
+        "UE8FSJXGC",
+        "U013U9ZMQ04"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "UC1MBG9SL",
+        "last_set": 1598889641
+    },
+    "purpose": {
+        "value": "Group messaging with: @kevin @lou @miguel @remington",
+        "creator": "UC1MBG9SL",
+        "last_set": 1598889641
+    }
+},
+{
+    "id": "G01AA55SCSU",
+    "name": "mpdm-lou--remington--chris.grange-1",
+    "created": 1598511855,
+    "creator": "U30A0FZSB",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB",
+        "U013U9ZMQ04",
+        "U0189GGCHM2"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "U30A0FZSB",
+        "last_set": 1598511855
+    },
+    "purpose": {
+        "value": "Group messaging with: @lou @remington @chris.grange",
+        "creator": "U30A0FZSB",
+        "last_set": 1598511855
+    }
+},
+{
+    "id": "G01AJBFU4R0",
+    "name": "mpdm-eliana--lou--kevin-1",
+    "created": 1599848309,
+    "creator": "U019EFTUQ1X",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB",
+        "UC1MBG9SL",
+        "U019EFTUQ1X"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "U019EFTUQ1X",
+        "last_set": 1599848309
+    },
+    "purpose": {
+        "value": "Group messaging with: @eliana @lou @kevin",
+        "creator": "U019EFTUQ1X",
+        "last_set": 1599848309
+    }
+},
+{
+    "id": "G01ANNBUGUX",
+    "name": "mpdm-lou--esther--noah-1",
+    "created": 1600709079,
+    "creator": "U30A0FZSB",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB",
+        "U01ABNBGBSM",
+        "U01AQGHRABU"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "U30A0FZSB",
+        "last_set": 1600709079
+    },
+    "purpose": {
+        "value": "Group messaging with: @lou @esther @noah",
+        "creator": "U30A0FZSB",
+        "last_set": 1600709079
+    }
+},
+{
+    "id": "G01AU8R85KP",
+    "name": "mpdm-remington--noah--eliana-1",
+    "created": 1600376551,
+    "creator": "U013U9ZMQ04",
+    "is_archived": false,
+    "members": [
+        "U013U9ZMQ04",
+        "U019EFTUQ1X",
+        "U01AQGHRABU"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "U013U9ZMQ04",
+        "last_set": 1600376551
+    },
+    "purpose": {
+        "value": "Group messaging with: @remington @noah @eliana",
+        "creator": "U013U9ZMQ04",
+        "last_set": 1600376551
+    }
+},
+{
+    "id": "G01B09TU1BM",
+    "name": "mpdm-lou--noah--remington--eliana-1",
+    "created": 1600465550,
+    "creator": "U30A0FZSB",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB",
+        "U013U9ZMQ04",
+        "U019EFTUQ1X",
+        "U01AQGHRABU"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "U30A0FZSB",
+        "last_set": 1600465550
+    },
+    "purpose": {
+        "value": "Group messaging with: @lou @noah @remington @eliana",
+        "creator": "U30A0FZSB",
+        "last_set": 1600465550
+    }
+},
+{
+    "id": "G01BKC99R0R",
+    "name": "mpdm-lou--noah--eliana-1",
+    "created": 1600811467,
+    "creator": "U30A0FZSB",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB",
+        "U019EFTUQ1X",
+        "U01AQGHRABU"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "U30A0FZSB",
+        "last_set": 1600811467
+    },
+    "purpose": {
+        "value": "Group messaging with: @lou @noah @eliana",
+        "creator": "U30A0FZSB",
+        "last_set": 1600811467
+    }
+},
+{
+    "id": "G01BMQH4SAX",
+    "name": "mpdm-esther--grace--noah-1",
+    "created": 1601406101,
+    "creator": "U01ABNBGBSM",
+    "is_archived": false,
+    "members": [
+        "U01ABNBGBSM",
+        "U01AQGHRABU",
+        "U01B9P04UUS"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "U01ABNBGBSM",
+        "last_set": 1601406101
+    },
+    "purpose": {
+        "value": "Group messaging with: @esther @grace @noah",
+        "creator": "U01ABNBGBSM",
+        "last_set": 1601406101
+    }
+},
+{
+    "id": "G01BW1TMR29",
+    "name": "mpdm-kevin--esther--noah-1",
+    "created": 1601905564,
+    "creator": "UC1MBG9SL",
+    "is_archived": false,
+    "members": [
+        "UC1MBG9SL",
+        "U01ABNBGBSM",
+        "U01AQGHRABU"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "UC1MBG9SL",
+        "last_set": 1601905564
+    },
+    "purpose": {
+        "value": "Group messaging with: @kevin @esther @noah",
+        "creator": "UC1MBG9SL",
+        "last_set": 1601905564
+    }
+},
+{
+    "id": "G01C1NCQL82",
+    "name": "mpdm-thibault--lou--remington-1",
+    "created": 1601988901,
+    "creator": "U01AFR873BM",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB",
+        "U013U9ZMQ04",
+        "U01AFR873BM"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "U01AFR873BM",
+        "last_set": 1601988901
+    },
+    "purpose": {
+        "value": "Group messaging with: @thibault @lou @remington",
+        "creator": "U01AFR873BM",
+        "last_set": 1601988901
+    }
+},
+{
+    "id": "G01C56N3QTF",
+    "name": "mpdm-kevin--esther--grace--remington-1",
+    "created": 1602176433,
+    "creator": "UC1MBG9SL",
+    "is_archived": false,
+    "members": [
+        "UC1MBG9SL",
+        "U013U9ZMQ04",
+        "U01ABNBGBSM",
+        "U01B9P04UUS"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "UC1MBG9SL",
+        "last_set": 1602176433
+    },
+    "purpose": {
+        "value": "Group messaging with: @kevin @esther @grace @remington",
+        "creator": "UC1MBG9SL",
+        "last_set": 1602176433
+    }
+},
+{
+    "id": "G01CEE05V8U",
+    "name": "mpdm-kevin--esther--grace-1",
+    "created": 1602176429,
+    "creator": "UC1MBG9SL",
+    "is_archived": false,
+    "members": [
+        "UC1MBG9SL",
+        "U01ABNBGBSM",
+        "U01B9P04UUS"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "UC1MBG9SL",
+        "last_set": 1602176429
+    },
+    "purpose": {
+        "value": "Group messaging with: @kevin @esther @grace",
+        "creator": "UC1MBG9SL",
+        "last_set": 1602176429
+    }
+},
+{
+    "id": "G01CF2KGFM4",
+    "name": "mpdm-lou--luoying--minxin--grace--george-1",
+    "created": 1602739315,
+    "creator": "U30A0FZSB",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB",
+        "U015EQ00T71",
+        "U01684K2GRX",
+        "U019XG4TQLU",
+        "U01B9P04UUS"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "U30A0FZSB",
+        "last_set": 1602739315
+    },
+    "purpose": {
+        "value": "Group messaging with: @lou @luoying @minxin @grace @george",
+        "creator": "U30A0FZSB",
+        "last_set": 1602739315
+    }
+},
+{
+    "id": "G01CLCM5THN",
+    "name": "mpdm-remington--esther--noah-1",
+    "created": 1601693948,
+    "creator": "U013U9ZMQ04",
+    "is_archived": false,
+    "members": [
+        "U013U9ZMQ04",
+        "U01ABNBGBSM",
+        "U01AQGHRABU"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "U013U9ZMQ04",
+        "last_set": 1601693948
+    },
+    "purpose": {
+        "value": "Group messaging with: @remington @esther @noah",
+        "creator": "U013U9ZMQ04",
+        "last_set": 1601693948
+    }
+},
+{
+    "id": "G01CR5XDYJ3",
+    "name": "mpdm-remington--esther--lou-1",
+    "created": 1603410757,
+    "creator": "U013U9ZMQ04",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB",
+        "U013U9ZMQ04",
+        "U01ABNBGBSM"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "U013U9ZMQ04",
+        "last_set": 1603410757
+    },
+    "purpose": {
+        "value": "Group messaging with: @remington @esther @lou",
+        "creator": "U013U9ZMQ04",
+        "last_set": 1603410757
+    }
+},
+{
+    "id": "C01CT0X7N31",
+    "name": "mpdm-lou--jake--hannah-1",
+    "created": 1603471115,
+    "creator": "U30A0FZSB",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB",
+        "UUE2Y8L11",
+        "U016MRM3L6Q"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "U30A0FZSB",
+        "last_set": 1603471115
+    },
+    "purpose": {
+        "value": "Group messaging with: @lou @jake @hannah",
+        "creator": "U30A0FZSB",
+        "last_set": 1603471115
+    }
+},
+{
+    "id": "G01CT5RRU79",
+    "name": "mpdm-lou--bryand--remington-1",
+    "created": 1603474800,
+    "creator": "U30A0FZSB",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB",
+        "U013U9ZMQ04",
+        "U01CYKX4F1B"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "U30A0FZSB",
+        "last_set": 1603474800
+    },
+    "purpose": {
+        "value": "Group messaging with: @lou @bryand @remington",
+        "creator": "U30A0FZSB",
+        "last_set": 1603474800
+    }
+},
+{
+    "id": "G01D1SA5JKE",
+    "name": "mpdm-kevin--remington--grace-1",
+    "created": 1603117338,
+    "creator": "UC1MBG9SL",
+    "is_archived": false,
+    "members": [
+        "UC1MBG9SL",
+        "U013U9ZMQ04",
+        "U01B9P04UUS"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "UC1MBG9SL",
+        "last_set": 1603117338
+    },
+    "purpose": {
+        "value": "Group messaging with: @kevin @remington @grace",
+        "creator": "UC1MBG9SL",
+        "last_set": 1603117338
+    }
+},
+{
+    "id": "G01DG7J0H5E",
+    "name": "mpdm-lou--noah--remington-1",
+    "created": 1602873233,
+    "creator": "U30A0FZSB",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB",
+        "U013U9ZMQ04",
+        "U01AQGHRABU"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "U30A0FZSB",
+        "last_set": 1602873233
+    },
+    "purpose": {
+        "value": "Group messaging with: @lou @noah @remington",
+        "creator": "U30A0FZSB",
+        "last_set": 1602873233
+    }
+},
+{
+    "id": "G01DLHSMKC1",
+    "name": "mpdm-remington--lou--bryand--isaacw-1",
+    "created": 1603475747,
+    "creator": "U013U9ZMQ04",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB",
+        "U013U9ZMQ04",
+        "U01CV2SE6EA",
+        "U01CYKX4F1B"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "U013U9ZMQ04",
+        "last_set": 1603475747
+    },
+    "purpose": {
+        "value": "Group messaging with: @remington @lou @bryand @isaacw",
+        "creator": "U013U9ZMQ04",
+        "last_set": 1603475747
+    }
+},
+{
+    "id": "G01DQ60EZJQ",
+    "name": "mpdm-kevin--remington--grace--noah-1",
+    "created": 1603904570,
+    "creator": "UC1MBG9SL",
+    "is_archived": false,
+    "members": [
+        "UC1MBG9SL",
+        "U013U9ZMQ04",
+        "U01AQGHRABU",
+        "U01B9P04UUS"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "UC1MBG9SL",
+        "last_set": 1603904570
+    },
+    "purpose": {
+        "value": "Group messaging with: @kevin @remington @grace @noah",
+        "creator": "UC1MBG9SL",
+        "last_set": 1603904570
+    }
+},
+{
+    "id": "G01DU59HX97",
+    "name": "mpdm-aaron--lou--remington-1",
+    "created": 1603829812,
+    "creator": "U0180D55C9F",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB",
+        "U013U9ZMQ04",
+        "U0180D55C9F"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "U0180D55C9F",
+        "last_set": 1603829812
+    },
+    "purpose": {
+        "value": "Group messaging with: @aaron @lou @remington",
+        "creator": "U0180D55C9F",
+        "last_set": 1603829812
+    }
+},
+{
+    "id": "G01DZ7N3ZR6",
+    "name": "mpdm-lou--bryand--timothy--isaacw-1",
+    "created": 1603581123,
+    "creator": "U30A0FZSB",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB",
+        "U01CV2SE6EA",
+        "U01CYKX4F1B",
+        "U01D1PZRNR0"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "U30A0FZSB",
+        "last_set": 1603581123
+    },
+    "purpose": {
+        "value": "Group messaging with: @lou @bryand @timothy @isaacw",
+        "creator": "U30A0FZSB",
+        "last_set": 1603581123
+    }
+},
+{
+    "id": "G01E1U39WJU",
+    "name": "mpdm-kevin--peggy376--aaron-1",
+    "created": 1603734589,
+    "creator": "UC1MBG9SL",
+    "is_archived": false,
+    "members": [
+        "UC1MBG9SL",
+        "UM2RCEMDM",
+        "U0180D55C9F"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "UC1MBG9SL",
+        "last_set": 1603734589
+    },
+    "purpose": {
+        "value": "Group messaging with: @kevin @peggy376 @aaron",
+        "creator": "UC1MBG9SL",
+        "last_set": 1603734589
+    }
+},
+{
+    "id": "G01E46ZPD9B",
+    "name": "mpdm-miguel--lou--aaron-1",
+    "created": 1604684043,
+    "creator": "UE8FSJXGC",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB",
+        "UE8FSJXGC",
+        "U0180D55C9F"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "UE8FSJXGC",
+        "last_set": 1604684043
+    },
+    "purpose": {
+        "value": "Group messaging with: @miguel @lou @aaron",
+        "creator": "UE8FSJXGC",
+        "last_set": 1604684043
+    }
+},
+{
+    "id": "G01ED76RS59",
+    "name": "mpdm-lou--kevin.mau--remington-1",
+    "created": 1604974915,
+    "creator": "U30A0FZSB",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB",
+        "UUSB5MHK7",
+        "U013U9ZMQ04"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "U30A0FZSB",
+        "last_set": 1604974915
+    },
+    "purpose": {
+        "value": "Group messaging with: @lou @kevin.mau @remington",
+        "creator": "U30A0FZSB",
+        "last_set": 1604974915
+    }
+},
+{
+    "id": "G01EKP08VLG",
+    "name": "mpdm-remington--grace--esther-1",
+    "created": 1604364581,
+    "creator": "U013U9ZMQ04",
+    "is_archived": false,
+    "members": [
+        "U013U9ZMQ04",
+        "U01ABNBGBSM",
+        "U01B9P04UUS"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "U013U9ZMQ04",
+        "last_set": 1604364581
+    },
+    "purpose": {
+        "value": "Group messaging with: @remington @grace @esther",
+        "creator": "U013U9ZMQ04",
+        "last_set": 1604364581
+    }
+},
+{
+    "id": "C01EWTFQMS5",
+    "name": "mpdm-lou--aaron--simon-1",
+    "created": 1605119024,
+    "creator": "U30A0FZSB",
+    "is_archived": false,
+    "members": [
+        "U30A0FZSB",
+        "U0180D55C9F"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "U30A0FZSB",
+        "last_set": 1605119024
+    },
+    "purpose": {
+        "value": "Group messaging with: @lou @aaron @simon",
+        "creator": "U30A0FZSB",
+        "last_set": 1605119024
+    }
+},
+{
+    "id": "CE8RHJ2JH",
+    "name": "mpdm-mmoon--nick--yahor-1",
+    "created": 1542753708,
+    "creator": "UB770EHNV",
+    "is_archived": false,
+    "members": [
+        "U84ADEJP9",
+        "UA8RCHTQV",
+        "UB770EHNV"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "UB770EHNV",
+        "last_set": 1542753708
+    },
+    "purpose": {
+        "value": "Group messaging with: @mmoon @nick @yahor",
+        "creator": "UB770EHNV",
+        "last_set": 1542753708
+    }
+},
+{
+    "id": "C0174FW1BSB",
+    "name": "mpdm-kyle--simon--nate--edan--conor-1",
+    "created": 1595446145,
+    "creator": "U439Y321E",
+    "is_archived": false,
+    "members": [
+        "U439Y321E",
+        "U443K0RAR",
+        "UAGLZ603B",
+        "UJTAT1056"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "U439Y321E",
+        "last_set": 1595446145
+    },
+    "purpose": {
+        "value": "Group messaging with: @kyle @simon @nate @edan @conor",
+        "creator": "U439Y321E",
+        "last_set": 1595446145
+    }
+},
+{
+    "id": "CLF027HPE",
+    "name": "mpdm-gene.libov--zlatko.unger--miguel-1",
+    "created": 1563241249,
+    "creator": "UGC2141LK",
+    "is_archived": false,
+    "members": [
+        "UE8FSJXGC",
+        "UGC2141LK",
+        "UJ6UAJL86"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "UGC2141LK",
+        "last_set": 1563241249
+    },
+    "purpose": {
+        "value": "Group messaging with: @gene.libov @zlatko.unger @miguel",
+        "creator": "UGC2141LK",
+        "last_set": 1563241249
+    }
+},
+{
+    "id": "CLM8N9NRL",
+    "name": "mpdm-zlatko.unger--mithil.deshmukh--miguel-1",
+    "created": 1563478350,
+    "creator": "UJ6UAJL86",
+    "is_archived": false,
+    "members": [
+        "UE8FSJXGC",
+        "UJ6UAJL86",
+        "UL7LV93UG"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "UJ6UAJL86",
+        "last_set": 1563478350
+    },
+    "purpose": {
+        "value": "Group messaging with: @zlatko.unger @mithil.deshmukh @miguel",
+        "creator": "UJ6UAJL86",
+        "last_set": 1563478350
+    }
+},
+{
+    "id": "CLQLQLT6D",
+    "name": "mpdm-mithil.deshmukh--oleg--gene.libov--zlatko.unger--miguel-1",
+    "created": 1564525605,
+    "creator": "UL7LV93UG",
+    "is_archived": false,
+    "members": [
+        "U1NV59T9N",
+        "UE8FSJXGC",
+        "UGC2141LK",
+        "UJ6UAJL86",
+        "UL7LV93UG"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "UL7LV93UG",
+        "last_set": 1564525605
+    },
+    "purpose": {
+        "value": "Group messaging with: @mithil.deshmukh @oleg @gene.libov @zlatko.unger @miguel",
+        "creator": "UL7LV93UG",
+        "last_set": 1564525605
+    }
+},
+{
+    "id": "CJD9WG0GJ",
+    "name": "mpdm-scott--jordan--dan--miguel-1",
+    "created": 1557949069,
+    "creator": "U07V96F5K",
+    "is_archived": false,
+    "members": [
+        "U07V96F5K",
+        "U07V9H7L5",
+        "UE8FSJXGC",
+        "UF88YAPNC"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "U07V96F5K",
+        "last_set": 1557949069
+    },
+    "purpose": {
+        "value": "Group messaging with: @scott @jordan @dan @miguel",
+        "creator": "U07V96F5K",
+        "last_set": 1557949069
+    }
+},
+{
+    "id": "CQUKF3EPJ",
+    "name": "mpdm-scott--lou--miguel-1",
+    "created": 1574373126,
+    "creator": "U07V96F5K",
+    "is_archived": false,
+    "members": [
+        "U07V96F5K",
+        "U30A0FZSB",
+        "UE8FSJXGC"
+    ],
+    "topic": {
+        "value": "Group messaging",
+        "creator": "U07V96F5K",
+        "last_set": 1574373126
+    },
+    "purpose": {
+        "value": "Group messaging with: @scott @lou @miguel",
+        "creator": "U07V96F5K",
+        "last_set": 1574373126
+    }
+}
+]

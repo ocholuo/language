@@ -1,12 +1,12 @@
 
 /**
  * Write a description of SecondRatings here.
- * 
+ *
  * @graceljy
  * @1
  */
 
- 
+
 import java.security.Principal;
 import java.util.*;
 import edu.duke.*;
@@ -15,13 +15,13 @@ import org.apache.commons.csv.*;
 public class SecondRatings {
     private ArrayList<Movie> myMovies;
     private ArrayList<Rater> myRaters;
-    
+
     public SecondRatings() {
         // default constructor
         // this("data/ratedmoviesfull.csv", "data/ratings.csv");
         this("ratedmovies_short.csv", "ratings_short.csv");
     }
-    
+
     public SecondRatings(String moviefile, String ratingsfile) {
         FirstRatings fratings = new FirstRatings();
         myMovies = fratings.loadMovies(moviefile);
@@ -33,7 +33,6 @@ public class SecondRatings {
             System.out.println(r.getID() + r.getItemsRated());
         }
     }
-    
 
     public int getMovieSize() {
         return myMovies.size();
@@ -56,7 +55,7 @@ public class SecondRatings {
                 movieRatingL.add(i.getRating(id));
             }
         }
-        if(movieRaterL.size() > minimalRaters){
+        if(movieRaterL.size() >= minimalRaters){
             for(Double value : movieRatingL){
                 avgRating += value;
             }
@@ -96,11 +95,23 @@ public class SecondRatings {
     }
 
 
-
-    public static void main(String[] args) {
-        SecondRatings pr = new SecondRatings();
-        ArrayList<Rating> ratingL = pr.getAverageRatings(2);
-        String movieTitle = pr.getTitle("1798709");
-        String movieTitle1 = pr.getTitle("17909");
+    public String getID(String title) {
+        for(Movie m : myMovies){
+            if(m.getTitle().equals(title)){
+                String movieID = m.getID();
+                return movieID;
+            }
+        }
+        // System.out.println(movieTitle + "not found");
+        return "NO SUCH TITLE.";
     }
+
+
+
+    // public static void main(String[] args) {
+    //     SecondRatings pr = new SecondRatings();
+    //     ArrayList<Rating> ratingL = pr.getAverageRatings(2);
+    //     String movieTitle = pr.getTitle("1798709");
+    //     String movieTitle1 = pr.getTitle("17909");
+    // }
 }
