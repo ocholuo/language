@@ -16,8 +16,8 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
-import org.w3c.dom.*;
-import org.xml.sax.SAXException;
+import lib.org.w3c.dom.*;
+import lib.org.xml.sax.SAXException;
 
 public class EarthQuakeParser {
     public EarthQuakeParser() {

@@ -29,7 +29,7 @@
 
 
 import java.lang.Object;
-import edu.duke.*;
+import lib.edu.duke.*;
 
 
 // Nucleotide =+ Condon

@@ -1,7 +1,7 @@
 
 
 
-import edu.duke.*;
+import lib.edu.duke.*;
 import java.util.*;
 
 public class CodonCount {

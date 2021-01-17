@@ -10,8 +10,8 @@
 
 import java.security.Principal;
 import java.util.*;
-import edu.duke.*;
-import org.apache.commons.csv.*;
+import lib.edu.duke.*;
+import lib.org.apache.commons.csv.*;
 
 
 public class FirstRatings{

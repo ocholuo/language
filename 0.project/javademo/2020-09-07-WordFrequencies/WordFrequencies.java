@@ -1,6 +1,6 @@
 
 
-import edu.duke.*;
+import lib.edu.duke.*;
 import java.util.ArrayList;
 
 

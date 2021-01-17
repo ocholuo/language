@@ -1,4 +1,4 @@
-import edu.duke.*;
+import lib.edu.duke.*;
 
 public class CaesarCipher {
     private String alphabet;

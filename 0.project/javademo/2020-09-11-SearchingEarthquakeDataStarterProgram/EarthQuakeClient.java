@@ -7,7 +7,7 @@
  */
 
 import java.util.*;
-import edu.duke.*;
+import lib.edu.duke.*;
 
 public class EarthQuakeClient {
 

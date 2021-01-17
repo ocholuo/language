@@ -6,7 +6,7 @@
  * @version (a version number or a date)
  */
  
-import edu.duke.*;
+import lib.edu.duke.*;
 
 public class MarkovRunner {
     public void runModel(IMarkovModel markov, String text, int size){ 

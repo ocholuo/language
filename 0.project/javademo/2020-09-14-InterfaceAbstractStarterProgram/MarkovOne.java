@@ -8,7 +8,7 @@
  
 import java.util.ArrayList;
 import java.util.Random;
-import edu.duke.*;
+import lib.edu.duke.*;
 
 public class MarkovOne extends AbstractMarkovModel {
 

@@ -1,4 +1,4 @@
-import edu.duke.*;
+import lib.edu.duke.*;
 import java.io.File;
 
 public class PerimeterRunner {

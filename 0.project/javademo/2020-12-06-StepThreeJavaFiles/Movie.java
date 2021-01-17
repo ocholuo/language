@@ -5,9 +5,6 @@
  * @1
  */
 
-import java.util.ArrayList;
-import java.util.Arrays;
-
 // An immutable passive data object (PDO) to represent item data
 public class Movie {
 

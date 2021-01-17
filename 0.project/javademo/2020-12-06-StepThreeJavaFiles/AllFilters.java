@@ -1,4 +1,3 @@
-
 // The class AllFilters combines several filters. 
 
 import java.util.ArrayList;

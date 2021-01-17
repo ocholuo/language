@@ -21,7 +21,7 @@ public class EfficientRater implements Rater{
 
     public void addRating(String movieID, double ratingvalue) {
         if (!myRatings.containsKey(movieID)) {
-            Rating newRating = new Rating(movieID,ratingvalue);
+            Rating newRating = new Rating(movieID, ratingvalue);
             myRatings.put(movieID, newRating);
         }
     }

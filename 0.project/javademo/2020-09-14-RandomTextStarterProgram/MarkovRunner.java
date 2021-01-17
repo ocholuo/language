@@ -6,7 +6,7 @@
  * @version 1
  */
 
-import edu.duke.*;
+import lib.edu.duke.*;
 
 public class MarkovRunner {
 
