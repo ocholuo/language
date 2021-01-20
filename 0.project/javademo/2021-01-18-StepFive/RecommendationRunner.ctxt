@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=RecommendationRunner
+comment0.text=\n\ Implement\ this\ interface\ to\ allow\ your\ code\ to\ be\ integrated\ with\ our\n\ web\ site.\n\ \n\ When\ users\ first\ visit\ the\ recommender\ website,\ our\ code\ will\ call\ the\n\ method\ <code>getItemsToRate()</code>\ to\ get\ a\ list\ of\ movies\ to\ display\n\ on\ the\ web\ page\ for\ users\ to\ rate.\n\ \n\ When\ a\ user\ submits\ their\ ratings,\ our\ code\ will\ call\ the\ method\ <code>\n\ printRecommendationsFor</code>\ to\ get\ your\ recommendations\ based\ on\ the\n\ user's\ ratings.\ \ The\ ID\ given\ to\ this\ method\ is\ for\ a\ new\ Rater\ that\ we\ \n\ have\ already\ added\ to\ the\ RaterDatabase\ with\ ratings\ for\ the\ movies\ \n\ returned\ by\ the\ first\ method.\ \ Whatever\ is\ printed\ from\ that\ method\ will\ \n\ be\ displayed\ on\ the\ web\ page\:\ HTML,\ plain\ text,\ or\ debugging\ information.\n\ \n
+comment1.params=
+comment1.target=java.util.ArrayList\ getItemsToRate()
+comment2.params=webRaterID
+comment2.target=void\ printRecommendationsFor(java.lang.String)
+numComments=3

@@ -8,7 +8,7 @@
 
 import java.lang.reflect.Array;
 import java.util.*;
-import lib.edu.duke.*;
+import edu.duke.*;
 
 public class MarkovWordTwo implements IMarkovModel {
     private String[] myText;

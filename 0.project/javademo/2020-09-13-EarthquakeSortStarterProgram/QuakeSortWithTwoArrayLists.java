@@ -1,5 +1,5 @@
 import java.util.*;
-import lib.edu.duke.*;
+import edu.duke.*;
 
 public class QuakeSortWithTwoArrayLists {
     // This is the code from the Video of Selection Sort with Two ArrayLists

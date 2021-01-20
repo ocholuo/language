@@ -1,9 +1,9 @@
 
 
-import lib.edu.duke.*;
+import edu.duke.*;
 import jdk.nashorn.internal.ir.ReturnNode;
 import jdk.nashorn.internal.runtime.StoredScript;
-import lib.org.apache.commons.csv.*;
+import org.apache.commons.csv.*;
 
 public class BabyNames {
 

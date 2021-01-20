@@ -9,7 +9,7 @@
 
 
 import java.util.*;
-import lib.edu.duke.*;
+import edu.duke.*;
 
 public class MatchAllFilter implements Filter{
 

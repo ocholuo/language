@@ -1,6 +1,6 @@
 
-import lib.edu.duke.*;
-import lib.org.apache.commons.csv.*;
+import edu.duke.*;
+import org.apache.commons.csv.*;
 
 public class CSVofCountryExport {
     

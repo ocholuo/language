@@ -7,7 +7,7 @@
  */
 
 
-import lib.edu.duke.*; 
+import edu.duke.*; 
 
 public class MarkovRunnerWithInterface {
 

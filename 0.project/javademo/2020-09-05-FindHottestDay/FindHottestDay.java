@@ -1,8 +1,8 @@
 
 import java.util.*;
-import lib.edu.duke.*;
+import edu.duke.*;
 import java.io.File;
-import lib.org.apache.commons.csv.*;
+import org.apache.commons.csv.*;
 
 public class FindHottestDay {
 

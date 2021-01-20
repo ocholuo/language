@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
-import lib.edu.duke.*;
+import edu.duke.*;
 
 public class EfficientMarkovModel extends AbstractMarkovModel {
 

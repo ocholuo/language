@@ -6,7 +6,7 @@
 // https://www.coursera.org/learn/java-programming-arrays-lists-data/supplement/727CD/programming-exercise-breaking-the-caesar-cipher
 
 
-import lib.edu.duke.*;
+import edu.duke.*;
 import sun.net.www.content.text.plain;
 
 import java.*;
